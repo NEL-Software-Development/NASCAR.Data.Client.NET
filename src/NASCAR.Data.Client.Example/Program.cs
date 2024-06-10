@@ -1,6 +1,7 @@
 ﻿using NASCAR.Data.Client.Api;
 using NASCAR.Data.Client.Client;
 using NASCAR.Data.Client.Model;
+using NASCAR.Data.Client.Utility;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -11,9 +12,18 @@ namespace NASCAR.Data.Client.Example
     {
         static void Main(string[] args)
         {
+            TokenManager _tokenManager = new TokenManager();
+
+            if(_tokenManager.GetAccessToken().IsExpired())
+            {
+                AccountApi _account = new AccountApi();
+                TokenResponse tokenResponse = _account.RefreshToken(_tokenManager.GetRefreshToken());
+                _tokenManager.StoreRefreshToken(tokenResponse);
+            }
+
             Configuration _config = new Configuration()
             {
-                AccessToken = "..."
+                AccessToken = _tokenManager.GetAccessToken()
             };
 
             CompanyApi _companies = new CompanyApi(_config);
