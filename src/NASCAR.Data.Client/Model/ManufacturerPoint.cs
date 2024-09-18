@@ -32,11 +32,11 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ManufacturerPoint" /> class.
         /// </summary>
-        /// <param name="position">position.</param>
-        /// <param name="manufacturer">manufacturer.</param>
-        /// <param name="points">points.</param>
-        /// <param name="wins">wins.</param>
-        /// <param name="bestFinish">bestFinish.</param>
+        /// <param name="position">Points position.</param>
+        /// <param name="manufacturer">Manufacturer name.</param>
+        /// <param name="points">Number of points earned.</param>
+        /// <param name="wins">Total wins in season.</param>
+        /// <param name="bestFinish">Best finish date.</param>
         public ManufacturerPoint(int? position = default(int?), string manufacturer = default(string), int? points = default(int?), int? wins = default(int?), DateTimeOffset? bestFinish = default(DateTimeOffset?))
         {
             this.Position = position;
@@ -47,32 +47,37 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets Position
+        /// Points position
         /// </summary>
+        /// <value>Points position</value>
         [DataMember(Name="position", EmitDefaultValue=false)]
         public int? Position { get; set; }
 
         /// <summary>
-        /// Gets or Sets Manufacturer
+        /// Manufacturer name
         /// </summary>
+        /// <value>Manufacturer name</value>
         [DataMember(Name="manufacturer", EmitDefaultValue=false)]
         public string Manufacturer { get; set; }
 
         /// <summary>
-        /// Gets or Sets Points
+        /// Number of points earned
         /// </summary>
+        /// <value>Number of points earned</value>
         [DataMember(Name="points", EmitDefaultValue=false)]
         public int? Points { get; set; }
 
         /// <summary>
-        /// Gets or Sets Wins
+        /// Total wins in season
         /// </summary>
+        /// <value>Total wins in season</value>
         [DataMember(Name="wins", EmitDefaultValue=false)]
         public int? Wins { get; set; }
 
         /// <summary>
-        /// Gets or Sets BestFinish
+        /// Best finish date
         /// </summary>
+        /// <value>Best finish date</value>
         [DataMember(Name="best_finish", EmitDefaultValue=false)]
         public DateTimeOffset? BestFinish { get; set; }
 

@@ -24,25 +24,29 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// Run type: (Practice, Qualifying, Race)
+    /// Defines PublishState
     /// </summary>
-    /// <value>Run type: (Practice, Qualifying, Race)</value>
     [JsonConverter(typeof(StringEnumConverter))]
-        public enum RunType
+        public enum PublishState
     {
         /// <summary>
-        /// Enum Practice for value: Practice
+        /// Enum NUMBER_0 for value: 0
         /// </summary>
-        [EnumMember(Value = "Practice")]
-        Practice = 1,
+        [EnumMember(Value = "0")]
+        NUMBER_0 = 1,
         /// <summary>
-        /// Enum Qualifying for value: Qualifying
+        /// Enum NUMBER_1 for value: 1
         /// </summary>
-        [EnumMember(Value = "Qualifying")]
-        Qualifying = 2,
+        [EnumMember(Value = "1")]
+        NUMBER_1 = 2,
         /// <summary>
-        /// Enum Race for value: Race
+        /// Enum NUMBER_2 for value: 2
         /// </summary>
-        [EnumMember(Value = "Race")]
-        Race = 3    }
+        [EnumMember(Value = "2")]
+        NUMBER_2 = 3,
+        /// <summary>
+        /// Enum NUMBER_3 for value: 3
+        /// </summary>
+        [EnumMember(Value = "3")]
+        NUMBER_3 = 4    }
 }

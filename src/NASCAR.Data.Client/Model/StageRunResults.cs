@@ -32,10 +32,10 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StageRunResults" /> class.
         /// </summary>
-        /// <param name="stageNumber">stageNumber.</param>
-        /// <param name="stageName">stageName.</param>
-        /// <param name="lap">lap.</param>
-        /// <param name="results">results.</param>
+        /// <param name="stageNumber">Stage number.</param>
+        /// <param name="stageName">Stage name.</param>
+        /// <param name="lap">The lap when the stage occurred.</param>
+        /// <param name="results">Stage results.</param>
         public StageRunResults(int? stageNumber = default(int?), string stageName = default(string), int? lap = default(int?), Collection<StageResult> results = default(Collection<StageResult>))
         {
             this.StageNumber = stageNumber;
@@ -45,26 +45,30 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets StageNumber
+        /// Stage number
         /// </summary>
+        /// <value>Stage number</value>
         [DataMember(Name="stage_number", EmitDefaultValue=false)]
         public int? StageNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets StageName
+        /// Stage name
         /// </summary>
+        /// <value>Stage name</value>
         [DataMember(Name="stage_name", EmitDefaultValue=false)]
         public string StageName { get; set; }
 
         /// <summary>
-        /// Gets or Sets Lap
+        /// The lap when the stage occurred
         /// </summary>
+        /// <value>The lap when the stage occurred</value>
         [DataMember(Name="lap", EmitDefaultValue=false)]
         public int? Lap { get; set; }
 
         /// <summary>
-        /// Gets or Sets Results
+        /// Stage results
         /// </summary>
+        /// <value>Stage results</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public Collection<StageResult> Results { get; set; }
 

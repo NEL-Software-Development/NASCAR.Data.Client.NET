@@ -33,10 +33,10 @@ namespace NASCAR.Data.Client.Model
         /// Initializes a new instance of the <see cref="DriverSummary" /> class.
         /// </summary>
         /// <param name="driver">driver.</param>
-        /// <param name="summaryByPrincipalRaceIDs">summaryByPrincipalRaceIDs.</param>
+        /// <param name="summaryByPrincipalRaceIDs">Principal race summaries.</param>
         /// <param name="summaryBySeason">summaryBySeason.</param>
-        /// <param name="summaryByTracks">summaryByTracks.</param>
-        /// <param name="summaryByTrackTypes">summaryByTrackTypes.</param>
+        /// <param name="summaryByTracks">Track summaries.</param>
+        /// <param name="summaryByTrackTypes">Track type summaries.</param>
         public DriverSummary(Driver driver = default(Driver), Collection<DriverSummaryByPrincipalRaceID> summaryByPrincipalRaceIDs = default(Collection<DriverSummaryByPrincipalRaceID>), DriverSummaryBySeason summaryBySeason = default(DriverSummaryBySeason), Collection<DriverSummaryByTrack> summaryByTracks = default(Collection<DriverSummaryByTrack>), Collection<DriverSummaryByTrackType> summaryByTrackTypes = default(Collection<DriverSummaryByTrackType>))
         {
             this.Driver = driver;
@@ -53,8 +53,9 @@ namespace NASCAR.Data.Client.Model
         public Driver Driver { get; set; }
 
         /// <summary>
-        /// Gets or Sets SummaryByPrincipalRaceIDs
+        /// Principal race summaries
         /// </summary>
+        /// <value>Principal race summaries</value>
         [DataMember(Name="Summary_ByPrincipalRaceIDs", EmitDefaultValue=false)]
         public Collection<DriverSummaryByPrincipalRaceID> SummaryByPrincipalRaceIDs { get; set; }
 
@@ -65,14 +66,16 @@ namespace NASCAR.Data.Client.Model
         public DriverSummaryBySeason SummaryBySeason { get; set; }
 
         /// <summary>
-        /// Gets or Sets SummaryByTracks
+        /// Track summaries
         /// </summary>
+        /// <value>Track summaries</value>
         [DataMember(Name="Summary_ByTracks", EmitDefaultValue=false)]
         public Collection<DriverSummaryByTrack> SummaryByTracks { get; set; }
 
         /// <summary>
-        /// Gets or Sets SummaryByTrackTypes
+        /// Track type summaries
         /// </summary>
+        /// <value>Track type summaries</value>
         [DataMember(Name="Summary_ByTrackTypes", EmitDefaultValue=false)]
         public Collection<DriverSummaryByTrackType> SummaryByTrackTypes { get; set; }
 

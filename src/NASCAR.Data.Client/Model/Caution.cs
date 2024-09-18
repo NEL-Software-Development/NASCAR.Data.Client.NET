@@ -32,12 +32,12 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Caution" /> class.
         /// </summary>
-        /// <param name="lapStart">lapStart.</param>
-        /// <param name="lapEnd">lapEnd.</param>
-        /// <param name="beneficiary">beneficiary.</param>
-        /// <param name="comment">comment.</param>
-        /// <param name="reason">reason.</param>
-        /// <param name="flagTime">flagTime.</param>
+        /// <param name="lapStart">The first lap of the caution.</param>
+        /// <param name="lapEnd">The last lap of the caution.</param>
+        /// <param name="beneficiary">The lap down vehicle put back on the lead lap.</param>
+        /// <param name="comment">Comments about the caution.</param>
+        /// <param name="reason">The reason the caution was thrown.</param>
+        /// <param name="flagTime">The time the caution was thrown.</param>
         public Caution(int? lapStart = default(int?), int? lapEnd = default(int?), string beneficiary = default(string), string comment = default(string), string reason = default(string), DateTimeOffset? flagTime = default(DateTimeOffset?))
         {
             this.LapStart = lapStart;
@@ -49,38 +49,44 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets LapStart
+        /// The first lap of the caution
         /// </summary>
+        /// <value>The first lap of the caution</value>
         [DataMember(Name="lap_start", EmitDefaultValue=false)]
         public int? LapStart { get; set; }
 
         /// <summary>
-        /// Gets or Sets LapEnd
+        /// The last lap of the caution
         /// </summary>
+        /// <value>The last lap of the caution</value>
         [DataMember(Name="lap_end", EmitDefaultValue=false)]
         public int? LapEnd { get; set; }
 
         /// <summary>
-        /// Gets or Sets Beneficiary
+        /// The lap down vehicle put back on the lead lap
         /// </summary>
+        /// <value>The lap down vehicle put back on the lead lap</value>
         [DataMember(Name="beneficiary", EmitDefaultValue=false)]
         public string Beneficiary { get; set; }
 
         /// <summary>
-        /// Gets or Sets Comment
+        /// Comments about the caution
         /// </summary>
+        /// <value>Comments about the caution</value>
         [DataMember(Name="comment", EmitDefaultValue=false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// Gets or Sets Reason
+        /// The reason the caution was thrown
         /// </summary>
+        /// <value>The reason the caution was thrown</value>
         [DataMember(Name="reason", EmitDefaultValue=false)]
         public string Reason { get; set; }
 
         /// <summary>
-        /// Gets or Sets FlagTime
+        /// The time the caution was thrown
         /// </summary>
+        /// <value>The time the caution was thrown</value>
         [DataMember(Name="flag_time", EmitDefaultValue=false)]
         public DateTimeOffset? FlagTime { get; set; }
 

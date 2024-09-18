@@ -32,39 +32,39 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LoopStat" /> class.
         /// </summary>
-        /// <param name="startingPosition">startingPosition.</param>
-        /// <param name="midRacePosition">midRacePosition.</param>
-        /// <param name="closingLapsPosition">closingLapsPosition.</param>
-        /// <param name="closingLapsDiff">closingLapsDiff.</param>
-        /// <param name="finishingPosition">finishingPosition.</param>
-        /// <param name="bestPosition">bestPosition.</param>
-        /// <param name="worstPosition">worstPosition.</param>
-        /// <param name="passingDifferential">passingDifferential.</param>
-        /// <param name="greenFlagPasses">greenFlagPasses.</param>
-        /// <param name="greenFlagTimesPassed">greenFlagTimesPassed.</param>
-        /// <param name="qualityPasses">qualityPasses.</param>
-        /// <param name="averageRunningPosition">averageRunningPosition.</param>
-        /// <param name="percentageQualityPasses">percentageQualityPasses.</param>
-        /// <param name="fastestLap">fastestLap.</param>
-        /// <param name="percentageFastestLaps">percentageFastestLaps.</param>
-        /// <param name="lapsInTop15">lapsInTop15.</param>
-        /// <param name="percentageLapsInTop15">percentageLapsInTop15.</param>
-        /// <param name="lapsLed">lapsLed.</param>
-        /// <param name="percentageLapsLed">percentageLapsLed.</param>
-        /// <param name="lapsCompleted">lapsCompleted.</param>
-        /// <param name="fastestOnRestarts">fastestOnRestarts.</param>
-        /// <param name="averageSpeedEarlyRun">averageSpeedEarlyRun.</param>
-        /// <param name="averageSpeedLateRun">averageSpeedLateRun.</param>
-        /// <param name="averageGreenFlagSpeed">averageGreenFlagSpeed.</param>
-        /// <param name="averageSpeedInTraffic">averageSpeedInTraffic.</param>
-        /// <param name="driverRating">driverRating.</param>
-        /// <param name="racesegment1MPHDifference">racesegment1MPHDifference.</param>
-        /// <param name="racesegment2MPHDifference">racesegment2MPHDifference.</param>
-        /// <param name="racesegment3MPHDifference">racesegment3MPHDifference.</param>
-        /// <param name="racesegment4MPHDifference">racesegment4MPHDifference.</param>
-        /// <param name="totalMPHDifference">totalMPHDifference.</param>
-        /// <param name="tookLead">tookLead.</param>
-        /// <param name="vehicleNumber">vehicleNumber.</param>
+        /// <param name="startingPosition">Starting position.</param>
+        /// <param name="midRacePosition">Mid race position.</param>
+        /// <param name="closingLapsPosition">Closing laps positions.</param>
+        /// <param name="closingLapsDiff">Closing laps differential.</param>
+        /// <param name="finishingPosition">Finishing position.</param>
+        /// <param name="bestPosition">Best position.</param>
+        /// <param name="worstPosition">Worst position.</param>
+        /// <param name="passingDifferential">Passing differential.</param>
+        /// <param name="greenFlagPasses">Green flag passes.</param>
+        /// <param name="greenFlagTimesPassed">Green flag paused.</param>
+        /// <param name="qualityPasses">Quality passes.</param>
+        /// <param name="averageRunningPosition">Average running position.</param>
+        /// <param name="percentageQualityPasses">Percentage quality passes.</param>
+        /// <param name="fastestLap">Fastest lap.</param>
+        /// <param name="percentageFastestLaps">Percentage fastest laps.</param>
+        /// <param name="lapsInTop15">Laps in Top15.</param>
+        /// <param name="percentageLapsInTop15">Percentage laps in Top15.</param>
+        /// <param name="lapsLed">Laps led.</param>
+        /// <param name="percentageLapsLed">Percentage laps led.</param>
+        /// <param name="lapsCompleted">Laps completed.</param>
+        /// <param name="fastestOnRestarts">Fastest on restarts.</param>
+        /// <param name="averageSpeedEarlyRun">Average speed early run.</param>
+        /// <param name="averageSpeedLateRun">Average speed late run.</param>
+        /// <param name="averageGreenFlagSpeed">Average green flag speed.</param>
+        /// <param name="averageSpeedInTraffic">Average speed in traffic.</param>
+        /// <param name="driverRating">Driver rating.</param>
+        /// <param name="racesegment1MPHDifference">Race segment 1 MPH difference.</param>
+        /// <param name="racesegment2MPHDifference">Race segment 2 MPH difference.</param>
+        /// <param name="racesegment3MPHDifference">Race segment 3 MPH difference.</param>
+        /// <param name="racesegment4MPHDifference">Race segment 4 MPH difference.</param>
+        /// <param name="totalMPHDifference">Total MPH difference.</param>
+        /// <param name="tookLead">Took lead.</param>
+        /// <param name="vehicleNumber">Vehicle number.</param>
         public LoopStat(int? startingPosition = default(int?), int? midRacePosition = default(int?), int? closingLapsPosition = default(int?), int? closingLapsDiff = default(int?), int? finishingPosition = default(int?), int? bestPosition = default(int?), int? worstPosition = default(int?), int? passingDifferential = default(int?), int? greenFlagPasses = default(int?), int? greenFlagTimesPassed = default(int?), int? qualityPasses = default(int?), double? averageRunningPosition = default(double?), double? percentageQualityPasses = default(double?), int? fastestLap = default(int?), double? percentageFastestLaps = default(double?), int? lapsInTop15 = default(int?), double? percentageLapsInTop15 = default(double?), int? lapsLed = default(int?), double? percentageLapsLed = default(double?), int? lapsCompleted = default(int?), double? fastestOnRestarts = default(double?), double? averageSpeedEarlyRun = default(double?), double? averageSpeedLateRun = default(double?), double? averageGreenFlagSpeed = default(double?), double? averageSpeedInTraffic = default(double?), double? driverRating = default(double?), double? racesegment1MPHDifference = default(double?), double? racesegment2MPHDifference = default(double?), double? racesegment3MPHDifference = default(double?), double? racesegment4MPHDifference = default(double?), double? totalMPHDifference = default(double?), double? tookLead = default(double?), string vehicleNumber = default(string))
         {
             this.StartingPosition = startingPosition;
@@ -103,200 +103,233 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets StartingPosition
+        /// Starting position
         /// </summary>
+        /// <value>Starting position</value>
         [DataMember(Name="starting_position", EmitDefaultValue=false)]
         public int? StartingPosition { get; set; }
 
         /// <summary>
-        /// Gets or Sets MidRacePosition
+        /// Mid race position
         /// </summary>
+        /// <value>Mid race position</value>
         [DataMember(Name="mid_race_position", EmitDefaultValue=false)]
         public int? MidRacePosition { get; set; }
 
         /// <summary>
-        /// Gets or Sets ClosingLapsPosition
+        /// Closing laps positions
         /// </summary>
+        /// <value>Closing laps positions</value>
         [DataMember(Name="closing_laps_position", EmitDefaultValue=false)]
         public int? ClosingLapsPosition { get; set; }
 
         /// <summary>
-        /// Gets or Sets ClosingLapsDiff
+        /// Closing laps differential
         /// </summary>
+        /// <value>Closing laps differential</value>
         [DataMember(Name="closing_laps_diff", EmitDefaultValue=false)]
         public int? ClosingLapsDiff { get; set; }
 
         /// <summary>
-        /// Gets or Sets FinishingPosition
+        /// Finishing position
         /// </summary>
+        /// <value>Finishing position</value>
         [DataMember(Name="finishing_position", EmitDefaultValue=false)]
         public int? FinishingPosition { get; set; }
 
         /// <summary>
-        /// Gets or Sets BestPosition
+        /// Best position
         /// </summary>
+        /// <value>Best position</value>
         [DataMember(Name="best_position", EmitDefaultValue=false)]
         public int? BestPosition { get; set; }
 
         /// <summary>
-        /// Gets or Sets WorstPosition
+        /// Worst position
         /// </summary>
+        /// <value>Worst position</value>
         [DataMember(Name="worst_position", EmitDefaultValue=false)]
         public int? WorstPosition { get; set; }
 
         /// <summary>
-        /// Gets or Sets PassingDifferential
+        /// Passing differential
         /// </summary>
+        /// <value>Passing differential</value>
         [DataMember(Name="passing_differential", EmitDefaultValue=false)]
         public int? PassingDifferential { get; set; }
 
         /// <summary>
-        /// Gets or Sets GreenFlagPasses
+        /// Green flag passes
         /// </summary>
+        /// <value>Green flag passes</value>
         [DataMember(Name="green_flag_passes", EmitDefaultValue=false)]
         public int? GreenFlagPasses { get; set; }
 
         /// <summary>
-        /// Gets or Sets GreenFlagTimesPassed
+        /// Green flag paused
         /// </summary>
+        /// <value>Green flag paused</value>
         [DataMember(Name="green_flag_times_passed", EmitDefaultValue=false)]
         public int? GreenFlagTimesPassed { get; set; }
 
         /// <summary>
-        /// Gets or Sets QualityPasses
+        /// Quality passes
         /// </summary>
+        /// <value>Quality passes</value>
         [DataMember(Name="quality_passes", EmitDefaultValue=false)]
         public int? QualityPasses { get; set; }
 
         /// <summary>
-        /// Gets or Sets AverageRunningPosition
+        /// Average running position
         /// </summary>
+        /// <value>Average running position</value>
         [DataMember(Name="average_running_position", EmitDefaultValue=false)]
         public double? AverageRunningPosition { get; set; }
 
         /// <summary>
-        /// Gets or Sets PercentageQualityPasses
+        /// Percentage quality passes
         /// </summary>
+        /// <value>Percentage quality passes</value>
         [DataMember(Name="percentage_quality_passes", EmitDefaultValue=false)]
         public double? PercentageQualityPasses { get; set; }
 
         /// <summary>
-        /// Gets or Sets FastestLap
+        /// Fastest lap
         /// </summary>
+        /// <value>Fastest lap</value>
         [DataMember(Name="fastest_lap", EmitDefaultValue=false)]
         public int? FastestLap { get; set; }
 
         /// <summary>
-        /// Gets or Sets PercentageFastestLaps
+        /// Percentage fastest laps
         /// </summary>
+        /// <value>Percentage fastest laps</value>
         [DataMember(Name="percentage_fastest_laps", EmitDefaultValue=false)]
         public double? PercentageFastestLaps { get; set; }
 
         /// <summary>
-        /// Gets or Sets LapsInTop15
+        /// Laps in Top15
         /// </summary>
+        /// <value>Laps in Top15</value>
         [DataMember(Name="laps_in_top15", EmitDefaultValue=false)]
         public int? LapsInTop15 { get; set; }
 
         /// <summary>
-        /// Gets or Sets PercentageLapsInTop15
+        /// Percentage laps in Top15
         /// </summary>
+        /// <value>Percentage laps in Top15</value>
         [DataMember(Name="percentage_laps_in_top15", EmitDefaultValue=false)]
         public double? PercentageLapsInTop15 { get; set; }
 
         /// <summary>
-        /// Gets or Sets LapsLed
+        /// Laps led
         /// </summary>
+        /// <value>Laps led</value>
         [DataMember(Name="laps_led", EmitDefaultValue=false)]
         public int? LapsLed { get; set; }
 
         /// <summary>
-        /// Gets or Sets PercentageLapsLed
+        /// Percentage laps led
         /// </summary>
+        /// <value>Percentage laps led</value>
         [DataMember(Name="percentage_laps_led", EmitDefaultValue=false)]
         public double? PercentageLapsLed { get; set; }
 
         /// <summary>
-        /// Gets or Sets LapsCompleted
+        /// Laps completed
         /// </summary>
+        /// <value>Laps completed</value>
         [DataMember(Name="laps_completed", EmitDefaultValue=false)]
         public int? LapsCompleted { get; set; }
 
         /// <summary>
-        /// Gets or Sets FastestOnRestarts
+        /// Fastest on restarts
         /// </summary>
+        /// <value>Fastest on restarts</value>
         [DataMember(Name="fastest_on_restarts", EmitDefaultValue=false)]
         public double? FastestOnRestarts { get; set; }
 
         /// <summary>
-        /// Gets or Sets AverageSpeedEarlyRun
+        /// Average speed early run
         /// </summary>
+        /// <value>Average speed early run</value>
         [DataMember(Name="average_speed_early_run", EmitDefaultValue=false)]
         public double? AverageSpeedEarlyRun { get; set; }
 
         /// <summary>
-        /// Gets or Sets AverageSpeedLateRun
+        /// Average speed late run
         /// </summary>
+        /// <value>Average speed late run</value>
         [DataMember(Name="average_speed_late_run", EmitDefaultValue=false)]
         public double? AverageSpeedLateRun { get; set; }
 
         /// <summary>
-        /// Gets or Sets AverageGreenFlagSpeed
+        /// Average green flag speed
         /// </summary>
+        /// <value>Average green flag speed</value>
         [DataMember(Name="average_green_flag_speed", EmitDefaultValue=false)]
         public double? AverageGreenFlagSpeed { get; set; }
 
         /// <summary>
-        /// Gets or Sets AverageSpeedInTraffic
+        /// Average speed in traffic
         /// </summary>
+        /// <value>Average speed in traffic</value>
         [DataMember(Name="average_speed_in_traffic", EmitDefaultValue=false)]
         public double? AverageSpeedInTraffic { get; set; }
 
         /// <summary>
-        /// Gets or Sets DriverRating
+        /// Driver rating
         /// </summary>
+        /// <value>Driver rating</value>
         [DataMember(Name="driver_rating", EmitDefaultValue=false)]
         public double? DriverRating { get; set; }
 
         /// <summary>
-        /// Gets or Sets Racesegment1MPHDifference
+        /// Race segment 1 MPH difference
         /// </summary>
+        /// <value>Race segment 1 MPH difference</value>
         [DataMember(Name="racesegment1_MPH_difference", EmitDefaultValue=false)]
         public double? Racesegment1MPHDifference { get; set; }
 
         /// <summary>
-        /// Gets or Sets Racesegment2MPHDifference
+        /// Race segment 2 MPH difference
         /// </summary>
+        /// <value>Race segment 2 MPH difference</value>
         [DataMember(Name="racesegment2_MPH_difference", EmitDefaultValue=false)]
         public double? Racesegment2MPHDifference { get; set; }
 
         /// <summary>
-        /// Gets or Sets Racesegment3MPHDifference
+        /// Race segment 3 MPH difference
         /// </summary>
+        /// <value>Race segment 3 MPH difference</value>
         [DataMember(Name="racesegment3_MPH_difference", EmitDefaultValue=false)]
         public double? Racesegment3MPHDifference { get; set; }
 
         /// <summary>
-        /// Gets or Sets Racesegment4MPHDifference
+        /// Race segment 4 MPH difference
         /// </summary>
+        /// <value>Race segment 4 MPH difference</value>
         [DataMember(Name="racesegment4_MPH_difference", EmitDefaultValue=false)]
         public double? Racesegment4MPHDifference { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalMPHDifference
+        /// Total MPH difference
         /// </summary>
+        /// <value>Total MPH difference</value>
         [DataMember(Name="total_MPH_difference", EmitDefaultValue=false)]
         public double? TotalMPHDifference { get; set; }
 
         /// <summary>
-        /// Gets or Sets TookLead
+        /// Took lead
         /// </summary>
+        /// <value>Took lead</value>
         [DataMember(Name="took_lead", EmitDefaultValue=false)]
         public double? TookLead { get; set; }
 
         /// <summary>
-        /// Gets or Sets VehicleNumber
+        /// Vehicle number
         /// </summary>
+        /// <value>Vehicle number</value>
         [DataMember(Name="vehicle_number", EmitDefaultValue=false)]
         public string VehicleNumber { get; set; }
 

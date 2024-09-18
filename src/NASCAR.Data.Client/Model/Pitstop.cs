@@ -32,28 +32,28 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Pitstop" /> class.
         /// </summary>
-        /// <param name="lap">lap.</param>
-        /// <param name="leaderLap">leaderLap.</param>
-        /// <param name="vehicleNumber">vehicleNumber.</param>
-        /// <param name="enterFlagstate">enterFlagstate.</param>
-        /// <param name="enterRacetime">enterRacetime.</param>
-        /// <param name="enterTravelduration">enterTravelduration.</param>
-        /// <param name="adjustmentLeft">adjustmentLeft.</param>
-        /// <param name="adjustmentRight">adjustmentRight.</param>
-        /// <param name="bodyRepairs">bodyRepairs.</param>
-        /// <param name="fuelCans">fuelCans.</param>
-        /// <param name="leftfrontTirechanged">leftfrontTirechanged.</param>
-        /// <param name="leftrearTirechanged">leftrearTirechanged.</param>
-        /// <param name="rightfrontTirechanged">rightfrontTirechanged.</param>
-        /// <param name="rightrearTirechanged">rightrearTirechanged.</param>
-        /// <param name="infraction">infraction.</param>
-        /// <param name="video">video.</param>
-        /// <param name="pitboxEnter">pitboxEnter.</param>
-        /// <param name="pitboxExit">pitboxExit.</param>
-        /// <param name="exitFlagstate">exitFlagstate.</param>
-        /// <param name="exitRacetime">exitRacetime.</param>
-        /// <param name="exitTravelduration">exitTravelduration.</param>
-        /// <param name="totalDuration">totalDuration.</param>
+        /// <param name="lap">Lap.</param>
+        /// <param name="leaderLap">Leader lap.</param>
+        /// <param name="vehicleNumber">Vehicle number.</param>
+        /// <param name="enterFlagstate">Enter flag state.</param>
+        /// <param name="enterRacetime">Exit flag state.</param>
+        /// <param name="enterTravelduration">Enter travel duration.</param>
+        /// <param name="adjustmentLeft">Adjustment left.</param>
+        /// <param name="adjustmentRight">Adjustment right.</param>
+        /// <param name="bodyRepairs">Body repairs.</param>
+        /// <param name="fuelCans">Number of fuel cans.</param>
+        /// <param name="leftfrontTirechanged">Left front tire changed.</param>
+        /// <param name="leftrearTirechanged">Left rear tire changed.</param>
+        /// <param name="rightfrontTirechanged">Right front tire changed.</param>
+        /// <param name="rightrearTirechanged">Right rear tire changed.</param>
+        /// <param name="infraction">Infraction.</param>
+        /// <param name="video">Video.</param>
+        /// <param name="pitboxEnter">Pit box enter.</param>
+        /// <param name="pitboxExit">Pit box exit.</param>
+        /// <param name="exitFlagstate">Exit flag state.</param>
+        /// <param name="exitRacetime">Exit race time.</param>
+        /// <param name="exitTravelduration">Exit travel duration.</param>
+        /// <param name="totalDuration">Total duration.</param>
         public Pitstop(int? lap = default(int?), int? leaderLap = default(int?), string vehicleNumber = default(string), int? enterFlagstate = default(int?), double? enterRacetime = default(double?), double? enterTravelduration = default(double?), bool? adjustmentLeft = default(bool?), bool? adjustmentRight = default(bool?), bool? bodyRepairs = default(bool?), int? fuelCans = default(int?), bool? leftfrontTirechanged = default(bool?), bool? leftrearTirechanged = default(bool?), bool? rightfrontTirechanged = default(bool?), bool? rightrearTirechanged = default(bool?), string infraction = default(string), string video = default(string), double? pitboxEnter = default(double?), double? pitboxExit = default(double?), int? exitFlagstate = default(int?), double? exitRacetime = default(double?), double? exitTravelduration = default(double?), double? totalDuration = default(double?))
         {
             this.Lap = lap;
@@ -81,134 +81,156 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets Lap
+        /// Lap
         /// </summary>
+        /// <value>Lap</value>
         [DataMember(Name="lap", EmitDefaultValue=false)]
         public int? Lap { get; set; }
 
         /// <summary>
-        /// Gets or Sets LeaderLap
+        /// Leader lap
         /// </summary>
+        /// <value>Leader lap</value>
         [DataMember(Name="leader_lap", EmitDefaultValue=false)]
         public int? LeaderLap { get; set; }
 
         /// <summary>
-        /// Gets or Sets VehicleNumber
+        /// Vehicle number
         /// </summary>
+        /// <value>Vehicle number</value>
         [DataMember(Name="vehicle_number", EmitDefaultValue=false)]
         public string VehicleNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets EnterFlagstate
+        /// Enter flag state
         /// </summary>
+        /// <value>Enter flag state</value>
         [DataMember(Name="enter_flagstate", EmitDefaultValue=false)]
         public int? EnterFlagstate { get; set; }
 
         /// <summary>
-        /// Gets or Sets EnterRacetime
+        /// Exit flag state
         /// </summary>
+        /// <value>Exit flag state</value>
         [DataMember(Name="enter_racetime", EmitDefaultValue=false)]
         public double? EnterRacetime { get; set; }
 
         /// <summary>
-        /// Gets or Sets EnterTravelduration
+        /// Enter travel duration
         /// </summary>
+        /// <value>Enter travel duration</value>
         [DataMember(Name="enter_travelduration", EmitDefaultValue=false)]
         public double? EnterTravelduration { get; set; }
 
         /// <summary>
-        /// Gets or Sets AdjustmentLeft
+        /// Adjustment left
         /// </summary>
+        /// <value>Adjustment left</value>
         [DataMember(Name="adjustment_left", EmitDefaultValue=false)]
         public bool? AdjustmentLeft { get; set; }
 
         /// <summary>
-        /// Gets or Sets AdjustmentRight
+        /// Adjustment right
         /// </summary>
+        /// <value>Adjustment right</value>
         [DataMember(Name="adjustment_right", EmitDefaultValue=false)]
         public bool? AdjustmentRight { get; set; }
 
         /// <summary>
-        /// Gets or Sets BodyRepairs
+        /// Body repairs
         /// </summary>
+        /// <value>Body repairs</value>
         [DataMember(Name="body_repairs", EmitDefaultValue=false)]
         public bool? BodyRepairs { get; set; }
 
         /// <summary>
-        /// Gets or Sets FuelCans
+        /// Number of fuel cans
         /// </summary>
+        /// <value>Number of fuel cans</value>
         [DataMember(Name="fuel_cans", EmitDefaultValue=false)]
         public int? FuelCans { get; set; }
 
         /// <summary>
-        /// Gets or Sets LeftfrontTirechanged
+        /// Left front tire changed
         /// </summary>
+        /// <value>Left front tire changed</value>
         [DataMember(Name="leftfront_tirechanged", EmitDefaultValue=false)]
         public bool? LeftfrontTirechanged { get; set; }
 
         /// <summary>
-        /// Gets or Sets LeftrearTirechanged
+        /// Left rear tire changed
         /// </summary>
+        /// <value>Left rear tire changed</value>
         [DataMember(Name="Leftrear_tirechanged", EmitDefaultValue=false)]
         public bool? LeftrearTirechanged { get; set; }
 
         /// <summary>
-        /// Gets or Sets RightfrontTirechanged
+        /// Right front tire changed
         /// </summary>
+        /// <value>Right front tire changed</value>
         [DataMember(Name="rightfront_tirechanged", EmitDefaultValue=false)]
         public bool? RightfrontTirechanged { get; set; }
 
         /// <summary>
-        /// Gets or Sets RightrearTirechanged
+        /// Right rear tire changed
         /// </summary>
+        /// <value>Right rear tire changed</value>
         [DataMember(Name="rightrear_tirechanged", EmitDefaultValue=false)]
         public bool? RightrearTirechanged { get; set; }
 
         /// <summary>
-        /// Gets or Sets Infraction
+        /// Infraction
         /// </summary>
+        /// <value>Infraction</value>
         [DataMember(Name="infraction", EmitDefaultValue=false)]
         public string Infraction { get; set; }
 
         /// <summary>
-        /// Gets or Sets Video
+        /// Video
         /// </summary>
+        /// <value>Video</value>
         [DataMember(Name="video", EmitDefaultValue=false)]
         public string Video { get; set; }
 
         /// <summary>
-        /// Gets or Sets PitboxEnter
+        /// Pit box enter
         /// </summary>
+        /// <value>Pit box enter</value>
         [DataMember(Name="pitbox_enter", EmitDefaultValue=false)]
         public double? PitboxEnter { get; set; }
 
         /// <summary>
-        /// Gets or Sets PitboxExit
+        /// Pit box exit
         /// </summary>
+        /// <value>Pit box exit</value>
         [DataMember(Name="pitbox_exit", EmitDefaultValue=false)]
         public double? PitboxExit { get; set; }
 
         /// <summary>
-        /// Gets or Sets ExitFlagstate
+        /// Exit flag state
         /// </summary>
+        /// <value>Exit flag state</value>
         [DataMember(Name="exit_flagstate", EmitDefaultValue=false)]
         public int? ExitFlagstate { get; set; }
 
         /// <summary>
-        /// Gets or Sets ExitRacetime
+        /// Exit race time
         /// </summary>
+        /// <value>Exit race time</value>
         [DataMember(Name="exit_racetime", EmitDefaultValue=false)]
         public double? ExitRacetime { get; set; }
 
         /// <summary>
-        /// Gets or Sets ExitTravelduration
+        /// Exit travel duration
         /// </summary>
+        /// <value>Exit travel duration</value>
         [DataMember(Name="exit_travelduration", EmitDefaultValue=false)]
         public double? ExitTravelduration { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalDuration
+        /// Total duration
         /// </summary>
+        /// <value>Total duration</value>
         [DataMember(Name="total_duration", EmitDefaultValue=false)]
         public double? TotalDuration { get; set; }
 

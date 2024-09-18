@@ -34,7 +34,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="raceId"> (optional, default to 0)</param>
         /// <returns>Collection&lt;DriverPoint&gt;</returns>
-        Collection<DriverPoint> DriverPoints (int? season = null, int? seriesId = null, int? raceId = null);
+        Collection<DriverPoint> PointsDriverPointsGet (int? season = null, int? seriesId = null, int? raceId = null);
 
         /// <summary>
         /// 
@@ -47,7 +47,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="raceId"> (optional, default to 0)</param>
         /// <returns>ApiResponse of Collection&lt;DriverPoint&gt;</returns>
-        ApiResponse<Collection<DriverPoint>> DriverPointsWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null);
+        ApiResponse<Collection<DriverPoint>> PointsDriverPointsGetWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -59,7 +59,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="raceId"> (optional, default to 0)</param>
         /// <returns>Collection&lt;ManufacturerPoint&gt;</returns>
-        Collection<ManufacturerPoint> ManufacturerPoints (int? season = null, int? seriesId = null, int? raceId = null);
+        Collection<ManufacturerPoint> PointsManufacturerPointsGet (int? season = null, int? seriesId = null, int? raceId = null);
 
         /// <summary>
         /// 
@@ -72,7 +72,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="raceId"> (optional, default to 0)</param>
         /// <returns>ApiResponse of Collection&lt;ManufacturerPoint&gt;</returns>
-        ApiResponse<Collection<ManufacturerPoint>> ManufacturerPointsWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null);
+        ApiResponse<Collection<ManufacturerPoint>> PointsManufacturerPointsGetWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -84,7 +84,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="raceId"> (optional, default to 0)</param>
         /// <returns>Collection&lt;OwnerPoint&gt;</returns>
-        Collection<OwnerPoint> OwnerPoints (int? season = null, int? seriesId = null, int? raceId = null);
+        Collection<OwnerPoint> PointsOwnerPointsGet (int? season = null, int? seriesId = null, int? raceId = null);
 
         /// <summary>
         /// 
@@ -97,7 +97,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="raceId"> (optional, default to 0)</param>
         /// <returns>ApiResponse of Collection&lt;OwnerPoint&gt;</returns>
-        ApiResponse<Collection<OwnerPoint>> OwnerPointsWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null);
+        ApiResponse<Collection<OwnerPoint>> PointsOwnerPointsGetWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -111,7 +111,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="raceId"> (optional, default to 0)</param>
         /// <returns>Task of Collection&lt;DriverPoint&gt;</returns>
-        System.Threading.Tasks.Task<Collection<DriverPoint>> DriverPointsAsync (int? season = null, int? seriesId = null, int? raceId = null);
+        System.Threading.Tasks.Task<Collection<DriverPoint>> PointsDriverPointsGetAsync (int? season = null, int? seriesId = null, int? raceId = null);
 
         /// <summary>
         /// 
@@ -124,7 +124,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="raceId"> (optional, default to 0)</param>
         /// <returns>Task of ApiResponse (Collection&lt;DriverPoint&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Collection<DriverPoint>>> DriverPointsAsyncWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null);
+        System.Threading.Tasks.Task<ApiResponse<Collection<DriverPoint>>> PointsDriverPointsGetAsyncWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -136,7 +136,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="raceId"> (optional, default to 0)</param>
         /// <returns>Task of Collection&lt;ManufacturerPoint&gt;</returns>
-        System.Threading.Tasks.Task<Collection<ManufacturerPoint>> ManufacturerPointsAsync (int? season = null, int? seriesId = null, int? raceId = null);
+        System.Threading.Tasks.Task<Collection<ManufacturerPoint>> PointsManufacturerPointsGetAsync (int? season = null, int? seriesId = null, int? raceId = null);
 
         /// <summary>
         /// 
@@ -149,7 +149,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="raceId"> (optional, default to 0)</param>
         /// <returns>Task of ApiResponse (Collection&lt;ManufacturerPoint&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Collection<ManufacturerPoint>>> ManufacturerPointsAsyncWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null);
+        System.Threading.Tasks.Task<ApiResponse<Collection<ManufacturerPoint>>> PointsManufacturerPointsGetAsyncWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -161,7 +161,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="raceId"> (optional, default to 0)</param>
         /// <returns>Task of Collection&lt;OwnerPoint&gt;</returns>
-        System.Threading.Tasks.Task<Collection<OwnerPoint>> OwnerPointsAsync (int? season = null, int? seriesId = null, int? raceId = null);
+        System.Threading.Tasks.Task<Collection<OwnerPoint>> PointsOwnerPointsGetAsync (int? season = null, int? seriesId = null, int? raceId = null);
 
         /// <summary>
         /// 
@@ -174,7 +174,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="raceId"> (optional, default to 0)</param>
         /// <returns>Task of ApiResponse (Collection&lt;OwnerPoint&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Collection<OwnerPoint>>> OwnerPointsAsyncWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null);
+        System.Threading.Tasks.Task<ApiResponse<Collection<OwnerPoint>>> PointsOwnerPointsGetAsyncWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null);
         #endregion Asynchronous Operations
     }
 
@@ -294,9 +294,9 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="raceId"> (optional, default to 0)</param>
         /// <returns>Collection&lt;DriverPoint&gt;</returns>
-        public Collection<DriverPoint> DriverPoints (int? season = null, int? seriesId = null, int? raceId = null)
+        public Collection<DriverPoint> PointsDriverPointsGet (int? season = null, int? seriesId = null, int? raceId = null)
         {
-             ApiResponse<Collection<DriverPoint>> localVarResponse = DriverPointsWithHttpInfo(season, seriesId, raceId);
+             ApiResponse<Collection<DriverPoint>> localVarResponse = PointsDriverPointsGetWithHttpInfo(season, seriesId, raceId);
              return localVarResponse.Data;
         }
 
@@ -308,7 +308,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="raceId"> (optional, default to 0)</param>
         /// <returns>ApiResponse of Collection&lt;DriverPoint&gt;</returns>
-        public ApiResponse< Collection<DriverPoint> > DriverPointsWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null)
+        public ApiResponse< Collection<DriverPoint> > PointsDriverPointsGetWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null)
         {
 
             var localVarPath = "/points/driver-points";
@@ -353,7 +353,7 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DriverPoints", localVarResponse);
+                Exception exception = ExceptionFactory("PointsDriverPointsGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -370,9 +370,9 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="raceId"> (optional, default to 0)</param>
         /// <returns>Task of Collection&lt;DriverPoint&gt;</returns>
-        public async System.Threading.Tasks.Task<Collection<DriverPoint>> DriverPointsAsync (int? season = null, int? seriesId = null, int? raceId = null)
+        public async System.Threading.Tasks.Task<Collection<DriverPoint>> PointsDriverPointsGetAsync (int? season = null, int? seriesId = null, int? raceId = null)
         {
-             ApiResponse<Collection<DriverPoint>> localVarResponse = await DriverPointsAsyncWithHttpInfo(season, seriesId, raceId);
+             ApiResponse<Collection<DriverPoint>> localVarResponse = await PointsDriverPointsGetAsyncWithHttpInfo(season, seriesId, raceId);
              return localVarResponse.Data;
 
         }
@@ -385,7 +385,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="raceId"> (optional, default to 0)</param>
         /// <returns>Task of ApiResponse (Collection&lt;DriverPoint&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Collection<DriverPoint>>> DriverPointsAsyncWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Collection<DriverPoint>>> PointsDriverPointsGetAsyncWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null)
         {
 
             var localVarPath = "/points/driver-points";
@@ -430,7 +430,7 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DriverPoints", localVarResponse);
+                Exception exception = ExceptionFactory("PointsDriverPointsGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -447,9 +447,9 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="raceId"> (optional, default to 0)</param>
         /// <returns>Collection&lt;ManufacturerPoint&gt;</returns>
-        public Collection<ManufacturerPoint> ManufacturerPoints (int? season = null, int? seriesId = null, int? raceId = null)
+        public Collection<ManufacturerPoint> PointsManufacturerPointsGet (int? season = null, int? seriesId = null, int? raceId = null)
         {
-             ApiResponse<Collection<ManufacturerPoint>> localVarResponse = ManufacturerPointsWithHttpInfo(season, seriesId, raceId);
+             ApiResponse<Collection<ManufacturerPoint>> localVarResponse = PointsManufacturerPointsGetWithHttpInfo(season, seriesId, raceId);
              return localVarResponse.Data;
         }
 
@@ -461,7 +461,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="raceId"> (optional, default to 0)</param>
         /// <returns>ApiResponse of Collection&lt;ManufacturerPoint&gt;</returns>
-        public ApiResponse< Collection<ManufacturerPoint> > ManufacturerPointsWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null)
+        public ApiResponse< Collection<ManufacturerPoint> > PointsManufacturerPointsGetWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null)
         {
 
             var localVarPath = "/points/manufacturer-points";
@@ -506,7 +506,7 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ManufacturerPoints", localVarResponse);
+                Exception exception = ExceptionFactory("PointsManufacturerPointsGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -523,9 +523,9 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="raceId"> (optional, default to 0)</param>
         /// <returns>Task of Collection&lt;ManufacturerPoint&gt;</returns>
-        public async System.Threading.Tasks.Task<Collection<ManufacturerPoint>> ManufacturerPointsAsync (int? season = null, int? seriesId = null, int? raceId = null)
+        public async System.Threading.Tasks.Task<Collection<ManufacturerPoint>> PointsManufacturerPointsGetAsync (int? season = null, int? seriesId = null, int? raceId = null)
         {
-             ApiResponse<Collection<ManufacturerPoint>> localVarResponse = await ManufacturerPointsAsyncWithHttpInfo(season, seriesId, raceId);
+             ApiResponse<Collection<ManufacturerPoint>> localVarResponse = await PointsManufacturerPointsGetAsyncWithHttpInfo(season, seriesId, raceId);
              return localVarResponse.Data;
 
         }
@@ -538,7 +538,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="raceId"> (optional, default to 0)</param>
         /// <returns>Task of ApiResponse (Collection&lt;ManufacturerPoint&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Collection<ManufacturerPoint>>> ManufacturerPointsAsyncWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Collection<ManufacturerPoint>>> PointsManufacturerPointsGetAsyncWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null)
         {
 
             var localVarPath = "/points/manufacturer-points";
@@ -583,7 +583,7 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ManufacturerPoints", localVarResponse);
+                Exception exception = ExceptionFactory("PointsManufacturerPointsGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -600,9 +600,9 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="raceId"> (optional, default to 0)</param>
         /// <returns>Collection&lt;OwnerPoint&gt;</returns>
-        public Collection<OwnerPoint> OwnerPoints (int? season = null, int? seriesId = null, int? raceId = null)
+        public Collection<OwnerPoint> PointsOwnerPointsGet (int? season = null, int? seriesId = null, int? raceId = null)
         {
-             ApiResponse<Collection<OwnerPoint>> localVarResponse = OwnerPointsWithHttpInfo(season, seriesId, raceId);
+             ApiResponse<Collection<OwnerPoint>> localVarResponse = PointsOwnerPointsGetWithHttpInfo(season, seriesId, raceId);
              return localVarResponse.Data;
         }
 
@@ -614,7 +614,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="raceId"> (optional, default to 0)</param>
         /// <returns>ApiResponse of Collection&lt;OwnerPoint&gt;</returns>
-        public ApiResponse< Collection<OwnerPoint> > OwnerPointsWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null)
+        public ApiResponse< Collection<OwnerPoint> > PointsOwnerPointsGetWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null)
         {
 
             var localVarPath = "/points/owner-points";
@@ -659,7 +659,7 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("OwnerPoints", localVarResponse);
+                Exception exception = ExceptionFactory("PointsOwnerPointsGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -676,9 +676,9 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="raceId"> (optional, default to 0)</param>
         /// <returns>Task of Collection&lt;OwnerPoint&gt;</returns>
-        public async System.Threading.Tasks.Task<Collection<OwnerPoint>> OwnerPointsAsync (int? season = null, int? seriesId = null, int? raceId = null)
+        public async System.Threading.Tasks.Task<Collection<OwnerPoint>> PointsOwnerPointsGetAsync (int? season = null, int? seriesId = null, int? raceId = null)
         {
-             ApiResponse<Collection<OwnerPoint>> localVarResponse = await OwnerPointsAsyncWithHttpInfo(season, seriesId, raceId);
+             ApiResponse<Collection<OwnerPoint>> localVarResponse = await PointsOwnerPointsGetAsyncWithHttpInfo(season, seriesId, raceId);
              return localVarResponse.Data;
 
         }
@@ -691,7 +691,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="raceId"> (optional, default to 0)</param>
         /// <returns>Task of ApiResponse (Collection&lt;OwnerPoint&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Collection<OwnerPoint>>> OwnerPointsAsyncWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Collection<OwnerPoint>>> PointsOwnerPointsGetAsyncWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null)
         {
 
             var localVarPath = "/points/owner-points";
@@ -736,7 +736,7 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("OwnerPoints", localVarResponse);
+                Exception exception = ExceptionFactory("PointsOwnerPointsGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 

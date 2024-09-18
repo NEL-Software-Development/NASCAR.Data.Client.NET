@@ -32,8 +32,8 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RaceWeekDetails" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
-        /// <param name="races">races.</param>
+        /// <param name="id">Raceweek Id.</param>
+        /// <param name="races">Raceweek race list.</param>
         public RaceWeekDetails(int? id = default(int?), Collection<RaceDetails> races = default(Collection<RaceDetails>))
         {
             this.Id = id;
@@ -41,14 +41,16 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Raceweek Id
         /// </summary>
+        /// <value>Raceweek Id</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Races
+        /// Raceweek race list
         /// </summary>
+        /// <value>Raceweek race list</value>
         [DataMember(Name="races", EmitDefaultValue=false)]
         public Collection<RaceDetails> Races { get; set; }
 

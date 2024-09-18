@@ -32,17 +32,17 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RaceDetails" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
-        /// <param name="seriesId">seriesId.</param>
-        /// <param name="name">name.</param>
-        /// <param name="promoter">promoter.</param>
-        /// <param name="laps">laps.</param>
-        /// <param name="distance">distance.</param>
-        /// <param name="date">date.</param>
-        /// <param name="comments">comments.</param>
-        /// <param name="entries">entries.</param>
-        /// <param name="runs">runs.</param>
-        /// <param name="schedule">schedule.</param>
+        /// <param name="id">The id of the race.</param>
+        /// <param name="seriesId">The series id of the race.</param>
+        /// <param name="name">The race name.</param>
+        /// <param name="promoter">The promoter of the race.</param>
+        /// <param name="laps">Laps.</param>
+        /// <param name="distance">Race distance.</param>
+        /// <param name="date">Race date.</param>
+        /// <param name="comments">Race Comments.</param>
+        /// <param name="entries">Race entries.</param>
+        /// <param name="runs">Runs.</param>
+        /// <param name="schedule">Weekend Schedule.</param>
         public RaceDetails(int? id = default(int?), int? seriesId = default(int?), string name = default(string), string promoter = default(string), int? laps = default(int?), double? distance = default(double?), DateTimeOffset? date = default(DateTimeOffset?), string comments = default(string), Collection<RunEntry> entries = default(Collection<RunEntry>), Collection<RunDetails> runs = default(Collection<RunDetails>), Collection<WeekendSchedule> schedule = default(Collection<WeekendSchedule>))
         {
             this.Id = id;
@@ -59,110 +59,128 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The id of the race
         /// </summary>
+        /// <value>The id of the race</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets SeriesId
+        /// The series id of the race
         /// </summary>
+        /// <value>The series id of the race</value>
         [DataMember(Name="series_id", EmitDefaultValue=false)]
         public int? SeriesId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// The race name
         /// </summary>
+        /// <value>The race name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Promoter
+        /// The promoter of the race
         /// </summary>
+        /// <value>The promoter of the race</value>
         [DataMember(Name="promoter", EmitDefaultValue=false)]
         public string Promoter { get; set; }
 
         /// <summary>
-        /// Gets or Sets Laps
+        /// Laps
         /// </summary>
+        /// <value>Laps</value>
         [DataMember(Name="laps", EmitDefaultValue=false)]
         public int? Laps { get; set; }
 
         /// <summary>
-        /// Gets or Sets Distance
+        /// Race distance
         /// </summary>
+        /// <value>Race distance</value>
         [DataMember(Name="distance", EmitDefaultValue=false)]
         public double? Distance { get; set; }
 
         /// <summary>
-        /// Gets or Sets PracticeResults
+        /// URL to Practice results
         /// </summary>
+        /// <value>URL to Practice results</value>
         [DataMember(Name="practice_results", EmitDefaultValue=false)]
         public string PracticeResults { get; private set; }
 
         /// <summary>
-        /// Gets or Sets QualifyingResults
+        /// URL to Qualifying results
         /// </summary>
+        /// <value>URL to Qualifying results</value>
         [DataMember(Name="qualifying_results", EmitDefaultValue=false)]
         public string QualifyingResults { get; private set; }
 
         /// <summary>
-        /// Gets or Sets RaceResults
+        /// URL to race results
         /// </summary>
+        /// <value>URL to race results</value>
         [DataMember(Name="race_results", EmitDefaultValue=false)]
         public string RaceResults { get; private set; }
 
         /// <summary>
-        /// Gets or Sets Cautions
+        /// URL to race cautions
         /// </summary>
+        /// <value>URL to race cautions</value>
         [DataMember(Name="cautions", EmitDefaultValue=false)]
         public string Cautions { get; private set; }
 
         /// <summary>
-        /// Gets or Sets Infractions
+        /// URL to race infractions
         /// </summary>
+        /// <value>URL to race infractions</value>
         [DataMember(Name="infractions", EmitDefaultValue=false)]
         public string Infractions { get; private set; }
 
         /// <summary>
-        /// Gets or Sets LapLeaders
+        /// URL to race lap leaders
         /// </summary>
+        /// <value>URL to race lap leaders</value>
         [DataMember(Name="lap_leaders", EmitDefaultValue=false)]
         public string LapLeaders { get; private set; }
 
         /// <summary>
-        /// Gets or Sets Pitstops
+        /// URL to race pitstops
         /// </summary>
+        /// <value>URL to race pitstops</value>
         [DataMember(Name="pitstops", EmitDefaultValue=false)]
         public string Pitstops { get; private set; }
 
         /// <summary>
-        /// Gets or Sets Date
+        /// Race date
         /// </summary>
+        /// <value>Race date</value>
         [DataMember(Name="date", EmitDefaultValue=false)]
         public DateTimeOffset? Date { get; set; }
 
         /// <summary>
-        /// Gets or Sets Comments
+        /// Race Comments
         /// </summary>
+        /// <value>Race Comments</value>
         [DataMember(Name="comments", EmitDefaultValue=false)]
         public string Comments { get; set; }
 
         /// <summary>
-        /// Gets or Sets Entries
+        /// Race entries
         /// </summary>
+        /// <value>Race entries</value>
         [DataMember(Name="entries", EmitDefaultValue=false)]
         public Collection<RunEntry> Entries { get; set; }
 
         /// <summary>
-        /// Gets or Sets Runs
+        /// Runs
         /// </summary>
+        /// <value>Runs</value>
         [DataMember(Name="runs", EmitDefaultValue=false)]
         public Collection<RunDetails> Runs { get; set; }
 
         /// <summary>
-        /// Gets or Sets Schedule
+        /// Weekend Schedule
         /// </summary>
+        /// <value>Weekend Schedule</value>
         [DataMember(Name="schedule", EmitDefaultValue=false)]
         public Collection<WeekendSchedule> Schedule { get; set; }
 

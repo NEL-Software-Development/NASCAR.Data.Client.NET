@@ -32,21 +32,21 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Race" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
-        /// <param name="principalRaceId">principalRaceId.</param>
-        /// <param name="eventId">eventId.</param>
-        /// <param name="seriesId">seriesId.</param>
-        /// <param name="name">name.</param>
-        /// <param name="promoter">promoter.</param>
-        /// <param name="laps">laps.</param>
-        /// <param name="distance">distance.</param>
-        /// <param name="date">date.</param>
-        /// <param name="comments">comments.</param>
-        public Race(int? id = default(int?), int? principalRaceId = default(int?), int? eventId = default(int?), int? seriesId = default(int?), string name = default(string), string promoter = default(string), int? laps = default(int?), double? distance = default(double?), DateTimeOffset? date = default(DateTimeOffset?), string comments = default(string))
+        /// <param name="id">The id of the race.</param>
+        /// <param name="principalRaceId">The principal race id of the race.</param>
+        /// <param name="raceweekId">The race.</param>
+        /// <param name="seriesId">The series id of the race.</param>
+        /// <param name="name">The race name.</param>
+        /// <param name="promoter">The promoter of the race.</param>
+        /// <param name="laps">Laps.</param>
+        /// <param name="distance">Race distance.</param>
+        /// <param name="date">Race date.</param>
+        /// <param name="comments">Race comments.</param>
+        public Race(int? id = default(int?), int? principalRaceId = default(int?), int? raceweekId = default(int?), int? seriesId = default(int?), string name = default(string), string promoter = default(string), int? laps = default(int?), double? distance = default(double?), DateTimeOffset? date = default(DateTimeOffset?), string comments = default(string))
         {
             this.Id = id;
             this.PrincipalRaceId = principalRaceId;
-            this.EventId = eventId;
+            this.RaceweekId = raceweekId;
             this.SeriesId = seriesId;
             this.Name = name;
             this.Promoter = promoter;
@@ -57,104 +57,121 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The id of the race
         /// </summary>
+        /// <value>The id of the race</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets PrincipalRaceId
+        /// The principal race id of the race
         /// </summary>
+        /// <value>The principal race id of the race</value>
         [DataMember(Name="principal_race_id", EmitDefaultValue=false)]
         public int? PrincipalRaceId { get; set; }
 
         /// <summary>
-        /// Gets or Sets EventId
+        /// The race
         /// </summary>
-        [DataMember(Name="event_id", EmitDefaultValue=false)]
-        public int? EventId { get; set; }
+        /// <value>The race</value>
+        [DataMember(Name="raceweek_id", EmitDefaultValue=false)]
+        public int? RaceweekId { get; set; }
 
         /// <summary>
-        /// Gets or Sets SeriesId
+        /// The series id of the race
         /// </summary>
+        /// <value>The series id of the race</value>
         [DataMember(Name="series_id", EmitDefaultValue=false)]
         public int? SeriesId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// The race name
         /// </summary>
+        /// <value>The race name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Promoter
+        /// The promoter of the race
         /// </summary>
+        /// <value>The promoter of the race</value>
         [DataMember(Name="promoter", EmitDefaultValue=false)]
         public string Promoter { get; set; }
 
         /// <summary>
-        /// Gets or Sets Laps
+        /// Laps
         /// </summary>
+        /// <value>Laps</value>
         [DataMember(Name="laps", EmitDefaultValue=false)]
         public int? Laps { get; set; }
 
         /// <summary>
-        /// Gets or Sets Distance
+        /// Race distance
         /// </summary>
+        /// <value>Race distance</value>
         [DataMember(Name="distance", EmitDefaultValue=false)]
         public double? Distance { get; set; }
 
         /// <summary>
-        /// Gets or Sets PracticeResults
+        /// URL to practice results
         /// </summary>
+        /// <value>URL to practice results</value>
         [DataMember(Name="practice_results", EmitDefaultValue=false)]
         public string PracticeResults { get; private set; }
 
         /// <summary>
-        /// Gets or Sets QualifyingResults
+        /// URL to Qualifying results
         /// </summary>
+        /// <value>URL to Qualifying results</value>
         [DataMember(Name="qualifying_results", EmitDefaultValue=false)]
         public string QualifyingResults { get; private set; }
 
         /// <summary>
-        /// Gets or Sets RaceResults
+        /// URL to race results
         /// </summary>
+        /// <value>URL to race results</value>
         [DataMember(Name="race_results", EmitDefaultValue=false)]
         public string RaceResults { get; private set; }
 
         /// <summary>
-        /// Gets or Sets Cautions
+        /// URL to race cautions
         /// </summary>
+        /// <value>URL to race cautions</value>
         [DataMember(Name="cautions", EmitDefaultValue=false)]
         public string Cautions { get; private set; }
 
         /// <summary>
-        /// Gets or Sets Infractions
+        /// URL to race infractions
         /// </summary>
+        /// <value>URL to race infractions</value>
         [DataMember(Name="infractions", EmitDefaultValue=false)]
         public string Infractions { get; private set; }
 
         /// <summary>
-        /// Gets or Sets LapLeaders
+        /// URL to race lap leaders
         /// </summary>
+        /// <value>URL to race lap leaders</value>
         [DataMember(Name="lap_leaders", EmitDefaultValue=false)]
         public string LapLeaders { get; private set; }
 
         /// <summary>
-        /// Gets or Sets Pitstops
+        /// URL to race pitstops
         /// </summary>
+        /// <value>URL to race pitstops</value>
         [DataMember(Name="pitstops", EmitDefaultValue=false)]
         public string Pitstops { get; private set; }
 
         /// <summary>
-        /// Gets or Sets Date
+        /// Race date
         /// </summary>
+        /// <value>Race date</value>
         [DataMember(Name="date", EmitDefaultValue=false)]
         public DateTimeOffset? Date { get; set; }
 
         /// <summary>
-        /// Gets or Sets Comments
+        /// Race comments
         /// </summary>
+        /// <value>Race comments</value>
         [DataMember(Name="comments", EmitDefaultValue=false)]
         public string Comments { get; set; }
 
@@ -168,7 +185,7 @@ namespace NASCAR.Data.Client.Model
             sb.Append("class Race {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  PrincipalRaceId: ").Append(PrincipalRaceId).Append("\n");
-            sb.Append("  EventId: ").Append(EventId).Append("\n");
+            sb.Append("  RaceweekId: ").Append(RaceweekId).Append("\n");
             sb.Append("  SeriesId: ").Append(SeriesId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Promoter: ").Append(Promoter).Append("\n");
@@ -228,9 +245,9 @@ namespace NASCAR.Data.Client.Model
                     this.PrincipalRaceId.Equals(input.PrincipalRaceId))
                 ) && 
                 (
-                    this.EventId == input.EventId ||
-                    (this.EventId != null &&
-                    this.EventId.Equals(input.EventId))
+                    this.RaceweekId == input.RaceweekId ||
+                    (this.RaceweekId != null &&
+                    this.RaceweekId.Equals(input.RaceweekId))
                 ) && 
                 (
                     this.SeriesId == input.SeriesId ||
@@ -317,8 +334,8 @@ namespace NASCAR.Data.Client.Model
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.PrincipalRaceId != null)
                     hashCode = hashCode * 59 + this.PrincipalRaceId.GetHashCode();
-                if (this.EventId != null)
-                    hashCode = hashCode * 59 + this.EventId.GetHashCode();
+                if (this.RaceweekId != null)
+                    hashCode = hashCode * 59 + this.RaceweekId.GetHashCode();
                 if (this.SeriesId != null)
                     hashCode = hashCode * 59 + this.SeriesId.GetHashCode();
                 if (this.Name != null)

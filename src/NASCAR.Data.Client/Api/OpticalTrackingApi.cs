@@ -31,7 +31,7 @@ namespace NASCAR.Data.Client.Api
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Collection&lt;OpticalTrackingUTMOffset&gt;</returns>
-        Collection<OpticalTrackingUTMOffset> UtmOffsets ();
+        Collection<OpticalTrackingUTMOffset> OpticalTrackingUtmOffsetsGet ();
 
         /// <summary>
         /// 
@@ -41,7 +41,7 @@ namespace NASCAR.Data.Client.Api
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Collection&lt;OpticalTrackingUTMOffset&gt;</returns>
-        ApiResponse<Collection<OpticalTrackingUTMOffset>> UtmOffsetsWithHttpInfo ();
+        ApiResponse<Collection<OpticalTrackingUTMOffset>> OpticalTrackingUtmOffsetsGetWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -52,7 +52,7 @@ namespace NASCAR.Data.Client.Api
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Collection&lt;OpticalTrackingUTMOffset&gt;</returns>
-        System.Threading.Tasks.Task<Collection<OpticalTrackingUTMOffset>> UtmOffsetsAsync ();
+        System.Threading.Tasks.Task<Collection<OpticalTrackingUTMOffset>> OpticalTrackingUtmOffsetsGetAsync ();
 
         /// <summary>
         /// 
@@ -62,7 +62,7 @@ namespace NASCAR.Data.Client.Api
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Collection&lt;OpticalTrackingUTMOffset&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Collection<OpticalTrackingUTMOffset>>> UtmOffsetsAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<Collection<OpticalTrackingUTMOffset>>> OpticalTrackingUtmOffsetsGetAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -179,9 +179,9 @@ namespace NASCAR.Data.Client.Api
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Collection&lt;OpticalTrackingUTMOffset&gt;</returns>
-        public Collection<OpticalTrackingUTMOffset> UtmOffsets ()
+        public Collection<OpticalTrackingUTMOffset> OpticalTrackingUtmOffsetsGet ()
         {
-             ApiResponse<Collection<OpticalTrackingUTMOffset>> localVarResponse = UtmOffsetsWithHttpInfo();
+             ApiResponse<Collection<OpticalTrackingUTMOffset>> localVarResponse = OpticalTrackingUtmOffsetsGetWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -190,10 +190,10 @@ namespace NASCAR.Data.Client.Api
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Collection&lt;OpticalTrackingUTMOffset&gt;</returns>
-        public ApiResponse< Collection<OpticalTrackingUTMOffset> > UtmOffsetsWithHttpInfo ()
+        public ApiResponse< Collection<OpticalTrackingUTMOffset> > OpticalTrackingUtmOffsetsGetWithHttpInfo ()
         {
 
-            var localVarPath = "/utm-offsets";
+            var localVarPath = "/optical-tracking/utm-offsets";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -232,7 +232,7 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UtmOffsets", localVarResponse);
+                Exception exception = ExceptionFactory("OpticalTrackingUtmOffsetsGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -246,9 +246,9 @@ namespace NASCAR.Data.Client.Api
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Collection&lt;OpticalTrackingUTMOffset&gt;</returns>
-        public async System.Threading.Tasks.Task<Collection<OpticalTrackingUTMOffset>> UtmOffsetsAsync ()
+        public async System.Threading.Tasks.Task<Collection<OpticalTrackingUTMOffset>> OpticalTrackingUtmOffsetsGetAsync ()
         {
-             ApiResponse<Collection<OpticalTrackingUTMOffset>> localVarResponse = await UtmOffsetsAsyncWithHttpInfo();
+             ApiResponse<Collection<OpticalTrackingUTMOffset>> localVarResponse = await OpticalTrackingUtmOffsetsGetAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -258,10 +258,10 @@ namespace NASCAR.Data.Client.Api
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Collection&lt;OpticalTrackingUTMOffset&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Collection<OpticalTrackingUTMOffset>>> UtmOffsetsAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<Collection<OpticalTrackingUTMOffset>>> OpticalTrackingUtmOffsetsGetAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/utm-offsets";
+            var localVarPath = "/optical-tracking/utm-offsets";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -300,7 +300,7 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UtmOffsets", localVarResponse);
+                Exception exception = ExceptionFactory("OpticalTrackingUtmOffsetsGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 

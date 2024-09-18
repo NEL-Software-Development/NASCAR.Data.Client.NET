@@ -32,14 +32,14 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RunEntry" /> class.
         /// </summary>
-        /// <param name="driverName">driverName.</param>
-        /// <param name="driverDetails">driverDetails.</param>
-        /// <param name="vehicleNumber">vehicleNumber.</param>
-        /// <param name="vehicleDetails">vehicleDetails.</param>
-        /// <param name="ownerName">ownerName.</param>
-        /// <param name="crewChief">crewChief.</param>
-        /// <param name="modelYear">modelYear.</param>
-        /// <param name="model">model.</param>
+        /// <param name="driverName">Driver name.</param>
+        /// <param name="driverDetails">URL to driver details.</param>
+        /// <param name="vehicleNumber">Vehicle number.</param>
+        /// <param name="vehicleDetails">URL to vehicle details.</param>
+        /// <param name="ownerName">Owner name.</param>
+        /// <param name="crewChief">Crew chief name.</param>
+        /// <param name="modelYear">Vehicle model year.</param>
+        /// <param name="model">Vehicle model.</param>
         public RunEntry(string driverName = default(string), string driverDetails = default(string), string vehicleNumber = default(string), string vehicleDetails = default(string), string ownerName = default(string), string crewChief = default(string), int? modelYear = default(int?), string model = default(string))
         {
             this.DriverName = driverName;
@@ -53,50 +53,58 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets DriverName
+        /// Driver name
         /// </summary>
+        /// <value>Driver name</value>
         [DataMember(Name="driver_name", EmitDefaultValue=false)]
         public string DriverName { get; set; }
 
         /// <summary>
-        /// Gets or Sets DriverDetails
+        /// URL to driver details
         /// </summary>
+        /// <value>URL to driver details</value>
         [DataMember(Name="driver_details", EmitDefaultValue=false)]
         public string DriverDetails { get; set; }
 
         /// <summary>
-        /// Gets or Sets VehicleNumber
+        /// Vehicle number
         /// </summary>
+        /// <value>Vehicle number</value>
         [DataMember(Name="vehicle_number", EmitDefaultValue=false)]
         public string VehicleNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets VehicleDetails
+        /// URL to vehicle details
         /// </summary>
+        /// <value>URL to vehicle details</value>
         [DataMember(Name="vehicle_details", EmitDefaultValue=false)]
         public string VehicleDetails { get; set; }
 
         /// <summary>
-        /// Gets or Sets OwnerName
+        /// Owner name
         /// </summary>
+        /// <value>Owner name</value>
         [DataMember(Name="owner_name", EmitDefaultValue=false)]
         public string OwnerName { get; set; }
 
         /// <summary>
-        /// Gets or Sets CrewChief
+        /// Crew chief name
         /// </summary>
+        /// <value>Crew chief name</value>
         [DataMember(Name="crew_chief", EmitDefaultValue=false)]
         public string CrewChief { get; set; }
 
         /// <summary>
-        /// Gets or Sets ModelYear
+        /// Vehicle model year
         /// </summary>
+        /// <value>Vehicle model year</value>
         [DataMember(Name="model_year", EmitDefaultValue=false)]
         public int? ModelYear { get; set; }
 
         /// <summary>
-        /// Gets or Sets Model
+        /// Vehicle model
         /// </summary>
+        /// <value>Vehicle model</value>
         [DataMember(Name="model", EmitDefaultValue=false)]
         public string Model { get; set; }
 

@@ -31,7 +31,7 @@ namespace NASCAR.Data.Client.Api
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Collection&lt;Series&gt;</returns>
-        Collection<Series> Series ();
+        Collection<Series> SeriesGet ();
 
         /// <summary>
         /// 
@@ -41,7 +41,7 @@ namespace NASCAR.Data.Client.Api
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Collection&lt;Series&gt;</returns>
-        ApiResponse<Collection<Series>> SeriesWithHttpInfo ();
+        ApiResponse<Collection<Series>> SeriesGetWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -52,7 +52,7 @@ namespace NASCAR.Data.Client.Api
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Collection&lt;Series&gt;</returns>
-        System.Threading.Tasks.Task<Collection<Series>> SeriesAsync ();
+        System.Threading.Tasks.Task<Collection<Series>> SeriesGetAsync ();
 
         /// <summary>
         /// 
@@ -62,7 +62,7 @@ namespace NASCAR.Data.Client.Api
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Collection&lt;Series&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Collection<Series>>> SeriesAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<Collection<Series>>> SeriesGetAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -179,9 +179,9 @@ namespace NASCAR.Data.Client.Api
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Collection&lt;Series&gt;</returns>
-        public Collection<Series> Series ()
+        public Collection<Series> SeriesGet ()
         {
-             ApiResponse<Collection<Series>> localVarResponse = SeriesWithHttpInfo();
+             ApiResponse<Collection<Series>> localVarResponse = SeriesGetWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -190,7 +190,7 @@ namespace NASCAR.Data.Client.Api
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Collection&lt;Series&gt;</returns>
-        public ApiResponse< Collection<Series> > SeriesWithHttpInfo ()
+        public ApiResponse< Collection<Series> > SeriesGetWithHttpInfo ()
         {
 
             var localVarPath = "/series";
@@ -232,7 +232,7 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("Series", localVarResponse);
+                Exception exception = ExceptionFactory("SeriesGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -246,9 +246,9 @@ namespace NASCAR.Data.Client.Api
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Collection&lt;Series&gt;</returns>
-        public async System.Threading.Tasks.Task<Collection<Series>> SeriesAsync ()
+        public async System.Threading.Tasks.Task<Collection<Series>> SeriesGetAsync ()
         {
-             ApiResponse<Collection<Series>> localVarResponse = await SeriesAsyncWithHttpInfo();
+             ApiResponse<Collection<Series>> localVarResponse = await SeriesGetAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -258,7 +258,7 @@ namespace NASCAR.Data.Client.Api
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Collection&lt;Series&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Collection<Series>>> SeriesAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<Collection<Series>>> SeriesGetAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/series";
@@ -300,7 +300,7 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("Series", localVarResponse);
+                Exception exception = ExceptionFactory("SeriesGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 

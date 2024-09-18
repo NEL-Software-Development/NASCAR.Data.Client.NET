@@ -32,9 +32,9 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WeekendSchedule" /> class.
         /// </summary>
-        /// <param name="activity">activity.</param>
-        /// <param name="startTime">startTime.</param>
-        /// <param name="endTime">endTime.</param>
+        /// <param name="activity">The name of the activity.</param>
+        /// <param name="startTime">Scheduled start time.</param>
+        /// <param name="endTime">Scheduled end time (if any).</param>
         public WeekendSchedule(string activity = default(string), DateTimeOffset? startTime = default(DateTimeOffset?), DateTimeOffset? endTime = default(DateTimeOffset?))
         {
             this.Activity = activity;
@@ -43,20 +43,23 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets Activity
+        /// The name of the activity
         /// </summary>
+        /// <value>The name of the activity</value>
         [DataMember(Name="activity", EmitDefaultValue=false)]
         public string Activity { get; set; }
 
         /// <summary>
-        /// Gets or Sets StartTime
+        /// Scheduled start time
         /// </summary>
+        /// <value>Scheduled start time</value>
         [DataMember(Name="start_time", EmitDefaultValue=false)]
         public DateTimeOffset? StartTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets EndTime
+        /// Scheduled end time (if any)
         /// </summary>
+        /// <value>Scheduled end time (if any)</value>
         [DataMember(Name="end_time", EmitDefaultValue=false)]
         public DateTimeOffset? EndTime { get; set; }
 

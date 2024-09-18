@@ -32,10 +32,10 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DisciplineUpdate" /> class.
         /// </summary>
-        /// <param name="inspectionType">inspectionType.</param>
-        /// <param name="discipline">discipline.</param>
-        /// <param name="vehicleNumber">vehicleNumber.</param>
-        /// <param name="chassis">chassis.</param>
+        /// <param name="inspectionType">The type of inspection.</param>
+        /// <param name="discipline">The inspection discipline.</param>
+        /// <param name="vehicleNumber">The vehicle inspected.</param>
+        /// <param name="chassis">The chassis inspected.</param>
         public DisciplineUpdate(string inspectionType = default(string), string discipline = default(string), string vehicleNumber = default(string), string chassis = default(string))
         {
             this.InspectionType = inspectionType;
@@ -45,32 +45,37 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets InspectionType
+        /// The type of inspection
         /// </summary>
+        /// <value>The type of inspection</value>
         [DataMember(Name="inspection_type", EmitDefaultValue=false)]
         public string InspectionType { get; set; }
 
         /// <summary>
-        /// Gets or Sets Discipline
+        /// The inspection discipline
         /// </summary>
+        /// <value>The inspection discipline</value>
         [DataMember(Name="discipline", EmitDefaultValue=false)]
         public string Discipline { get; set; }
 
         /// <summary>
-        /// Gets or Sets VehicleNumber
+        /// The vehicle inspected
         /// </summary>
+        /// <value>The vehicle inspected</value>
         [DataMember(Name="vehicle_number", EmitDefaultValue=false)]
         public string VehicleNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets Chassis
+        /// The chassis inspected
         /// </summary>
+        /// <value>The chassis inspected</value>
         [DataMember(Name="chassis", EmitDefaultValue=false)]
         public string Chassis { get; set; }
 
         /// <summary>
-        /// Gets or Sets InspectionTime
+        /// The time of the inspection
         /// </summary>
+        /// <value>The time of the inspection</value>
         [DataMember(Name="inspection_time", EmitDefaultValue=false)]
         public DateTimeOffset? InspectionTime { get; private set; }
 

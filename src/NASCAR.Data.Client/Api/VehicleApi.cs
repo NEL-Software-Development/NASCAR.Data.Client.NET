@@ -32,7 +32,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"> (optional)</param>
         /// <returns>VehicleDetails</returns>
-        VehicleDetails Vehicle (int? id = null);
+        VehicleDetails VehicleGet (int? id = null);
 
         /// <summary>
         /// 
@@ -43,7 +43,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"> (optional)</param>
         /// <returns>ApiResponse of VehicleDetails</returns>
-        ApiResponse<VehicleDetails> VehicleWithHttpInfo (int? id = null);
+        ApiResponse<VehicleDetails> VehicleGetWithHttpInfo (int? id = null);
         /// <summary>
         /// 
         /// </summary>
@@ -55,7 +55,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="vehicle"> (optional)</param>
         /// <returns>Collection&lt;RaceResultSummary&gt;</returns>
-        Collection<RaceResultSummary> VehicleSeasonFinishes (int? season = null, int? seriesId = null, string vehicle = null);
+        Collection<RaceResultSummary> VehicleSeasonFinishesGet (int? season = null, int? seriesId = null, string vehicle = null);
 
         /// <summary>
         /// 
@@ -68,7 +68,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="vehicle"> (optional)</param>
         /// <returns>ApiResponse of Collection&lt;RaceResultSummary&gt;</returns>
-        ApiResponse<Collection<RaceResultSummary>> VehicleSeasonFinishesWithHttpInfo (int? season = null, int? seriesId = null, string vehicle = null);
+        ApiResponse<Collection<RaceResultSummary>> VehicleSeasonFinishesGetWithHttpInfo (int? season = null, int? seriesId = null, string vehicle = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -80,7 +80,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"> (optional)</param>
         /// <returns>Task of VehicleDetails</returns>
-        System.Threading.Tasks.Task<VehicleDetails> VehicleAsync (int? id = null);
+        System.Threading.Tasks.Task<VehicleDetails> VehicleGetAsync (int? id = null);
 
         /// <summary>
         /// 
@@ -91,7 +91,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"> (optional)</param>
         /// <returns>Task of ApiResponse (VehicleDetails)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VehicleDetails>> VehicleAsyncWithHttpInfo (int? id = null);
+        System.Threading.Tasks.Task<ApiResponse<VehicleDetails>> VehicleGetAsyncWithHttpInfo (int? id = null);
         /// <summary>
         /// 
         /// </summary>
@@ -103,7 +103,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="vehicle"> (optional)</param>
         /// <returns>Task of Collection&lt;RaceResultSummary&gt;</returns>
-        System.Threading.Tasks.Task<Collection<RaceResultSummary>> VehicleSeasonFinishesAsync (int? season = null, int? seriesId = null, string vehicle = null);
+        System.Threading.Tasks.Task<Collection<RaceResultSummary>> VehicleSeasonFinishesGetAsync (int? season = null, int? seriesId = null, string vehicle = null);
 
         /// <summary>
         /// 
@@ -116,7 +116,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="vehicle"> (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;RaceResultSummary&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Collection<RaceResultSummary>>> VehicleSeasonFinishesAsyncWithHttpInfo (int? season = null, int? seriesId = null, string vehicle = null);
+        System.Threading.Tasks.Task<ApiResponse<Collection<RaceResultSummary>>> VehicleSeasonFinishesGetAsyncWithHttpInfo (int? season = null, int? seriesId = null, string vehicle = null);
         #endregion Asynchronous Operations
     }
 
@@ -234,9 +234,9 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"> (optional)</param>
         /// <returns>VehicleDetails</returns>
-        public VehicleDetails Vehicle (int? id = null)
+        public VehicleDetails VehicleGet (int? id = null)
         {
-             ApiResponse<VehicleDetails> localVarResponse = VehicleWithHttpInfo(id);
+             ApiResponse<VehicleDetails> localVarResponse = VehicleGetWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -246,7 +246,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"> (optional)</param>
         /// <returns>ApiResponse of VehicleDetails</returns>
-        public ApiResponse< VehicleDetails > VehicleWithHttpInfo (int? id = null)
+        public ApiResponse< VehicleDetails > VehicleGetWithHttpInfo (int? id = null)
         {
 
             var localVarPath = "/vehicle";
@@ -289,7 +289,7 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("Vehicle", localVarResponse);
+                Exception exception = ExceptionFactory("VehicleGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -304,9 +304,9 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"> (optional)</param>
         /// <returns>Task of VehicleDetails</returns>
-        public async System.Threading.Tasks.Task<VehicleDetails> VehicleAsync (int? id = null)
+        public async System.Threading.Tasks.Task<VehicleDetails> VehicleGetAsync (int? id = null)
         {
-             ApiResponse<VehicleDetails> localVarResponse = await VehicleAsyncWithHttpInfo(id);
+             ApiResponse<VehicleDetails> localVarResponse = await VehicleGetAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -317,7 +317,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"> (optional)</param>
         /// <returns>Task of ApiResponse (VehicleDetails)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VehicleDetails>> VehicleAsyncWithHttpInfo (int? id = null)
+        public async System.Threading.Tasks.Task<ApiResponse<VehicleDetails>> VehicleGetAsyncWithHttpInfo (int? id = null)
         {
 
             var localVarPath = "/vehicle";
@@ -360,7 +360,7 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("Vehicle", localVarResponse);
+                Exception exception = ExceptionFactory("VehicleGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -377,9 +377,9 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="vehicle"> (optional)</param>
         /// <returns>Collection&lt;RaceResultSummary&gt;</returns>
-        public Collection<RaceResultSummary> VehicleSeasonFinishes (int? season = null, int? seriesId = null, string vehicle = null)
+        public Collection<RaceResultSummary> VehicleSeasonFinishesGet (int? season = null, int? seriesId = null, string vehicle = null)
         {
-             ApiResponse<Collection<RaceResultSummary>> localVarResponse = VehicleSeasonFinishesWithHttpInfo(season, seriesId, vehicle);
+             ApiResponse<Collection<RaceResultSummary>> localVarResponse = VehicleSeasonFinishesGetWithHttpInfo(season, seriesId, vehicle);
              return localVarResponse.Data;
         }
 
@@ -391,7 +391,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="vehicle"> (optional)</param>
         /// <returns>ApiResponse of Collection&lt;RaceResultSummary&gt;</returns>
-        public ApiResponse< Collection<RaceResultSummary> > VehicleSeasonFinishesWithHttpInfo (int? season = null, int? seriesId = null, string vehicle = null)
+        public ApiResponse< Collection<RaceResultSummary> > VehicleSeasonFinishesGetWithHttpInfo (int? season = null, int? seriesId = null, string vehicle = null)
         {
 
             var localVarPath = "/vehicle/season-finishes";
@@ -436,7 +436,7 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("VehicleSeasonFinishes", localVarResponse);
+                Exception exception = ExceptionFactory("VehicleSeasonFinishesGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -453,9 +453,9 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="vehicle"> (optional)</param>
         /// <returns>Task of Collection&lt;RaceResultSummary&gt;</returns>
-        public async System.Threading.Tasks.Task<Collection<RaceResultSummary>> VehicleSeasonFinishesAsync (int? season = null, int? seriesId = null, string vehicle = null)
+        public async System.Threading.Tasks.Task<Collection<RaceResultSummary>> VehicleSeasonFinishesGetAsync (int? season = null, int? seriesId = null, string vehicle = null)
         {
-             ApiResponse<Collection<RaceResultSummary>> localVarResponse = await VehicleSeasonFinishesAsyncWithHttpInfo(season, seriesId, vehicle);
+             ApiResponse<Collection<RaceResultSummary>> localVarResponse = await VehicleSeasonFinishesGetAsyncWithHttpInfo(season, seriesId, vehicle);
              return localVarResponse.Data;
 
         }
@@ -468,7 +468,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="seriesId"> (optional)</param>
         /// <param name="vehicle"> (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;RaceResultSummary&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Collection<RaceResultSummary>>> VehicleSeasonFinishesAsyncWithHttpInfo (int? season = null, int? seriesId = null, string vehicle = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Collection<RaceResultSummary>>> VehicleSeasonFinishesGetAsyncWithHttpInfo (int? season = null, int? seriesId = null, string vehicle = null)
         {
 
             var localVarPath = "/vehicle/season-finishes";
@@ -513,7 +513,7 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("VehicleSeasonFinishes", localVarResponse);
+                Exception exception = ExceptionFactory("VehicleSeasonFinishesGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 

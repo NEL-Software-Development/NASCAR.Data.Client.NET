@@ -24,9 +24,9 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// Inactive, Active, Completed
+    /// Run state: (Inactive, Active, Completed)
     /// </summary>
-    /// <value>Inactive, Active, Completed</value>
+    /// <value>Run state: (Inactive, Active, Completed)</value>
     [JsonConverter(typeof(StringEnumConverter))]
         public enum RunState
     {

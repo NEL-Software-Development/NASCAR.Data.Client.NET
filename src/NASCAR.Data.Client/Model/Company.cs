@@ -32,12 +32,12 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Company" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
-        /// <param name="name">name.</param>
-        /// <param name="abbreviation">abbreviation.</param>
-        /// <param name="alias">alias.</param>
-        /// <param name="categoryId">categoryId.</param>
-        /// <param name="categoryName">categoryName.</param>
+        /// <param name="id">Company Id.</param>
+        /// <param name="name">The name of the company.</param>
+        /// <param name="abbreviation">The company&#x27;s abbreviation.</param>
+        /// <param name="alias">The company&#x27;s alias.</param>
+        /// <param name="categoryId">Company category Id.</param>
+        /// <param name="categoryName">Category name.</param>
         public Company(int? id = default(int?), string name = default(string), string abbreviation = default(string), string alias = default(string), int? categoryId = default(int?), string categoryName = default(string))
         {
             this.Id = id;
@@ -49,38 +49,44 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Company Id
         /// </summary>
+        /// <value>Company Id</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the company
         /// </summary>
+        /// <value>The name of the company</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Abbreviation
+        /// The company&#x27;s abbreviation
         /// </summary>
+        /// <value>The company&#x27;s abbreviation</value>
         [DataMember(Name="abbreviation", EmitDefaultValue=false)]
         public string Abbreviation { get; set; }
 
         /// <summary>
-        /// Gets or Sets Alias
+        /// The company&#x27;s alias
         /// </summary>
+        /// <value>The company&#x27;s alias</value>
         [DataMember(Name="alias", EmitDefaultValue=false)]
         public string Alias { get; set; }
 
         /// <summary>
-        /// Gets or Sets CategoryId
+        /// Company category Id
         /// </summary>
+        /// <value>Company category Id</value>
         [DataMember(Name="category_id", EmitDefaultValue=false)]
         public int? CategoryId { get; set; }
 
         /// <summary>
-        /// Gets or Sets CategoryName
+        /// Category name
         /// </summary>
+        /// <value>Category name</value>
         [DataMember(Name="category_name", EmitDefaultValue=false)]
         public string CategoryName { get; set; }
 
