@@ -32,7 +32,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="refreshToken"> (optional)</param>
         /// <returns>TokenResponse</returns>
-        TokenResponse RefreshToken (string refreshToken = null);
+        TokenResponse AccountRefreshTokenGet (string refreshToken = null);
 
         /// <summary>
         /// 
@@ -43,7 +43,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="refreshToken"> (optional)</param>
         /// <returns>ApiResponse of TokenResponse</returns>
-        ApiResponse<TokenResponse> RefreshTokenWithHttpInfo (string refreshToken = null);
+        ApiResponse<TokenResponse> AccountRefreshTokenGetWithHttpInfo (string refreshToken = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -55,7 +55,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="refreshToken"> (optional)</param>
         /// <returns>Task of TokenResponse</returns>
-        System.Threading.Tasks.Task<TokenResponse> RefreshTokenAsync (string refreshToken = null);
+        System.Threading.Tasks.Task<TokenResponse> AccountRefreshTokenGetAsync (string refreshToken = null);
 
         /// <summary>
         /// 
@@ -66,7 +66,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="refreshToken"> (optional)</param>
         /// <returns>Task of ApiResponse (TokenResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TokenResponse>> RefreshTokenAsyncWithHttpInfo (string refreshToken = null);
+        System.Threading.Tasks.Task<ApiResponse<TokenResponse>> AccountRefreshTokenGetAsyncWithHttpInfo (string refreshToken = null);
         #endregion Asynchronous Operations
     }
 
@@ -184,9 +184,9 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="refreshToken"> (optional)</param>
         /// <returns>TokenResponse</returns>
-        public TokenResponse RefreshToken (string refreshToken = null)
+        public TokenResponse AccountRefreshTokenGet (string refreshToken = null)
         {
-             ApiResponse<TokenResponse> localVarResponse = RefreshTokenWithHttpInfo(refreshToken);
+             ApiResponse<TokenResponse> localVarResponse = AccountRefreshTokenGetWithHttpInfo(refreshToken);
              return localVarResponse.Data;
         }
 
@@ -196,7 +196,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="refreshToken"> (optional)</param>
         /// <returns>ApiResponse of TokenResponse</returns>
-        public ApiResponse< TokenResponse > RefreshTokenWithHttpInfo (string refreshToken = null)
+        public ApiResponse< TokenResponse > AccountRefreshTokenGetWithHttpInfo (string refreshToken = null)
         {
 
             var localVarPath = "/account/refresh-token";
@@ -239,7 +239,7 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("RefreshToken", localVarResponse);
+                Exception exception = ExceptionFactory("AccountRefreshTokenGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -254,9 +254,9 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="refreshToken"> (optional)</param>
         /// <returns>Task of TokenResponse</returns>
-        public async System.Threading.Tasks.Task<TokenResponse> RefreshTokenAsync (string refreshToken = null)
+        public async System.Threading.Tasks.Task<TokenResponse> AccountRefreshTokenGetAsync (string refreshToken = null)
         {
-             ApiResponse<TokenResponse> localVarResponse = await RefreshTokenAsyncWithHttpInfo(refreshToken);
+             ApiResponse<TokenResponse> localVarResponse = await AccountRefreshTokenGetAsyncWithHttpInfo(refreshToken);
              return localVarResponse.Data;
 
         }
@@ -267,7 +267,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="refreshToken"> (optional)</param>
         /// <returns>Task of ApiResponse (TokenResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TokenResponse>> RefreshTokenAsyncWithHttpInfo (string refreshToken = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TokenResponse>> AccountRefreshTokenGetAsyncWithHttpInfo (string refreshToken = null)
         {
 
             var localVarPath = "/account/refresh-token";
@@ -310,7 +310,7 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("RefreshToken", localVarResponse);
+                Exception exception = ExceptionFactory("AccountRefreshTokenGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 

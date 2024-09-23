@@ -32,48 +32,61 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QualifyingRunResults" /> class.
         /// </summary>
-        /// <param name="runName">runName.</param>
-        /// <param name="runState">Inactive, Active, Completed.</param>
-        /// <param name="round">round.</param>
-        /// <param name="group">group.</param>
-        /// <param name="results">results.</param>
-        public QualifyingRunResults(string runName = default(string), string runState = default(string), int? round = default(int?), string group = default(string), Collection<RunResult> results = default(Collection<RunResult>))
+        /// <param name="runName">Run name.</param>
+        /// <param name="runState">Run state:  (Inactive, Active, Completed).</param>
+        /// <param name="flagState">Flag state:  (NONE, WARMUP, GREEN, YELLOW, RED, WHITE, FINISH, EXTRA).</param>
+        /// <param name="round">Qualifying round: 0-3.</param>
+        /// <param name="group">Qualifying group: A, B, (empty).</param>
+        /// <param name="results">Qualifying results.</param>
+        public QualifyingRunResults(string runName = default(string), string runState = default(string), string flagState = default(string), int? round = default(int?), string group = default(string), Collection<RunResult> results = default(Collection<RunResult>))
         {
             this.RunName = runName;
             this.RunState = runState;
+            this.FlagState = flagState;
             this.Round = round;
             this.Group = group;
             this.Results = results;
         }
         
         /// <summary>
-        /// Gets or Sets RunName
+        /// Run name
         /// </summary>
+        /// <value>Run name</value>
         [DataMember(Name="run_name", EmitDefaultValue=false)]
         public string RunName { get; set; }
 
         /// <summary>
-        /// Inactive, Active, Completed
+        /// Run state:  (Inactive, Active, Completed)
         /// </summary>
-        /// <value>Inactive, Active, Completed</value>
+        /// <value>Run state:  (Inactive, Active, Completed)</value>
         [DataMember(Name="run_state", EmitDefaultValue=false)]
         public string RunState { get; set; }
 
         /// <summary>
-        /// Gets or Sets Round
+        /// Flag state:  (NONE, WARMUP, GREEN, YELLOW, RED, WHITE, FINISH, EXTRA)
         /// </summary>
+        /// <value>Flag state:  (NONE, WARMUP, GREEN, YELLOW, RED, WHITE, FINISH, EXTRA)</value>
+        [DataMember(Name="flag_state", EmitDefaultValue=false)]
+        public string FlagState { get; set; }
+
+        /// <summary>
+        /// Qualifying round: 0-3
+        /// </summary>
+        /// <value>Qualifying round: 0-3</value>
         [DataMember(Name="round", EmitDefaultValue=false)]
         public int? Round { get; set; }
 
         /// <summary>
-        /// Gets or Sets Group
+        /// Qualifying group: A, B, (empty)
         /// </summary>
+        /// <value>Qualifying group: A, B, (empty)</value>
         [DataMember(Name="group", EmitDefaultValue=false)]
         public string Group { get; set; }
 
         /// <summary>
-        /// Gets or Sets Results
+        /// Qualifying results
         /// </summary>
+        /// <value>Qualifying results</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public Collection<RunResult> Results { get; set; }
 
@@ -87,6 +100,7 @@ namespace NASCAR.Data.Client.Model
             sb.Append("class QualifyingRunResults {\n");
             sb.Append("  RunName: ").Append(RunName).Append("\n");
             sb.Append("  RunState: ").Append(RunState).Append("\n");
+            sb.Append("  FlagState: ").Append(FlagState).Append("\n");
             sb.Append("  Round: ").Append(Round).Append("\n");
             sb.Append("  Group: ").Append(Group).Append("\n");
             sb.Append("  Results: ").Append(Results).Append("\n");
@@ -135,6 +149,11 @@ namespace NASCAR.Data.Client.Model
                     this.RunState.Equals(input.RunState))
                 ) && 
                 (
+                    this.FlagState == input.FlagState ||
+                    (this.FlagState != null &&
+                    this.FlagState.Equals(input.FlagState))
+                ) && 
+                (
                     this.Round == input.Round ||
                     (this.Round != null &&
                     this.Round.Equals(input.Round))
@@ -165,6 +184,8 @@ namespace NASCAR.Data.Client.Model
                     hashCode = hashCode * 59 + this.RunName.GetHashCode();
                 if (this.RunState != null)
                     hashCode = hashCode * 59 + this.RunState.GetHashCode();
+                if (this.FlagState != null)
+                    hashCode = hashCode * 59 + this.FlagState.GetHashCode();
                 if (this.Round != null)
                     hashCode = hashCode * 59 + this.Round.GetHashCode();
                 if (this.Group != null)

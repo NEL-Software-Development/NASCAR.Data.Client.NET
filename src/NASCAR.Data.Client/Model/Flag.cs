@@ -32,14 +32,14 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Flag" /> class.
         /// </summary>
-        /// <param name="startLap">startLap.</param>
-        /// <param name="finishLap">finishLap.</param>
-        /// <param name="numberOfLaps">numberOfLaps.</param>
-        /// <param name="elapsedTime">elapsedTime.</param>
-        /// <param name="time">time.</param>
-        /// <param name="duration">duration.</param>
-        /// <param name="flagState">NONE, WARMUP, GREEN, YELLOW, RED, WHITE, FINISH, EXTRA.</param>
-        /// <param name="comment">comment.</param>
+        /// <param name="startLap">The flag&#x27;s first lap.</param>
+        /// <param name="finishLap">The flag&#x27;s last lap.</param>
+        /// <param name="numberOfLaps">Total number of laps.</param>
+        /// <param name="elapsedTime">Elapsed race time in milliseconds.</param>
+        /// <param name="time">Time of flag.</param>
+        /// <param name="duration">Duration in seconds.</param>
+        /// <param name="flagState">Flag stage:  (NONE, WARMUP, GREEN, YELLOW, RED, WHITE, FINISH, EXTRA).</param>
+        /// <param name="comment">Comments.</param>
         public Flag(int? startLap = default(int?), int? finishLap = default(int?), int? numberOfLaps = default(int?), int? elapsedTime = default(int?), DateTimeOffset? time = default(DateTimeOffset?), int? duration = default(int?), string flagState = default(string), string comment = default(string))
         {
             this.StartLap = startLap;
@@ -53,51 +53,58 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets StartLap
+        /// The flag&#x27;s first lap
         /// </summary>
+        /// <value>The flag&#x27;s first lap</value>
         [DataMember(Name="start_lap", EmitDefaultValue=false)]
         public int? StartLap { get; set; }
 
         /// <summary>
-        /// Gets or Sets FinishLap
+        /// The flag&#x27;s last lap
         /// </summary>
+        /// <value>The flag&#x27;s last lap</value>
         [DataMember(Name="finish_lap", EmitDefaultValue=false)]
         public int? FinishLap { get; set; }
 
         /// <summary>
-        /// Gets or Sets NumberOfLaps
+        /// Total number of laps
         /// </summary>
+        /// <value>Total number of laps</value>
         [DataMember(Name="number_of_laps", EmitDefaultValue=false)]
         public int? NumberOfLaps { get; set; }
 
         /// <summary>
-        /// Gets or Sets ElapsedTime
+        /// Elapsed race time in milliseconds
         /// </summary>
+        /// <value>Elapsed race time in milliseconds</value>
         [DataMember(Name="elapsed_time", EmitDefaultValue=false)]
         public int? ElapsedTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets Time
+        /// Time of flag
         /// </summary>
+        /// <value>Time of flag</value>
         [DataMember(Name="time", EmitDefaultValue=false)]
         public DateTimeOffset? Time { get; set; }
 
         /// <summary>
-        /// Gets or Sets Duration
+        /// Duration in seconds
         /// </summary>
+        /// <value>Duration in seconds</value>
         [DataMember(Name="duration", EmitDefaultValue=false)]
         public int? Duration { get; set; }
 
         /// <summary>
-        /// NONE, WARMUP, GREEN, YELLOW, RED, WHITE, FINISH, EXTRA
+        /// Flag stage:  (NONE, WARMUP, GREEN, YELLOW, RED, WHITE, FINISH, EXTRA)
         /// </summary>
-        /// <value>NONE, WARMUP, GREEN, YELLOW, RED, WHITE, FINISH, EXTRA</value>
+        /// <value>Flag stage:  (NONE, WARMUP, GREEN, YELLOW, RED, WHITE, FINISH, EXTRA)</value>
         [DataMember(Name="flag_state", EmitDefaultValue=false)]
         public string FlagState { get; set; }
 
         /// <summary>
-        /// Gets or Sets Comment
+        /// Comments
         /// </summary>
+        /// <value>Comments</value>
         [DataMember(Name="comment", EmitDefaultValue=false)]
         public string Comment { get; set; }
 

@@ -32,85 +32,85 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OSSScan" /> class.
         /// </summary>
-        /// <param name="vehicleNumber">vehicleNumber.</param>
-        /// <param name="chassis">chassis.</param>
-        /// <param name="limitsBodyoffsetMin">limitsBodyoffsetMin.</param>
-        /// <param name="limitsBodyoffsetMax">limitsBodyoffsetMax.</param>
-        /// <param name="passfailsBodyoffset">passfailsBodyoffset.</param>
-        /// <param name="resultsBodyoffset">resultsBodyoffset.</param>
-        /// <param name="limitsCamberLfMin">limitsCamberLfMin.</param>
-        /// <param name="limitsCamberLfMax">limitsCamberLfMax.</param>
-        /// <param name="passfailsCamberLf">passfailsCamberLf.</param>
-        /// <param name="resultsCamberLf">resultsCamberLf.</param>
-        /// <param name="limitsCamberLrMin">limitsCamberLrMin.</param>
-        /// <param name="limitsCamberLrMax">limitsCamberLrMax.</param>
-        /// <param name="passfailsCamberLr">passfailsCamberLr.</param>
-        /// <param name="resultsCamberLr">resultsCamberLr.</param>
-        /// <param name="limitsCamberRfMin">limitsCamberRfMin.</param>
-        /// <param name="limitsCamberRfMax">limitsCamberRfMax.</param>
-        /// <param name="passfailsCamberRf">passfailsCamberRf.</param>
-        /// <param name="resultsCamberRf">resultsCamberRf.</param>
-        /// <param name="limitsCamberRrMin">limitsCamberRrMin.</param>
-        /// <param name="limitsCamberRrMax">limitsCamberRrMax.</param>
-        /// <param name="passfailsCamberRr">passfailsCamberRr.</param>
-        /// <param name="resultsCamberRr">resultsCamberRr.</param>
-        /// <param name="limitsLfFramerailMin">limitsLfFramerailMin.</param>
-        /// <param name="limitsLfFramerailMax">limitsLfFramerailMax.</param>
-        /// <param name="passfailsLfFramerail">passfailsLfFramerail.</param>
-        /// <param name="resultsLfFramerail">resultsLfFramerail.</param>
-        /// <param name="limitsLrFramerailMin">limitsLrFramerailMin.</param>
-        /// <param name="limitsLrFramerailMax">limitsLrFramerailMax.</param>
-        /// <param name="passfailsLrFramerail">passfailsLrFramerail.</param>
-        /// <param name="resultsLrFramerail">resultsLrFramerail.</param>
-        /// <param name="limitsRfFramerailMin">limitsRfFramerailMin.</param>
-        /// <param name="limitsRfFramerailMax">limitsRfFramerailMax.</param>
-        /// <param name="passfailsRfFramerail">passfailsRfFramerail.</param>
-        /// <param name="resultsRfFramerail">resultsRfFramerail.</param>
-        /// <param name="limitsRhLocationLeftMin">limitsRhLocationLeftMin.</param>
-        /// <param name="limitsRhLocationLeftMax">limitsRhLocationLeftMax.</param>
-        /// <param name="passfailsRhLocationLeft">passfailsRhLocationLeft.</param>
-        /// <param name="resultsRhLocationLeft">resultsRhLocationLeft.</param>
-        /// <param name="limitsRhLocationRightMin">limitsRhLocationRightMin.</param>
-        /// <param name="limitsRhLocationRightMax">limitsRhLocationRightMax.</param>
-        /// <param name="passfailsRhLocationRight">passfailsRhLocationRight.</param>
-        /// <param name="resultsRhLocationRight">resultsRhLocationRight.</param>
-        /// <param name="limitsRhSkewMin">limitsRhSkewMin.</param>
-        /// <param name="limitsRhSkewMax">limitsRhSkewMax.</param>
-        /// <param name="passfailsRhSkew">passfailsRhSkew.</param>
-        /// <param name="resultsRhSkew">resultsRhSkew.</param>
-        /// <param name="limitsRrFramerailMin">limitsRrFramerailMin.</param>
-        /// <param name="limitsRrFramerailMax">limitsRrFramerailMax.</param>
-        /// <param name="passfailsRrFramerail">passfailsRrFramerail.</param>
-        /// <param name="resultsRrFramerail">resultsRrFramerail.</param>
-        /// <param name="limitsRightParallelMin">limitsRightParallelMin.</param>
-        /// <param name="limitsRightParallelMax">limitsRightParallelMax.</param>
-        /// <param name="passfailsRightParallel">passfailsRightParallel.</param>
-        /// <param name="resultsRightParallel">resultsRightParallel.</param>
-        /// <param name="limitsTreadwidthFrontMin">limitsTreadwidthFrontMin.</param>
-        /// <param name="limitsTreadwidthFrontMax">limitsTreadwidthFrontMax.</param>
-        /// <param name="passfailsTreadwidthFront">passfailsTreadwidthFront.</param>
-        /// <param name="resultsTreadwidthFront">resultsTreadwidthFront.</param>
-        /// <param name="limitsTreadwidthRearMin">limitsTreadwidthRearMin.</param>
-        /// <param name="limitsTreadwidthRearMax">limitsTreadwidthRearMax.</param>
-        /// <param name="passfailsTreadwidthRear">passfailsTreadwidthRear.</param>
-        /// <param name="resultsTreadwidthRear">resultsTreadwidthRear.</param>
-        /// <param name="limitsWheelbaseLeftMin">limitsWheelbaseLeftMin.</param>
-        /// <param name="limitsWheelbaseLeftMax">limitsWheelbaseLeftMax.</param>
-        /// <param name="passfailsWheelbaseLeft">passfailsWheelbaseLeft.</param>
-        /// <param name="resultsWheelbaseLeft">resultsWheelbaseLeft.</param>
-        /// <param name="limitsWheelbaseRightMin">limitsWheelbaseRightMin.</param>
-        /// <param name="limitsWheelbaseRightMax">limitsWheelbaseRightMax.</param>
-        /// <param name="passfailsWheelbaseRight">passfailsWheelbaseRight.</param>
-        /// <param name="resultsWheelbaseRight">resultsWheelbaseRight.</param>
-        /// <param name="limitsToeLrMin">limitsToeLrMin.</param>
-        /// <param name="limitsToeLrMax">limitsToeLrMax.</param>
-        /// <param name="passfailsToeLr">passfailsToeLr.</param>
-        /// <param name="resultsToeLr">resultsToeLr.</param>
-        /// <param name="limitsToeRrMin">limitsToeRrMin.</param>
-        /// <param name="limitsToeRrMax">limitsToeRrMax.</param>
-        /// <param name="passfailsToeRr">passfailsToeRr.</param>
-        /// <param name="resultsToeRr">resultsToeRr.</param>
-        /// <param name="inspectionDate">inspectionDate.</param>
+        /// <param name="vehicleNumber">Vehicle number.</param>
+        /// <param name="chassis">Chassis.</param>
+        /// <param name="limitsBodyoffsetMin">Body offset minimum.</param>
+        /// <param name="limitsBodyoffsetMax">Body offset maximum.</param>
+        /// <param name="passfailsBodyoffset">Body offset pass/fails.</param>
+        /// <param name="resultsBodyoffset">Results body offset.</param>
+        /// <param name="limitsCamberLfMin">Left front camber minimum.</param>
+        /// <param name="limitsCamberLfMax">Left front camber maximum.</param>
+        /// <param name="passfailsCamberLf">Left front camber pass/fails.</param>
+        /// <param name="resultsCamberLf">Left front camber results.</param>
+        /// <param name="limitsCamberLrMin">Left rear camber minimum.</param>
+        /// <param name="limitsCamberLrMax">Left rear camber maximum.</param>
+        /// <param name="passfailsCamberLr">Left rear camber pass/fails.</param>
+        /// <param name="resultsCamberLr">Left rear camber results.</param>
+        /// <param name="limitsCamberRfMin">Right front camber minimum.</param>
+        /// <param name="limitsCamberRfMax">Right front camber maximum.</param>
+        /// <param name="passfailsCamberRf">Right front camber pass/fails.</param>
+        /// <param name="resultsCamberRf">Right front camber results.</param>
+        /// <param name="limitsCamberRrMin">Right rear camber minimum.</param>
+        /// <param name="limitsCamberRrMax">Right rear camber maximum.</param>
+        /// <param name="passfailsCamberRr">Right rear camber pass/fails.</param>
+        /// <param name="resultsCamberRr">Right rear camber results.</param>
+        /// <param name="limitsLfFramerailMin">Left front framerail minimum.</param>
+        /// <param name="limitsLfFramerailMax">Left front framework maximum.</param>
+        /// <param name="passfailsLfFramerail">Left front framerail pass/fails.</param>
+        /// <param name="resultsLfFramerail">Left front framework results.</param>
+        /// <param name="limitsLrFramerailMin">Left rear framerail minimum.</param>
+        /// <param name="limitsLrFramerailMax">Left rear framerail maximum.</param>
+        /// <param name="passfailsLrFramerail">Left rear framerail pass/fails.</param>
+        /// <param name="resultsLrFramerail">Left rear framerail results.</param>
+        /// <param name="limitsRfFramerailMin">Right front framerail minimum.</param>
+        /// <param name="limitsRfFramerailMax">Right front framerail maximum.</param>
+        /// <param name="passfailsRfFramerail">Right front framerail pass/fails.</param>
+        /// <param name="resultsRfFramerail">Right front framerail results.</param>
+        /// <param name="limitsRhLocationLeftMin">Right hand left minimum.</param>
+        /// <param name="limitsRhLocationLeftMax">Right hand left maximum.</param>
+        /// <param name="passfailsRhLocationLeft">Right hand left pass/fails.</param>
+        /// <param name="resultsRhLocationLeft">Right hand left results.</param>
+        /// <param name="limitsRhLocationRightMin">Right hand right min.</param>
+        /// <param name="limitsRhLocationRightMax">Right hand right max.</param>
+        /// <param name="passfailsRhLocationRight">Right hand right pass/fails.</param>
+        /// <param name="resultsRhLocationRight">Right hand right results.</param>
+        /// <param name="limitsRhSkewMin">Right right skew minimum.</param>
+        /// <param name="limitsRhSkewMax">Right hand skew maximum.</param>
+        /// <param name="passfailsRhSkew">Right hand skew pass/fails.</param>
+        /// <param name="resultsRhSkew">Right hand skew results.</param>
+        /// <param name="limitsRrFramerailMin">Right rear framerail minimum.</param>
+        /// <param name="limitsRrFramerailMax">Right rear framerail maximum.</param>
+        /// <param name="passfailsRrFramerail">Right rear framerail pass/fails.</param>
+        /// <param name="resultsRrFramerail">Right rear framerail results.</param>
+        /// <param name="limitsRightParallelMin">Right parallel minimum.</param>
+        /// <param name="limitsRightParallelMax">Right parallel maximum.</param>
+        /// <param name="passfailsRightParallel">Right parallel pass/fails.</param>
+        /// <param name="resultsRightParallel">Right parallel results.</param>
+        /// <param name="limitsTreadwidthFrontMin">Front treadwidth minimum.</param>
+        /// <param name="limitsTreadwidthFrontMax">Front treadwidth maximum.</param>
+        /// <param name="passfailsTreadwidthFront">Front treadwidth pass/fails.</param>
+        /// <param name="resultsTreadwidthFront">Front treadwidth results.</param>
+        /// <param name="limitsTreadwidthRearMin">Rear treadwidth minimum.</param>
+        /// <param name="limitsTreadwidthRearMax">Rear treadwidth maximum.</param>
+        /// <param name="passfailsTreadwidthRear">Rear treadwidth pass/fails.</param>
+        /// <param name="resultsTreadwidthRear">Rear treadwidth results.</param>
+        /// <param name="limitsWheelbaseLeftMin">Left wheelbase minimum.</param>
+        /// <param name="limitsWheelbaseLeftMax">Left wheelbase maximum.</param>
+        /// <param name="passfailsWheelbaseLeft">Left wheelbase pass/fails.</param>
+        /// <param name="resultsWheelbaseLeft">Left wheelbase results.</param>
+        /// <param name="limitsWheelbaseRightMin">Right wheelbase minimum.</param>
+        /// <param name="limitsWheelbaseRightMax">Right wheelbase maximum.</param>
+        /// <param name="passfailsWheelbaseRight">Right wheelbase pass/fails.</param>
+        /// <param name="resultsWheelbaseRight">Right wheelbase results.</param>
+        /// <param name="limitsToeLrMin">Left rear toe minimum.</param>
+        /// <param name="limitsToeLrMax">Left rear toe maximum.</param>
+        /// <param name="passfailsToeLr">Left rear toe pass/fails.</param>
+        /// <param name="resultsToeLr">Left rear toe results.</param>
+        /// <param name="limitsToeRrMin">Right rear toe minimum.</param>
+        /// <param name="limitsToeRrMax">Right rear toe maximum.</param>
+        /// <param name="passfailsToeRr">Right rear pass/fails.</param>
+        /// <param name="resultsToeRr">Right rear toe results.</param>
+        /// <param name="inspectionDate">Inspection date.</param>
         public OSSScan(string vehicleNumber = default(string), string chassis = default(string), double? limitsBodyoffsetMin = default(double?), double? limitsBodyoffsetMax = default(double?), bool? passfailsBodyoffset = default(bool?), double? resultsBodyoffset = default(double?), double? limitsCamberLfMin = default(double?), double? limitsCamberLfMax = default(double?), bool? passfailsCamberLf = default(bool?), double? resultsCamberLf = default(double?), double? limitsCamberLrMin = default(double?), double? limitsCamberLrMax = default(double?), bool? passfailsCamberLr = default(bool?), double? resultsCamberLr = default(double?), double? limitsCamberRfMin = default(double?), double? limitsCamberRfMax = default(double?), bool? passfailsCamberRf = default(bool?), double? resultsCamberRf = default(double?), double? limitsCamberRrMin = default(double?), double? limitsCamberRrMax = default(double?), bool? passfailsCamberRr = default(bool?), double? resultsCamberRr = default(double?), double? limitsLfFramerailMin = default(double?), double? limitsLfFramerailMax = default(double?), bool? passfailsLfFramerail = default(bool?), double? resultsLfFramerail = default(double?), double? limitsLrFramerailMin = default(double?), double? limitsLrFramerailMax = default(double?), bool? passfailsLrFramerail = default(bool?), double? resultsLrFramerail = default(double?), double? limitsRfFramerailMin = default(double?), double? limitsRfFramerailMax = default(double?), bool? passfailsRfFramerail = default(bool?), double? resultsRfFramerail = default(double?), double? limitsRhLocationLeftMin = default(double?), double? limitsRhLocationLeftMax = default(double?), bool? passfailsRhLocationLeft = default(bool?), double? resultsRhLocationLeft = default(double?), double? limitsRhLocationRightMin = default(double?), double? limitsRhLocationRightMax = default(double?), bool? passfailsRhLocationRight = default(bool?), double? resultsRhLocationRight = default(double?), double? limitsRhSkewMin = default(double?), double? limitsRhSkewMax = default(double?), bool? passfailsRhSkew = default(bool?), double? resultsRhSkew = default(double?), double? limitsRrFramerailMin = default(double?), double? limitsRrFramerailMax = default(double?), bool? passfailsRrFramerail = default(bool?), double? resultsRrFramerail = default(double?), double? limitsRightParallelMin = default(double?), double? limitsRightParallelMax = default(double?), bool? passfailsRightParallel = default(bool?), double? resultsRightParallel = default(double?), double? limitsTreadwidthFrontMin = default(double?), double? limitsTreadwidthFrontMax = default(double?), bool? passfailsTreadwidthFront = default(bool?), double? resultsTreadwidthFront = default(double?), double? limitsTreadwidthRearMin = default(double?), double? limitsTreadwidthRearMax = default(double?), bool? passfailsTreadwidthRear = default(bool?), double? resultsTreadwidthRear = default(double?), double? limitsWheelbaseLeftMin = default(double?), double? limitsWheelbaseLeftMax = default(double?), bool? passfailsWheelbaseLeft = default(bool?), double? resultsWheelbaseLeft = default(double?), double? limitsWheelbaseRightMin = default(double?), double? limitsWheelbaseRightMax = default(double?), bool? passfailsWheelbaseRight = default(bool?), double? resultsWheelbaseRight = default(double?), double? limitsToeLrMin = default(double?), double? limitsToeLrMax = default(double?), bool? passfailsToeLr = default(bool?), double? resultsToeLr = default(double?), double? limitsToeRrMin = default(double?), double? limitsToeRrMax = default(double?), bool? passfailsToeRr = default(bool?), double? resultsToeRr = default(double?), DateTimeOffset? inspectionDate = default(DateTimeOffset?))
         {
             this.VehicleNumber = vehicleNumber;
@@ -195,476 +195,555 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets VehicleNumber
+        /// Vehicle number
         /// </summary>
+        /// <value>Vehicle number</value>
         [DataMember(Name="vehicle_number", EmitDefaultValue=false)]
         public string VehicleNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets Chassis
+        /// Chassis
         /// </summary>
+        /// <value>Chassis</value>
         [DataMember(Name="chassis", EmitDefaultValue=false)]
         public string Chassis { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsBodyoffsetMin
+        /// Body offset minimum
         /// </summary>
+        /// <value>Body offset minimum</value>
         [DataMember(Name="limits_bodyoffset_min", EmitDefaultValue=false)]
         public double? LimitsBodyoffsetMin { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsBodyoffsetMax
+        /// Body offset maximum
         /// </summary>
+        /// <value>Body offset maximum</value>
         [DataMember(Name="limits_bodyoffset_max", EmitDefaultValue=false)]
         public double? LimitsBodyoffsetMax { get; set; }
 
         /// <summary>
-        /// Gets or Sets PassfailsBodyoffset
+        /// Body offset pass/fails
         /// </summary>
+        /// <value>Body offset pass/fails</value>
         [DataMember(Name="passfails_bodyoffset", EmitDefaultValue=false)]
         public bool? PassfailsBodyoffset { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResultsBodyoffset
+        /// Results body offset
         /// </summary>
+        /// <value>Results body offset</value>
         [DataMember(Name="results_bodyoffset", EmitDefaultValue=false)]
         public double? ResultsBodyoffset { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsCamberLfMin
+        /// Left front camber minimum
         /// </summary>
+        /// <value>Left front camber minimum</value>
         [DataMember(Name="limits_camber_lf_min", EmitDefaultValue=false)]
         public double? LimitsCamberLfMin { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsCamberLfMax
+        /// Left front camber maximum
         /// </summary>
+        /// <value>Left front camber maximum</value>
         [DataMember(Name="limits_camber_lf_max", EmitDefaultValue=false)]
         public double? LimitsCamberLfMax { get; set; }
 
         /// <summary>
-        /// Gets or Sets PassfailsCamberLf
+        /// Left front camber pass/fails
         /// </summary>
+        /// <value>Left front camber pass/fails</value>
         [DataMember(Name="passfails_camber_lf", EmitDefaultValue=false)]
         public bool? PassfailsCamberLf { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResultsCamberLf
+        /// Left front camber results
         /// </summary>
+        /// <value>Left front camber results</value>
         [DataMember(Name="results_camber_lf", EmitDefaultValue=false)]
         public double? ResultsCamberLf { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsCamberLrMin
+        /// Left rear camber minimum
         /// </summary>
+        /// <value>Left rear camber minimum</value>
         [DataMember(Name="limits_camber_lr_min", EmitDefaultValue=false)]
         public double? LimitsCamberLrMin { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsCamberLrMax
+        /// Left rear camber maximum
         /// </summary>
+        /// <value>Left rear camber maximum</value>
         [DataMember(Name="limits_camber_lr_max", EmitDefaultValue=false)]
         public double? LimitsCamberLrMax { get; set; }
 
         /// <summary>
-        /// Gets or Sets PassfailsCamberLr
+        /// Left rear camber pass/fails
         /// </summary>
+        /// <value>Left rear camber pass/fails</value>
         [DataMember(Name="passfails_camber_lr", EmitDefaultValue=false)]
         public bool? PassfailsCamberLr { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResultsCamberLr
+        /// Left rear camber results
         /// </summary>
+        /// <value>Left rear camber results</value>
         [DataMember(Name="results_camber_lr", EmitDefaultValue=false)]
         public double? ResultsCamberLr { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsCamberRfMin
+        /// Right front camber minimum
         /// </summary>
+        /// <value>Right front camber minimum</value>
         [DataMember(Name="limits_camber_rf_min", EmitDefaultValue=false)]
         public double? LimitsCamberRfMin { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsCamberRfMax
+        /// Right front camber maximum
         /// </summary>
+        /// <value>Right front camber maximum</value>
         [DataMember(Name="limits_camber_rf_max", EmitDefaultValue=false)]
         public double? LimitsCamberRfMax { get; set; }
 
         /// <summary>
-        /// Gets or Sets PassfailsCamberRf
+        /// Right front camber pass/fails
         /// </summary>
+        /// <value>Right front camber pass/fails</value>
         [DataMember(Name="passfails_camber_rf", EmitDefaultValue=false)]
         public bool? PassfailsCamberRf { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResultsCamberRf
+        /// Right front camber results
         /// </summary>
+        /// <value>Right front camber results</value>
         [DataMember(Name="results_camber_rf", EmitDefaultValue=false)]
         public double? ResultsCamberRf { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsCamberRrMin
+        /// Right rear camber minimum
         /// </summary>
+        /// <value>Right rear camber minimum</value>
         [DataMember(Name="limits_camber_rr_min", EmitDefaultValue=false)]
         public double? LimitsCamberRrMin { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsCamberRrMax
+        /// Right rear camber maximum
         /// </summary>
+        /// <value>Right rear camber maximum</value>
         [DataMember(Name="limits_camber_rr_max", EmitDefaultValue=false)]
         public double? LimitsCamberRrMax { get; set; }
 
         /// <summary>
-        /// Gets or Sets PassfailsCamberRr
+        /// Right rear camber pass/fails
         /// </summary>
+        /// <value>Right rear camber pass/fails</value>
         [DataMember(Name="passfails_camber_rr", EmitDefaultValue=false)]
         public bool? PassfailsCamberRr { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResultsCamberRr
+        /// Right rear camber results
         /// </summary>
+        /// <value>Right rear camber results</value>
         [DataMember(Name="results_camber_rr", EmitDefaultValue=false)]
         public double? ResultsCamberRr { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsLfFramerailMin
+        /// Left front framerail minimum
         /// </summary>
+        /// <value>Left front framerail minimum</value>
         [DataMember(Name="limits_lf_framerail_min", EmitDefaultValue=false)]
         public double? LimitsLfFramerailMin { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsLfFramerailMax
+        /// Left front framework maximum
         /// </summary>
+        /// <value>Left front framework maximum</value>
         [DataMember(Name="limits_lf_framerail_max", EmitDefaultValue=false)]
         public double? LimitsLfFramerailMax { get; set; }
 
         /// <summary>
-        /// Gets or Sets PassfailsLfFramerail
+        /// Left front framerail pass/fails
         /// </summary>
+        /// <value>Left front framerail pass/fails</value>
         [DataMember(Name="passfails_lf_framerail", EmitDefaultValue=false)]
         public bool? PassfailsLfFramerail { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResultsLfFramerail
+        /// Left front framework results
         /// </summary>
+        /// <value>Left front framework results</value>
         [DataMember(Name="results_lf_framerail", EmitDefaultValue=false)]
         public double? ResultsLfFramerail { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsLrFramerailMin
+        /// Left rear framerail minimum
         /// </summary>
+        /// <value>Left rear framerail minimum</value>
         [DataMember(Name="limits_lr_framerail_min", EmitDefaultValue=false)]
         public double? LimitsLrFramerailMin { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsLrFramerailMax
+        /// Left rear framerail maximum
         /// </summary>
+        /// <value>Left rear framerail maximum</value>
         [DataMember(Name="limits_lr_framerail_max", EmitDefaultValue=false)]
         public double? LimitsLrFramerailMax { get; set; }
 
         /// <summary>
-        /// Gets or Sets PassfailsLrFramerail
+        /// Left rear framerail pass/fails
         /// </summary>
+        /// <value>Left rear framerail pass/fails</value>
         [DataMember(Name="passfails_lr_framerail", EmitDefaultValue=false)]
         public bool? PassfailsLrFramerail { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResultsLrFramerail
+        /// Left rear framerail results
         /// </summary>
+        /// <value>Left rear framerail results</value>
         [DataMember(Name="results_lr_framerail", EmitDefaultValue=false)]
         public double? ResultsLrFramerail { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsRfFramerailMin
+        /// Right front framerail minimum
         /// </summary>
+        /// <value>Right front framerail minimum</value>
         [DataMember(Name="limits_rf_framerail_min", EmitDefaultValue=false)]
         public double? LimitsRfFramerailMin { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsRfFramerailMax
+        /// Right front framerail maximum
         /// </summary>
+        /// <value>Right front framerail maximum</value>
         [DataMember(Name="limits_rf_framerail_max", EmitDefaultValue=false)]
         public double? LimitsRfFramerailMax { get; set; }
 
         /// <summary>
-        /// Gets or Sets PassfailsRfFramerail
+        /// Right front framerail pass/fails
         /// </summary>
+        /// <value>Right front framerail pass/fails</value>
         [DataMember(Name="passfails_rf_framerail", EmitDefaultValue=false)]
         public bool? PassfailsRfFramerail { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResultsRfFramerail
+        /// Right front framerail results
         /// </summary>
+        /// <value>Right front framerail results</value>
         [DataMember(Name="results_rf_framerail", EmitDefaultValue=false)]
         public double? ResultsRfFramerail { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsRhLocationLeftMin
+        /// Right hand left minimum
         /// </summary>
+        /// <value>Right hand left minimum</value>
         [DataMember(Name="limits_rh_location_left_min", EmitDefaultValue=false)]
         public double? LimitsRhLocationLeftMin { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsRhLocationLeftMax
+        /// Right hand left maximum
         /// </summary>
+        /// <value>Right hand left maximum</value>
         [DataMember(Name="limits_rh_location_left_max", EmitDefaultValue=false)]
         public double? LimitsRhLocationLeftMax { get; set; }
 
         /// <summary>
-        /// Gets or Sets PassfailsRhLocationLeft
+        /// Right hand left pass/fails
         /// </summary>
+        /// <value>Right hand left pass/fails</value>
         [DataMember(Name="passfails_rh_location_left", EmitDefaultValue=false)]
         public bool? PassfailsRhLocationLeft { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResultsRhLocationLeft
+        /// Right hand left results
         /// </summary>
+        /// <value>Right hand left results</value>
         [DataMember(Name="results_rh_location_left", EmitDefaultValue=false)]
         public double? ResultsRhLocationLeft { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsRhLocationRightMin
+        /// Right hand right min
         /// </summary>
+        /// <value>Right hand right min</value>
         [DataMember(Name="limits_rh_location_right_min", EmitDefaultValue=false)]
         public double? LimitsRhLocationRightMin { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsRhLocationRightMax
+        /// Right hand right max
         /// </summary>
+        /// <value>Right hand right max</value>
         [DataMember(Name="limits_rh_location_right_max", EmitDefaultValue=false)]
         public double? LimitsRhLocationRightMax { get; set; }
 
         /// <summary>
-        /// Gets or Sets PassfailsRhLocationRight
+        /// Right hand right pass/fails
         /// </summary>
+        /// <value>Right hand right pass/fails</value>
         [DataMember(Name="passfails_rh_location_right", EmitDefaultValue=false)]
         public bool? PassfailsRhLocationRight { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResultsRhLocationRight
+        /// Right hand right results
         /// </summary>
+        /// <value>Right hand right results</value>
         [DataMember(Name="results_rh_location_right", EmitDefaultValue=false)]
         public double? ResultsRhLocationRight { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsRhSkewMin
+        /// Right right skew minimum
         /// </summary>
+        /// <value>Right right skew minimum</value>
         [DataMember(Name="limits_rh_skew_min", EmitDefaultValue=false)]
         public double? LimitsRhSkewMin { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsRhSkewMax
+        /// Right hand skew maximum
         /// </summary>
+        /// <value>Right hand skew maximum</value>
         [DataMember(Name="limits_rh_skew_max", EmitDefaultValue=false)]
         public double? LimitsRhSkewMax { get; set; }
 
         /// <summary>
-        /// Gets or Sets PassfailsRhSkew
+        /// Right hand skew pass/fails
         /// </summary>
+        /// <value>Right hand skew pass/fails</value>
         [DataMember(Name="passfails_rh_skew", EmitDefaultValue=false)]
         public bool? PassfailsRhSkew { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResultsRhSkew
+        /// Right hand skew results
         /// </summary>
+        /// <value>Right hand skew results</value>
         [DataMember(Name="results_rh_skew", EmitDefaultValue=false)]
         public double? ResultsRhSkew { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsRrFramerailMin
+        /// Right rear framerail minimum
         /// </summary>
+        /// <value>Right rear framerail minimum</value>
         [DataMember(Name="limits_rr_framerail_min", EmitDefaultValue=false)]
         public double? LimitsRrFramerailMin { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsRrFramerailMax
+        /// Right rear framerail maximum
         /// </summary>
+        /// <value>Right rear framerail maximum</value>
         [DataMember(Name="limits_rr_framerail_max", EmitDefaultValue=false)]
         public double? LimitsRrFramerailMax { get; set; }
 
         /// <summary>
-        /// Gets or Sets PassfailsRrFramerail
+        /// Right rear framerail pass/fails
         /// </summary>
+        /// <value>Right rear framerail pass/fails</value>
         [DataMember(Name="passfails_rr_framerail", EmitDefaultValue=false)]
         public bool? PassfailsRrFramerail { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResultsRrFramerail
+        /// Right rear framerail results
         /// </summary>
+        /// <value>Right rear framerail results</value>
         [DataMember(Name="results_rr_framerail", EmitDefaultValue=false)]
         public double? ResultsRrFramerail { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsRightParallelMin
+        /// Right parallel minimum
         /// </summary>
+        /// <value>Right parallel minimum</value>
         [DataMember(Name="limits_right_parallel_min", EmitDefaultValue=false)]
         public double? LimitsRightParallelMin { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsRightParallelMax
+        /// Right parallel maximum
         /// </summary>
+        /// <value>Right parallel maximum</value>
         [DataMember(Name="limits_right_parallel_max", EmitDefaultValue=false)]
         public double? LimitsRightParallelMax { get; set; }
 
         /// <summary>
-        /// Gets or Sets PassfailsRightParallel
+        /// Right parallel pass/fails
         /// </summary>
+        /// <value>Right parallel pass/fails</value>
         [DataMember(Name="passfails_right_parallel", EmitDefaultValue=false)]
         public bool? PassfailsRightParallel { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResultsRightParallel
+        /// Right parallel results
         /// </summary>
+        /// <value>Right parallel results</value>
         [DataMember(Name="results_right_parallel", EmitDefaultValue=false)]
         public double? ResultsRightParallel { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsTreadwidthFrontMin
+        /// Front treadwidth minimum
         /// </summary>
+        /// <value>Front treadwidth minimum</value>
         [DataMember(Name="limits_treadwidth_front_min", EmitDefaultValue=false)]
         public double? LimitsTreadwidthFrontMin { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsTreadwidthFrontMax
+        /// Front treadwidth maximum
         /// </summary>
+        /// <value>Front treadwidth maximum</value>
         [DataMember(Name="limits_treadwidth_front_max", EmitDefaultValue=false)]
         public double? LimitsTreadwidthFrontMax { get; set; }
 
         /// <summary>
-        /// Gets or Sets PassfailsTreadwidthFront
+        /// Front treadwidth pass/fails
         /// </summary>
+        /// <value>Front treadwidth pass/fails</value>
         [DataMember(Name="passfails_treadwidth_front", EmitDefaultValue=false)]
         public bool? PassfailsTreadwidthFront { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResultsTreadwidthFront
+        /// Front treadwidth results
         /// </summary>
+        /// <value>Front treadwidth results</value>
         [DataMember(Name="results_treadwidth_front", EmitDefaultValue=false)]
         public double? ResultsTreadwidthFront { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsTreadwidthRearMin
+        /// Rear treadwidth minimum
         /// </summary>
+        /// <value>Rear treadwidth minimum</value>
         [DataMember(Name="limits_treadwidth_rear_min", EmitDefaultValue=false)]
         public double? LimitsTreadwidthRearMin { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsTreadwidthRearMax
+        /// Rear treadwidth maximum
         /// </summary>
+        /// <value>Rear treadwidth maximum</value>
         [DataMember(Name="limits_treadwidth_rear_max", EmitDefaultValue=false)]
         public double? LimitsTreadwidthRearMax { get; set; }
 
         /// <summary>
-        /// Gets or Sets PassfailsTreadwidthRear
+        /// Rear treadwidth pass/fails
         /// </summary>
+        /// <value>Rear treadwidth pass/fails</value>
         [DataMember(Name="passfails_treadwidth_rear", EmitDefaultValue=false)]
         public bool? PassfailsTreadwidthRear { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResultsTreadwidthRear
+        /// Rear treadwidth results
         /// </summary>
+        /// <value>Rear treadwidth results</value>
         [DataMember(Name="results_treadwidth_rear", EmitDefaultValue=false)]
         public double? ResultsTreadwidthRear { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsWheelbaseLeftMin
+        /// Left wheelbase minimum
         /// </summary>
+        /// <value>Left wheelbase minimum</value>
         [DataMember(Name="limits_wheelbase_left_min", EmitDefaultValue=false)]
         public double? LimitsWheelbaseLeftMin { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsWheelbaseLeftMax
+        /// Left wheelbase maximum
         /// </summary>
+        /// <value>Left wheelbase maximum</value>
         [DataMember(Name="limits_wheelbase_left_max", EmitDefaultValue=false)]
         public double? LimitsWheelbaseLeftMax { get; set; }
 
         /// <summary>
-        /// Gets or Sets PassfailsWheelbaseLeft
+        /// Left wheelbase pass/fails
         /// </summary>
+        /// <value>Left wheelbase pass/fails</value>
         [DataMember(Name="passfails_wheelbase_left", EmitDefaultValue=false)]
         public bool? PassfailsWheelbaseLeft { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResultsWheelbaseLeft
+        /// Left wheelbase results
         /// </summary>
+        /// <value>Left wheelbase results</value>
         [DataMember(Name="results_wheelbase_left", EmitDefaultValue=false)]
         public double? ResultsWheelbaseLeft { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsWheelbaseRightMin
+        /// Right wheelbase minimum
         /// </summary>
+        /// <value>Right wheelbase minimum</value>
         [DataMember(Name="limits_wheelbase_right_min", EmitDefaultValue=false)]
         public double? LimitsWheelbaseRightMin { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsWheelbaseRightMax
+        /// Right wheelbase maximum
         /// </summary>
+        /// <value>Right wheelbase maximum</value>
         [DataMember(Name="limits_wheelbase_right_max", EmitDefaultValue=false)]
         public double? LimitsWheelbaseRightMax { get; set; }
 
         /// <summary>
-        /// Gets or Sets PassfailsWheelbaseRight
+        /// Right wheelbase pass/fails
         /// </summary>
+        /// <value>Right wheelbase pass/fails</value>
         [DataMember(Name="passfails_wheelbase_right", EmitDefaultValue=false)]
         public bool? PassfailsWheelbaseRight { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResultsWheelbaseRight
+        /// Right wheelbase results
         /// </summary>
+        /// <value>Right wheelbase results</value>
         [DataMember(Name="results_wheelbase_right", EmitDefaultValue=false)]
         public double? ResultsWheelbaseRight { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsToeLrMin
+        /// Left rear toe minimum
         /// </summary>
+        /// <value>Left rear toe minimum</value>
         [DataMember(Name="limits_toe_lr_min", EmitDefaultValue=false)]
         public double? LimitsToeLrMin { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsToeLrMax
+        /// Left rear toe maximum
         /// </summary>
+        /// <value>Left rear toe maximum</value>
         [DataMember(Name="limits_toe_lr_max", EmitDefaultValue=false)]
         public double? LimitsToeLrMax { get; set; }
 
         /// <summary>
-        /// Gets or Sets PassfailsToeLr
+        /// Left rear toe pass/fails
         /// </summary>
+        /// <value>Left rear toe pass/fails</value>
         [DataMember(Name="passfails_toe_lr", EmitDefaultValue=false)]
         public bool? PassfailsToeLr { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResultsToeLr
+        /// Left rear toe results
         /// </summary>
+        /// <value>Left rear toe results</value>
         [DataMember(Name="results_toe_lr", EmitDefaultValue=false)]
         public double? ResultsToeLr { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsToeRrMin
+        /// Right rear toe minimum
         /// </summary>
+        /// <value>Right rear toe minimum</value>
         [DataMember(Name="limits_toe_rr_min", EmitDefaultValue=false)]
         public double? LimitsToeRrMin { get; set; }
 
         /// <summary>
-        /// Gets or Sets LimitsToeRrMax
+        /// Right rear toe maximum
         /// </summary>
+        /// <value>Right rear toe maximum</value>
         [DataMember(Name="limits_toe_rr_max", EmitDefaultValue=false)]
         public double? LimitsToeRrMax { get; set; }
 
         /// <summary>
-        /// Gets or Sets PassfailsToeRr
+        /// Right rear pass/fails
         /// </summary>
+        /// <value>Right rear pass/fails</value>
         [DataMember(Name="passfails_toe_rr", EmitDefaultValue=false)]
         public bool? PassfailsToeRr { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResultsToeRr
+        /// Right rear toe results
         /// </summary>
+        /// <value>Right rear toe results</value>
         [DataMember(Name="results_toe_rr", EmitDefaultValue=false)]
         public double? ResultsToeRr { get; set; }
 
         /// <summary>
-        /// Gets or Sets InspectionDate
+        /// Inspection date
         /// </summary>
+        /// <value>Inspection date</value>
         [DataMember(Name="inspection_date", EmitDefaultValue=false)]
         public DateTimeOffset? InspectionDate { get; set; }
 

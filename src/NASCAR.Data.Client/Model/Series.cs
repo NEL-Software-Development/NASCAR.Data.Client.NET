@@ -32,11 +32,11 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Series" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
-        /// <param name="shortName">shortName.</param>
-        /// <param name="name">name.</param>
-        /// <param name="abbreviation">abbreviation.</param>
-        /// <param name="logo">logo.</param>
+        /// <param name="id">The series id.</param>
+        /// <param name="shortName">Series short name.</param>
+        /// <param name="name">Series full name.</param>
+        /// <param name="abbreviation">Series abbreviation.</param>
+        /// <param name="logo">URL to series logo.</param>
         public Series(int? id = default(int?), string shortName = default(string), string name = default(string), string abbreviation = default(string), string logo = default(string))
         {
             this.Id = id;
@@ -47,32 +47,37 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The series id
         /// </summary>
+        /// <value>The series id</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets ShortName
+        /// Series short name
         /// </summary>
+        /// <value>Series short name</value>
         [DataMember(Name="short_name", EmitDefaultValue=false)]
         public string ShortName { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Series full name
         /// </summary>
+        /// <value>Series full name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Abbreviation
+        /// Series abbreviation
         /// </summary>
+        /// <value>Series abbreviation</value>
         [DataMember(Name="abbreviation", EmitDefaultValue=false)]
         public string Abbreviation { get; set; }
 
         /// <summary>
-        /// Gets or Sets Logo
+        /// URL to series logo
         /// </summary>
+        /// <value>URL to series logo</value>
         [DataMember(Name="logo", EmitDefaultValue=false)]
         public string Logo { get; set; }
 

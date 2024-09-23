@@ -32,9 +32,9 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StageResult" /> class.
         /// </summary>
-        /// <param name="finishPosition">finishPosition.</param>
-        /// <param name="driverName">driverName.</param>
-        /// <param name="vehicleNumber">vehicleNumber.</param>
+        /// <param name="finishPosition">Finish position in stage.</param>
+        /// <param name="driverName">Driver name.</param>
+        /// <param name="vehicleNumber">Vehicle number.</param>
         public StageResult(int? finishPosition = default(int?), string driverName = default(string), string vehicleNumber = default(string))
         {
             this.FinishPosition = finishPosition;
@@ -43,20 +43,23 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets FinishPosition
+        /// Finish position in stage
         /// </summary>
+        /// <value>Finish position in stage</value>
         [DataMember(Name="finish_position", EmitDefaultValue=false)]
         public int? FinishPosition { get; set; }
 
         /// <summary>
-        /// Gets or Sets DriverName
+        /// Driver name
         /// </summary>
+        /// <value>Driver name</value>
         [DataMember(Name="driver_name", EmitDefaultValue=false)]
         public string DriverName { get; set; }
 
         /// <summary>
-        /// Gets or Sets VehicleNumber
+        /// Vehicle number
         /// </summary>
+        /// <value>Vehicle number</value>
         [DataMember(Name="vehicle_number", EmitDefaultValue=false)]
         public string VehicleNumber { get; set; }
 

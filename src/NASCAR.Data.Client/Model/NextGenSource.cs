@@ -33,9 +33,9 @@ namespace NASCAR.Data.Client.Model
         /// Initializes a new instance of the <see cref="NextGenSource" /> class.
         /// </summary>
         /// <param name="sourceId">sourceId.</param>
-        /// <param name="name">name.</param>
-        /// <param name="description">description.</param>
-        /// <param name="vehicleNumber">vehicleNumber.</param>
+        /// <param name="name">Source name.</param>
+        /// <param name="description">Description.</param>
+        /// <param name="vehicleNumber">Vehicle Number.</param>
         public NextGenSource(string sourceId = default(string), string name = default(string), string description = default(string), string vehicleNumber = default(string))
         {
             this.SourceId = sourceId;
@@ -51,20 +51,23 @@ namespace NASCAR.Data.Client.Model
         public string SourceId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Source name
         /// </summary>
+        /// <value>Source name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Description
+        /// Description
         /// </summary>
+        /// <value>Description</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or Sets VehicleNumber
+        /// Vehicle Number
         /// </summary>
+        /// <value>Vehicle Number</value>
         [DataMember(Name="vehicle_number", EmitDefaultValue=false)]
         public string VehicleNumber { get; set; }
 

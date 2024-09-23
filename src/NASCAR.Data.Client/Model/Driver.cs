@@ -32,20 +32,20 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Driver" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
-        /// <param name="name">name.</param>
-        /// <param name="dateOfBirth">dateOfBirth.</param>
-        /// <param name="dateOfDeath">dateOfDeath.</param>
-        /// <param name="hometownCity">hometownCity.</param>
-        /// <param name="hometownState">hometownState.</param>
-        /// <param name="hometownCountry">hometownCountry.</param>
-        /// <param name="residesCity">residesCity.</param>
-        /// <param name="residesState">residesState.</param>
-        /// <param name="residesCountry">residesCountry.</param>
-        /// <param name="series1RookieYear">series1RookieYear.</param>
-        /// <param name="series2RookieYear">series2RookieYear.</param>
-        /// <param name="series3RookieYear">series3RookieYear.</param>
-        /// <param name="hobbies">hobbies.</param>
+        /// <param name="id">Id.</param>
+        /// <param name="name">Name.</param>
+        /// <param name="dateOfBirth">Date of birth.</param>
+        /// <param name="dateOfDeath">Date of death.</param>
+        /// <param name="hometownCity">The driver&#x27;s hometown.</param>
+        /// <param name="hometownState">The driver&#x27;s home state.</param>
+        /// <param name="hometownCountry">The driver&#x27;s home country.</param>
+        /// <param name="residesCity">The city where the driver resides.</param>
+        /// <param name="residesState">The state where the driver resides.</param>
+        /// <param name="residesCountry">The country where the driver resides.</param>
+        /// <param name="series1RookieYear">The driver&#x27;s rookie year in series 1.</param>
+        /// <param name="series2RookieYear">The driver&#x27;s rookie year in series 2.</param>
+        /// <param name="series3RookieYear">The driver&#x27;s rookie year in series 3.</param>
+        /// <param name="hobbies">The driver&#x27;s hobbies.</param>
         public Driver(int? id = default(int?), string name = default(string), DateTimeOffset? dateOfBirth = default(DateTimeOffset?), DateTimeOffset? dateOfDeath = default(DateTimeOffset?), string hometownCity = default(string), string hometownState = default(string), string hometownCountry = default(string), string residesCity = default(string), string residesState = default(string), string residesCountry = default(string), int? series1RookieYear = default(int?), int? series2RookieYear = default(int?), int? series3RookieYear = default(int?), string hobbies = default(string))
         {
             this.Id = id;
@@ -65,86 +65,100 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Id
         /// </summary>
+        /// <value>Id</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Name
         /// </summary>
+        /// <value>Name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets DateOfBirth
+        /// Date of birth
         /// </summary>
+        /// <value>Date of birth</value>
         [DataMember(Name="date_of_birth", EmitDefaultValue=false)]
         public DateTimeOffset? DateOfBirth { get; set; }
 
         /// <summary>
-        /// Gets or Sets DateOfDeath
+        /// Date of death
         /// </summary>
+        /// <value>Date of death</value>
         [DataMember(Name="date_of_death", EmitDefaultValue=false)]
         public DateTimeOffset? DateOfDeath { get; set; }
 
         /// <summary>
-        /// Gets or Sets HometownCity
+        /// The driver&#x27;s hometown
         /// </summary>
+        /// <value>The driver&#x27;s hometown</value>
         [DataMember(Name="hometown_city", EmitDefaultValue=false)]
         public string HometownCity { get; set; }
 
         /// <summary>
-        /// Gets or Sets HometownState
+        /// The driver&#x27;s home state
         /// </summary>
+        /// <value>The driver&#x27;s home state</value>
         [DataMember(Name="hometown_state", EmitDefaultValue=false)]
         public string HometownState { get; set; }
 
         /// <summary>
-        /// Gets or Sets HometownCountry
+        /// The driver&#x27;s home country
         /// </summary>
+        /// <value>The driver&#x27;s home country</value>
         [DataMember(Name="hometown_country", EmitDefaultValue=false)]
         public string HometownCountry { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResidesCity
+        /// The city where the driver resides
         /// </summary>
+        /// <value>The city where the driver resides</value>
         [DataMember(Name="resides_city", EmitDefaultValue=false)]
         public string ResidesCity { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResidesState
+        /// The state where the driver resides
         /// </summary>
+        /// <value>The state where the driver resides</value>
         [DataMember(Name="resides_state", EmitDefaultValue=false)]
         public string ResidesState { get; set; }
 
         /// <summary>
-        /// Gets or Sets ResidesCountry
+        /// The country where the driver resides
         /// </summary>
+        /// <value>The country where the driver resides</value>
         [DataMember(Name="resides_country", EmitDefaultValue=false)]
         public string ResidesCountry { get; set; }
 
         /// <summary>
-        /// Gets or Sets Series1RookieYear
+        /// The driver&#x27;s rookie year in series 1
         /// </summary>
+        /// <value>The driver&#x27;s rookie year in series 1</value>
         [DataMember(Name="series_1_rookie_year", EmitDefaultValue=false)]
         public int? Series1RookieYear { get; set; }
 
         /// <summary>
-        /// Gets or Sets Series2RookieYear
+        /// The driver&#x27;s rookie year in series 2
         /// </summary>
+        /// <value>The driver&#x27;s rookie year in series 2</value>
         [DataMember(Name="series_2_rookie_year", EmitDefaultValue=false)]
         public int? Series2RookieYear { get; set; }
 
         /// <summary>
-        /// Gets or Sets Series3RookieYear
+        /// The driver&#x27;s rookie year in series 3
         /// </summary>
+        /// <value>The driver&#x27;s rookie year in series 3</value>
         [DataMember(Name="series_3_rookie_year", EmitDefaultValue=false)]
         public int? Series3RookieYear { get; set; }
 
         /// <summary>
-        /// Gets or Sets Hobbies
+        /// The driver&#x27;s hobbies
         /// </summary>
+        /// <value>The driver&#x27;s hobbies</value>
         [DataMember(Name="hobbies", EmitDefaultValue=false)]
         public string Hobbies { get; set; }
 

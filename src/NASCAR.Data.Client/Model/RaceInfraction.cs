@@ -32,14 +32,14 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RaceInfraction" /> class.
         /// </summary>
-        /// <param name="flagState">flagState.</param>
-        /// <param name="infraction">infraction.</param>
-        /// <param name="vehicleNumber">vehicleNumber.</param>
-        /// <param name="lap">lap.</param>
-        /// <param name="lapAssessed">lapAssessed.</param>
-        /// <param name="timeOfRace">timeOfRace.</param>
-        /// <param name="penalty">penalty.</param>
-        /// <param name="notes">notes.</param>
+        /// <param name="flagState">Flag state at the time of the infraction: (W,G,G/Y,R,Y).</param>
+        /// <param name="infraction">Description of the infraction.</param>
+        /// <param name="vehicleNumber">Vehicle number.</param>
+        /// <param name="lap">Lap of infraction.</param>
+        /// <param name="lapAssessed">Lap infraction was assessed.</param>
+        /// <param name="timeOfRace">Time of race the infraction occurred.</param>
+        /// <param name="penalty">Penalty assessed.</param>
+        /// <param name="notes">Notes.</param>
         public RaceInfraction(string flagState = default(string), string infraction = default(string), string vehicleNumber = default(string), int? lap = default(int?), int? lapAssessed = default(int?), DateTimeOffset? timeOfRace = default(DateTimeOffset?), string penalty = default(string), string notes = default(string))
         {
             this.FlagState = flagState;
@@ -53,50 +53,58 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets FlagState
+        /// Flag state at the time of the infraction: (W,G,G/Y,R,Y)
         /// </summary>
+        /// <value>Flag state at the time of the infraction: (W,G,G/Y,R,Y)</value>
         [DataMember(Name="flag_state", EmitDefaultValue=false)]
         public string FlagState { get; set; }
 
         /// <summary>
-        /// Gets or Sets Infraction
+        /// Description of the infraction
         /// </summary>
+        /// <value>Description of the infraction</value>
         [DataMember(Name="infraction", EmitDefaultValue=false)]
         public string Infraction { get; set; }
 
         /// <summary>
-        /// Gets or Sets VehicleNumber
+        /// Vehicle number
         /// </summary>
+        /// <value>Vehicle number</value>
         [DataMember(Name="vehicle_number", EmitDefaultValue=false)]
         public string VehicleNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets Lap
+        /// Lap of infraction
         /// </summary>
+        /// <value>Lap of infraction</value>
         [DataMember(Name="lap", EmitDefaultValue=false)]
         public int? Lap { get; set; }
 
         /// <summary>
-        /// Gets or Sets LapAssessed
+        /// Lap infraction was assessed
         /// </summary>
+        /// <value>Lap infraction was assessed</value>
         [DataMember(Name="lap_assessed", EmitDefaultValue=false)]
         public int? LapAssessed { get; set; }
 
         /// <summary>
-        /// Gets or Sets TimeOfRace
+        /// Time of race the infraction occurred
         /// </summary>
+        /// <value>Time of race the infraction occurred</value>
         [DataMember(Name="time_of_race", EmitDefaultValue=false)]
         public DateTimeOffset? TimeOfRace { get; set; }
 
         /// <summary>
-        /// Gets or Sets Penalty
+        /// Penalty assessed
         /// </summary>
+        /// <value>Penalty assessed</value>
         [DataMember(Name="penalty", EmitDefaultValue=false)]
         public string Penalty { get; set; }
 
         /// <summary>
-        /// Gets or Sets Notes
+        /// Notes
         /// </summary>
+        /// <value>Notes</value>
         [DataMember(Name="notes", EmitDefaultValue=false)]
         public string Notes { get; set; }
 

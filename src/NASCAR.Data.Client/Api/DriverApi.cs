@@ -30,32 +30,9 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
-        /// <returns>Collection&lt;Driver&gt;</returns>
-        Collection<Driver> BySeason (int? season = null, int? seriesId = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
-        /// <returns>ApiResponse of Collection&lt;Driver&gt;</returns>
-        ApiResponse<Collection<Driver>> BySeasonWithHttpInfo (int? season = null, int? seriesId = null);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"> (optional)</param>
         /// <returns>Driver</returns>
-        Driver Driver (int? id = null);
+        Driver DriverGet (int? id = null);
 
         /// <summary>
         /// 
@@ -66,7 +43,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"> (optional)</param>
         /// <returns>ApiResponse of Driver</returns>
-        ApiResponse<Driver> DriverWithHttpInfo (int? id = null);
+        ApiResponse<Driver> DriverGetWithHttpInfo (int? id = null);
         /// <summary>
         /// 
         /// </summary>
@@ -78,7 +55,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="season"> (optional)</param>
         /// <param name="seriesId"> (optional)</param>
         /// <returns>Collection&lt;RaceResultSummary&gt;</returns>
-        Collection<RaceResultSummary> DriverSeasonFinishes (int? id = null, int? season = null, int? seriesId = null);
+        Collection<RaceResultSummary> DriverSeasonFinishesGet (int? id = null, int? season = null, int? seriesId = null);
 
         /// <summary>
         /// 
@@ -91,9 +68,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="season"> (optional)</param>
         /// <param name="seriesId"> (optional)</param>
         /// <returns>ApiResponse of Collection&lt;RaceResultSummary&gt;</returns>
-        ApiResponse<Collection<RaceResultSummary>> DriverSeasonFinishesWithHttpInfo (int? id = null, int? season = null, int? seriesId = null);
-        #endregion Synchronous Operations
-        #region Asynchronous Operations
+        ApiResponse<Collection<RaceResultSummary>> DriverSeasonFinishesGetWithHttpInfo (int? id = null, int? season = null, int? seriesId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -103,8 +78,8 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="season"> (optional)</param>
         /// <param name="seriesId"> (optional)</param>
-        /// <returns>Task of Collection&lt;Driver&gt;</returns>
-        System.Threading.Tasks.Task<Collection<Driver>> BySeasonAsync (int? season = null, int? seriesId = null);
+        /// <returns>Collection&lt;Driver&gt;</returns>
+        Collection<Driver> DriverSeasonGet (int? season = null, int? seriesId = null);
 
         /// <summary>
         /// 
@@ -115,8 +90,10 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="season"> (optional)</param>
         /// <param name="seriesId"> (optional)</param>
-        /// <returns>Task of ApiResponse (Collection&lt;Driver&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Collection<Driver>>> BySeasonAsyncWithHttpInfo (int? season = null, int? seriesId = null);
+        /// <returns>ApiResponse of Collection&lt;Driver&gt;</returns>
+        ApiResponse<Collection<Driver>> DriverSeasonGetWithHttpInfo (int? season = null, int? seriesId = null);
+        #endregion Synchronous Operations
+        #region Asynchronous Operations
         /// <summary>
         /// 
         /// </summary>
@@ -126,7 +103,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"> (optional)</param>
         /// <returns>Task of Driver</returns>
-        System.Threading.Tasks.Task<Driver> DriverAsync (int? id = null);
+        System.Threading.Tasks.Task<Driver> DriverGetAsync (int? id = null);
 
         /// <summary>
         /// 
@@ -137,7 +114,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"> (optional)</param>
         /// <returns>Task of ApiResponse (Driver)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Driver>> DriverAsyncWithHttpInfo (int? id = null);
+        System.Threading.Tasks.Task<ApiResponse<Driver>> DriverGetAsyncWithHttpInfo (int? id = null);
         /// <summary>
         /// 
         /// </summary>
@@ -149,7 +126,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="season"> (optional)</param>
         /// <param name="seriesId"> (optional)</param>
         /// <returns>Task of Collection&lt;RaceResultSummary&gt;</returns>
-        System.Threading.Tasks.Task<Collection<RaceResultSummary>> DriverSeasonFinishesAsync (int? id = null, int? season = null, int? seriesId = null);
+        System.Threading.Tasks.Task<Collection<RaceResultSummary>> DriverSeasonFinishesGetAsync (int? id = null, int? season = null, int? seriesId = null);
 
         /// <summary>
         /// 
@@ -162,7 +139,30 @@ namespace NASCAR.Data.Client.Api
         /// <param name="season"> (optional)</param>
         /// <param name="seriesId"> (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;RaceResultSummary&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Collection<RaceResultSummary>>> DriverSeasonFinishesAsyncWithHttpInfo (int? id = null, int? season = null, int? seriesId = null);
+        System.Threading.Tasks.Task<ApiResponse<Collection<RaceResultSummary>>> DriverSeasonFinishesGetAsyncWithHttpInfo (int? id = null, int? season = null, int? seriesId = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="season"> (optional)</param>
+        /// <param name="seriesId"> (optional)</param>
+        /// <returns>Task of Collection&lt;Driver&gt;</returns>
+        System.Threading.Tasks.Task<Collection<Driver>> DriverSeasonGetAsync (int? season = null, int? seriesId = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="season"> (optional)</param>
+        /// <param name="seriesId"> (optional)</param>
+        /// <returns>Task of ApiResponse (Collection&lt;Driver&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Collection<Driver>>> DriverSeasonGetAsyncWithHttpInfo (int? season = null, int? seriesId = null);
         #endregion Asynchronous Operations
     }
 
@@ -278,158 +278,11 @@ namespace NASCAR.Data.Client.Api
         ///  
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
-        /// <returns>Collection&lt;Driver&gt;</returns>
-        public Collection<Driver> BySeason (int? season = null, int? seriesId = null)
-        {
-             ApiResponse<Collection<Driver>> localVarResponse = BySeasonWithHttpInfo(season, seriesId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
-        /// <returns>ApiResponse of Collection&lt;Driver&gt;</returns>
-        public ApiResponse< Collection<Driver> > BySeasonWithHttpInfo (int? season = null, int? seriesId = null)
-        {
-
-            var localVarPath = "/driver/season";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "text/plain",
-                "application/json",
-                "text/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (season != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "season", season)); // query parameter
-            if (seriesId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "series_id", seriesId)); // query parameter
-            // authentication (Bearer) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("BySeason", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Collection<Driver>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (Collection<Driver>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<Driver>)));
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
-        /// <returns>Task of Collection&lt;Driver&gt;</returns>
-        public async System.Threading.Tasks.Task<Collection<Driver>> BySeasonAsync (int? season = null, int? seriesId = null)
-        {
-             ApiResponse<Collection<Driver>> localVarResponse = await BySeasonAsyncWithHttpInfo(season, seriesId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
-        /// <returns>Task of ApiResponse (Collection&lt;Driver&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Collection<Driver>>> BySeasonAsyncWithHttpInfo (int? season = null, int? seriesId = null)
-        {
-
-            var localVarPath = "/driver/season";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "text/plain",
-                "application/json",
-                "text/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (season != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "season", season)); // query parameter
-            if (seriesId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "series_id", seriesId)); // query parameter
-            // authentication (Bearer) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("BySeason", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Collection<Driver>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (Collection<Driver>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<Driver>)));
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"> (optional)</param>
         /// <returns>Driver</returns>
-        public Driver Driver (int? id = null)
+        public Driver DriverGet (int? id = null)
         {
-             ApiResponse<Driver> localVarResponse = DriverWithHttpInfo(id);
+             ApiResponse<Driver> localVarResponse = DriverGetWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -439,7 +292,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"> (optional)</param>
         /// <returns>ApiResponse of Driver</returns>
-        public ApiResponse< Driver > DriverWithHttpInfo (int? id = null)
+        public ApiResponse< Driver > DriverGetWithHttpInfo (int? id = null)
         {
 
             var localVarPath = "/driver";
@@ -482,7 +335,7 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("Driver", localVarResponse);
+                Exception exception = ExceptionFactory("DriverGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -497,9 +350,9 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"> (optional)</param>
         /// <returns>Task of Driver</returns>
-        public async System.Threading.Tasks.Task<Driver> DriverAsync (int? id = null)
+        public async System.Threading.Tasks.Task<Driver> DriverGetAsync (int? id = null)
         {
-             ApiResponse<Driver> localVarResponse = await DriverAsyncWithHttpInfo(id);
+             ApiResponse<Driver> localVarResponse = await DriverGetAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -510,7 +363,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"> (optional)</param>
         /// <returns>Task of ApiResponse (Driver)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Driver>> DriverAsyncWithHttpInfo (int? id = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Driver>> DriverGetAsyncWithHttpInfo (int? id = null)
         {
 
             var localVarPath = "/driver";
@@ -553,7 +406,7 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("Driver", localVarResponse);
+                Exception exception = ExceptionFactory("DriverGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -570,9 +423,9 @@ namespace NASCAR.Data.Client.Api
         /// <param name="season"> (optional)</param>
         /// <param name="seriesId"> (optional)</param>
         /// <returns>Collection&lt;RaceResultSummary&gt;</returns>
-        public Collection<RaceResultSummary> DriverSeasonFinishes (int? id = null, int? season = null, int? seriesId = null)
+        public Collection<RaceResultSummary> DriverSeasonFinishesGet (int? id = null, int? season = null, int? seriesId = null)
         {
-             ApiResponse<Collection<RaceResultSummary>> localVarResponse = DriverSeasonFinishesWithHttpInfo(id, season, seriesId);
+             ApiResponse<Collection<RaceResultSummary>> localVarResponse = DriverSeasonFinishesGetWithHttpInfo(id, season, seriesId);
              return localVarResponse.Data;
         }
 
@@ -584,7 +437,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="season"> (optional)</param>
         /// <param name="seriesId"> (optional)</param>
         /// <returns>ApiResponse of Collection&lt;RaceResultSummary&gt;</returns>
-        public ApiResponse< Collection<RaceResultSummary> > DriverSeasonFinishesWithHttpInfo (int? id = null, int? season = null, int? seriesId = null)
+        public ApiResponse< Collection<RaceResultSummary> > DriverSeasonFinishesGetWithHttpInfo (int? id = null, int? season = null, int? seriesId = null)
         {
 
             var localVarPath = "/driver/season-finishes";
@@ -629,7 +482,7 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DriverSeasonFinishes", localVarResponse);
+                Exception exception = ExceptionFactory("DriverSeasonFinishesGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -646,9 +499,9 @@ namespace NASCAR.Data.Client.Api
         /// <param name="season"> (optional)</param>
         /// <param name="seriesId"> (optional)</param>
         /// <returns>Task of Collection&lt;RaceResultSummary&gt;</returns>
-        public async System.Threading.Tasks.Task<Collection<RaceResultSummary>> DriverSeasonFinishesAsync (int? id = null, int? season = null, int? seriesId = null)
+        public async System.Threading.Tasks.Task<Collection<RaceResultSummary>> DriverSeasonFinishesGetAsync (int? id = null, int? season = null, int? seriesId = null)
         {
-             ApiResponse<Collection<RaceResultSummary>> localVarResponse = await DriverSeasonFinishesAsyncWithHttpInfo(id, season, seriesId);
+             ApiResponse<Collection<RaceResultSummary>> localVarResponse = await DriverSeasonFinishesGetAsyncWithHttpInfo(id, season, seriesId);
              return localVarResponse.Data;
 
         }
@@ -661,7 +514,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="season"> (optional)</param>
         /// <param name="seriesId"> (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;RaceResultSummary&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Collection<RaceResultSummary>>> DriverSeasonFinishesAsyncWithHttpInfo (int? id = null, int? season = null, int? seriesId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Collection<RaceResultSummary>>> DriverSeasonFinishesGetAsyncWithHttpInfo (int? id = null, int? season = null, int? seriesId = null)
         {
 
             var localVarPath = "/driver/season-finishes";
@@ -706,13 +559,160 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DriverSeasonFinishes", localVarResponse);
+                Exception exception = ExceptionFactory("DriverSeasonFinishesGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<Collection<RaceResultSummary>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (Collection<RaceResultSummary>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<RaceResultSummary>)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="season"> (optional)</param>
+        /// <param name="seriesId"> (optional)</param>
+        /// <returns>Collection&lt;Driver&gt;</returns>
+        public Collection<Driver> DriverSeasonGet (int? season = null, int? seriesId = null)
+        {
+             ApiResponse<Collection<Driver>> localVarResponse = DriverSeasonGetWithHttpInfo(season, seriesId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="season"> (optional)</param>
+        /// <param name="seriesId"> (optional)</param>
+        /// <returns>ApiResponse of Collection&lt;Driver&gt;</returns>
+        public ApiResponse< Collection<Driver> > DriverSeasonGetWithHttpInfo (int? season = null, int? seriesId = null)
+        {
+
+            var localVarPath = "/driver/season";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (season != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "season", season)); // query parameter
+            if (seriesId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "series_id", seriesId)); // query parameter
+            // authentication (Bearer) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DriverSeasonGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Collection<Driver>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (Collection<Driver>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<Driver>)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="season"> (optional)</param>
+        /// <param name="seriesId"> (optional)</param>
+        /// <returns>Task of Collection&lt;Driver&gt;</returns>
+        public async System.Threading.Tasks.Task<Collection<Driver>> DriverSeasonGetAsync (int? season = null, int? seriesId = null)
+        {
+             ApiResponse<Collection<Driver>> localVarResponse = await DriverSeasonGetAsyncWithHttpInfo(season, seriesId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="season"> (optional)</param>
+        /// <param name="seriesId"> (optional)</param>
+        /// <returns>Task of ApiResponse (Collection&lt;Driver&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Collection<Driver>>> DriverSeasonGetAsyncWithHttpInfo (int? season = null, int? seriesId = null)
+        {
+
+            var localVarPath = "/driver/season";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (season != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "season", season)); // query parameter
+            if (seriesId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "series_id", seriesId)); // query parameter
+            // authentication (Bearer) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DriverSeasonGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Collection<Driver>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (Collection<Driver>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<Driver>)));
         }
 
     }

@@ -20,7 +20,7 @@ namespace NASCAR.Data.Client.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-        public interface IRaceWeekApi : IApiAccessor
+        public interface IERDPApi : IApiAccessor
     {
         #region Synchronous Operations
         /// <summary>
@@ -30,9 +30,8 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"> (optional)</param>
-        /// <returns>RaceWeekDetails</returns>
-        RaceWeekDetails RaceWeekDetailsGet (int? id = null);
+        /// <returns>Collection&lt;NextGenDatapoint&gt;</returns>
+        Collection<NextGenDatapoint> ErdpDatapointsGet ();
 
         /// <summary>
         /// 
@@ -41,9 +40,8 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"> (optional)</param>
-        /// <returns>ApiResponse of RaceWeekDetails</returns>
-        ApiResponse<RaceWeekDetails> RaceWeekDetailsGetWithHttpInfo (int? id = null);
+        /// <returns>ApiResponse of Collection&lt;NextGenDatapoint&gt;</returns>
+        ApiResponse<Collection<NextGenDatapoint>> ErdpDatapointsGetWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -51,8 +49,8 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Collection&lt;RaceWeek&gt;</returns>
-        Collection<RaceWeek> RaceWeekLiveGet ();
+        /// <returns>Collection&lt;NextGenSource&gt;</returns>
+        Collection<NextGenSource> ErdpSourcesGet ();
 
         /// <summary>
         /// 
@@ -61,29 +59,8 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Collection&lt;RaceWeek&gt;</returns>
-        ApiResponse<Collection<RaceWeek>> RaceWeekLiveGetWithHttpInfo ();
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <returns>Collection&lt;RaceWeek&gt;</returns>
-        Collection<RaceWeek> RaceWeekSeasonGet (int? season = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <returns>ApiResponse of Collection&lt;RaceWeek&gt;</returns>
-        ApiResponse<Collection<RaceWeek>> RaceWeekSeasonGetWithHttpInfo (int? season = null);
+        /// <returns>ApiResponse of Collection&lt;NextGenSource&gt;</returns>
+        ApiResponse<Collection<NextGenSource>> ErdpSourcesGetWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -93,9 +70,8 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"> (optional)</param>
-        /// <returns>Task of RaceWeekDetails</returns>
-        System.Threading.Tasks.Task<RaceWeekDetails> RaceWeekDetailsGetAsync (int? id = null);
+        /// <returns>Task of Collection&lt;NextGenDatapoint&gt;</returns>
+        System.Threading.Tasks.Task<Collection<NextGenDatapoint>> ErdpDatapointsGetAsync ();
 
         /// <summary>
         /// 
@@ -104,9 +80,8 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"> (optional)</param>
-        /// <returns>Task of ApiResponse (RaceWeekDetails)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RaceWeekDetails>> RaceWeekDetailsGetAsyncWithHttpInfo (int? id = null);
+        /// <returns>Task of ApiResponse (Collection&lt;NextGenDatapoint&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Collection<NextGenDatapoint>>> ErdpDatapointsGetAsyncWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -114,8 +89,8 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of Collection&lt;RaceWeek&gt;</returns>
-        System.Threading.Tasks.Task<Collection<RaceWeek>> RaceWeekLiveGetAsync ();
+        /// <returns>Task of Collection&lt;NextGenSource&gt;</returns>
+        System.Threading.Tasks.Task<Collection<NextGenSource>> ErdpSourcesGetAsync ();
 
         /// <summary>
         /// 
@@ -124,44 +99,23 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (Collection&lt;RaceWeek&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Collection<RaceWeek>>> RaceWeekLiveGetAsyncWithHttpInfo ();
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <returns>Task of Collection&lt;RaceWeek&gt;</returns>
-        System.Threading.Tasks.Task<Collection<RaceWeek>> RaceWeekSeasonGetAsync (int? season = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <returns>Task of ApiResponse (Collection&lt;RaceWeek&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Collection<RaceWeek>>> RaceWeekSeasonGetAsyncWithHttpInfo (int? season = null);
+        /// <returns>Task of ApiResponse (Collection&lt;NextGenSource&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Collection<NextGenSource>>> ErdpSourcesGetAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-        public partial class RaceWeekApi : IRaceWeekApi
+        public partial class ERDPApi : IERDPApi
     {
         private NASCAR.Data.Client.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="RaceWeekApi"/> class.
+        /// Initializes a new instance of the <see cref="ERDPApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public RaceWeekApi(String basePath)
+        public ERDPApi(String basePath)
         {
             this.Configuration = new NASCAR.Data.Client.Client.Configuration { BasePath = basePath };
 
@@ -169,10 +123,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="RaceWeekApi"/> class
+        /// Initializes a new instance of the <see cref="ERDPApi"/> class
         /// </summary>
         /// <returns></returns>
-        public RaceWeekApi()
+        public ERDPApi()
         {
             this.Configuration = NASCAR.Data.Client.Client.Configuration.Default;
 
@@ -180,12 +134,12 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="RaceWeekApi"/> class
+        /// Initializes a new instance of the <see cref="ERDPApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public RaceWeekApi(NASCAR.Data.Client.Client.Configuration configuration = null)
+        public ERDPApi(NASCAR.Data.Client.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = NASCAR.Data.Client.Client.Configuration.Default;
@@ -262,11 +216,10 @@ namespace NASCAR.Data.Client.Api
         ///  
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"> (optional)</param>
-        /// <returns>RaceWeekDetails</returns>
-        public RaceWeekDetails RaceWeekDetailsGet (int? id = null)
+        /// <returns>Collection&lt;NextGenDatapoint&gt;</returns>
+        public Collection<NextGenDatapoint> ErdpDatapointsGet ()
         {
-             ApiResponse<RaceWeekDetails> localVarResponse = RaceWeekDetailsGetWithHttpInfo(id);
+             ApiResponse<Collection<NextGenDatapoint>> localVarResponse = ErdpDatapointsGetWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -274,151 +227,11 @@ namespace NASCAR.Data.Client.Api
         ///  
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"> (optional)</param>
-        /// <returns>ApiResponse of RaceWeekDetails</returns>
-        public ApiResponse< RaceWeekDetails > RaceWeekDetailsGetWithHttpInfo (int? id = null)
+        /// <returns>ApiResponse of Collection&lt;NextGenDatapoint&gt;</returns>
+        public ApiResponse< Collection<NextGenDatapoint> > ErdpDatapointsGetWithHttpInfo ()
         {
 
-            var localVarPath = "/race-week/details";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "text/plain",
-                "application/json",
-                "text/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "id", id)); // query parameter
-            // authentication (Bearer) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("RaceWeekDetailsGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<RaceWeekDetails>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (RaceWeekDetails) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RaceWeekDetails)));
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"> (optional)</param>
-        /// <returns>Task of RaceWeekDetails</returns>
-        public async System.Threading.Tasks.Task<RaceWeekDetails> RaceWeekDetailsGetAsync (int? id = null)
-        {
-             ApiResponse<RaceWeekDetails> localVarResponse = await RaceWeekDetailsGetAsyncWithHttpInfo(id);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"> (optional)</param>
-        /// <returns>Task of ApiResponse (RaceWeekDetails)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RaceWeekDetails>> RaceWeekDetailsGetAsyncWithHttpInfo (int? id = null)
-        {
-
-            var localVarPath = "/race-week/details";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "text/plain",
-                "application/json",
-                "text/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "id", id)); // query parameter
-            // authentication (Bearer) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("RaceWeekDetailsGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<RaceWeekDetails>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (RaceWeekDetails) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RaceWeekDetails)));
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Collection&lt;RaceWeek&gt;</returns>
-        public Collection<RaceWeek> RaceWeekLiveGet ()
-        {
-             ApiResponse<Collection<RaceWeek>> localVarResponse = RaceWeekLiveGetWithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Collection&lt;RaceWeek&gt;</returns>
-        public ApiResponse< Collection<RaceWeek> > RaceWeekLiveGetWithHttpInfo ()
-        {
-
-            var localVarPath = "/race-week/live";
+            var localVarPath = "/erdp/datapoints";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -457,23 +270,23 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("RaceWeekLiveGet", localVarResponse);
+                Exception exception = ExceptionFactory("ErdpDatapointsGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Collection<RaceWeek>>(localVarStatusCode,
+            return new ApiResponse<Collection<NextGenDatapoint>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (Collection<RaceWeek>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<RaceWeek>)));
+                (Collection<NextGenDatapoint>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<NextGenDatapoint>)));
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of Collection&lt;RaceWeek&gt;</returns>
-        public async System.Threading.Tasks.Task<Collection<RaceWeek>> RaceWeekLiveGetAsync ()
+        /// <returns>Task of Collection&lt;NextGenDatapoint&gt;</returns>
+        public async System.Threading.Tasks.Task<Collection<NextGenDatapoint>> ErdpDatapointsGetAsync ()
         {
-             ApiResponse<Collection<RaceWeek>> localVarResponse = await RaceWeekLiveGetAsyncWithHttpInfo();
+             ApiResponse<Collection<NextGenDatapoint>> localVarResponse = await ErdpDatapointsGetAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -482,11 +295,11 @@ namespace NASCAR.Data.Client.Api
         ///  
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (Collection&lt;RaceWeek&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Collection<RaceWeek>>> RaceWeekLiveGetAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (Collection&lt;NextGenDatapoint&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Collection<NextGenDatapoint>>> ErdpDatapointsGetAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/race-week/live";
+            var localVarPath = "/erdp/datapoints";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -525,24 +338,23 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("RaceWeekLiveGet", localVarResponse);
+                Exception exception = ExceptionFactory("ErdpDatapointsGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Collection<RaceWeek>>(localVarStatusCode,
+            return new ApiResponse<Collection<NextGenDatapoint>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (Collection<RaceWeek>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<RaceWeek>)));
+                (Collection<NextGenDatapoint>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<NextGenDatapoint>)));
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <returns>Collection&lt;RaceWeek&gt;</returns>
-        public Collection<RaceWeek> RaceWeekSeasonGet (int? season = null)
+        /// <returns>Collection&lt;NextGenSource&gt;</returns>
+        public Collection<NextGenSource> ErdpSourcesGet ()
         {
-             ApiResponse<Collection<RaceWeek>> localVarResponse = RaceWeekSeasonGetWithHttpInfo(season);
+             ApiResponse<Collection<NextGenSource>> localVarResponse = ErdpSourcesGetWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -550,12 +362,11 @@ namespace NASCAR.Data.Client.Api
         ///  
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <returns>ApiResponse of Collection&lt;RaceWeek&gt;</returns>
-        public ApiResponse< Collection<RaceWeek> > RaceWeekSeasonGetWithHttpInfo (int? season = null)
+        /// <returns>ApiResponse of Collection&lt;NextGenSource&gt;</returns>
+        public ApiResponse< Collection<NextGenSource> > ErdpSourcesGetWithHttpInfo ()
         {
 
-            var localVarPath = "/race-week/season";
+            var localVarPath = "/erdp/sources";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -578,7 +389,6 @@ namespace NASCAR.Data.Client.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (season != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "season", season)); // query parameter
             // authentication (Bearer) required
             // bearer required
             if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
@@ -595,24 +405,23 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("RaceWeekSeasonGet", localVarResponse);
+                Exception exception = ExceptionFactory("ErdpSourcesGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Collection<RaceWeek>>(localVarStatusCode,
+            return new ApiResponse<Collection<NextGenSource>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (Collection<RaceWeek>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<RaceWeek>)));
+                (Collection<NextGenSource>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<NextGenSource>)));
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <returns>Task of Collection&lt;RaceWeek&gt;</returns>
-        public async System.Threading.Tasks.Task<Collection<RaceWeek>> RaceWeekSeasonGetAsync (int? season = null)
+        /// <returns>Task of Collection&lt;NextGenSource&gt;</returns>
+        public async System.Threading.Tasks.Task<Collection<NextGenSource>> ErdpSourcesGetAsync ()
         {
-             ApiResponse<Collection<RaceWeek>> localVarResponse = await RaceWeekSeasonGetAsyncWithHttpInfo(season);
+             ApiResponse<Collection<NextGenSource>> localVarResponse = await ErdpSourcesGetAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -621,12 +430,11 @@ namespace NASCAR.Data.Client.Api
         ///  
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <returns>Task of ApiResponse (Collection&lt;RaceWeek&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Collection<RaceWeek>>> RaceWeekSeasonGetAsyncWithHttpInfo (int? season = null)
+        /// <returns>Task of ApiResponse (Collection&lt;NextGenSource&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Collection<NextGenSource>>> ErdpSourcesGetAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/race-week/season";
+            var localVarPath = "/erdp/sources";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -649,7 +457,6 @@ namespace NASCAR.Data.Client.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (season != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "season", season)); // query parameter
             // authentication (Bearer) required
             // bearer required
             if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
@@ -666,13 +473,13 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("RaceWeekSeasonGet", localVarResponse);
+                Exception exception = ExceptionFactory("ErdpSourcesGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Collection<RaceWeek>>(localVarStatusCode,
+            return new ApiResponse<Collection<NextGenSource>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (Collection<RaceWeek>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<RaceWeek>)));
+                (Collection<NextGenSource>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<NextGenSource>)));
         }
 
     }

@@ -32,10 +32,10 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LapLeader" /> class.
         /// </summary>
-        /// <param name="startLap">startLap.</param>
-        /// <param name="endLap">endLap.</param>
-        /// <param name="lapsLed">lapsLed.</param>
-        /// <param name="vehicleNumber">vehicleNumber.</param>
+        /// <param name="startLap">Start lap.</param>
+        /// <param name="endLap">End lap.</param>
+        /// <param name="lapsLed">Total laps led.</param>
+        /// <param name="vehicleNumber">Vehicle number.</param>
         public LapLeader(int? startLap = default(int?), int? endLap = default(int?), int? lapsLed = default(int?), string vehicleNumber = default(string))
         {
             this.StartLap = startLap;
@@ -45,26 +45,30 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets StartLap
+        /// Start lap
         /// </summary>
+        /// <value>Start lap</value>
         [DataMember(Name="start_lap", EmitDefaultValue=false)]
         public int? StartLap { get; set; }
 
         /// <summary>
-        /// Gets or Sets EndLap
+        /// End lap
         /// </summary>
+        /// <value>End lap</value>
         [DataMember(Name="end_lap", EmitDefaultValue=false)]
         public int? EndLap { get; set; }
 
         /// <summary>
-        /// Gets or Sets LapsLed
+        /// Total laps led
         /// </summary>
+        /// <value>Total laps led</value>
         [DataMember(Name="laps_led", EmitDefaultValue=false)]
         public int? LapsLed { get; set; }
 
         /// <summary>
-        /// Gets or Sets VehicleNumber
+        /// Vehicle number
         /// </summary>
+        /// <value>Vehicle number</value>
         [DataMember(Name="vehicle_number", EmitDefaultValue=false)]
         public string VehicleNumber { get; set; }
 

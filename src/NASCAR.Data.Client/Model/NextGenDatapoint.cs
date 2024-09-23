@@ -32,9 +32,9 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NextGenDatapoint" /> class.
         /// </summary>
-        /// <param name="datapointId">datapointId.</param>
-        /// <param name="name">name.</param>
-        /// <param name="description">description.</param>
+        /// <param name="datapointId">Datapoint Id.</param>
+        /// <param name="name">Name.</param>
+        /// <param name="description">Description.</param>
         public NextGenDatapoint(string datapointId = default(string), string name = default(string), string description = default(string))
         {
             this.DatapointId = datapointId;
@@ -43,20 +43,23 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets DatapointId
+        /// Datapoint Id
         /// </summary>
+        /// <value>Datapoint Id</value>
         [DataMember(Name="datapoint_id", EmitDefaultValue=false)]
         public string DatapointId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Name
         /// </summary>
+        /// <value>Name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Description
+        /// Description
         /// </summary>
+        /// <value>Description</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
 

@@ -32,28 +32,26 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DriverSummaryByTrack" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
-        /// <param name="averageStart">averageStart.</param>
-        /// <param name="averageFinish">averageFinish.</param>
-        /// <param name="dnf">dnf.</param>
-        /// <param name="driverId">driverId.</param>
-        /// <param name="lapsCompleted">lapsCompleted.</param>
-        /// <param name="lapsLed">lapsLed.</param>
-        /// <param name="leadLapFinish">leadLapFinish.</param>
-        /// <param name="milesCompleted">milesCompleted.</param>
-        /// <param name="poles">poles.</param>
-        /// <param name="runningAtFinish">runningAtFinish.</param>
-        /// <param name="seriesId">seriesId.</param>
-        /// <param name="top5">top5.</param>
-        /// <param name="top10">top10.</param>
-        /// <param name="totalRaces">totalRaces.</param>
-        /// <param name="wins">wins.</param>
-        /// <param name="season">season.</param>
-        /// <param name="trackId">trackId.</param>
-        /// <param name="trackName">trackName.</param>
-        public DriverSummaryByTrack(int? id = default(int?), double? averageStart = default(double?), double? averageFinish = default(double?), int? dnf = default(int?), int? driverId = default(int?), int? lapsCompleted = default(int?), int? lapsLed = default(int?), int? leadLapFinish = default(int?), double? milesCompleted = default(double?), int? poles = default(int?), int? runningAtFinish = default(int?), int? seriesId = default(int?), int? top5 = default(int?), int? top10 = default(int?), int? totalRaces = default(int?), int? wins = default(int?), int? season = default(int?), int? trackId = default(int?), string trackName = default(string))
+        /// <param name="averageStart">Average start position.</param>
+        /// <param name="averageFinish">Average finish position.</param>
+        /// <param name="dnf">The number of races where the driver did not finish.</param>
+        /// <param name="driverId">Driver Id.</param>
+        /// <param name="lapsCompleted">The number of laps completed.</param>
+        /// <param name="lapsLed">The number of laps led.</param>
+        /// <param name="leadLapFinish">The number of finishes where the driver was on the lead lap.</param>
+        /// <param name="milesCompleted">Total miles completed.</param>
+        /// <param name="poles">The number of times the driver earned the pole position.</param>
+        /// <param name="runningAtFinish">Running at finish.</param>
+        /// <param name="seriesId">Series ID.</param>
+        /// <param name="top5">The number of top 5 finishes.</param>
+        /// <param name="top10">The number of top 10 finishes.</param>
+        /// <param name="totalRaces">The total number of races.</param>
+        /// <param name="wins">Race wins.</param>
+        /// <param name="season">Race season.</param>
+        /// <param name="trackId">Track Id.</param>
+        /// <param name="trackName">Track name.</param>
+        public DriverSummaryByTrack(double? averageStart = default(double?), double? averageFinish = default(double?), int? dnf = default(int?), int? driverId = default(int?), int? lapsCompleted = default(int?), int? lapsLed = default(int?), int? leadLapFinish = default(int?), double? milesCompleted = default(double?), int? poles = default(int?), int? runningAtFinish = default(int?), int? seriesId = default(int?), int? top5 = default(int?), int? top10 = default(int?), int? totalRaces = default(int?), int? wins = default(int?), int? season = default(int?), int? trackId = default(int?), string trackName = default(string))
         {
-            this.Id = id;
             this.AverageStart = averageStart;
             this.AverageFinish = averageFinish;
             this.Dnf = dnf;
@@ -75,116 +73,128 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Average start position
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public int? Id { get; set; }
-
-        /// <summary>
-        /// Gets or Sets AverageStart
-        /// </summary>
+        /// <value>Average start position</value>
         [DataMember(Name="average_start", EmitDefaultValue=false)]
         public double? AverageStart { get; set; }
 
         /// <summary>
-        /// Gets or Sets AverageFinish
+        /// Average finish position
         /// </summary>
+        /// <value>Average finish position</value>
         [DataMember(Name="average_finish", EmitDefaultValue=false)]
         public double? AverageFinish { get; set; }
 
         /// <summary>
-        /// Gets or Sets Dnf
+        /// The number of races where the driver did not finish
         /// </summary>
+        /// <value>The number of races where the driver did not finish</value>
         [DataMember(Name="dnf", EmitDefaultValue=false)]
         public int? Dnf { get; set; }
 
         /// <summary>
-        /// Gets or Sets DriverId
+        /// Driver Id
         /// </summary>
+        /// <value>Driver Id</value>
         [DataMember(Name="driver_id", EmitDefaultValue=false)]
         public int? DriverId { get; set; }
 
         /// <summary>
-        /// Gets or Sets LapsCompleted
+        /// The number of laps completed
         /// </summary>
+        /// <value>The number of laps completed</value>
         [DataMember(Name="laps_completed", EmitDefaultValue=false)]
         public int? LapsCompleted { get; set; }
 
         /// <summary>
-        /// Gets or Sets LapsLed
+        /// The number of laps led
         /// </summary>
+        /// <value>The number of laps led</value>
         [DataMember(Name="laps_led", EmitDefaultValue=false)]
         public int? LapsLed { get; set; }
 
         /// <summary>
-        /// Gets or Sets LeadLapFinish
+        /// The number of finishes where the driver was on the lead lap
         /// </summary>
+        /// <value>The number of finishes where the driver was on the lead lap</value>
         [DataMember(Name="lead_lap_finish", EmitDefaultValue=false)]
         public int? LeadLapFinish { get; set; }
 
         /// <summary>
-        /// Gets or Sets MilesCompleted
+        /// Total miles completed
         /// </summary>
+        /// <value>Total miles completed</value>
         [DataMember(Name="miles_completed", EmitDefaultValue=false)]
         public double? MilesCompleted { get; set; }
 
         /// <summary>
-        /// Gets or Sets Poles
+        /// The number of times the driver earned the pole position
         /// </summary>
+        /// <value>The number of times the driver earned the pole position</value>
         [DataMember(Name="poles", EmitDefaultValue=false)]
         public int? Poles { get; set; }
 
         /// <summary>
-        /// Gets or Sets RunningAtFinish
+        /// Running at finish
         /// </summary>
+        /// <value>Running at finish</value>
         [DataMember(Name="running_at_finish", EmitDefaultValue=false)]
         public int? RunningAtFinish { get; set; }
 
         /// <summary>
-        /// Gets or Sets SeriesId
+        /// Series ID
         /// </summary>
+        /// <value>Series ID</value>
         [DataMember(Name="series_id", EmitDefaultValue=false)]
         public int? SeriesId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Top5
+        /// The number of top 5 finishes
         /// </summary>
+        /// <value>The number of top 5 finishes</value>
         [DataMember(Name="top5", EmitDefaultValue=false)]
         public int? Top5 { get; set; }
 
         /// <summary>
-        /// Gets or Sets Top10
+        /// The number of top 10 finishes
         /// </summary>
+        /// <value>The number of top 10 finishes</value>
         [DataMember(Name="top10", EmitDefaultValue=false)]
         public int? Top10 { get; set; }
 
         /// <summary>
-        /// Gets or Sets TotalRaces
+        /// The total number of races
         /// </summary>
+        /// <value>The total number of races</value>
         [DataMember(Name="total_races", EmitDefaultValue=false)]
         public int? TotalRaces { get; set; }
 
         /// <summary>
-        /// Gets or Sets Wins
+        /// Race wins
         /// </summary>
+        /// <value>Race wins</value>
         [DataMember(Name="wins", EmitDefaultValue=false)]
         public int? Wins { get; set; }
 
         /// <summary>
-        /// Gets or Sets Season
+        /// Race season
         /// </summary>
+        /// <value>Race season</value>
         [DataMember(Name="season", EmitDefaultValue=false)]
         public int? Season { get; set; }
 
         /// <summary>
-        /// Gets or Sets TrackId
+        /// Track Id
         /// </summary>
+        /// <value>Track Id</value>
         [DataMember(Name="track_id", EmitDefaultValue=false)]
         public int? TrackId { get; set; }
 
         /// <summary>
-        /// Gets or Sets TrackName
+        /// Track name
         /// </summary>
+        /// <value>Track name</value>
         [DataMember(Name="track_name", EmitDefaultValue=false)]
         public string TrackName { get; set; }
 
@@ -196,7 +206,6 @@ namespace NASCAR.Data.Client.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DriverSummaryByTrack {\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  AverageStart: ").Append(AverageStart).Append("\n");
             sb.Append("  AverageFinish: ").Append(AverageFinish).Append("\n");
             sb.Append("  Dnf: ").Append(Dnf).Append("\n");
@@ -249,11 +258,6 @@ namespace NASCAR.Data.Client.Model
                 return false;
 
             return 
-                (
-                    this.Id == input.Id ||
-                    (this.Id != null &&
-                    this.Id.Equals(input.Id))
-                ) && 
                 (
                     this.AverageStart == input.AverageStart ||
                     (this.AverageStart != null &&
@@ -355,8 +359,6 @@ namespace NASCAR.Data.Client.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Id != null)
-                    hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.AverageStart != null)
                     hashCode = hashCode * 59 + this.AverageStart.GetHashCode();
                 if (this.AverageFinish != null)

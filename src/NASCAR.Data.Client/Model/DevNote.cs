@@ -24,35 +24,35 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// RosterMember
+    /// DevNote
     /// </summary>
     [DataContract]
-        public partial class RosterMember :  IEquatable<RosterMember>, IValidatableObject
+        public partial class DevNote :  IEquatable<DevNote>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RosterMember" /> class.
+        /// Initializes a new instance of the <see cref="DevNote" /> class.
         /// </summary>
-        /// <param name="name">Team member name.</param>
-        /// <param name="position">Position.</param>
-        public RosterMember(string name = default(string), string position = default(string))
+        /// <param name="date">Date submitted.</param>
+        /// <param name="note">Note.</param>
+        public DevNote(DateTimeOffset? date = default(DateTimeOffset?), string note = default(string))
         {
-            this.Name = name;
-            this.Position = position;
+            this.Date = date;
+            this.Note = note;
         }
         
         /// <summary>
-        /// Team member name
+        /// Date submitted
         /// </summary>
-        /// <value>Team member name</value>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
+        /// <value>Date submitted</value>
+        [DataMember(Name="date", EmitDefaultValue=false)]
+        public DateTimeOffset? Date { get; set; }
 
         /// <summary>
-        /// Position
+        /// Note
         /// </summary>
-        /// <value>Position</value>
-        [DataMember(Name="position", EmitDefaultValue=false)]
-        public string Position { get; set; }
+        /// <value>Note</value>
+        [DataMember(Name="note", EmitDefaultValue=false)]
+        public string Note { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -61,9 +61,9 @@ namespace NASCAR.Data.Client.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class RosterMember {\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Position: ").Append(Position).Append("\n");
+            sb.Append("class DevNote {\n");
+            sb.Append("  Date: ").Append(Date).Append("\n");
+            sb.Append("  Note: ").Append(Note).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -84,29 +84,29 @@ namespace NASCAR.Data.Client.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as RosterMember);
+            return this.Equals(input as DevNote);
         }
 
         /// <summary>
-        /// Returns true if RosterMember instances are equal
+        /// Returns true if DevNote instances are equal
         /// </summary>
-        /// <param name="input">Instance of RosterMember to be compared</param>
+        /// <param name="input">Instance of DevNote to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(RosterMember input)
+        public bool Equals(DevNote input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    this.Date == input.Date ||
+                    (this.Date != null &&
+                    this.Date.Equals(input.Date))
                 ) && 
                 (
-                    this.Position == input.Position ||
-                    (this.Position != null &&
-                    this.Position.Equals(input.Position))
+                    this.Note == input.Note ||
+                    (this.Note != null &&
+                    this.Note.Equals(input.Note))
                 );
         }
 
@@ -119,10 +119,10 @@ namespace NASCAR.Data.Client.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.Position != null)
-                    hashCode = hashCode * 59 + this.Position.GetHashCode();
+                if (this.Date != null)
+                    hashCode = hashCode * 59 + this.Date.GetHashCode();
+                if (this.Note != null)
+                    hashCode = hashCode * 59 + this.Note.GetHashCode();
                 return hashCode;
             }
         }

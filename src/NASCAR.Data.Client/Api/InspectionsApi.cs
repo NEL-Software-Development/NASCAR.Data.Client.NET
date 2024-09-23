@@ -32,7 +32,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="raceId"> (optional)</param>
         /// <returns>Collection&lt;OSSScan&gt;</returns>
-        Collection<OSSScan> OSS (int? raceId = null);
+        Collection<OSSScan> InspectionsOssGet (int? raceId = null);
 
         /// <summary>
         /// 
@@ -43,7 +43,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="raceId"> (optional)</param>
         /// <returns>ApiResponse of Collection&lt;OSSScan&gt;</returns>
-        ApiResponse<Collection<OSSScan>> OSSWithHttpInfo (int? raceId = null);
+        ApiResponse<Collection<OSSScan>> InspectionsOssGetWithHttpInfo (int? raceId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -53,7 +53,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="raceId"> (optional)</param>
         /// <returns>Collection&lt;VehicleWeight&gt;</returns>
-        Collection<VehicleWeight> VehicleWeights (int? raceId = null);
+        Collection<VehicleWeight> InspectionsVehicleWeightsGet (int? raceId = null);
 
         /// <summary>
         /// 
@@ -64,7 +64,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="raceId"> (optional)</param>
         /// <returns>ApiResponse of Collection&lt;VehicleWeight&gt;</returns>
-        ApiResponse<Collection<VehicleWeight>> VehicleWeightsWithHttpInfo (int? raceId = null);
+        ApiResponse<Collection<VehicleWeight>> InspectionsVehicleWeightsGetWithHttpInfo (int? raceId = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -76,7 +76,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="raceId"> (optional)</param>
         /// <returns>Task of Collection&lt;OSSScan&gt;</returns>
-        System.Threading.Tasks.Task<Collection<OSSScan>> OSSAsync (int? raceId = null);
+        System.Threading.Tasks.Task<Collection<OSSScan>> InspectionsOssGetAsync (int? raceId = null);
 
         /// <summary>
         /// 
@@ -87,7 +87,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="raceId"> (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;OSSScan&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Collection<OSSScan>>> OSSAsyncWithHttpInfo (int? raceId = null);
+        System.Threading.Tasks.Task<ApiResponse<Collection<OSSScan>>> InspectionsOssGetAsyncWithHttpInfo (int? raceId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -97,7 +97,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="raceId"> (optional)</param>
         /// <returns>Task of Collection&lt;VehicleWeight&gt;</returns>
-        System.Threading.Tasks.Task<Collection<VehicleWeight>> VehicleWeightsAsync (int? raceId = null);
+        System.Threading.Tasks.Task<Collection<VehicleWeight>> InspectionsVehicleWeightsGetAsync (int? raceId = null);
 
         /// <summary>
         /// 
@@ -108,7 +108,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="raceId"> (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;VehicleWeight&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Collection<VehicleWeight>>> VehicleWeightsAsyncWithHttpInfo (int? raceId = null);
+        System.Threading.Tasks.Task<ApiResponse<Collection<VehicleWeight>>> InspectionsVehicleWeightsGetAsyncWithHttpInfo (int? raceId = null);
         #endregion Asynchronous Operations
     }
 
@@ -226,9 +226,9 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="raceId"> (optional)</param>
         /// <returns>Collection&lt;OSSScan&gt;</returns>
-        public Collection<OSSScan> OSS (int? raceId = null)
+        public Collection<OSSScan> InspectionsOssGet (int? raceId = null)
         {
-             ApiResponse<Collection<OSSScan>> localVarResponse = OSSWithHttpInfo(raceId);
+             ApiResponse<Collection<OSSScan>> localVarResponse = InspectionsOssGetWithHttpInfo(raceId);
              return localVarResponse.Data;
         }
 
@@ -238,7 +238,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="raceId"> (optional)</param>
         /// <returns>ApiResponse of Collection&lt;OSSScan&gt;</returns>
-        public ApiResponse< Collection<OSSScan> > OSSWithHttpInfo (int? raceId = null)
+        public ApiResponse< Collection<OSSScan> > InspectionsOssGetWithHttpInfo (int? raceId = null)
         {
 
             var localVarPath = "/inspections/oss";
@@ -281,7 +281,7 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("OSS", localVarResponse);
+                Exception exception = ExceptionFactory("InspectionsOssGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -296,9 +296,9 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="raceId"> (optional)</param>
         /// <returns>Task of Collection&lt;OSSScan&gt;</returns>
-        public async System.Threading.Tasks.Task<Collection<OSSScan>> OSSAsync (int? raceId = null)
+        public async System.Threading.Tasks.Task<Collection<OSSScan>> InspectionsOssGetAsync (int? raceId = null)
         {
-             ApiResponse<Collection<OSSScan>> localVarResponse = await OSSAsyncWithHttpInfo(raceId);
+             ApiResponse<Collection<OSSScan>> localVarResponse = await InspectionsOssGetAsyncWithHttpInfo(raceId);
              return localVarResponse.Data;
 
         }
@@ -309,7 +309,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="raceId"> (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;OSSScan&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Collection<OSSScan>>> OSSAsyncWithHttpInfo (int? raceId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Collection<OSSScan>>> InspectionsOssGetAsyncWithHttpInfo (int? raceId = null)
         {
 
             var localVarPath = "/inspections/oss";
@@ -352,7 +352,7 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("OSS", localVarResponse);
+                Exception exception = ExceptionFactory("InspectionsOssGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -367,9 +367,9 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="raceId"> (optional)</param>
         /// <returns>Collection&lt;VehicleWeight&gt;</returns>
-        public Collection<VehicleWeight> VehicleWeights (int? raceId = null)
+        public Collection<VehicleWeight> InspectionsVehicleWeightsGet (int? raceId = null)
         {
-             ApiResponse<Collection<VehicleWeight>> localVarResponse = VehicleWeightsWithHttpInfo(raceId);
+             ApiResponse<Collection<VehicleWeight>> localVarResponse = InspectionsVehicleWeightsGetWithHttpInfo(raceId);
              return localVarResponse.Data;
         }
 
@@ -379,7 +379,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="raceId"> (optional)</param>
         /// <returns>ApiResponse of Collection&lt;VehicleWeight&gt;</returns>
-        public ApiResponse< Collection<VehicleWeight> > VehicleWeightsWithHttpInfo (int? raceId = null)
+        public ApiResponse< Collection<VehicleWeight> > InspectionsVehicleWeightsGetWithHttpInfo (int? raceId = null)
         {
 
             var localVarPath = "/inspections/vehicle-weights";
@@ -422,7 +422,7 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("VehicleWeights", localVarResponse);
+                Exception exception = ExceptionFactory("InspectionsVehicleWeightsGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -437,9 +437,9 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="raceId"> (optional)</param>
         /// <returns>Task of Collection&lt;VehicleWeight&gt;</returns>
-        public async System.Threading.Tasks.Task<Collection<VehicleWeight>> VehicleWeightsAsync (int? raceId = null)
+        public async System.Threading.Tasks.Task<Collection<VehicleWeight>> InspectionsVehicleWeightsGetAsync (int? raceId = null)
         {
-             ApiResponse<Collection<VehicleWeight>> localVarResponse = await VehicleWeightsAsyncWithHttpInfo(raceId);
+             ApiResponse<Collection<VehicleWeight>> localVarResponse = await InspectionsVehicleWeightsGetAsyncWithHttpInfo(raceId);
              return localVarResponse.Data;
 
         }
@@ -450,7 +450,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="raceId"> (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;VehicleWeight&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Collection<VehicleWeight>>> VehicleWeightsAsyncWithHttpInfo (int? raceId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Collection<VehicleWeight>>> InspectionsVehicleWeightsGetAsyncWithHttpInfo (int? raceId = null)
         {
 
             var localVarPath = "/inspections/vehicle-weights";
@@ -493,7 +493,7 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("VehicleWeights", localVarResponse);
+                Exception exception = ExceptionFactory("InspectionsVehicleWeightsGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 

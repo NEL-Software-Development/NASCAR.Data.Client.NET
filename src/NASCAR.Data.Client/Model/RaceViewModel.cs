@@ -32,26 +32,26 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RaceViewModel" /> class.
         /// </summary>
-        /// <param name="seriesId">seriesId.</param>
-        /// <param name="name">name.</param>
-        /// <param name="promoter">promoter.</param>
-        /// <param name="laps">laps.</param>
-        /// <param name="distance">distance.</param>
-        /// <param name="date">date.</param>
-        /// <param name="comments">comments.</param>
-        /// <param name="cautions">cautions.</param>
-        /// <param name="entries">entries.</param>
-        /// <param name="infractions">infractions.</param>
-        /// <param name="lapLeaders">lapLeaders.</param>
-        /// <param name="loopStats">loopStats.</param>
-        /// <param name="pitstops">pitstops.</param>
-        /// <param name="practiceResults">practiceResults.</param>
-        /// <param name="qualifyingResults">qualifyingResults.</param>
-        /// <param name="raceResults">raceResults.</param>
-        /// <param name="runs">runs.</param>
-        /// <param name="schedule">schedule.</param>
-        /// <param name="stageResults">stageResults.</param>
-        public RaceViewModel(int? seriesId = default(int?), string name = default(string), string promoter = default(string), int? laps = default(int?), double? distance = default(double?), DateTimeOffset? date = default(DateTimeOffset?), string comments = default(string), Collection<Caution> cautions = default(Collection<Caution>), Collection<RunEntry> entries = default(Collection<RunEntry>), Collection<RaceInfraction> infractions = default(Collection<RaceInfraction>), Collection<LapLeader> lapLeaders = default(Collection<LapLeader>), Collection<LoopStat> loopStats = default(Collection<LoopStat>), Collection<Pitstop> pitstops = default(Collection<Pitstop>), Collection<PracticeRunResults> practiceResults = default(Collection<PracticeRunResults>), Collection<QualifyingRunResults> qualifyingResults = default(Collection<QualifyingRunResults>), Collection<RaceRunResults> raceResults = default(Collection<RaceRunResults>), Collection<RunDetails> runs = default(Collection<RunDetails>), Collection<WeekendSchedule> schedule = default(Collection<WeekendSchedule>), Collection<StageRunResults> stageResults = default(Collection<StageRunResults>))
+        /// <param name="seriesId">Series Id.</param>
+        /// <param name="name">Race name.</param>
+        /// <param name="promoter">Race promoter.</param>
+        /// <param name="laps">Laps.</param>
+        /// <param name="distance">Distance.</param>
+        /// <param name="date">Race date.</param>
+        /// <param name="comments">Comments.</param>
+        /// <param name="cautions">Cautions.</param>
+        /// <param name="entries">Race entries.</param>
+        /// <param name="infractions">Race infractions.</param>
+        /// <param name="lapLeaders">Lap leaders.</param>
+        /// <param name="loopStats">Loop stats.</param>
+        /// <param name="pitstops">Pitstops.</param>
+        /// <param name="practiceResults">Practice results.</param>
+        /// <param name="qualifyingResults">Qualifying results.</param>
+        /// <param name="raceResults">Race results.</param>
+        /// <param name="runs">Runs.</param>
+        /// <param name="stageResults">Stage results.</param>
+        /// <param name="schedule">Weekend schedule.</param>
+        public RaceViewModel(int? seriesId = default(int?), string name = default(string), string promoter = default(string), int? laps = default(int?), double? distance = default(double?), DateTimeOffset? date = default(DateTimeOffset?), string comments = default(string), Collection<Caution> cautions = default(Collection<Caution>), Collection<RunEntry> entries = default(Collection<RunEntry>), Collection<RaceInfraction> infractions = default(Collection<RaceInfraction>), Collection<LapLeader> lapLeaders = default(Collection<LapLeader>), Collection<LoopStat> loopStats = default(Collection<LoopStat>), Collection<Pitstop> pitstops = default(Collection<Pitstop>), Collection<PracticeRunResults> practiceResults = default(Collection<PracticeRunResults>), Collection<QualifyingRunResults> qualifyingResults = default(Collection<QualifyingRunResults>), Collection<RaceRunResults> raceResults = default(Collection<RaceRunResults>), Collection<RunDetails> runs = default(Collection<RunDetails>), Collection<StageRunResults> stageResults = default(Collection<StageRunResults>), Collection<WeekendSchedule> schedule = default(Collection<WeekendSchedule>))
         {
             this.SeriesId = seriesId;
             this.Name = name;
@@ -70,123 +70,142 @@ namespace NASCAR.Data.Client.Model
             this.QualifyingResults = qualifyingResults;
             this.RaceResults = raceResults;
             this.Runs = runs;
-            this.Schedule = schedule;
             this.StageResults = stageResults;
+            this.Schedule = schedule;
         }
         
         /// <summary>
-        /// Gets or Sets SeriesId
+        /// Series Id
         /// </summary>
+        /// <value>Series Id</value>
         [DataMember(Name="series_id", EmitDefaultValue=false)]
         public int? SeriesId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Race name
         /// </summary>
+        /// <value>Race name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Promoter
+        /// Race promoter
         /// </summary>
+        /// <value>Race promoter</value>
         [DataMember(Name="promoter", EmitDefaultValue=false)]
         public string Promoter { get; set; }
 
         /// <summary>
-        /// Gets or Sets Laps
+        /// Laps
         /// </summary>
+        /// <value>Laps</value>
         [DataMember(Name="laps", EmitDefaultValue=false)]
         public int? Laps { get; set; }
 
         /// <summary>
-        /// Gets or Sets Distance
+        /// Distance
         /// </summary>
+        /// <value>Distance</value>
         [DataMember(Name="distance", EmitDefaultValue=false)]
         public double? Distance { get; set; }
 
         /// <summary>
-        /// Gets or Sets Date
+        /// Race date
         /// </summary>
+        /// <value>Race date</value>
         [DataMember(Name="date", EmitDefaultValue=false)]
         public DateTimeOffset? Date { get; set; }
 
         /// <summary>
-        /// Gets or Sets Comments
+        /// Comments
         /// </summary>
+        /// <value>Comments</value>
         [DataMember(Name="comments", EmitDefaultValue=false)]
         public string Comments { get; set; }
 
         /// <summary>
-        /// Gets or Sets Cautions
+        /// Cautions
         /// </summary>
+        /// <value>Cautions</value>
         [DataMember(Name="cautions", EmitDefaultValue=false)]
         public Collection<Caution> Cautions { get; set; }
 
         /// <summary>
-        /// Gets or Sets Entries
+        /// Race entries
         /// </summary>
+        /// <value>Race entries</value>
         [DataMember(Name="entries", EmitDefaultValue=false)]
         public Collection<RunEntry> Entries { get; set; }
 
         /// <summary>
-        /// Gets or Sets Infractions
+        /// Race infractions
         /// </summary>
+        /// <value>Race infractions</value>
         [DataMember(Name="infractions", EmitDefaultValue=false)]
         public Collection<RaceInfraction> Infractions { get; set; }
 
         /// <summary>
-        /// Gets or Sets LapLeaders
+        /// Lap leaders
         /// </summary>
+        /// <value>Lap leaders</value>
         [DataMember(Name="lap_Leaders", EmitDefaultValue=false)]
         public Collection<LapLeader> LapLeaders { get; set; }
 
         /// <summary>
-        /// Gets or Sets LoopStats
+        /// Loop stats
         /// </summary>
+        /// <value>Loop stats</value>
         [DataMember(Name="loop_Stats", EmitDefaultValue=false)]
         public Collection<LoopStat> LoopStats { get; set; }
 
         /// <summary>
-        /// Gets or Sets Pitstops
+        /// Pitstops
         /// </summary>
+        /// <value>Pitstops</value>
         [DataMember(Name="pitstops", EmitDefaultValue=false)]
         public Collection<Pitstop> Pitstops { get; set; }
 
         /// <summary>
-        /// Gets or Sets PracticeResults
+        /// Practice results
         /// </summary>
+        /// <value>Practice results</value>
         [DataMember(Name="practice_results", EmitDefaultValue=false)]
         public Collection<PracticeRunResults> PracticeResults { get; set; }
 
         /// <summary>
-        /// Gets or Sets QualifyingResults
+        /// Qualifying results
         /// </summary>
+        /// <value>Qualifying results</value>
         [DataMember(Name="qualifying_results", EmitDefaultValue=false)]
         public Collection<QualifyingRunResults> QualifyingResults { get; set; }
 
         /// <summary>
-        /// Gets or Sets RaceResults
+        /// Race results
         /// </summary>
+        /// <value>Race results</value>
         [DataMember(Name="race_results", EmitDefaultValue=false)]
         public Collection<RaceRunResults> RaceResults { get; set; }
 
         /// <summary>
-        /// Gets or Sets Runs
+        /// Runs
         /// </summary>
+        /// <value>Runs</value>
         [DataMember(Name="runs", EmitDefaultValue=false)]
         public Collection<RunDetails> Runs { get; set; }
 
         /// <summary>
-        /// Gets or Sets Schedule
+        /// Stage results
         /// </summary>
-        [DataMember(Name="schedule", EmitDefaultValue=false)]
-        public Collection<WeekendSchedule> Schedule { get; set; }
-
-        /// <summary>
-        /// Gets or Sets StageResults
-        /// </summary>
+        /// <value>Stage results</value>
         [DataMember(Name="stage_results", EmitDefaultValue=false)]
         public Collection<StageRunResults> StageResults { get; set; }
+
+        /// <summary>
+        /// Weekend schedule
+        /// </summary>
+        /// <value>Weekend schedule</value>
+        [DataMember(Name="schedule", EmitDefaultValue=false)]
+        public Collection<WeekendSchedule> Schedule { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -213,8 +232,8 @@ namespace NASCAR.Data.Client.Model
             sb.Append("  QualifyingResults: ").Append(QualifyingResults).Append("\n");
             sb.Append("  RaceResults: ").Append(RaceResults).Append("\n");
             sb.Append("  Runs: ").Append(Runs).Append("\n");
-            sb.Append("  Schedule: ").Append(Schedule).Append("\n");
             sb.Append("  StageResults: ").Append(StageResults).Append("\n");
+            sb.Append("  Schedule: ").Append(Schedule).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -345,16 +364,16 @@ namespace NASCAR.Data.Client.Model
                     this.Runs.SequenceEqual(input.Runs)
                 ) && 
                 (
-                    this.Schedule == input.Schedule ||
-                    this.Schedule != null &&
-                    input.Schedule != null &&
-                    this.Schedule.SequenceEqual(input.Schedule)
-                ) && 
-                (
                     this.StageResults == input.StageResults ||
                     this.StageResults != null &&
                     input.StageResults != null &&
                     this.StageResults.SequenceEqual(input.StageResults)
+                ) && 
+                (
+                    this.Schedule == input.Schedule ||
+                    this.Schedule != null &&
+                    input.Schedule != null &&
+                    this.Schedule.SequenceEqual(input.Schedule)
                 );
         }
 
@@ -401,10 +420,10 @@ namespace NASCAR.Data.Client.Model
                     hashCode = hashCode * 59 + this.RaceResults.GetHashCode();
                 if (this.Runs != null)
                     hashCode = hashCode * 59 + this.Runs.GetHashCode();
-                if (this.Schedule != null)
-                    hashCode = hashCode * 59 + this.Schedule.GetHashCode();
                 if (this.StageResults != null)
                     hashCode = hashCode * 59 + this.StageResults.GetHashCode();
+                if (this.Schedule != null)
+                    hashCode = hashCode * 59 + this.Schedule.GetHashCode();
                 return hashCode;
             }
         }

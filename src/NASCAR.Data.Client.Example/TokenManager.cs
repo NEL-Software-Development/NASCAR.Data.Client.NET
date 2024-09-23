@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using Microsoft.Extensions.Configuration;
 using NASCAR.Data.Client.Model;
 using Newtonsoft.Json.Linq;
 

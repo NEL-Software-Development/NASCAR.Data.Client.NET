@@ -32,7 +32,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchTerm"> (optional)</param>
         /// <returns>Collection&lt;Company&gt;</returns>
-        Collection<Company> FindCompany (string searchTerm = null);
+        Collection<Company> CompanySearchGet (string searchTerm = null);
 
         /// <summary>
         /// 
@@ -43,7 +43,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchTerm"> (optional)</param>
         /// <returns>ApiResponse of Collection&lt;Company&gt;</returns>
-        ApiResponse<Collection<Company>> FindCompanyWithHttpInfo (string searchTerm = null);
+        ApiResponse<Collection<Company>> CompanySearchGetWithHttpInfo (string searchTerm = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -55,7 +55,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchTerm"> (optional)</param>
         /// <returns>Task of Collection&lt;Company&gt;</returns>
-        System.Threading.Tasks.Task<Collection<Company>> FindCompanyAsync (string searchTerm = null);
+        System.Threading.Tasks.Task<Collection<Company>> CompanySearchGetAsync (string searchTerm = null);
 
         /// <summary>
         /// 
@@ -66,7 +66,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchTerm"> (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;Company&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Collection<Company>>> FindCompanyAsyncWithHttpInfo (string searchTerm = null);
+        System.Threading.Tasks.Task<ApiResponse<Collection<Company>>> CompanySearchGetAsyncWithHttpInfo (string searchTerm = null);
         #endregion Asynchronous Operations
     }
 
@@ -184,9 +184,9 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchTerm"> (optional)</param>
         /// <returns>Collection&lt;Company&gt;</returns>
-        public Collection<Company> FindCompany (string searchTerm = null)
+        public Collection<Company> CompanySearchGet (string searchTerm = null)
         {
-             ApiResponse<Collection<Company>> localVarResponse = FindCompanyWithHttpInfo(searchTerm);
+             ApiResponse<Collection<Company>> localVarResponse = CompanySearchGetWithHttpInfo(searchTerm);
              return localVarResponse.Data;
         }
 
@@ -196,7 +196,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchTerm"> (optional)</param>
         /// <returns>ApiResponse of Collection&lt;Company&gt;</returns>
-        public ApiResponse< Collection<Company> > FindCompanyWithHttpInfo (string searchTerm = null)
+        public ApiResponse< Collection<Company> > CompanySearchGetWithHttpInfo (string searchTerm = null)
         {
 
             var localVarPath = "/company/search";
@@ -239,7 +239,7 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("FindCompany", localVarResponse);
+                Exception exception = ExceptionFactory("CompanySearchGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -254,9 +254,9 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchTerm"> (optional)</param>
         /// <returns>Task of Collection&lt;Company&gt;</returns>
-        public async System.Threading.Tasks.Task<Collection<Company>> FindCompanyAsync (string searchTerm = null)
+        public async System.Threading.Tasks.Task<Collection<Company>> CompanySearchGetAsync (string searchTerm = null)
         {
-             ApiResponse<Collection<Company>> localVarResponse = await FindCompanyAsyncWithHttpInfo(searchTerm);
+             ApiResponse<Collection<Company>> localVarResponse = await CompanySearchGetAsyncWithHttpInfo(searchTerm);
              return localVarResponse.Data;
 
         }
@@ -267,7 +267,7 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchTerm"> (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;Company&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Collection<Company>>> FindCompanyAsyncWithHttpInfo (string searchTerm = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Collection<Company>>> CompanySearchGetAsyncWithHttpInfo (string searchTerm = null)
         {
 
             var localVarPath = "/company/search";
@@ -310,7 +310,7 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("FindCompany", localVarResponse);
+                Exception exception = ExceptionFactory("CompanySearchGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 

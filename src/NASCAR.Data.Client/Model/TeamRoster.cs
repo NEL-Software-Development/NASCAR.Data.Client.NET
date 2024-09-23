@@ -32,8 +32,8 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TeamRoster" /> class.
         /// </summary>
-        /// <param name="vehicleNumber">vehicleNumber.</param>
-        /// <param name="members">members.</param>
+        /// <param name="vehicleNumber">Vehicle number.</param>
+        /// <param name="members">Team members.</param>
         public TeamRoster(string vehicleNumber = default(string), Collection<RosterMember> members = default(Collection<RosterMember>))
         {
             this.VehicleNumber = vehicleNumber;
@@ -41,14 +41,16 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets VehicleNumber
+        /// Vehicle number
         /// </summary>
+        /// <value>Vehicle number</value>
         [DataMember(Name="vehicle_number", EmitDefaultValue=false)]
         public string VehicleNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets Members
+        /// Team members
         /// </summary>
+        /// <value>Team members</value>
         [DataMember(Name="members", EmitDefaultValue=false)]
         public Collection<RosterMember> Members { get; set; }
 

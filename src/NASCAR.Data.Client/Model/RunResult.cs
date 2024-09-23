@@ -32,21 +32,22 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RunResult" /> class.
         /// </summary>
-        /// <param name="finishPosition">finishPosition.</param>
-        /// <param name="driverName">driverName.</param>
-        /// <param name="vehicleNumber">vehicleNumber.</param>
-        /// <param name="laps">laps.</param>
-        /// <param name="bestTime">bestTime.</param>
-        /// <param name="bestSpeed">bestSpeed.</param>
-        /// <param name="bestLap">bestLap.</param>
-        /// <param name="deltaNextTime">deltaNextTime.</param>
-        /// <param name="deltaNextLaps">deltaNextLaps.</param>
-        /// <param name="deltaLeaderTime">deltaLeaderTime.</param>
-        /// <param name="deltaLeaderLaps">deltaLeaderLaps.</param>
-        /// <param name="onTrack">onTrack.</param>
-        /// <param name="status">status.</param>
-        /// <param name="comment">comment.</param>
-        public RunResult(int? finishPosition = default(int?), string driverName = default(string), string vehicleNumber = default(string), int? laps = default(int?), int? bestTime = default(int?), double? bestSpeed = default(double?), int? bestLap = default(int?), int? deltaNextTime = default(int?), int? deltaNextLaps = default(int?), int? deltaLeaderTime = default(int?), int? deltaLeaderLaps = default(int?), bool? onTrack = default(bool?), string status = default(string), string comment = default(string))
+        /// <param name="finishPosition">Finish position.</param>
+        /// <param name="driverName">Driver name.</param>
+        /// <param name="vehicleNumber">Vehicle number.</param>
+        /// <param name="laps">Number of laps.</param>
+        /// <param name="bestTime">Best lap time in milliseconds.</param>
+        /// <param name="bestSpeed">Best speed in MPH.</param>
+        /// <param name="bestLap">Best lap number.</param>
+        /// <param name="lastLapTime">Last lap time.</param>
+        /// <param name="deltaNextTime">Number of milliseconds behind the next position.</param>
+        /// <param name="deltaNextLaps">Number of laps behind the next position.</param>
+        /// <param name="deltaLeaderTime">Number of milliseconds behind the leader.</param>
+        /// <param name="deltaLeaderLaps">Number of laps behind the leader.</param>
+        /// <param name="onTrack">Is on track.</param>
+        /// <param name="status">Status.</param>
+        /// <param name="comment">Comment.</param>
+        public RunResult(int? finishPosition = default(int?), string driverName = default(string), string vehicleNumber = default(string), int? laps = default(int?), int? bestTime = default(int?), double? bestSpeed = default(double?), int? bestLap = default(int?), int? lastLapTime = default(int?), int? deltaNextTime = default(int?), int? deltaNextLaps = default(int?), int? deltaLeaderTime = default(int?), int? deltaLeaderLaps = default(int?), bool? onTrack = default(bool?), string status = default(string), string comment = default(string))
         {
             this.FinishPosition = finishPosition;
             this.DriverName = driverName;
@@ -55,6 +56,7 @@ namespace NASCAR.Data.Client.Model
             this.BestTime = bestTime;
             this.BestSpeed = bestSpeed;
             this.BestLap = bestLap;
+            this.LastLapTime = lastLapTime;
             this.DeltaNextTime = deltaNextTime;
             this.DeltaNextLaps = deltaNextLaps;
             this.DeltaLeaderTime = deltaLeaderTime;
@@ -65,86 +67,107 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets FinishPosition
+        /// Finish position
         /// </summary>
+        /// <value>Finish position</value>
         [DataMember(Name="finish_position", EmitDefaultValue=false)]
         public int? FinishPosition { get; set; }
 
         /// <summary>
-        /// Gets or Sets DriverName
+        /// Driver name
         /// </summary>
+        /// <value>Driver name</value>
         [DataMember(Name="driver_name", EmitDefaultValue=false)]
         public string DriverName { get; set; }
 
         /// <summary>
-        /// Gets or Sets VehicleNumber
+        /// Vehicle number
         /// </summary>
+        /// <value>Vehicle number</value>
         [DataMember(Name="vehicle_number", EmitDefaultValue=false)]
         public string VehicleNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets Laps
+        /// Number of laps
         /// </summary>
+        /// <value>Number of laps</value>
         [DataMember(Name="laps", EmitDefaultValue=false)]
         public int? Laps { get; set; }
 
         /// <summary>
-        /// Gets or Sets BestTime
+        /// Best lap time in milliseconds
         /// </summary>
+        /// <value>Best lap time in milliseconds</value>
         [DataMember(Name="best_time", EmitDefaultValue=false)]
         public int? BestTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets BestSpeed
+        /// Best speed in MPH
         /// </summary>
+        /// <value>Best speed in MPH</value>
         [DataMember(Name="best_speed", EmitDefaultValue=false)]
         public double? BestSpeed { get; set; }
 
         /// <summary>
-        /// Gets or Sets BestLap
+        /// Best lap number
         /// </summary>
+        /// <value>Best lap number</value>
         [DataMember(Name="best_lap", EmitDefaultValue=false)]
         public int? BestLap { get; set; }
 
         /// <summary>
-        /// Gets or Sets DeltaNextTime
+        /// Last lap time
         /// </summary>
+        /// <value>Last lap time</value>
+        [DataMember(Name="last_lap_time", EmitDefaultValue=false)]
+        public int? LastLapTime { get; set; }
+
+        /// <summary>
+        /// Number of milliseconds behind the next position
+        /// </summary>
+        /// <value>Number of milliseconds behind the next position</value>
         [DataMember(Name="delta_next_time", EmitDefaultValue=false)]
         public int? DeltaNextTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets DeltaNextLaps
+        /// Number of laps behind the next position
         /// </summary>
+        /// <value>Number of laps behind the next position</value>
         [DataMember(Name="delta_next_laps", EmitDefaultValue=false)]
         public int? DeltaNextLaps { get; set; }
 
         /// <summary>
-        /// Gets or Sets DeltaLeaderTime
+        /// Number of milliseconds behind the leader
         /// </summary>
+        /// <value>Number of milliseconds behind the leader</value>
         [DataMember(Name="delta_leader_time", EmitDefaultValue=false)]
         public int? DeltaLeaderTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets DeltaLeaderLaps
+        /// Number of laps behind the leader
         /// </summary>
+        /// <value>Number of laps behind the leader</value>
         [DataMember(Name="delta_leader_laps", EmitDefaultValue=false)]
         public int? DeltaLeaderLaps { get; set; }
 
         /// <summary>
-        /// Gets or Sets OnTrack
+        /// Is on track
         /// </summary>
+        /// <value>Is on track</value>
         [DataMember(Name="on_track", EmitDefaultValue=false)]
         public bool? OnTrack { get; set; }
 
         /// <summary>
-        /// Gets or Sets Status
+        /// Status
         /// </summary>
+        /// <value>Status</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets Comment
+        /// Comment
         /// </summary>
+        /// <value>Comment</value>
         [DataMember(Name="comment", EmitDefaultValue=false)]
         public string Comment { get; set; }
 
@@ -163,6 +186,7 @@ namespace NASCAR.Data.Client.Model
             sb.Append("  BestTime: ").Append(BestTime).Append("\n");
             sb.Append("  BestSpeed: ").Append(BestSpeed).Append("\n");
             sb.Append("  BestLap: ").Append(BestLap).Append("\n");
+            sb.Append("  LastLapTime: ").Append(LastLapTime).Append("\n");
             sb.Append("  DeltaNextTime: ").Append(DeltaNextTime).Append("\n");
             sb.Append("  DeltaNextLaps: ").Append(DeltaNextLaps).Append("\n");
             sb.Append("  DeltaLeaderTime: ").Append(DeltaLeaderTime).Append("\n");
@@ -240,6 +264,11 @@ namespace NASCAR.Data.Client.Model
                     this.BestLap.Equals(input.BestLap))
                 ) && 
                 (
+                    this.LastLapTime == input.LastLapTime ||
+                    (this.LastLapTime != null &&
+                    this.LastLapTime.Equals(input.LastLapTime))
+                ) && 
+                (
                     this.DeltaNextTime == input.DeltaNextTime ||
                     (this.DeltaNextTime != null &&
                     this.DeltaNextTime.Equals(input.DeltaNextTime))
@@ -299,6 +328,8 @@ namespace NASCAR.Data.Client.Model
                     hashCode = hashCode * 59 + this.BestSpeed.GetHashCode();
                 if (this.BestLap != null)
                     hashCode = hashCode * 59 + this.BestLap.GetHashCode();
+                if (this.LastLapTime != null)
+                    hashCode = hashCode * 59 + this.LastLapTime.GetHashCode();
                 if (this.DeltaNextTime != null)
                     hashCode = hashCode * 59 + this.DeltaNextTime.GetHashCode();
                 if (this.DeltaNextLaps != null)

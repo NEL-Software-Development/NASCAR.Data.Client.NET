@@ -32,13 +32,13 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RaceWeek" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
-        /// <param name="season">season (required) (default to 0).</param>
-        /// <param name="venue">venue (required) (default to &quot;&quot;).</param>
-        /// <param name="runningSeries">runningSeries (required) (default to &quot;&quot;).</param>
-        /// <param name="startDate">startDate.</param>
-        /// <param name="endDate">endDate.</param>
-        /// <param name="isLive">isLive.</param>
+        /// <param name="id">Id.</param>
+        /// <param name="season">Race season (required) (default to 0).</param>
+        /// <param name="venue">Venue (required) (default to &quot;&quot;).</param>
+        /// <param name="runningSeries">List of series running at this event (required) (default to &quot;&quot;).</param>
+        /// <param name="startDate">Start of raceweek.</param>
+        /// <param name="endDate">End of raceweek.</param>
+        /// <param name="isLive">Is this raceweek currently in progress.</param>
         public RaceWeek(int? id = default(int?), int? season = 0, string venue = "", string runningSeries = "", DateTimeOffset? startDate = default(DateTimeOffset?), DateTimeOffset? endDate = default(DateTimeOffset?), bool? isLive = default(bool?))
         {
             // to ensure "season" is required (not null)
@@ -75,50 +75,58 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Id
         /// </summary>
+        /// <value>Id</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Season
+        /// Race season
         /// </summary>
+        /// <value>Race season</value>
         [DataMember(Name="season", EmitDefaultValue=false)]
         public int? Season { get; set; }
 
         /// <summary>
-        /// Gets or Sets Venue
+        /// Venue
         /// </summary>
+        /// <value>Venue</value>
         [DataMember(Name="venue", EmitDefaultValue=false)]
         public string Venue { get; set; }
 
         /// <summary>
-        /// Gets or Sets RunningSeries
+        /// List of series running at this event
         /// </summary>
+        /// <value>List of series running at this event</value>
         [DataMember(Name="running_series", EmitDefaultValue=false)]
         public string RunningSeries { get; set; }
 
         /// <summary>
-        /// Gets or Sets StartDate
+        /// Start of raceweek
         /// </summary>
+        /// <value>Start of raceweek</value>
         [DataMember(Name="start_date", EmitDefaultValue=false)]
         public DateTimeOffset? StartDate { get; set; }
 
         /// <summary>
-        /// Gets or Sets EndDate
+        /// End of raceweek
         /// </summary>
+        /// <value>End of raceweek</value>
         [DataMember(Name="end_date", EmitDefaultValue=false)]
         public DateTimeOffset? EndDate { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsLive
+        /// Is this raceweek currently in progress
         /// </summary>
+        /// <value>Is this raceweek currently in progress</value>
         [DataMember(Name="is_live", EmitDefaultValue=false)]
         public bool? IsLive { get; set; }
 
         /// <summary>
-        /// Gets or Sets Details
+        /// URL to raceweek details
         /// </summary>
+        /// <value>URL to raceweek details</value>
         [DataMember(Name="details", EmitDefaultValue=false)]
         public string Details { get; private set; }
 

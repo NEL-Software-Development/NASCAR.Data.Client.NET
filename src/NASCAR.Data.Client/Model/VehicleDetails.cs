@@ -32,11 +32,11 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VehicleDetails" /> class.
         /// </summary>
-        /// <param name="season">season.</param>
-        /// <param name="seriesId">seriesId.</param>
-        /// <param name="vehicleNumber">vehicleNumber.</param>
-        /// <param name="badge">badge.</param>
-        /// <param name="results">results.</param>
+        /// <param name="season">Race season.</param>
+        /// <param name="seriesId">Series.</param>
+        /// <param name="vehicleNumber">Vehicle Number.</param>
+        /// <param name="badge">URL to badge logo.</param>
+        /// <param name="results">Season race results.</param>
         public VehicleDetails(int? season = default(int?), int? seriesId = default(int?), string vehicleNumber = default(string), string badge = default(string), Collection<RaceResultSummary> results = default(Collection<RaceResultSummary>))
         {
             this.Season = season;
@@ -47,32 +47,37 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets Season
+        /// Race season
         /// </summary>
+        /// <value>Race season</value>
         [DataMember(Name="season", EmitDefaultValue=false)]
         public int? Season { get; set; }
 
         /// <summary>
-        /// Gets or Sets SeriesId
+        /// Series
         /// </summary>
+        /// <value>Series</value>
         [DataMember(Name="series_id", EmitDefaultValue=false)]
         public int? SeriesId { get; set; }
 
         /// <summary>
-        /// Gets or Sets VehicleNumber
+        /// Vehicle Number
         /// </summary>
+        /// <value>Vehicle Number</value>
         [DataMember(Name="vehicle_number", EmitDefaultValue=false)]
         public string VehicleNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets Badge
+        /// URL to badge logo
         /// </summary>
+        /// <value>URL to badge logo</value>
         [DataMember(Name="badge", EmitDefaultValue=false)]
         public string Badge { get; set; }
 
         /// <summary>
-        /// Gets or Sets Results
+        /// Season race results
         /// </summary>
+        /// <value>Season race results</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public Collection<RaceResultSummary> Results { get; set; }
 

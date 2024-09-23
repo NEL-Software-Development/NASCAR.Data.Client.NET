@@ -17,7 +17,7 @@ namespace NASCAR.Data.Client.Example
             if(_tokenManager.GetAccessToken().IsExpired())
             {
                 AccountApi _account = new AccountApi();
-                TokenResponse tokenResponse = _account.RefreshToken(_tokenManager.GetRefreshToken());
+                TokenResponse tokenResponse = _account.AccountRefreshTokenGet(_tokenManager.GetRefreshToken());
                 _tokenManager.StoreRefreshToken(tokenResponse);
             }
 
@@ -29,8 +29,8 @@ namespace NASCAR.Data.Client.Example
             CompanyApi _companies = new CompanyApi(_config);
             DriverApi _drivers = new DriverApi(_config);
 
-            Collection<Company> companyResult = _companies.FindCompany("NASCAR");
-            Collection<Driver> driverResult = _drivers.BySeason(season: 2023, seriesId: 1);
+            Collection<Company> companyResult = _companies.CompanySearchGet("NASCAR");
+            Collection<Driver> driverResult = _drivers.DriverSeasonGet(season: 2023, seriesId: 1);
 
 
             Console.WriteLine("Found " + companyResult.Count() + " companies.");

@@ -32,33 +32,33 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OwnerPoint" /> class.
         /// </summary>
-        /// <param name="owner">owner.</param>
-        /// <param name="vehicleNumber">vehicleNumber.</param>
-        /// <param name="position">position.</param>
-        /// <param name="points">points.</param>
-        /// <param name="playoffPoints">playoffPoints.</param>
-        /// <param name="playoffRank">playoffRank.</param>
-        /// <param name="deltaLeader">deltaLeader.</param>
-        /// <param name="deltaNext">deltaNext.</param>
-        /// <param name="starts">starts.</param>
-        /// <param name="poles">poles.</param>
-        /// <param name="wins">wins.</param>
-        /// <param name="stage1Wins">stage1Wins.</param>
-        /// <param name="stage2Wins">stage2Wins.</param>
-        /// <param name="stage3Wins">stage3Wins.</param>
-        /// <param name="stagePoints">stagePoints.</param>
-        /// <param name="playoffRaceWins">playoffRaceWins.</param>
-        /// <param name="playoffStageWins">playoffStageWins.</param>
-        /// <param name="pointsEarnedThisRace">pointsEarnedThisRace.</param>
-        /// <param name="playoffPointsEarnedThisRace">playoffPointsEarnedThisRace.</param>
-        /// <param name="stagePointsEarnedThisRace">stagePointsEarnedThisRace.</param>
-        /// <param name="top5">top5.</param>
-        /// <param name="top10">top10.</param>
-        /// <param name="lapsLed">lapsLed.</param>
-        /// <param name="dnf">dnf.</param>
-        /// <param name="madePlayoffs">madePlayoffs.</param>
-        /// <param name="inPlayoffs">inPlayoffs.</param>
-        /// <param name="highestRound">highestRound.</param>
+        /// <param name="owner">Owner name.</param>
+        /// <param name="vehicleNumber">Vehicle number.</param>
+        /// <param name="position">Points position.</param>
+        /// <param name="points">Total points.</param>
+        /// <param name="playoffPoints">Total playoff points.</param>
+        /// <param name="playoffRank">Current playoff rank.</param>
+        /// <param name="deltaLeader">Number of points behind the leader.</param>
+        /// <param name="deltaNext">Number of points behind the next position.</param>
+        /// <param name="starts">Number of starts this season.</param>
+        /// <param name="poles">Number of times the pole position was earned.</param>
+        /// <param name="wins">Total race wins.</param>
+        /// <param name="stage1Wins">Stage 1 wins.</param>
+        /// <param name="stage2Wins">Stage 2 wins.</param>
+        /// <param name="stage3Wins">Stage 3 wins.</param>
+        /// <param name="stagePoints">Total stage points.</param>
+        /// <param name="playoffRaceWins">Playoff race wins.</param>
+        /// <param name="playoffStageWins">Playoff stage wins.</param>
+        /// <param name="pointsEarnedThisRace">Points earned this race.</param>
+        /// <param name="playoffPointsEarnedThisRace">Playoff points earned this race.</param>
+        /// <param name="stagePointsEarnedThisRace">Stage points earned this race.</param>
+        /// <param name="top5">Number of Top 5 finishes.</param>
+        /// <param name="top10">Number of Top 10 finishes.</param>
+        /// <param name="lapsLed">Total laps led.</param>
+        /// <param name="dnf">Number of times the vehicle did not finish the race.</param>
+        /// <param name="madePlayoffs">Whether or not the owner made the playoffs.</param>
+        /// <param name="inPlayoffs">Whether or not the owner is still in the playoffs.</param>
+        /// <param name="highestRound">Highest playoff round earned.</param>
         public OwnerPoint(string owner = default(string), string vehicleNumber = default(string), int? position = default(int?), int? points = default(int?), int? playoffPoints = default(int?), int? playoffRank = default(int?), int? deltaLeader = default(int?), int? deltaNext = default(int?), int? starts = default(int?), int? poles = default(int?), int? wins = default(int?), int? stage1Wins = default(int?), int? stage2Wins = default(int?), int? stage3Wins = default(int?), int? stagePoints = default(int?), int? playoffRaceWins = default(int?), int? playoffStageWins = default(int?), int? pointsEarnedThisRace = default(int?), int? playoffPointsEarnedThisRace = default(int?), int? stagePointsEarnedThisRace = default(int?), int? top5 = default(int?), int? top10 = default(int?), int? lapsLed = default(int?), int? dnf = default(int?), bool? madePlayoffs = default(bool?), bool? inPlayoffs = default(bool?), int? highestRound = default(int?))
         {
             this.Owner = owner;
@@ -91,164 +91,191 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets Owner
+        /// Owner name
         /// </summary>
+        /// <value>Owner name</value>
         [DataMember(Name="owner", EmitDefaultValue=false)]
         public string Owner { get; set; }
 
         /// <summary>
-        /// Gets or Sets VehicleNumber
+        /// Vehicle number
         /// </summary>
+        /// <value>Vehicle number</value>
         [DataMember(Name="vehicle_number", EmitDefaultValue=false)]
         public string VehicleNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets Position
+        /// Points position
         /// </summary>
+        /// <value>Points position</value>
         [DataMember(Name="position", EmitDefaultValue=false)]
         public int? Position { get; set; }
 
         /// <summary>
-        /// Gets or Sets Points
+        /// Total points
         /// </summary>
+        /// <value>Total points</value>
         [DataMember(Name="points", EmitDefaultValue=false)]
         public int? Points { get; set; }
 
         /// <summary>
-        /// Gets or Sets PlayoffPoints
+        /// Total playoff points
         /// </summary>
+        /// <value>Total playoff points</value>
         [DataMember(Name="playoff_points", EmitDefaultValue=false)]
         public int? PlayoffPoints { get; set; }
 
         /// <summary>
-        /// Gets or Sets PlayoffRank
+        /// Current playoff rank
         /// </summary>
+        /// <value>Current playoff rank</value>
         [DataMember(Name="playoff_rank", EmitDefaultValue=false)]
         public int? PlayoffRank { get; set; }
 
         /// <summary>
-        /// Gets or Sets DeltaLeader
+        /// Number of points behind the leader
         /// </summary>
+        /// <value>Number of points behind the leader</value>
         [DataMember(Name="delta_leader", EmitDefaultValue=false)]
         public int? DeltaLeader { get; set; }
 
         /// <summary>
-        /// Gets or Sets DeltaNext
+        /// Number of points behind the next position
         /// </summary>
+        /// <value>Number of points behind the next position</value>
         [DataMember(Name="delta_next", EmitDefaultValue=false)]
         public int? DeltaNext { get; set; }
 
         /// <summary>
-        /// Gets or Sets Starts
+        /// Number of starts this season
         /// </summary>
+        /// <value>Number of starts this season</value>
         [DataMember(Name="starts", EmitDefaultValue=false)]
         public int? Starts { get; set; }
 
         /// <summary>
-        /// Gets or Sets Poles
+        /// Number of times the pole position was earned
         /// </summary>
+        /// <value>Number of times the pole position was earned</value>
         [DataMember(Name="poles", EmitDefaultValue=false)]
         public int? Poles { get; set; }
 
         /// <summary>
-        /// Gets or Sets Wins
+        /// Total race wins
         /// </summary>
+        /// <value>Total race wins</value>
         [DataMember(Name="wins", EmitDefaultValue=false)]
         public int? Wins { get; set; }
 
         /// <summary>
-        /// Gets or Sets Stage1Wins
+        /// Stage 1 wins
         /// </summary>
+        /// <value>Stage 1 wins</value>
         [DataMember(Name="stage_1_wins", EmitDefaultValue=false)]
         public int? Stage1Wins { get; set; }
 
         /// <summary>
-        /// Gets or Sets Stage2Wins
+        /// Stage 2 wins
         /// </summary>
+        /// <value>Stage 2 wins</value>
         [DataMember(Name="stage_2_wins", EmitDefaultValue=false)]
         public int? Stage2Wins { get; set; }
 
         /// <summary>
-        /// Gets or Sets Stage3Wins
+        /// Stage 3 wins
         /// </summary>
+        /// <value>Stage 3 wins</value>
         [DataMember(Name="stage_3_wins", EmitDefaultValue=false)]
         public int? Stage3Wins { get; set; }
 
         /// <summary>
-        /// Gets or Sets StagePoints
+        /// Total stage points
         /// </summary>
+        /// <value>Total stage points</value>
         [DataMember(Name="stage_points", EmitDefaultValue=false)]
         public int? StagePoints { get; set; }
 
         /// <summary>
-        /// Gets or Sets PlayoffRaceWins
+        /// Playoff race wins
         /// </summary>
+        /// <value>Playoff race wins</value>
         [DataMember(Name="playoff_race_wins", EmitDefaultValue=false)]
         public int? PlayoffRaceWins { get; set; }
 
         /// <summary>
-        /// Gets or Sets PlayoffStageWins
+        /// Playoff stage wins
         /// </summary>
+        /// <value>Playoff stage wins</value>
         [DataMember(Name="playoff_stage_wins", EmitDefaultValue=false)]
         public int? PlayoffStageWins { get; set; }
 
         /// <summary>
-        /// Gets or Sets PointsEarnedThisRace
+        /// Points earned this race
         /// </summary>
+        /// <value>Points earned this race</value>
         [DataMember(Name="points_earned_this_race", EmitDefaultValue=false)]
         public int? PointsEarnedThisRace { get; set; }
 
         /// <summary>
-        /// Gets or Sets PlayoffPointsEarnedThisRace
+        /// Playoff points earned this race
         /// </summary>
+        /// <value>Playoff points earned this race</value>
         [DataMember(Name="playoff_points_earned_this_race", EmitDefaultValue=false)]
         public int? PlayoffPointsEarnedThisRace { get; set; }
 
         /// <summary>
-        /// Gets or Sets StagePointsEarnedThisRace
+        /// Stage points earned this race
         /// </summary>
+        /// <value>Stage points earned this race</value>
         [DataMember(Name="stage_points_earned_this_race", EmitDefaultValue=false)]
         public int? StagePointsEarnedThisRace { get; set; }
 
         /// <summary>
-        /// Gets or Sets Top5
+        /// Number of Top 5 finishes
         /// </summary>
+        /// <value>Number of Top 5 finishes</value>
         [DataMember(Name="top5", EmitDefaultValue=false)]
         public int? Top5 { get; set; }
 
         /// <summary>
-        /// Gets or Sets Top10
+        /// Number of Top 10 finishes
         /// </summary>
+        /// <value>Number of Top 10 finishes</value>
         [DataMember(Name="top10", EmitDefaultValue=false)]
         public int? Top10 { get; set; }
 
         /// <summary>
-        /// Gets or Sets LapsLed
+        /// Total laps led
         /// </summary>
+        /// <value>Total laps led</value>
         [DataMember(Name="laps_led", EmitDefaultValue=false)]
         public int? LapsLed { get; set; }
 
         /// <summary>
-        /// Gets or Sets Dnf
+        /// Number of times the vehicle did not finish the race
         /// </summary>
+        /// <value>Number of times the vehicle did not finish the race</value>
         [DataMember(Name="dnf", EmitDefaultValue=false)]
         public int? Dnf { get; set; }
 
         /// <summary>
-        /// Gets or Sets MadePlayoffs
+        /// Whether or not the owner made the playoffs
         /// </summary>
+        /// <value>Whether or not the owner made the playoffs</value>
         [DataMember(Name="made_playoffs", EmitDefaultValue=false)]
         public bool? MadePlayoffs { get; set; }
 
         /// <summary>
-        /// Gets or Sets InPlayoffs
+        /// Whether or not the owner is still in the playoffs
         /// </summary>
+        /// <value>Whether or not the owner is still in the playoffs</value>
         [DataMember(Name="in_playoffs", EmitDefaultValue=false)]
         public bool? InPlayoffs { get; set; }
 
         /// <summary>
-        /// Gets or Sets HighestRound
+        /// Highest playoff round earned
         /// </summary>
+        /// <value>Highest playoff round earned</value>
         [DataMember(Name="highest_round", EmitDefaultValue=false)]
         public int? HighestRound { get; set; }
 

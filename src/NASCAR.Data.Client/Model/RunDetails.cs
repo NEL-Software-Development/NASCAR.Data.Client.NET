@@ -32,29 +32,33 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RunDetails" /> class.
         /// </summary>
-        /// <param name="name">name.</param>
-        /// <param name="startTime">startTime.</param>
+        /// <param name="name">The name of the run.</param>
+        /// <param name="startTime">Scheduled start time.</param>
         /// <param name="runState">runState.</param>
         /// <param name="runType">runType.</param>
-        /// <param name="flags">flags.</param>
-        public RunDetails(string name = default(string), DateTimeOffset? startTime = default(DateTimeOffset?), RunState runState = default(RunState), RunType runType = default(RunType), Collection<Flag> flags = default(Collection<Flag>))
+        /// <param name="duration">The scheduled duration of the run in seconds.</param>
+        /// <param name="flags">Flags associated with this run.</param>
+        public RunDetails(string name = default(string), DateTimeOffset? startTime = default(DateTimeOffset?), RunState runState = default(RunState), RunType runType = default(RunType), int? duration = default(int?), Collection<Flag> flags = default(Collection<Flag>))
         {
             this.Name = name;
             this.StartTime = startTime;
             this.RunState = runState;
             this.RunType = runType;
+            this.Duration = duration;
             this.Flags = flags;
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the run
         /// </summary>
+        /// <value>The name of the run</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets StartTime
+        /// Scheduled start time
         /// </summary>
+        /// <value>Scheduled start time</value>
         [DataMember(Name="start_time", EmitDefaultValue=false)]
         public DateTimeOffset? StartTime { get; set; }
 
@@ -71,14 +75,23 @@ namespace NASCAR.Data.Client.Model
         public RunType RunType { get; set; }
 
         /// <summary>
-        /// Gets or Sets FlagState
+        /// The scheduled duration of the run in seconds
         /// </summary>
+        /// <value>The scheduled duration of the run in seconds</value>
+        [DataMember(Name="duration", EmitDefaultValue=false)]
+        public int? Duration { get; set; }
+
+        /// <summary>
+        /// Flag state:  (Inactive, Active, Completed)
+        /// </summary>
+        /// <value>Flag state:  (Inactive, Active, Completed)</value>
         [DataMember(Name="flag_state", EmitDefaultValue=false)]
         public string FlagState { get; private set; }
 
         /// <summary>
-        /// Gets or Sets Flags
+        /// Flags associated with this run
         /// </summary>
+        /// <value>Flags associated with this run</value>
         [DataMember(Name="flags", EmitDefaultValue=false)]
         public Collection<Flag> Flags { get; set; }
 
@@ -94,6 +107,7 @@ namespace NASCAR.Data.Client.Model
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
             sb.Append("  RunState: ").Append(RunState).Append("\n");
             sb.Append("  RunType: ").Append(RunType).Append("\n");
+            sb.Append("  Duration: ").Append(Duration).Append("\n");
             sb.Append("  FlagState: ").Append(FlagState).Append("\n");
             sb.Append("  Flags: ").Append(Flags).Append("\n");
             sb.Append("}\n");
@@ -151,6 +165,11 @@ namespace NASCAR.Data.Client.Model
                     this.RunType.Equals(input.RunType))
                 ) && 
                 (
+                    this.Duration == input.Duration ||
+                    (this.Duration != null &&
+                    this.Duration.Equals(input.Duration))
+                ) && 
+                (
                     this.FlagState == input.FlagState ||
                     (this.FlagState != null &&
                     this.FlagState.Equals(input.FlagState))
@@ -180,6 +199,8 @@ namespace NASCAR.Data.Client.Model
                     hashCode = hashCode * 59 + this.RunState.GetHashCode();
                 if (this.RunType != null)
                     hashCode = hashCode * 59 + this.RunType.GetHashCode();
+                if (this.Duration != null)
+                    hashCode = hashCode * 59 + this.Duration.GetHashCode();
                 if (this.FlagState != null)
                     hashCode = hashCode * 59 + this.FlagState.GetHashCode();
                 if (this.Flags != null)

@@ -34,7 +34,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="season"> (optional)</param>
         /// <param name="driverId"> (optional, default to 0)</param>
         /// <returns>Collection&lt;DriverSummary&gt;</returns>
-        Collection<DriverSummary> DriverSummary (int? seriesId = null, int? season = null, int? driverId = null);
+        Collection<DriverSummary> DriverSummaryGet (int? seriesId = null, int? season = null, int? driverId = null);
 
         /// <summary>
         /// 
@@ -47,7 +47,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="season"> (optional)</param>
         /// <param name="driverId"> (optional, default to 0)</param>
         /// <returns>ApiResponse of Collection&lt;DriverSummary&gt;</returns>
-        ApiResponse<Collection<DriverSummary>> DriverSummaryWithHttpInfo (int? seriesId = null, int? season = null, int? driverId = null);
+        ApiResponse<Collection<DriverSummary>> DriverSummaryGetWithHttpInfo (int? seriesId = null, int? season = null, int? driverId = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -61,7 +61,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="season"> (optional)</param>
         /// <param name="driverId"> (optional, default to 0)</param>
         /// <returns>Task of Collection&lt;DriverSummary&gt;</returns>
-        System.Threading.Tasks.Task<Collection<DriverSummary>> DriverSummaryAsync (int? seriesId = null, int? season = null, int? driverId = null);
+        System.Threading.Tasks.Task<Collection<DriverSummary>> DriverSummaryGetAsync (int? seriesId = null, int? season = null, int? driverId = null);
 
         /// <summary>
         /// 
@@ -74,7 +74,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="season"> (optional)</param>
         /// <param name="driverId"> (optional, default to 0)</param>
         /// <returns>Task of ApiResponse (Collection&lt;DriverSummary&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Collection<DriverSummary>>> DriverSummaryAsyncWithHttpInfo (int? seriesId = null, int? season = null, int? driverId = null);
+        System.Threading.Tasks.Task<ApiResponse<Collection<DriverSummary>>> DriverSummaryGetAsyncWithHttpInfo (int? seriesId = null, int? season = null, int? driverId = null);
         #endregion Asynchronous Operations
     }
 
@@ -194,9 +194,9 @@ namespace NASCAR.Data.Client.Api
         /// <param name="season"> (optional)</param>
         /// <param name="driverId"> (optional, default to 0)</param>
         /// <returns>Collection&lt;DriverSummary&gt;</returns>
-        public Collection<DriverSummary> DriverSummary (int? seriesId = null, int? season = null, int? driverId = null)
+        public Collection<DriverSummary> DriverSummaryGet (int? seriesId = null, int? season = null, int? driverId = null)
         {
-             ApiResponse<Collection<DriverSummary>> localVarResponse = DriverSummaryWithHttpInfo(seriesId, season, driverId);
+             ApiResponse<Collection<DriverSummary>> localVarResponse = DriverSummaryGetWithHttpInfo(seriesId, season, driverId);
              return localVarResponse.Data;
         }
 
@@ -208,7 +208,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="season"> (optional)</param>
         /// <param name="driverId"> (optional, default to 0)</param>
         /// <returns>ApiResponse of Collection&lt;DriverSummary&gt;</returns>
-        public ApiResponse< Collection<DriverSummary> > DriverSummaryWithHttpInfo (int? seriesId = null, int? season = null, int? driverId = null)
+        public ApiResponse< Collection<DriverSummary> > DriverSummaryGetWithHttpInfo (int? seriesId = null, int? season = null, int? driverId = null)
         {
 
             var localVarPath = "/driver-summary";
@@ -253,7 +253,7 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DriverSummary", localVarResponse);
+                Exception exception = ExceptionFactory("DriverSummaryGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -270,9 +270,9 @@ namespace NASCAR.Data.Client.Api
         /// <param name="season"> (optional)</param>
         /// <param name="driverId"> (optional, default to 0)</param>
         /// <returns>Task of Collection&lt;DriverSummary&gt;</returns>
-        public async System.Threading.Tasks.Task<Collection<DriverSummary>> DriverSummaryAsync (int? seriesId = null, int? season = null, int? driverId = null)
+        public async System.Threading.Tasks.Task<Collection<DriverSummary>> DriverSummaryGetAsync (int? seriesId = null, int? season = null, int? driverId = null)
         {
-             ApiResponse<Collection<DriverSummary>> localVarResponse = await DriverSummaryAsyncWithHttpInfo(seriesId, season, driverId);
+             ApiResponse<Collection<DriverSummary>> localVarResponse = await DriverSummaryGetAsyncWithHttpInfo(seriesId, season, driverId);
              return localVarResponse.Data;
 
         }
@@ -285,7 +285,7 @@ namespace NASCAR.Data.Client.Api
         /// <param name="season"> (optional)</param>
         /// <param name="driverId"> (optional, default to 0)</param>
         /// <returns>Task of ApiResponse (Collection&lt;DriverSummary&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Collection<DriverSummary>>> DriverSummaryAsyncWithHttpInfo (int? seriesId = null, int? season = null, int? driverId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Collection<DriverSummary>>> DriverSummaryGetAsyncWithHttpInfo (int? seriesId = null, int? season = null, int? driverId = null)
         {
 
             var localVarPath = "/driver-summary";
@@ -330,7 +330,7 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DriverSummary", localVarResponse);
+                Exception exception = ExceptionFactory("DriverSummaryGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 

@@ -32,12 +32,12 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OpticalTrackingUTMOffset" /> class.
         /// </summary>
-        /// <param name="trackId">trackId.</param>
-        /// <param name="trackName">trackName.</param>
-        /// <param name="zone">zone.</param>
-        /// <param name="x">x.</param>
-        /// <param name="y">y.</param>
-        /// <param name="z">z.</param>
+        /// <param name="trackId">Track Id.</param>
+        /// <param name="trackName">Track Name.</param>
+        /// <param name="zone">Zone.</param>
+        /// <param name="x">X Coordinate.</param>
+        /// <param name="y">Y coordinate.</param>
+        /// <param name="z">Z coordinate.</param>
         public OpticalTrackingUTMOffset(int? trackId = default(int?), string trackName = default(string), string zone = default(string), double? x = default(double?), double? y = default(double?), double? z = default(double?))
         {
             this.TrackId = trackId;
@@ -49,38 +49,44 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets TrackId
+        /// Track Id
         /// </summary>
+        /// <value>Track Id</value>
         [DataMember(Name="track_id", EmitDefaultValue=false)]
         public int? TrackId { get; set; }
 
         /// <summary>
-        /// Gets or Sets TrackName
+        /// Track Name
         /// </summary>
+        /// <value>Track Name</value>
         [DataMember(Name="track_name", EmitDefaultValue=false)]
         public string TrackName { get; set; }
 
         /// <summary>
-        /// Gets or Sets Zone
+        /// Zone
         /// </summary>
+        /// <value>Zone</value>
         [DataMember(Name="zone", EmitDefaultValue=false)]
         public string Zone { get; set; }
 
         /// <summary>
-        /// Gets or Sets X
+        /// X Coordinate
         /// </summary>
+        /// <value>X Coordinate</value>
         [DataMember(Name="x", EmitDefaultValue=false)]
         public double? X { get; set; }
 
         /// <summary>
-        /// Gets or Sets Y
+        /// Y coordinate
         /// </summary>
+        /// <value>Y coordinate</value>
         [DataMember(Name="y", EmitDefaultValue=false)]
         public double? Y { get; set; }
 
         /// <summary>
-        /// Gets or Sets Z
+        /// Z coordinate
         /// </summary>
+        /// <value>Z coordinate</value>
         [DataMember(Name="z", EmitDefaultValue=false)]
         public double? Z { get; set; }
 

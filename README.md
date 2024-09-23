@@ -77,52 +77,55 @@ namespace NASCAR.Data.Client.Example
 <a name="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
 
-All URIs are relative to */*
+All URIs are relative to */api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AccountApi* | [**RefreshToken**](docs/AccountApi.md#refreshtoken) | **GET** /account/refresh-token | 
-*CompanyApi* | [**FindCompany**](docs/CompanyApi.md#findcompany) | **GET** /company/search | 
-*DriverApi* | [**BySeason**](docs/DriverApi.md#byseason) | **GET** /driver/season | 
-*DriverApi* | [**Driver**](docs/DriverApi.md#driver) | **GET** /driver | 
-*DriverApi* | [**DriverSeasonFinishes**](docs/DriverApi.md#driverseasonfinishes) | **GET** /driver/season-finishes | 
-*DriverSummaryApi* | [**DriverSummary**](docs/DriverSummaryApi.md#driversummary) | **GET** /driver-summary | 
-*InspectionsApi* | [**OSS**](docs/InspectionsApi.md#oss) | **GET** /inspections/oss | 
-*InspectionsApi* | [**VehicleWeights**](docs/InspectionsApi.md#vehicleweights) | **GET** /inspections/vehicle-weights | 
-*NextGenApi* | [**DataPoints**](docs/NextGenApi.md#datapoints) | **GET** /nextgen-datapoints | 
-*NextGenApi* | [**Sources**](docs/NextGenApi.md#sources) | **GET** /nextgen-sources | 
-*OpticalTrackingApi* | [**UtmOffsets**](docs/OpticalTrackingApi.md#utmoffsets) | **GET** /utm-offsets | 
-*PointsApi* | [**DriverPoints**](docs/PointsApi.md#driverpoints) | **GET** /points/driver-points | 
-*PointsApi* | [**ManufacturerPoints**](docs/PointsApi.md#manufacturerpoints) | **GET** /points/manufacturer-points | 
-*PointsApi* | [**OwnerPoints**](docs/PointsApi.md#ownerpoints) | **GET** /points/owner-points | 
-*RaceApi* | [**Cautions**](docs/RaceApi.md#cautions) | **GET** /race/cautions | 
-*RaceApi* | [**DisciplineUpdates**](docs/RaceApi.md#disciplineupdates) | **GET** /race/discipline-updates | 
-*RaceApi* | [**Entries**](docs/RaceApi.md#entries) | **GET** /race/entries | 
-*RaceApi* | [**Infractions**](docs/RaceApi.md#infractions) | **GET** /race/infractions | 
-*RaceApi* | [**LapLeaders**](docs/RaceApi.md#lapleaders) | **GET** /race/lap-leaders | 
-*RaceApi* | [**LoopStats**](docs/RaceApi.md#loopstats) | **GET** /race/loop-stats | 
-*RaceApi* | [**PitStops**](docs/RaceApi.md#pitstops) | **GET** /race/pitstops | 
-*RaceApi* | [**PracticeResults**](docs/RaceApi.md#practiceresults) | **GET** /race/practice-results | 
-*RaceApi* | [**QualifyingResults**](docs/RaceApi.md#qualifyingresults) | **GET** /race/qualifying-results | 
-*RaceApi* | [**Race**](docs/RaceApi.md#race) | **GET** /race | 
-*RaceApi* | [**RaceResults**](docs/RaceApi.md#raceresults) | **GET** /race/race-results | 
-*RaceApi* | [**RaceSeason**](docs/RaceApi.md#raceseason) | **GET** /race/season | 
-*RaceApi* | [**Rosters**](docs/RaceApi.md#rosters) | **GET** /race/rosters | 
-*RaceApi* | [**StageResults**](docs/RaceApi.md#stageresults) | **GET** /race/stage-results | 
-*RaceApi* | [**ViewModel**](docs/RaceApi.md#viewmodel) | **GET** /race/viewmodel | 
-*RaceApi* | [**WeekendSchedule**](docs/RaceApi.md#weekendschedule) | **GET** /race/weekend-schedule | 
-*RaceWeekApi* | [**Details**](docs/RaceWeekApi.md#details) | **GET** /race-week/details | 
-*RaceWeekApi* | [**Live**](docs/RaceWeekApi.md#live) | **GET** /race-week/live | 
-*RaceWeekApi* | [**Season**](docs/RaceWeekApi.md#season) | **GET** /race-week/season | 
-*SeriesApi* | [**Series**](docs/SeriesApi.md#series) | **GET** /series | 
-*VehicleApi* | [**Vehicle**](docs/VehicleApi.md#vehicle) | **GET** /vehicle | 
-*VehicleApi* | [**VehicleSeasonFinishes**](docs/VehicleApi.md#vehicleseasonfinishes) | **GET** /vehicle/season-finishes | 
+*AccountApi* | [**AccountRefreshTokenGet**](docs/AccountApi.md#accountrefreshtokenget) | **GET** /account/refresh-token | 
+*CompanyApi* | [**CompanySearchGet**](docs/CompanyApi.md#companysearchget) | **GET** /company/search | 
+*DriverApi* | [**DriverGet**](docs/DriverApi.md#driverget) | **GET** /driver | 
+*DriverApi* | [**DriverSeasonFinishesGet**](docs/DriverApi.md#driverseasonfinishesget) | **GET** /driver/season-finishes | 
+*DriverApi* | [**DriverSeasonGet**](docs/DriverApi.md#driverseasonget) | **GET** /driver/season | 
+*DriverSummaryApi* | [**DriverSummaryGet**](docs/DriverSummaryApi.md#driversummaryget) | **GET** /driver-summary | 
+*ERDPApi* | [**ErdpDatapointsGet**](docs/ERDPApi.md#erdpdatapointsget) | **GET** /erdp/datapoints | 
+*ERDPApi* | [**ErdpSourcesGet**](docs/ERDPApi.md#erdpsourcesget) | **GET** /erdp/sources | 
+*FeedbackApi* | [**FeedbackDevNotesGet**](docs/FeedbackApi.md#feedbackdevnotesget) | **GET** /feedback/dev-notes | 
+*FeedbackApi* | [**FeedbackSubmitFeedbackPost**](docs/FeedbackApi.md#feedbacksubmitfeedbackpost) | **POST** /feedback/submit-feedback | 
+*InspectionsApi* | [**InspectionsOssGet**](docs/InspectionsApi.md#inspectionsossget) | **GET** /inspections/oss | 
+*InspectionsApi* | [**InspectionsVehicleWeightsGet**](docs/InspectionsApi.md#inspectionsvehicleweightsget) | **GET** /inspections/vehicle-weights | 
+*OpticalTrackingApi* | [**OpticalTrackingUtmOffsetsGet**](docs/OpticalTrackingApi.md#opticaltrackingutmoffsetsget) | **GET** /optical-tracking/utm-offsets | 
+*PointsApi* | [**PointsDriverPointsGet**](docs/PointsApi.md#pointsdriverpointsget) | **GET** /points/driver-points | 
+*PointsApi* | [**PointsManufacturerPointsGet**](docs/PointsApi.md#pointsmanufacturerpointsget) | **GET** /points/manufacturer-points | 
+*PointsApi* | [**PointsOwnerPointsGet**](docs/PointsApi.md#pointsownerpointsget) | **GET** /points/owner-points | 
+*RaceApi* | [**RaceCautionsGet**](docs/RaceApi.md#racecautionsget) | **GET** /race/cautions | 
+*RaceApi* | [**RaceDisciplineUpdatesGet**](docs/RaceApi.md#racedisciplineupdatesget) | **GET** /race/discipline-updates | 
+*RaceApi* | [**RaceEntriesGet**](docs/RaceApi.md#raceentriesget) | **GET** /race/entries | 
+*RaceApi* | [**RaceGet**](docs/RaceApi.md#raceget) | **GET** /race | 
+*RaceApi* | [**RaceInfractionsGet**](docs/RaceApi.md#raceinfractionsget) | **GET** /race/infractions | 
+*RaceApi* | [**RaceLapLeadersGet**](docs/RaceApi.md#racelapleadersget) | **GET** /race/lap-leaders | 
+*RaceApi* | [**RaceLoopStatsGet**](docs/RaceApi.md#raceloopstatsget) | **GET** /race/loop-stats | 
+*RaceApi* | [**RacePitstopsGet**](docs/RaceApi.md#racepitstopsget) | **GET** /race/pitstops | 
+*RaceApi* | [**RacePracticeResultsGet**](docs/RaceApi.md#racepracticeresultsget) | **GET** /race/practice-results | 
+*RaceApi* | [**RaceQualifyingResultsGet**](docs/RaceApi.md#racequalifyingresultsget) | **GET** /race/qualifying-results | 
+*RaceApi* | [**RaceRaceResultsGet**](docs/RaceApi.md#raceraceresultsget) | **GET** /race/race-results | 
+*RaceApi* | [**RaceRostersGet**](docs/RaceApi.md#racerostersget) | **GET** /race/rosters | 
+*RaceApi* | [**RaceSeasonGet**](docs/RaceApi.md#raceseasonget) | **GET** /race/season | 
+*RaceApi* | [**RaceStageResultsGet**](docs/RaceApi.md#racestageresultsget) | **GET** /race/stage-results | 
+*RaceApi* | [**RaceViewmodelGet**](docs/RaceApi.md#raceviewmodelget) | **GET** /race/viewmodel | 
+*RaceApi* | [**RaceWeekendScheduleGet**](docs/RaceApi.md#raceweekendscheduleget) | **GET** /race/weekend-schedule | 
+*RaceWeekApi* | [**RaceWeekDetailsGet**](docs/RaceWeekApi.md#raceweekdetailsget) | **GET** /race-week/details | 
+*RaceWeekApi* | [**RaceWeekLiveGet**](docs/RaceWeekApi.md#raceweekliveget) | **GET** /race-week/live | 
+*RaceWeekApi* | [**RaceWeekSeasonGet**](docs/RaceWeekApi.md#raceweekseasonget) | **GET** /race-week/season | 
+*SeriesApi* | [**SeriesGet**](docs/SeriesApi.md#seriesget) | **GET** /series | 
+*VehicleApi* | [**VehicleGet**](docs/VehicleApi.md#vehicleget) | **GET** /vehicle | 
+*VehicleApi* | [**VehicleSeasonFinishesGet**](docs/VehicleApi.md#vehicleseasonfinishesget) | **GET** /vehicle/season-finishes | 
 
 <a name="documentation-for-models"></a>
 ## Documentation for Models
 
  - [Model.Caution](docs/Caution.md)
  - [Model.Company](docs/Company.md)
+ - [Model.DevNote](docs/DevNote.md)
  - [Model.DisciplineUpdate](docs/DisciplineUpdate.md)
  - [Model.Driver](docs/Driver.md)
  - [Model.DriverPoint](docs/DriverPoint.md)
@@ -131,6 +134,7 @@ Class | Method | HTTP request | Description
  - [Model.DriverSummaryBySeason](docs/DriverSummaryBySeason.md)
  - [Model.DriverSummaryByTrack](docs/DriverSummaryByTrack.md)
  - [Model.DriverSummaryByTrackType](docs/DriverSummaryByTrackType.md)
+ - [Model.Feedback](docs/Feedback.md)
  - [Model.Flag](docs/Flag.md)
  - [Model.LapLeader](docs/LapLeader.md)
  - [Model.LoopStat](docs/LoopStat.md)
@@ -142,6 +146,8 @@ Class | Method | HTTP request | Description
  - [Model.OwnerPoint](docs/OwnerPoint.md)
  - [Model.Pitstop](docs/Pitstop.md)
  - [Model.PracticeRunResults](docs/PracticeRunResults.md)
+ - [Model.ProcessingState](docs/ProcessingState.md)
+ - [Model.PublishState](docs/PublishState.md)
  - [Model.QualifyingRunResults](docs/QualifyingRunResults.md)
  - [Model.Race](docs/Race.md)
  - [Model.RaceDetails](docs/RaceDetails.md)
@@ -158,6 +164,7 @@ Class | Method | HTTP request | Description
  - [Model.RunResult](docs/RunResult.md)
  - [Model.RunState](docs/RunState.md)
  - [Model.RunType](docs/RunType.md)
+ - [Model.ScheduledActionSchedule](docs/ScheduledActionSchedule.md)
  - [Model.Series](docs/Series.md)
  - [Model.StageResult](docs/StageResult.md)
  - [Model.StageRunResults](docs/StageRunResults.md)
@@ -172,5 +179,3 @@ Class | Method | HTTP request | Description
 
 <a name="Bearer"></a>
 ### Bearer
-
-
