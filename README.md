@@ -1,11 +1,28 @@
 # NASCAR.Data.Client - the C# library for the NASCAR.Data.API
 
+## Table of Contents
 
+- [Overview](#overview)
+- [Frameworks Supported](#frameworks-supported)
+- [Dependencies](#dependencies)
+- [Installation](#installation)
+- [Documentation For Data API](#documentation-for-data-api)
+    - [Getting Started](#getting-started)
+    - [Documentation for API Endpoints](#api-endpoints)
+    - [Documentation for Models](#api-models)
+    - [Documentation for Authorization](#api-authorization)
+- [Documentation for NATS Connector](#documentation-for-nats-connector)
+    - [NATS Client](#nats-client)
+    - [NATS Authentication](#nats-authentication)
+    - [NATS Client Methods](#nats-client-methods)
+
+<a name="overview"></a>
+## Overview
 - API version: 1.0
 - SDK version: 1.0.0
 
 <a name="frameworks-supported"></a>
-## Frameworks supported
+## Frameworks Supported
 - .NET 4.0 or later
 - Windows Phone 7.1 (Mango)
 
@@ -36,9 +53,11 @@ using NASCAR.Data.Client.Api;
 using NASCAR.Data.Client.Client;
 using NASCAR.Data.Client.Model;
 ```
+<a name="documentation-for-data-api"></a>
+## Documentation For Data API
 
 <a name="getting-started"></a>
-## Getting Started
+### Getting Started
 
 ```csharp
 using NASCAR.Data.Client.Api;
@@ -74,8 +93,8 @@ namespace NASCAR.Data.Client.Example
 }
 ```
 
-<a name="documentation-for-api-endpoints"></a>
-## Documentation for API Endpoints
+<a name="api-endpoints"></a>
+### API Endpoints
 
 All URIs are relative to */api*
 
@@ -120,8 +139,8 @@ Class | Method | HTTP request | Description
 *VehicleApi* | [**VehicleGet**](docs/VehicleApi.md#vehicleget) | **GET** /vehicle | 
 *VehicleApi* | [**VehicleSeasonFinishesGet**](docs/VehicleApi.md#vehicleseasonfinishesget) | **GET** /vehicle/season-finishes | 
 
-<a name="documentation-for-models"></a>
-## Documentation for Models
+<a name="api-models"></a>
+### API Models
 
  - [Model.Caution](docs/Caution.md)
  - [Model.Company](docs/Company.md)
@@ -174,8 +193,8 @@ Class | Method | HTTP request | Description
  - [Model.VehicleWeight](docs/VehicleWeight.md)
  - [Model.WeekendSchedule](docs/WeekendSchedule.md)
 
-<a name="documentation-for-authorization"></a>
-## Documentation for Authorization
+<a name="api-authorization"></a>
+### API Authorization
 
 <a name="Bearer"></a>
 ### Bearer
@@ -189,6 +208,12 @@ The `NatsClient` class provides methods for connecting to the NATS server, subsc
 
 #### Example
 ```csharp
+using NASCAR.Data.Client.NATS;
+using System;
+using System.Collections.ObjectModel;
+using System.Linq;
+using NASCAR.Data.Client.NATS.Models.OpticalTrackingData;
+
 NatsAuthentication auth = new NatsAuthentication()
 {
     CertificatePath = "<PATH_TO_CERT_FILE>",
