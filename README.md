@@ -179,3 +179,68 @@ Class | Method | HTTP request | Description
 
 <a name="Bearer"></a>
 ### Bearer
+
+<a name="documentation-for-nats-connector"></a>
+## Documentation for NATS Connector
+
+<a name="nats-client"></a>
+### NATS Client
+The `NatsClient` class provides methods for connecting to the NATS server, subscribing to endpoints, sending messages, and handling disconnection scenarios. It wraps the NATS connection in a higher-level API.
+
+#### Example
+```csharp
+NatsAuthentication auth = new NatsAuthentication()
+{
+    CertificatePath = "<PATH_TO_CERT_FILE>",
+    CertificatePassword = "<CERT_PASSWORD>",
+    CredentialsPath = "<PATH_TO_CREDENTIALS_FILE>"
+};
+NatsClient _natsClient = new NatsClient("<NATS_URL>", auth);
+_natsClient.Connect();
+
+_natsClient.Subscribe<LocationData>(NATS.DataPoints.DataPoint.LowLatency, (val) =>
+{
+    Console.WriteLine(val.Time);
+});
+
+_natsClient.Unsubscribe(NATS.DataPoints.DataPoint.LowLatency);
+
+Console.ReadLine();
+_natsClient.Disconnect();
+```
+
+<a name="nats-authentication"></a>
+### NATS Authentication
+The `NatsAuthentication` class holds certificate-based authentication details such as the certificate path, password, and credentials path. You can pass an instance of this class to the `NatsClient` to enable authentication.
+
+#### Example
+```csharp
+var auth = new NatsAuthentication
+{
+    CertificatePath = "path/to/cert.pfx",
+    CertificatePassword = "your-cert-password",
+    CredentialsPath = "path/to/creds"
+};
+```
+
+<a name="nats-client-methods"></a>
+### NATS Client Methods
+`bool Connect()`
+- Connects to the NATS server.
+- Returns: `true` if the connection is successful, `false` otherwise.
+
+`bool Disconnect()`
+- Disconnects from the NATS server.
+- Returns: `true` if the disconnection is successful, `false` otherwise.
+
+`bool Subscribe<T>(string endpoint, Action<T> messageHandler)`
+- Subscribes to a NATS endpoint and invokes the provided message handler when messages are received.
+- Returns: `true` if the subscription is successful, `false` otherwise.
+
+`bool Unsubscribe(string endpoint)`
+- Unsubscribes from a specific NATS endpoint.
+- Returns: `true` if the unsubscription is successful, `false` otherwise.
+
+`bool Send<T>(string endpoint, T data)`
+- Sends a message to a specific NATS endpoint.
+- Returns: `true` if the message is sent successfully, `false` otherwise.
