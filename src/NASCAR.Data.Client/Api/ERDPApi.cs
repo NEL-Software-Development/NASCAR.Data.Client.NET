@@ -24,83 +24,45 @@ namespace NASCAR.Data.Client.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// Get a users erdp topics.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Collection&lt;NextGenDatapoint&gt;</returns>
-        Collection<NextGenDatapoint> ErdpDatapointsGet ();
+        /// <returns>Collection&lt;ClientERDPTopic&gt;</returns>
+        Collection<ClientERDPTopic> ErdpTopicsGet ();
 
         /// <summary>
-        /// 
+        /// Get a users erdp topics.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Collection&lt;NextGenDatapoint&gt;</returns>
-        ApiResponse<Collection<NextGenDatapoint>> ErdpDatapointsGetWithHttpInfo ();
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Collection&lt;NextGenSource&gt;</returns>
-        Collection<NextGenSource> ErdpSourcesGet ();
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Collection&lt;NextGenSource&gt;</returns>
-        ApiResponse<Collection<NextGenSource>> ErdpSourcesGetWithHttpInfo ();
+        /// <returns>ApiResponse of Collection&lt;ClientERDPTopic&gt;</returns>
+        ApiResponse<Collection<ClientERDPTopic>> ErdpTopicsGetWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// Get a users erdp topics.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of Collection&lt;NextGenDatapoint&gt;</returns>
-        System.Threading.Tasks.Task<Collection<NextGenDatapoint>> ErdpDatapointsGetAsync ();
+        /// <returns>Task of Collection&lt;ClientERDPTopic&gt;</returns>
+        System.Threading.Tasks.Task<Collection<ClientERDPTopic>> ErdpTopicsGetAsync ();
 
         /// <summary>
-        /// 
+        /// Get a users erdp topics.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (Collection&lt;NextGenDatapoint&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Collection<NextGenDatapoint>>> ErdpDatapointsGetAsyncWithHttpInfo ();
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of Collection&lt;NextGenSource&gt;</returns>
-        System.Threading.Tasks.Task<Collection<NextGenSource>> ErdpSourcesGetAsync ();
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (Collection&lt;NextGenSource&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Collection<NextGenSource>>> ErdpSourcesGetAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (Collection&lt;ClientERDPTopic&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Collection<ClientERDPTopic>>> ErdpTopicsGetAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -213,25 +175,25 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Get a users erdp topics. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Collection&lt;NextGenDatapoint&gt;</returns>
-        public Collection<NextGenDatapoint> ErdpDatapointsGet ()
+        /// <returns>Collection&lt;ClientERDPTopic&gt;</returns>
+        public Collection<ClientERDPTopic> ErdpTopicsGet ()
         {
-             ApiResponse<Collection<NextGenDatapoint>> localVarResponse = ErdpDatapointsGetWithHttpInfo();
+             ApiResponse<Collection<ClientERDPTopic>> localVarResponse = ErdpTopicsGetWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
-        ///  
+        /// Get a users erdp topics. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Collection&lt;NextGenDatapoint&gt;</returns>
-        public ApiResponse< Collection<NextGenDatapoint> > ErdpDatapointsGetWithHttpInfo ()
+        /// <returns>ApiResponse of Collection&lt;ClientERDPTopic&gt;</returns>
+        public ApiResponse< Collection<ClientERDPTopic> > ErdpTopicsGetWithHttpInfo ()
         {
 
-            var localVarPath = "/erdp/datapoints";
+            var localVarPath = "/erdp/topics";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -270,36 +232,36 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ErdpDatapointsGet", localVarResponse);
+                Exception exception = ExceptionFactory("ErdpTopicsGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Collection<NextGenDatapoint>>(localVarStatusCode,
+            return new ApiResponse<Collection<ClientERDPTopic>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (Collection<NextGenDatapoint>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<NextGenDatapoint>)));
+                (Collection<ClientERDPTopic>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<ClientERDPTopic>)));
         }
 
         /// <summary>
-        ///  
+        /// Get a users erdp topics. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of Collection&lt;NextGenDatapoint&gt;</returns>
-        public async System.Threading.Tasks.Task<Collection<NextGenDatapoint>> ErdpDatapointsGetAsync ()
+        /// <returns>Task of Collection&lt;ClientERDPTopic&gt;</returns>
+        public async System.Threading.Tasks.Task<Collection<ClientERDPTopic>> ErdpTopicsGetAsync ()
         {
-             ApiResponse<Collection<NextGenDatapoint>> localVarResponse = await ErdpDatapointsGetAsyncWithHttpInfo();
+             ApiResponse<Collection<ClientERDPTopic>> localVarResponse = await ErdpTopicsGetAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        ///  
+        /// Get a users erdp topics. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (Collection&lt;NextGenDatapoint&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Collection<NextGenDatapoint>>> ErdpDatapointsGetAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (Collection&lt;ClientERDPTopic&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Collection<ClientERDPTopic>>> ErdpTopicsGetAsyncWithHttpInfo ()
         {
 
-            var localVarPath = "/erdp/datapoints";
+            var localVarPath = "/erdp/topics";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -338,148 +300,13 @@ namespace NASCAR.Data.Client.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ErdpDatapointsGet", localVarResponse);
+                Exception exception = ExceptionFactory("ErdpTopicsGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Collection<NextGenDatapoint>>(localVarStatusCode,
+            return new ApiResponse<Collection<ClientERDPTopic>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (Collection<NextGenDatapoint>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<NextGenDatapoint>)));
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Collection&lt;NextGenSource&gt;</returns>
-        public Collection<NextGenSource> ErdpSourcesGet ()
-        {
-             ApiResponse<Collection<NextGenSource>> localVarResponse = ErdpSourcesGetWithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Collection&lt;NextGenSource&gt;</returns>
-        public ApiResponse< Collection<NextGenSource> > ErdpSourcesGetWithHttpInfo ()
-        {
-
-            var localVarPath = "/erdp/sources";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "text/plain",
-                "application/json",
-                "text/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // authentication (Bearer) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("ErdpSourcesGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Collection<NextGenSource>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (Collection<NextGenSource>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<NextGenSource>)));
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of Collection&lt;NextGenSource&gt;</returns>
-        public async System.Threading.Tasks.Task<Collection<NextGenSource>> ErdpSourcesGetAsync ()
-        {
-             ApiResponse<Collection<NextGenSource>> localVarResponse = await ErdpSourcesGetAsyncWithHttpInfo();
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (Collection&lt;NextGenSource&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Collection<NextGenSource>>> ErdpSourcesGetAsyncWithHttpInfo ()
-        {
-
-            var localVarPath = "/erdp/sources";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "text/plain",
-                "application/json",
-                "text/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // authentication (Bearer) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("ErdpSourcesGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Collection<NextGenSource>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (Collection<NextGenSource>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<NextGenSource>)));
+                (Collection<ClientERDPTopic>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<ClientERDPTopic>)));
         }
 
     }

@@ -77,7 +77,7 @@ namespace NASCAR.Data.Client.Example
 <a name="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
 
-All URIs are relative to */api*
+All URIs are relative to */*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -87,12 +87,12 @@ Class | Method | HTTP request | Description
 *DriverApi* | [**DriverSeasonFinishesGet**](docs/DriverApi.md#driverseasonfinishesget) | **GET** /driver/season-finishes | 
 *DriverApi* | [**DriverSeasonGet**](docs/DriverApi.md#driverseasonget) | **GET** /driver/season | 
 *DriverSummaryApi* | [**DriverSummaryGet**](docs/DriverSummaryApi.md#driversummaryget) | **GET** /driver-summary | 
-*ERDPApi* | [**ErdpDatapointsGet**](docs/ERDPApi.md#erdpdatapointsget) | **GET** /erdp/datapoints | 
-*ERDPApi* | [**ErdpSourcesGet**](docs/ERDPApi.md#erdpsourcesget) | **GET** /erdp/sources | 
+*ERDPApi* | [**ErdpTopicsGet**](docs/ERDPApi.md#erdptopicsget) | **GET** /erdp/topics | Get a users erdp topics.
 *FeedbackApi* | [**FeedbackDevNotesGet**](docs/FeedbackApi.md#feedbackdevnotesget) | **GET** /feedback/dev-notes | 
 *FeedbackApi* | [**FeedbackSubmitFeedbackPost**](docs/FeedbackApi.md#feedbacksubmitfeedbackpost) | **POST** /feedback/submit-feedback | 
 *InspectionsApi* | [**InspectionsOssGet**](docs/InspectionsApi.md#inspectionsossget) | **GET** /inspections/oss | 
 *InspectionsApi* | [**InspectionsVehicleWeightsGet**](docs/InspectionsApi.md#inspectionsvehicleweightsget) | **GET** /inspections/vehicle-weights | 
+*JournalFilesApi* | [**JournalGet**](docs/JournalFilesApi.md#journalget) | **GET** /journal | 
 *OpticalTrackingApi* | [**OpticalTrackingUtmOffsetsGet**](docs/OpticalTrackingApi.md#opticaltrackingutmoffsetsget) | **GET** /optical-tracking/utm-offsets | 
 *PointsApi* | [**PointsDriverPointsGet**](docs/PointsApi.md#pointsdriverpointsget) | **GET** /points/driver-points | 
 *PointsApi* | [**PointsManufacturerPointsGet**](docs/PointsApi.md#pointsmanufacturerpointsget) | **GET** /points/manufacturer-points | 
@@ -117,14 +117,23 @@ Class | Method | HTTP request | Description
 *RaceWeekApi* | [**RaceWeekLiveGet**](docs/RaceWeekApi.md#raceweekliveget) | **GET** /race-week/live | 
 *RaceWeekApi* | [**RaceWeekSeasonGet**](docs/RaceWeekApi.md#raceweekseasonget) | **GET** /race-week/season | 
 *SeriesApi* | [**SeriesGet**](docs/SeriesApi.md#seriesget) | **GET** /series | 
+*TracksApi* | [**TrackDetailsGet**](docs/TracksApi.md#trackdetailsget) | **GET** /track-details | 
+*TracksApi* | [**TracksGet**](docs/TracksApi.md#tracksget) | **GET** /tracks | 
 *VehicleApi* | [**VehicleGet**](docs/VehicleApi.md#vehicleget) | **GET** /vehicle | 
 *VehicleApi* | [**VehicleSeasonFinishesGet**](docs/VehicleApi.md#vehicleseasonfinishesget) | **GET** /vehicle/season-finishes | 
+*VendorApi* | [**VendorCrlTestresultPost**](docs/VendorApi.md#vendorcrltestresultpost) | **POST** /vendor/crl_testresult | 
+*VendorApi* | [**VendorTiresPost**](docs/VendorApi.md#vendortirespost) | **POST** /vendor/tires | 
+*VendorApi* | [**VendorUtmOffsetsPost**](docs/VendorApi.md#vendorutmoffsetspost) | **POST** /vendor/utm_offsets | 
 
 <a name="documentation-for-models"></a>
 ## Documentation for Models
 
  - [Model.Caution](docs/Caution.md)
+ - [Model.ClientERDPDatapoint](docs/ClientERDPDatapoint.md)
+ - [Model.ClientERDPSource](docs/ClientERDPSource.md)
+ - [Model.ClientERDPTopic](docs/ClientERDPTopic.md)
  - [Model.Company](docs/Company.md)
+ - [Model.CrlFormFoxResult](docs/CrlFormFoxResult.md)
  - [Model.DevNote](docs/DevNote.md)
  - [Model.DisciplineUpdate](docs/DisciplineUpdate.md)
  - [Model.Driver](docs/Driver.md)
@@ -139,15 +148,13 @@ Class | Method | HTTP request | Description
  - [Model.LapLeader](docs/LapLeader.md)
  - [Model.LoopStat](docs/LoopStat.md)
  - [Model.ManufacturerPoint](docs/ManufacturerPoint.md)
- - [Model.NextGenDatapoint](docs/NextGenDatapoint.md)
- - [Model.NextGenSource](docs/NextGenSource.md)
  - [Model.OSSScan](docs/OSSScan.md)
  - [Model.OpticalTrackingUTMOffset](docs/OpticalTrackingUTMOffset.md)
+ - [Model.OpticalTrackingUTMOffsetListETLSaveResult](docs/OpticalTrackingUTMOffsetListETLSaveResult.md)
  - [Model.OwnerPoint](docs/OwnerPoint.md)
+ - [Model.PitPath](docs/PitPath.md)
  - [Model.Pitstop](docs/Pitstop.md)
  - [Model.PracticeRunResults](docs/PracticeRunResults.md)
- - [Model.ProcessingState](docs/ProcessingState.md)
- - [Model.PublishState](docs/PublishState.md)
  - [Model.QualifyingRunResults](docs/QualifyingRunResults.md)
  - [Model.Race](docs/Race.md)
  - [Model.RaceDetails](docs/RaceDetails.md)
@@ -164,12 +171,17 @@ Class | Method | HTTP request | Description
  - [Model.RunResult](docs/RunResult.md)
  - [Model.RunState](docs/RunState.md)
  - [Model.RunType](docs/RunType.md)
- - [Model.ScheduledActionSchedule](docs/ScheduledActionSchedule.md)
  - [Model.Series](docs/Series.md)
  - [Model.StageResult](docs/StageResult.md)
  - [Model.StageRunResults](docs/StageRunResults.md)
  - [Model.TeamRoster](docs/TeamRoster.md)
+ - [Model.Tire](docs/Tire.md)
+ - [Model.TireListETLSaveResult](docs/TireListETLSaveResult.md)
  - [Model.TokenResponse](docs/TokenResponse.md)
+ - [Model.Track](docs/Track.md)
+ - [Model.TrackConfiguration](docs/TrackConfiguration.md)
+ - [Model.TrackDetails](docs/TrackDetails.md)
+ - [Model.TrackPath](docs/TrackPath.md)
  - [Model.VehicleDetails](docs/VehicleDetails.md)
  - [Model.VehicleWeight](docs/VehicleWeight.md)
  - [Model.WeekendSchedule](docs/WeekendSchedule.md)
@@ -179,3 +191,5 @@ Class | Method | HTTP request | Description
 
 <a name="Bearer"></a>
 ### Bearer
+
+

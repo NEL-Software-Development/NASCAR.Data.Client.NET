@@ -4,11 +4,11 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**RefreshToken**](AccountApi.md#refreshtoken) | **GET** /account/refresh-token | 
+[**AccountRefreshTokenGet**](AccountApi.md#accountrefreshtokenget) | **GET** /account/refresh-token | 
 
-<a name="refreshtoken"></a>
-# **RefreshToken**
-> TokenResponse RefreshToken (string refreshToken = null)
+<a name="accountrefreshtokenget"></a>
+# **AccountRefreshTokenGet**
+> TokenResponse AccountRefreshTokenGet (string refreshToken = null)
 
 
 
@@ -22,7 +22,7 @@ using NASCAR.Data.Client.Model;
 
 namespace Example
 {
-    public class RefreshTokenExample
+    public class AccountRefreshTokenGetExample
     {
         public void main()
         {
@@ -32,12 +32,12 @@ namespace Example
 
             try
             {
-                TokenResponse result = apiInstance.RefreshToken(refreshToken);
+                TokenResponse result = apiInstance.AccountRefreshTokenGet(refreshToken);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AccountApi.RefreshToken: " + e.Message );
+                Debug.Print("Exception when calling AccountApi.AccountRefreshTokenGet: " + e.Message );
             }
         }
     }

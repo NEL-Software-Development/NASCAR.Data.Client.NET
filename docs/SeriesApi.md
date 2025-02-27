@@ -4,11 +4,11 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Series**](SeriesApi.md#series) | **GET** /series | 
+[**SeriesGet**](SeriesApi.md#seriesget) | **GET** /series | 
 
-<a name="series"></a>
-# **Series**
-> Collection<Series> Series ()
+<a name="seriesget"></a>
+# **SeriesGet**
+> Collection<Series> SeriesGet ()
 
 
 
@@ -22,7 +22,7 @@ using NASCAR.Data.Client.Model;
 
 namespace Example
 {
-    public class SeriesExample
+    public class SeriesGetExample
     {
         public void main()
         {
@@ -31,12 +31,12 @@ namespace Example
 
             try
             {
-                Collection&lt;Series&gt; result = apiInstance.Series();
+                Collection&lt;Series&gt; result = apiInstance.SeriesGet();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling SeriesApi.Series: " + e.Message );
+                Debug.Print("Exception when calling SeriesApi.SeriesGet: " + e.Message );
             }
         }
     }

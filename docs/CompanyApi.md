@@ -4,11 +4,11 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**FindCompany**](CompanyApi.md#findcompany) | **GET** /company/search | 
+[**CompanySearchGet**](CompanyApi.md#companysearchget) | **GET** /company/search | 
 
-<a name="findcompany"></a>
-# **FindCompany**
-> Collection<Company> FindCompany (string searchTerm = null)
+<a name="companysearchget"></a>
+# **CompanySearchGet**
+> Collection<Company> CompanySearchGet (string searchTerm = null)
 
 
 
@@ -22,7 +22,7 @@ using NASCAR.Data.Client.Model;
 
 namespace Example
 {
-    public class FindCompanyExample
+    public class CompanySearchGetExample
     {
         public void main()
         {
@@ -32,12 +32,12 @@ namespace Example
 
             try
             {
-                Collection&lt;Company&gt; result = apiInstance.FindCompany(searchTerm);
+                Collection&lt;Company&gt; result = apiInstance.CompanySearchGet(searchTerm);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling CompanyApi.FindCompany: " + e.Message );
+                Debug.Print("Exception when calling CompanyApi.CompanySearchGet: " + e.Message );
             }
         }
     }

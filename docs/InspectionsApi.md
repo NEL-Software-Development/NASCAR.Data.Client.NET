@@ -4,12 +4,12 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**OSS**](InspectionsApi.md#oss) | **GET** /inspections/oss | 
-[**VehicleWeights**](InspectionsApi.md#vehicleweights) | **GET** /inspections/vehicle-weights | 
+[**InspectionsOssGet**](InspectionsApi.md#inspectionsossget) | **GET** /inspections/oss | 
+[**InspectionsVehicleWeightsGet**](InspectionsApi.md#inspectionsvehicleweightsget) | **GET** /inspections/vehicle-weights | 
 
-<a name="oss"></a>
-# **OSS**
-> Collection<OSSScan> OSS (int? raceId = null)
+<a name="inspectionsossget"></a>
+# **InspectionsOssGet**
+> Collection<OSSScan> InspectionsOssGet (int? raceId = null)
 
 
 
@@ -23,7 +23,7 @@ using NASCAR.Data.Client.Model;
 
 namespace Example
 {
-    public class OSSExample
+    public class InspectionsOssGetExample
     {
         public void main()
         {
@@ -33,12 +33,12 @@ namespace Example
 
             try
             {
-                Collection&lt;OSSScan&gt; result = apiInstance.OSS(raceId);
+                Collection&lt;OSSScan&gt; result = apiInstance.InspectionsOssGet(raceId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling InspectionsApi.OSS: " + e.Message );
+                Debug.Print("Exception when calling InspectionsApi.InspectionsOssGet: " + e.Message );
             }
         }
     }
@@ -65,9 +65,9 @@ Name | Type | Description  | Notes
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="vehicleweights"></a>
-# **VehicleWeights**
-> Collection<VehicleWeight> VehicleWeights (int? raceId = null)
+<a name="inspectionsvehicleweightsget"></a>
+# **InspectionsVehicleWeightsGet**
+> Collection<VehicleWeight> InspectionsVehicleWeightsGet (int? raceId = null)
 
 
 
@@ -81,7 +81,7 @@ using NASCAR.Data.Client.Model;
 
 namespace Example
 {
-    public class VehicleWeightsExample
+    public class InspectionsVehicleWeightsGetExample
     {
         public void main()
         {
@@ -91,12 +91,12 @@ namespace Example
 
             try
             {
-                Collection&lt;VehicleWeight&gt; result = apiInstance.VehicleWeights(raceId);
+                Collection&lt;VehicleWeight&gt; result = apiInstance.InspectionsVehicleWeightsGet(raceId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling InspectionsApi.VehicleWeights: " + e.Message );
+                Debug.Print("Exception when calling InspectionsApi.InspectionsVehicleWeightsGet: " + e.Message );
             }
         }
     }
