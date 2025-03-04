@@ -3,10 +3,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartLap** | **int?** |  | [optional] 
-**EndLap** | **int?** |  | [optional] 
-**LapsLed** | **int?** |  | [optional] 
-**VehicleNumber** | **string** |  | [optional] 
+**StartLap** | **int?** | Start lap | [optional] 
+**EndLap** | **int?** | End lap | [optional] 
+**LapsLed** | **int?** | Total laps led | [optional] 
+**VehicleNumber** | **string** | Vehicle number | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

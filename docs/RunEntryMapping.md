@@ -1,0 +1,45 @@
+# NASCAR.Data.Client.Model.RunEntryMapping
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**PublishState** | **PublishState** |  | [optional] 
+**Id** | **int?** |  | [optional] 
+**TrackingId** | **Guid?** |  | [optional] 
+**InDataWarehouse** | **bool?** |  | [optional] 
+**ManuallySet** | **bool?** |  | [optional] 
+**LastUpdate** | **DateTimeOffset?** |  | [optional] 
+**LastUpdatedBy** | **string** |  | [optional] 
+**VehicleNumber** | **string** |  | [optional] 
+**AdjustedVehicleNumber** | **string** |  | [optional] 
+**ModelYear** | **int?** |  | [optional] 
+**Model** | **string** |  | [optional] 
+**CrewChiefName** | **string** |  | [optional] 
+**DriverName** | **string** |  | [optional] 
+**DriverMemberId** | **int?** |  | [optional] 
+**DriverDetails** | **string** |  | [optional] 
+**OwnerName** | **string** |  | [optional] 
+**VehicleDetails** | **string** |  | [optional] 
+**Pitbox** | **int?** |  | [optional] 
+**Sponsor** | **string** |  | [optional] 
+**Season** | **int?** |  | [optional] 
+**NascarOneRaceId** | **int?** |  | [optional] 
+**NascarOneDriverContactId** | **int?** |  | [optional] 
+**NascarOneCrewChiefContactId** | **int?** |  | [optional] 
+**NascarOneEntryCouponId** | **int?** |  | [optional] 
+**TimingEventId** | **int?** |  | [optional] 
+**TimingCompetitorId** | **int?** |  | [optional] 
+**ETLCrewChiefId** | **int?** |  | [optional] 
+**ETLDriverId** | **int?** |  | [optional] 
+**ETLOrganizationId** | **int?** |  | [optional] 
+**ETLOwnerId** | **int?** |  | [optional] 
+**ETLSeriesId** | **int?** |  | [optional] 
+**ETLTrackId** | **int?** |  | [optional] 
+**ETLVehicleId** | **int?** |  | [optional] 
+**HistoryRaceId** | **int?** |  | [optional] 
+**HistoryRaceEntryId** | **int?** |  | [optional] 
+**HistoryDriverId** | **int?** |  | [optional] 
+**HistoryTrackId** | **int?** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

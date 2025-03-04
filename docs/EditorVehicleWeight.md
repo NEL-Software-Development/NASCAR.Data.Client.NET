@@ -1,0 +1,48 @@
+# NASCAR.Data.Client.Model.EditorVehicleWeight
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**PublishState** | **PublishState** |  | [optional] 
+**Id** | **int?** |  | [optional] 
+**TrackingId** | **Guid?** |  | [optional] 
+**InDataWarehouse** | **bool?** |  | [optional] 
+**ManuallySet** | **bool?** |  | [optional] 
+**LastUpdate** | **DateTimeOffset?** |  | [optional] 
+**LastUpdatedBy** | **string** |  | [optional] 
+**InspectionType** | **string** |  | [optional] 
+**VehicleNumber** | **string** |  | [optional] 
+**DriverName** | **string** |  | [optional] 
+**AddedWeightTotal** | **int?** |  | [optional] 
+**AddedWeightLeft** | **int?** |  | [optional] 
+**AddedWeightRight** | **int?** |  | [optional] 
+**CrossWeight** | **int?** |  | [optional] 
+**CrossWeightMin** | **int?** |  | [optional] 
+**CrossWeightMax** | **int?** |  | [optional] 
+**FailedReason** | **string** |  | [optional] 
+**GoAroundReason** | **string** |  | [optional] 
+**IsEVC** | **bool?** |  | [optional] 
+**IsFlangeBody** | **bool?** |  | [optional] 
+**IsGoAround** | **bool?** |  | [optional] 
+**IsPassed** | **bool?** |  | [optional] 
+**LeftFront** | **int?** |  | [optional] 
+**LeftRear** | **int?** |  | [optional] 
+**LeftSideWeight** | **int?** |  | [optional] 
+**LeftSideWeightMax** | **int?** |  | [optional] 
+**NoseWeight** | **int?** |  | [optional] 
+**PreQualifyingWeight** | **int?** |  | [optional] 
+**QualifyingWeightAllowance** | **int?** |  | [optional] 
+**QualifyingWeightDifference** | **int?** |  | [optional] 
+**RearWeight** | **int?** |  | [optional] 
+**RearWeightMax** | **int?** |  | [optional] 
+**RightFront** | **int?** |  | [optional] 
+**RightRear** | **int?** |  | [optional] 
+**RightSideWeight** | **int?** |  | [optional] 
+**TotalWeight** | **int?** |  | [optional] 
+**TotalWeightMin** | **int?** |  | [optional] 
+**WeightAdjustment** | **int?** |  | [optional] 
+**PkVehicleWeightID** | **int?** |  | [optional] 
+**NascarOneRaceId** | **int?** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
