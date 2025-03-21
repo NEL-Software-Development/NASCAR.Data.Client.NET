@@ -1,29 +1,29 @@
 # NASCAR.Data.Client.Api.RaceApi
 
-All URIs are relative to */*
+All URIs are relative to */api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Cautions**](RaceApi.md#cautions) | **GET** /race/cautions | 
-[**DisciplineUpdates**](RaceApi.md#disciplineupdates) | **GET** /race/discipline-updates | 
-[**Entries**](RaceApi.md#entries) | **GET** /race/entries | 
-[**Infractions**](RaceApi.md#infractions) | **GET** /race/infractions | 
-[**LapLeaders**](RaceApi.md#lapleaders) | **GET** /race/lap-leaders | 
-[**LoopStats**](RaceApi.md#loopstats) | **GET** /race/loop-stats | 
-[**PitStops**](RaceApi.md#pitstops) | **GET** /race/pitstops | 
-[**PracticeResults**](RaceApi.md#practiceresults) | **GET** /race/practice-results | 
-[**QualifyingResults**](RaceApi.md#qualifyingresults) | **GET** /race/qualifying-results | 
-[**Race**](RaceApi.md#race) | **GET** /race | 
-[**RaceResults**](RaceApi.md#raceresults) | **GET** /race/race-results | 
-[**RaceSeason**](RaceApi.md#raceseason) | **GET** /race/season | 
-[**Rosters**](RaceApi.md#rosters) | **GET** /race/rosters | 
-[**StageResults**](RaceApi.md#stageresults) | **GET** /race/stage-results | 
-[**ViewModel**](RaceApi.md#viewmodel) | **GET** /race/viewmodel | 
-[**WeekendSchedule**](RaceApi.md#weekendschedule) | **GET** /race/weekend-schedule | 
+[**RaceCautionsGet**](RaceApi.md#racecautionsget) | **GET** /race/cautions | 
+[**RaceDisciplineUpdatesGet**](RaceApi.md#racedisciplineupdatesget) | **GET** /race/discipline-updates | 
+[**RaceEntriesGet**](RaceApi.md#raceentriesget) | **GET** /race/entries | 
+[**RaceGet**](RaceApi.md#raceget) | **GET** /race | 
+[**RaceInfractionsGet**](RaceApi.md#raceinfractionsget) | **GET** /race/infractions | 
+[**RaceLapLeadersGet**](RaceApi.md#racelapleadersget) | **GET** /race/lap-leaders | 
+[**RaceLoopStatsGet**](RaceApi.md#raceloopstatsget) | **GET** /race/loop-stats | 
+[**RacePitstopsGet**](RaceApi.md#racepitstopsget) | **GET** /race/pitstops | 
+[**RacePracticeResultsGet**](RaceApi.md#racepracticeresultsget) | **GET** /race/practice-results | 
+[**RaceQualifyingResultsGet**](RaceApi.md#racequalifyingresultsget) | **GET** /race/qualifying-results | 
+[**RaceRaceResultsGet**](RaceApi.md#raceraceresultsget) | **GET** /race/race-results | 
+[**RaceRostersGet**](RaceApi.md#racerostersget) | **GET** /race/rosters | 
+[**RaceSeasonGet**](RaceApi.md#raceseasonget) | **GET** /race/season | 
+[**RaceStageResultsGet**](RaceApi.md#racestageresultsget) | **GET** /race/stage-results | 
+[**RaceViewmodelGet**](RaceApi.md#raceviewmodelget) | **GET** /race/viewmodel | 
+[**RaceWeekendScheduleGet**](RaceApi.md#raceweekendscheduleget) | **GET** /race/weekend-schedule | 
 
-<a name="cautions"></a>
-# **Cautions**
-> Collection<Caution> Cautions (int? raceId = null)
+<a name="racecautionsget"></a>
+# **RaceCautionsGet**
+> Collection<Caution> RaceCautionsGet (int? raceId = null)
 
 
 
@@ -37,7 +37,7 @@ using NASCAR.Data.Client.Model;
 
 namespace Example
 {
-    public class CautionsExample
+    public class RaceCautionsGetExample
     {
         public void main()
         {
@@ -47,12 +47,12 @@ namespace Example
 
             try
             {
-                Collection&lt;Caution&gt; result = apiInstance.Cautions(raceId);
+                Collection&lt;Caution&gt; result = apiInstance.RaceCautionsGet(raceId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RaceApi.Cautions: " + e.Message );
+                Debug.Print("Exception when calling RaceApi.RaceCautionsGet: " + e.Message );
             }
         }
     }
@@ -79,9 +79,9 @@ Name | Type | Description  | Notes
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="disciplineupdates"></a>
-# **DisciplineUpdates**
-> Collection<DisciplineUpdate> DisciplineUpdates (int? raceId = null)
+<a name="racedisciplineupdatesget"></a>
+# **RaceDisciplineUpdatesGet**
+> Collection<DisciplineUpdate> RaceDisciplineUpdatesGet (int? raceId = null)
 
 
 
@@ -95,7 +95,7 @@ using NASCAR.Data.Client.Model;
 
 namespace Example
 {
-    public class DisciplineUpdatesExample
+    public class RaceDisciplineUpdatesGetExample
     {
         public void main()
         {
@@ -105,12 +105,12 @@ namespace Example
 
             try
             {
-                Collection&lt;DisciplineUpdate&gt; result = apiInstance.DisciplineUpdates(raceId);
+                Collection&lt;DisciplineUpdate&gt; result = apiInstance.RaceDisciplineUpdatesGet(raceId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RaceApi.DisciplineUpdates: " + e.Message );
+                Debug.Print("Exception when calling RaceApi.RaceDisciplineUpdatesGet: " + e.Message );
             }
         }
     }
@@ -137,9 +137,9 @@ Name | Type | Description  | Notes
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="entries"></a>
-# **Entries**
-> Collection<RunEntry> Entries (int? raceId = null)
+<a name="raceentriesget"></a>
+# **RaceEntriesGet**
+> Collection<RunEntry> RaceEntriesGet (int? raceId = null)
 
 
 
@@ -153,7 +153,7 @@ using NASCAR.Data.Client.Model;
 
 namespace Example
 {
-    public class EntriesExample
+    public class RaceEntriesGetExample
     {
         public void main()
         {
@@ -163,12 +163,12 @@ namespace Example
 
             try
             {
-                Collection&lt;RunEntry&gt; result = apiInstance.Entries(raceId);
+                Collection&lt;RunEntry&gt; result = apiInstance.RaceEntriesGet(raceId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RaceApi.Entries: " + e.Message );
+                Debug.Print("Exception when calling RaceApi.RaceEntriesGet: " + e.Message );
             }
         }
     }
@@ -195,9 +195,9 @@ Name | Type | Description  | Notes
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="infractions"></a>
-# **Infractions**
-> Collection<RaceInfraction> Infractions (int? raceId = null)
+<a name="raceget"></a>
+# **RaceGet**
+> RaceDetails RaceGet (int? raceId = null)
 
 
 
@@ -211,7 +211,7 @@ using NASCAR.Data.Client.Model;
 
 namespace Example
 {
-    public class InfractionsExample
+    public class RaceGetExample
     {
         public void main()
         {
@@ -221,360 +221,12 @@ namespace Example
 
             try
             {
-                Collection&lt;RaceInfraction&gt; result = apiInstance.Infractions(raceId);
+                RaceDetails result = apiInstance.RaceGet(raceId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RaceApi.Infractions: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **raceId** | **int?**|  | [optional] 
-
-### Return type
-
-[**Collection<RaceInfraction>**](RaceInfraction.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="lapleaders"></a>
-# **LapLeaders**
-> Collection<LapLeader> LapLeaders (int? raceId = null)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using NASCAR.Data.Client.Api;
-using NASCAR.Data.Client.Client;
-using NASCAR.Data.Client.Model;
-
-namespace Example
-{
-    public class LapLeadersExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new RaceApi();
-            var raceId = 56;  // int? |  (optional) 
-
-            try
-            {
-                Collection&lt;LapLeader&gt; result = apiInstance.LapLeaders(raceId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RaceApi.LapLeaders: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **raceId** | **int?**|  | [optional] 
-
-### Return type
-
-[**Collection<LapLeader>**](LapLeader.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="loopstats"></a>
-# **LoopStats**
-> Collection<LoopStat> LoopStats (int? raceId = null)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using NASCAR.Data.Client.Api;
-using NASCAR.Data.Client.Client;
-using NASCAR.Data.Client.Model;
-
-namespace Example
-{
-    public class LoopStatsExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new RaceApi();
-            var raceId = 56;  // int? |  (optional) 
-
-            try
-            {
-                Collection&lt;LoopStat&gt; result = apiInstance.LoopStats(raceId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RaceApi.LoopStats: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **raceId** | **int?**|  | [optional] 
-
-### Return type
-
-[**Collection<LoopStat>**](LoopStat.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="pitstops"></a>
-# **PitStops**
-> Collection<Pitstop> PitStops (int? raceId = null)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using NASCAR.Data.Client.Api;
-using NASCAR.Data.Client.Client;
-using NASCAR.Data.Client.Model;
-
-namespace Example
-{
-    public class PitStopsExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new RaceApi();
-            var raceId = 56;  // int? |  (optional) 
-
-            try
-            {
-                Collection&lt;Pitstop&gt; result = apiInstance.PitStops(raceId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RaceApi.PitStops: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **raceId** | **int?**|  | [optional] 
-
-### Return type
-
-[**Collection<Pitstop>**](Pitstop.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="practiceresults"></a>
-# **PracticeResults**
-> Collection<PracticeRunResults> PracticeResults (int? raceId = null)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using NASCAR.Data.Client.Api;
-using NASCAR.Data.Client.Client;
-using NASCAR.Data.Client.Model;
-
-namespace Example
-{
-    public class PracticeResultsExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new RaceApi();
-            var raceId = 56;  // int? |  (optional) 
-
-            try
-            {
-                Collection&lt;PracticeRunResults&gt; result = apiInstance.PracticeResults(raceId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RaceApi.PracticeResults: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **raceId** | **int?**|  | [optional] 
-
-### Return type
-
-[**Collection<PracticeRunResults>**](PracticeRunResults.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="qualifyingresults"></a>
-# **QualifyingResults**
-> Collection<QualifyingRunResults> QualifyingResults (int? raceId = null)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using NASCAR.Data.Client.Api;
-using NASCAR.Data.Client.Client;
-using NASCAR.Data.Client.Model;
-
-namespace Example
-{
-    public class QualifyingResultsExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new RaceApi();
-            var raceId = 56;  // int? |  (optional) 
-
-            try
-            {
-                Collection&lt;QualifyingRunResults&gt; result = apiInstance.QualifyingResults(raceId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RaceApi.QualifyingResults: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **raceId** | **int?**|  | [optional] 
-
-### Return type
-
-[**Collection<QualifyingRunResults>**](QualifyingRunResults.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="race"></a>
-# **Race**
-> RaceDetails Race (int? raceId = null)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using NASCAR.Data.Client.Api;
-using NASCAR.Data.Client.Client;
-using NASCAR.Data.Client.Model;
-
-namespace Example
-{
-    public class RaceExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new RaceApi();
-            var raceId = 56;  // int? |  (optional) 
-
-            try
-            {
-                RaceDetails result = apiInstance.Race(raceId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RaceApi.Race: " + e.Message );
+                Debug.Print("Exception when calling RaceApi.RaceGet: " + e.Message );
             }
         }
     }
@@ -601,9 +253,9 @@ Name | Type | Description  | Notes
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="raceresults"></a>
-# **RaceResults**
-> Collection<RaceRunResults> RaceResults (int? raceId = null)
+<a name="raceinfractionsget"></a>
+# **RaceInfractionsGet**
+> Collection<RaceInfraction> RaceInfractionsGet (int? raceId = null)
 
 
 
@@ -617,7 +269,7 @@ using NASCAR.Data.Client.Model;
 
 namespace Example
 {
-    public class RaceResultsExample
+    public class RaceInfractionsGetExample
     {
         public void main()
         {
@@ -627,12 +279,360 @@ namespace Example
 
             try
             {
-                Collection&lt;RaceRunResults&gt; result = apiInstance.RaceResults(raceId);
+                Collection&lt;RaceInfraction&gt; result = apiInstance.RaceInfractionsGet(raceId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RaceApi.RaceResults: " + e.Message );
+                Debug.Print("Exception when calling RaceApi.RaceInfractionsGet: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **raceId** | **int?**|  | [optional] 
+
+### Return type
+
+[**Collection<RaceInfraction>**](RaceInfraction.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+<a name="racelapleadersget"></a>
+# **RaceLapLeadersGet**
+> Collection<LapLeader> RaceLapLeadersGet (int? raceId = null)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using NASCAR.Data.Client.Api;
+using NASCAR.Data.Client.Client;
+using NASCAR.Data.Client.Model;
+
+namespace Example
+{
+    public class RaceLapLeadersGetExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new RaceApi();
+            var raceId = 56;  // int? |  (optional) 
+
+            try
+            {
+                Collection&lt;LapLeader&gt; result = apiInstance.RaceLapLeadersGet(raceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RaceApi.RaceLapLeadersGet: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **raceId** | **int?**|  | [optional] 
+
+### Return type
+
+[**Collection<LapLeader>**](LapLeader.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+<a name="raceloopstatsget"></a>
+# **RaceLoopStatsGet**
+> Collection<LoopStat> RaceLoopStatsGet (int? raceId = null)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using NASCAR.Data.Client.Api;
+using NASCAR.Data.Client.Client;
+using NASCAR.Data.Client.Model;
+
+namespace Example
+{
+    public class RaceLoopStatsGetExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new RaceApi();
+            var raceId = 56;  // int? |  (optional) 
+
+            try
+            {
+                Collection&lt;LoopStat&gt; result = apiInstance.RaceLoopStatsGet(raceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RaceApi.RaceLoopStatsGet: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **raceId** | **int?**|  | [optional] 
+
+### Return type
+
+[**Collection<LoopStat>**](LoopStat.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+<a name="racepitstopsget"></a>
+# **RacePitstopsGet**
+> Collection<Pitstop> RacePitstopsGet (int? raceId = null)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using NASCAR.Data.Client.Api;
+using NASCAR.Data.Client.Client;
+using NASCAR.Data.Client.Model;
+
+namespace Example
+{
+    public class RacePitstopsGetExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new RaceApi();
+            var raceId = 56;  // int? |  (optional) 
+
+            try
+            {
+                Collection&lt;Pitstop&gt; result = apiInstance.RacePitstopsGet(raceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RaceApi.RacePitstopsGet: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **raceId** | **int?**|  | [optional] 
+
+### Return type
+
+[**Collection<Pitstop>**](Pitstop.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+<a name="racepracticeresultsget"></a>
+# **RacePracticeResultsGet**
+> Collection<PracticeRunResults> RacePracticeResultsGet (int? raceId = null)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using NASCAR.Data.Client.Api;
+using NASCAR.Data.Client.Client;
+using NASCAR.Data.Client.Model;
+
+namespace Example
+{
+    public class RacePracticeResultsGetExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new RaceApi();
+            var raceId = 56;  // int? |  (optional) 
+
+            try
+            {
+                Collection&lt;PracticeRunResults&gt; result = apiInstance.RacePracticeResultsGet(raceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RaceApi.RacePracticeResultsGet: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **raceId** | **int?**|  | [optional] 
+
+### Return type
+
+[**Collection<PracticeRunResults>**](PracticeRunResults.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+<a name="racequalifyingresultsget"></a>
+# **RaceQualifyingResultsGet**
+> Collection<QualifyingRunResults> RaceQualifyingResultsGet (int? raceId = null)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using NASCAR.Data.Client.Api;
+using NASCAR.Data.Client.Client;
+using NASCAR.Data.Client.Model;
+
+namespace Example
+{
+    public class RaceQualifyingResultsGetExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new RaceApi();
+            var raceId = 56;  // int? |  (optional) 
+
+            try
+            {
+                Collection&lt;QualifyingRunResults&gt; result = apiInstance.RaceQualifyingResultsGet(raceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RaceApi.RaceQualifyingResultsGet: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **raceId** | **int?**|  | [optional] 
+
+### Return type
+
+[**Collection<QualifyingRunResults>**](QualifyingRunResults.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+<a name="raceraceresultsget"></a>
+# **RaceRaceResultsGet**
+> Collection<RaceRunResults> RaceRaceResultsGet (int? raceId = null)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using NASCAR.Data.Client.Api;
+using NASCAR.Data.Client.Client;
+using NASCAR.Data.Client.Model;
+
+namespace Example
+{
+    public class RaceRaceResultsGetExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new RaceApi();
+            var raceId = 56;  // int? |  (optional) 
+
+            try
+            {
+                Collection&lt;RaceRunResults&gt; result = apiInstance.RaceRaceResultsGet(raceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RaceApi.RaceRaceResultsGet: " + e.Message );
             }
         }
     }
@@ -659,9 +659,9 @@ Name | Type | Description  | Notes
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="raceseason"></a>
-# **RaceSeason**
-> Collection<Collection<Race>> RaceSeason (int? season = null, int? seriesId = null)
+<a name="racerostersget"></a>
+# **RaceRostersGet**
+> Collection<TeamRoster> RaceRostersGet (int? raceId = null)
 
 
 
@@ -675,7 +675,65 @@ using NASCAR.Data.Client.Model;
 
 namespace Example
 {
-    public class RaceSeasonExample
+    public class RaceRostersGetExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new RaceApi();
+            var raceId = 56;  // int? |  (optional) 
+
+            try
+            {
+                Collection&lt;TeamRoster&gt; result = apiInstance.RaceRostersGet(raceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RaceApi.RaceRostersGet: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **raceId** | **int?**|  | [optional] 
+
+### Return type
+
+[**Collection<TeamRoster>**](TeamRoster.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+<a name="raceseasonget"></a>
+# **RaceSeasonGet**
+> Collection<Collection<Race>> RaceSeasonGet (int? season = null, int? seriesId = null)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using NASCAR.Data.Client.Api;
+using NASCAR.Data.Client.Client;
+using NASCAR.Data.Client.Model;
+
+namespace Example
+{
+    public class RaceSeasonGetExample
     {
         public void main()
         {
@@ -686,12 +744,12 @@ namespace Example
 
             try
             {
-                Collection&lt;Collection&lt;Race&gt;&gt; result = apiInstance.RaceSeason(season, seriesId);
+                Collection&lt;Collection&lt;Race&gt;&gt; result = apiInstance.RaceSeasonGet(season, seriesId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RaceApi.RaceSeason: " + e.Message );
+                Debug.Print("Exception when calling RaceApi.RaceSeasonGet: " + e.Message );
             }
         }
     }
@@ -719,9 +777,9 @@ Name | Type | Description  | Notes
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="rosters"></a>
-# **Rosters**
-> Collection<TeamRoster> Rosters (int? raceId = null)
+<a name="racestageresultsget"></a>
+# **RaceStageResultsGet**
+> Collection<StageRunResults> RaceStageResultsGet (int? raceId = null)
 
 
 
@@ -735,7 +793,7 @@ using NASCAR.Data.Client.Model;
 
 namespace Example
 {
-    public class RostersExample
+    public class RaceStageResultsGetExample
     {
         public void main()
         {
@@ -745,70 +803,12 @@ namespace Example
 
             try
             {
-                Collection&lt;TeamRoster&gt; result = apiInstance.Rosters(raceId);
+                Collection&lt;StageRunResults&gt; result = apiInstance.RaceStageResultsGet(raceId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RaceApi.Rosters: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **raceId** | **int?**|  | [optional] 
-
-### Return type
-
-[**Collection<TeamRoster>**](TeamRoster.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="stageresults"></a>
-# **StageResults**
-> Collection<StageRunResults> StageResults (int? raceId = null)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using NASCAR.Data.Client.Api;
-using NASCAR.Data.Client.Client;
-using NASCAR.Data.Client.Model;
-
-namespace Example
-{
-    public class StageResultsExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new RaceApi();
-            var raceId = 56;  // int? |  (optional) 
-
-            try
-            {
-                Collection&lt;StageRunResults&gt; result = apiInstance.StageResults(raceId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RaceApi.StageResults: " + e.Message );
+                Debug.Print("Exception when calling RaceApi.RaceStageResultsGet: " + e.Message );
             }
         }
     }
@@ -835,9 +835,9 @@ Name | Type | Description  | Notes
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="viewmodel"></a>
-# **ViewModel**
-> RaceViewModel ViewModel (int? raceId = null)
+<a name="raceviewmodelget"></a>
+# **RaceViewmodelGet**
+> RaceViewModel RaceViewmodelGet (int? raceId = null)
 
 
 
@@ -851,7 +851,7 @@ using NASCAR.Data.Client.Model;
 
 namespace Example
 {
-    public class ViewModelExample
+    public class RaceViewmodelGetExample
     {
         public void main()
         {
@@ -861,12 +861,12 @@ namespace Example
 
             try
             {
-                RaceViewModel result = apiInstance.ViewModel(raceId);
+                RaceViewModel result = apiInstance.RaceViewmodelGet(raceId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RaceApi.ViewModel: " + e.Message );
+                Debug.Print("Exception when calling RaceApi.RaceViewmodelGet: " + e.Message );
             }
         }
     }
@@ -893,9 +893,9 @@ Name | Type | Description  | Notes
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="weekendschedule"></a>
-# **WeekendSchedule**
-> Collection<WeekendSchedule> WeekendSchedule (int? raceId = null)
+<a name="raceweekendscheduleget"></a>
+# **RaceWeekendScheduleGet**
+> Collection<WeekendSchedule> RaceWeekendScheduleGet (int? raceId = null)
 
 
 
@@ -909,7 +909,7 @@ using NASCAR.Data.Client.Model;
 
 namespace Example
 {
-    public class WeekendScheduleExample
+    public class RaceWeekendScheduleGetExample
     {
         public void main()
         {
@@ -919,12 +919,12 @@ namespace Example
 
             try
             {
-                Collection&lt;WeekendSchedule&gt; result = apiInstance.WeekendSchedule(raceId);
+                Collection&lt;WeekendSchedule&gt; result = apiInstance.RaceWeekendScheduleGet(raceId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RaceApi.WeekendSchedule: " + e.Message );
+                Debug.Print("Exception when calling RaceApi.RaceWeekendScheduleGet: " + e.Message );
             }
         }
     }

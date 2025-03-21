@@ -1,0 +1,47 @@
+# NASCAR.Data.Client.Model.EditorOwnerPoints
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**PublishState** | **PublishState** |  | [optional] 
+**Id** | **int?** |  | [optional] 
+**TrackingId** | **Guid?** |  | [optional] 
+**InDataWarehouse** | **bool?** |  | [optional] 
+**ManuallySet** | **bool?** |  | [optional] 
+**LastUpdate** | **DateTimeOffset?** |  | [optional] 
+**LastUpdatedBy** | **string** |  | [optional] 
+**NascarOneRaceId** | **int?** |  | [optional] 
+**HistoryRaceId** | **int?** |  | [optional] 
+**OwnerMemberId** | **int?** |  | [optional] 
+**Position** | **int?** |  | [optional] 
+**VehicleNumber** | **string** |  | [optional] 
+**Owner** | **string** |  | [optional] 
+**Points** | **int?** |  | [optional] 
+**PlayoffPoints** | **int?** |  | [optional] 
+**PlayoffRank** | **int?** |  | [optional] 
+**DeltaLeader** | **int?** |  | [optional] 
+**DeltaNext** | **int?** |  | [optional] 
+**Starts** | **int?** |  | [optional] 
+**Poles** | **int?** |  | [optional] 
+**Wins** | **int?** |  | [optional] 
+**Stage1Wins** | **int?** |  | [optional] 
+**Stage2Wins** | **int?** |  | [optional] 
+**Stage3Wins** | **int?** |  | [optional] 
+**StagePoints** | **int?** |  | [optional] 
+**PlayoffRaceWins** | **int?** |  | [optional] 
+**PlayoffStageWins** | **int?** |  | [optional] 
+**PointsEarnedThisRace** | **int?** |  | [optional] 
+**StagePointsEarnedThisRace** | **int?** |  | [optional] 
+**PlayoffPointsEarnedThisRace** | **int?** |  | [optional] 
+**PointsPenalizedThisRace** | **int?** |  | [optional] 
+**PlayoffPointsPenalizedThisRace** | **int?** |  | [optional] 
+**Top5** | **int?** |  | [optional] 
+**Top10** | **int?** |  | [optional] 
+**LapsLed** | **int?** |  | [optional] 
+**DNFs** | **int?** |  | [optional] 
+**InPlayoffs** | **bool?** |  | [optional] 
+**MadePlayoffs** | **bool?** |  | [optional] 
+**HighestRound** | **int?** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
