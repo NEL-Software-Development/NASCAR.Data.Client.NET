@@ -1,14 +1,14 @@
 # NASCAR.Data.Client.Api.OpticalTrackingApi
 
-All URIs are relative to */*
+All URIs are relative to */api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**UtmOffsets**](OpticalTrackingApi.md#utmoffsets) | **GET** /utm-offsets | 
+[**OpticalTrackingUtmOffsetsGet**](OpticalTrackingApi.md#opticaltrackingutmoffsetsget) | **GET** /optical-tracking/utm-offsets | 
 
-<a name="utmoffsets"></a>
-# **UtmOffsets**
-> Collection<OpticalTrackingUTMOffset> UtmOffsets ()
+<a name="opticaltrackingutmoffsetsget"></a>
+# **OpticalTrackingUtmOffsetsGet**
+> Collection<OpticalTrackingUTMOffset> OpticalTrackingUtmOffsetsGet ()
 
 
 
@@ -22,7 +22,7 @@ using NASCAR.Data.Client.Model;
 
 namespace Example
 {
-    public class UtmOffsetsExample
+    public class OpticalTrackingUtmOffsetsGetExample
     {
         public void main()
         {
@@ -31,12 +31,12 @@ namespace Example
 
             try
             {
-                Collection&lt;OpticalTrackingUTMOffset&gt; result = apiInstance.UtmOffsets();
+                Collection&lt;OpticalTrackingUTMOffset&gt; result = apiInstance.OpticalTrackingUtmOffsetsGet();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling OpticalTrackingApi.UtmOffsets: " + e.Message );
+                Debug.Print("Exception when calling OpticalTrackingApi.OpticalTrackingUtmOffsetsGet: " + e.Message );
             }
         }
     }
