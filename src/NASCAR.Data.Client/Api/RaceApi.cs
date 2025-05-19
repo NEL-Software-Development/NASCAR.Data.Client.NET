@@ -156,6 +156,31 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="historyRaceId"> (optional)</param>
+        /// <param name="dateStart">enter date_start in yyyy-mm-dd format (optional)</param>
+        /// <param name="dateEnd">enter date_end in yyyy-mm-dd format (optional)</param>
+        /// <returns>Collection&lt;RaceDetails&gt;</returns>
+        Collection<RaceDetails> RaceLookupGet (int? historyRaceId = null, DateTime? dateStart = null, DateTime? dateEnd = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="historyRaceId"> (optional)</param>
+        /// <param name="dateStart">enter date_start in yyyy-mm-dd format (optional)</param>
+        /// <param name="dateEnd">enter date_end in yyyy-mm-dd format (optional)</param>
+        /// <returns>ApiResponse of Collection&lt;RaceDetails&gt;</returns>
+        ApiResponse<Collection<RaceDetails>> RaceLookupGetWithHttpInfo (int? historyRaceId = null, DateTime? dateStart = null, DateTime? dateEnd = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="raceId"> (optional)</param>
         /// <returns>Collection&lt;LoopStat&gt;</returns>
         Collection<LoopStat> RaceLoopStatsGet (int? raceId = null);
@@ -319,6 +344,27 @@ namespace NASCAR.Data.Client.Api
         /// <param name="raceId"> (optional)</param>
         /// <returns>ApiResponse of Collection&lt;StageRunResults&gt;</returns>
         ApiResponse<Collection<StageRunResults>> RaceStageResultsGetWithHttpInfo (int? raceId = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Collection&lt;Stage&gt;</returns>
+        Collection<Stage> RaceStagesGet (int? raceId = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>ApiResponse of Collection&lt;Stage&gt;</returns>
+        ApiResponse<Collection<Stage>> RaceStagesGetWithHttpInfo (int? raceId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -496,6 +542,31 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="historyRaceId"> (optional)</param>
+        /// <param name="dateStart">enter date_start in yyyy-mm-dd format (optional)</param>
+        /// <param name="dateEnd">enter date_end in yyyy-mm-dd format (optional)</param>
+        /// <returns>Task of Collection&lt;RaceDetails&gt;</returns>
+        System.Threading.Tasks.Task<Collection<RaceDetails>> RaceLookupGetAsync (int? historyRaceId = null, DateTime? dateStart = null, DateTime? dateEnd = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="historyRaceId"> (optional)</param>
+        /// <param name="dateStart">enter date_start in yyyy-mm-dd format (optional)</param>
+        /// <param name="dateEnd">enter date_end in yyyy-mm-dd format (optional)</param>
+        /// <returns>Task of ApiResponse (Collection&lt;RaceDetails&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Collection<RaceDetails>>> RaceLookupGetAsyncWithHttpInfo (int? historyRaceId = null, DateTime? dateStart = null, DateTime? dateEnd = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="raceId"> (optional)</param>
         /// <returns>Task of Collection&lt;LoopStat&gt;</returns>
         System.Threading.Tasks.Task<Collection<LoopStat>> RaceLoopStatsGetAsync (int? raceId = null);
@@ -659,6 +730,27 @@ namespace NASCAR.Data.Client.Api
         /// <param name="raceId"> (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;StageRunResults&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Collection<StageRunResults>>> RaceStageResultsGetAsyncWithHttpInfo (int? raceId = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Task of Collection&lt;Stage&gt;</returns>
+        System.Threading.Tasks.Task<Collection<Stage>> RaceStagesGetAsync (int? raceId = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Task of ApiResponse (Collection&lt;Stage&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Collection<Stage>>> RaceStagesGetAsyncWithHttpInfo (int? raceId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1656,6 +1748,159 @@ namespace NASCAR.Data.Client.Api
             return new ApiResponse<Collection<LapLeader>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (Collection<LapLeader>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<LapLeader>)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="historyRaceId"> (optional)</param>
+        /// <param name="dateStart">enter date_start in yyyy-mm-dd format (optional)</param>
+        /// <param name="dateEnd">enter date_end in yyyy-mm-dd format (optional)</param>
+        /// <returns>Collection&lt;RaceDetails&gt;</returns>
+        public Collection<RaceDetails> RaceLookupGet (int? historyRaceId = null, DateTime? dateStart = null, DateTime? dateEnd = null)
+        {
+             ApiResponse<Collection<RaceDetails>> localVarResponse = RaceLookupGetWithHttpInfo(historyRaceId, dateStart, dateEnd);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="historyRaceId"> (optional)</param>
+        /// <param name="dateStart">enter date_start in yyyy-mm-dd format (optional)</param>
+        /// <param name="dateEnd">enter date_end in yyyy-mm-dd format (optional)</param>
+        /// <returns>ApiResponse of Collection&lt;RaceDetails&gt;</returns>
+        public ApiResponse< Collection<RaceDetails> > RaceLookupGetWithHttpInfo (int? historyRaceId = null, DateTime? dateStart = null, DateTime? dateEnd = null)
+        {
+
+            var localVarPath = "/race/lookup";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (historyRaceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "history_race_id", historyRaceId)); // query parameter
+            if (dateStart != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "date_start", dateStart)); // query parameter
+            if (dateEnd != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "date_end", dateEnd)); // query parameter
+            // authentication (Bearer) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RaceLookupGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Collection<RaceDetails>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (Collection<RaceDetails>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<RaceDetails>)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="historyRaceId"> (optional)</param>
+        /// <param name="dateStart">enter date_start in yyyy-mm-dd format (optional)</param>
+        /// <param name="dateEnd">enter date_end in yyyy-mm-dd format (optional)</param>
+        /// <returns>Task of Collection&lt;RaceDetails&gt;</returns>
+        public async System.Threading.Tasks.Task<Collection<RaceDetails>> RaceLookupGetAsync (int? historyRaceId = null, DateTime? dateStart = null, DateTime? dateEnd = null)
+        {
+             ApiResponse<Collection<RaceDetails>> localVarResponse = await RaceLookupGetAsyncWithHttpInfo(historyRaceId, dateStart, dateEnd);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="historyRaceId"> (optional)</param>
+        /// <param name="dateStart">enter date_start in yyyy-mm-dd format (optional)</param>
+        /// <param name="dateEnd">enter date_end in yyyy-mm-dd format (optional)</param>
+        /// <returns>Task of ApiResponse (Collection&lt;RaceDetails&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Collection<RaceDetails>>> RaceLookupGetAsyncWithHttpInfo (int? historyRaceId = null, DateTime? dateStart = null, DateTime? dateEnd = null)
+        {
+
+            var localVarPath = "/race/lookup";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (historyRaceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "history_race_id", historyRaceId)); // query parameter
+            if (dateStart != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "date_start", dateStart)); // query parameter
+            if (dateEnd != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "date_end", dateEnd)); // query parameter
+            // authentication (Bearer) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RaceLookupGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Collection<RaceDetails>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (Collection<RaceDetails>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<RaceDetails>)));
         }
 
         /// <summary>
@@ -2790,6 +3035,147 @@ namespace NASCAR.Data.Client.Api
             return new ApiResponse<Collection<StageRunResults>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (Collection<StageRunResults>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<StageRunResults>)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Collection&lt;Stage&gt;</returns>
+        public Collection<Stage> RaceStagesGet (int? raceId = null)
+        {
+             ApiResponse<Collection<Stage>> localVarResponse = RaceStagesGetWithHttpInfo(raceId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>ApiResponse of Collection&lt;Stage&gt;</returns>
+        public ApiResponse< Collection<Stage> > RaceStagesGetWithHttpInfo (int? raceId = null)
+        {
+
+            var localVarPath = "/race/stages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (raceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "race_id", raceId)); // query parameter
+            // authentication (Bearer) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RaceStagesGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Collection<Stage>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (Collection<Stage>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<Stage>)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Task of Collection&lt;Stage&gt;</returns>
+        public async System.Threading.Tasks.Task<Collection<Stage>> RaceStagesGetAsync (int? raceId = null)
+        {
+             ApiResponse<Collection<Stage>> localVarResponse = await RaceStagesGetAsyncWithHttpInfo(raceId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Task of ApiResponse (Collection&lt;Stage&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Collection<Stage>>> RaceStagesGetAsyncWithHttpInfo (int? raceId = null)
+        {
+
+            var localVarPath = "/race/stages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (raceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "race_id", raceId)); // query parameter
+            // authentication (Bearer) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RaceStagesGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Collection<Stage>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (Collection<Stage>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<Stage>)));
         }
 
         /// <summary>

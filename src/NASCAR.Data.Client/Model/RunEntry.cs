@@ -34,16 +34,18 @@ namespace NASCAR.Data.Client.Model
         /// </summary>
         /// <param name="driverName">Driver name.</param>
         /// <param name="driverDetails">URL to driver details.</param>
+        /// <param name="sponsor">Sponsor.</param>
         /// <param name="vehicleNumber">Vehicle number.</param>
         /// <param name="vehicleDetails">URL to vehicle details.</param>
         /// <param name="ownerName">Owner name.</param>
         /// <param name="crewChief">Crew chief name.</param>
         /// <param name="modelYear">Vehicle model year.</param>
         /// <param name="model">Vehicle model.</param>
-        public RunEntry(string driverName = default(string), string driverDetails = default(string), string vehicleNumber = default(string), string vehicleDetails = default(string), string ownerName = default(string), string crewChief = default(string), int? modelYear = default(int?), string model = default(string))
+        public RunEntry(string driverName = default(string), string driverDetails = default(string), string sponsor = default(string), string vehicleNumber = default(string), string vehicleDetails = default(string), string ownerName = default(string), string crewChief = default(string), int? modelYear = default(int?), string model = default(string))
         {
             this.DriverName = driverName;
             this.DriverDetails = driverDetails;
+            this.Sponsor = sponsor;
             this.VehicleNumber = vehicleNumber;
             this.VehicleDetails = vehicleDetails;
             this.OwnerName = ownerName;
@@ -65,6 +67,13 @@ namespace NASCAR.Data.Client.Model
         /// <value>URL to driver details</value>
         [DataMember(Name="driver_details", EmitDefaultValue=false)]
         public string DriverDetails { get; set; }
+
+        /// <summary>
+        /// Sponsor
+        /// </summary>
+        /// <value>Sponsor</value>
+        [DataMember(Name="sponsor", EmitDefaultValue=false)]
+        public string Sponsor { get; set; }
 
         /// <summary>
         /// Vehicle number
@@ -118,6 +127,7 @@ namespace NASCAR.Data.Client.Model
             sb.Append("class RunEntry {\n");
             sb.Append("  DriverName: ").Append(DriverName).Append("\n");
             sb.Append("  DriverDetails: ").Append(DriverDetails).Append("\n");
+            sb.Append("  Sponsor: ").Append(Sponsor).Append("\n");
             sb.Append("  VehicleNumber: ").Append(VehicleNumber).Append("\n");
             sb.Append("  VehicleDetails: ").Append(VehicleDetails).Append("\n");
             sb.Append("  OwnerName: ").Append(OwnerName).Append("\n");
@@ -169,6 +179,11 @@ namespace NASCAR.Data.Client.Model
                     this.DriverDetails.Equals(input.DriverDetails))
                 ) && 
                 (
+                    this.Sponsor == input.Sponsor ||
+                    (this.Sponsor != null &&
+                    this.Sponsor.Equals(input.Sponsor))
+                ) && 
+                (
                     this.VehicleNumber == input.VehicleNumber ||
                     (this.VehicleNumber != null &&
                     this.VehicleNumber.Equals(input.VehicleNumber))
@@ -213,6 +228,8 @@ namespace NASCAR.Data.Client.Model
                     hashCode = hashCode * 59 + this.DriverName.GetHashCode();
                 if (this.DriverDetails != null)
                     hashCode = hashCode * 59 + this.DriverDetails.GetHashCode();
+                if (this.Sponsor != null)
+                    hashCode = hashCode * 59 + this.Sponsor.GetHashCode();
                 if (this.VehicleNumber != null)
                     hashCode = hashCode * 59 + this.VehicleNumber.GetHashCode();
                 if (this.VehicleDetails != null)
