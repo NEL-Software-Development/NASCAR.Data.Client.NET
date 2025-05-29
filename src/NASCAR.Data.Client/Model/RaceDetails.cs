@@ -33,6 +33,7 @@ namespace NASCAR.Data.Client.Model
         /// Initializes a new instance of the <see cref="RaceDetails" /> class.
         /// </summary>
         /// <param name="id">The id of the race.</param>
+        /// <param name="historyRaceId">The race id from the history database (default to -1).</param>
         /// <param name="seriesId">The series id of the race.</param>
         /// <param name="name">The race name.</param>
         /// <param name="promoter">The promoter of the race.</param>
@@ -40,12 +41,24 @@ namespace NASCAR.Data.Client.Model
         /// <param name="distance">Race distance.</param>
         /// <param name="date">Race date.</param>
         /// <param name="comments">Race Comments.</param>
+        /// <param name="trackName">Track Name.</param>
+        /// <param name="trackId">Track Id.</param>
+        /// <param name="inspectionComplete">Has inspection been completed.</param>
         /// <param name="entries">Race entries.</param>
         /// <param name="runs">Runs.</param>
         /// <param name="schedule">Weekend Schedule.</param>
-        public RaceDetails(int? id = default(int?), int? seriesId = default(int?), string name = default(string), string promoter = default(string), int? laps = default(int?), double? distance = default(double?), DateTimeOffset? date = default(DateTimeOffset?), string comments = default(string), Collection<RunEntry> entries = default(Collection<RunEntry>), Collection<RunDetails> runs = default(Collection<RunDetails>), Collection<WeekendSchedule> schedule = default(Collection<WeekendSchedule>))
+        public RaceDetails(int? id = default(int?), int? historyRaceId = -1, int? seriesId = default(int?), string name = default(string), string promoter = default(string), int? laps = default(int?), double? distance = default(double?), DateTimeOffset? date = default(DateTimeOffset?), string comments = default(string), string trackName = default(string), int? trackId = default(int?), bool? inspectionComplete = default(bool?), Collection<RunEntry> entries = default(Collection<RunEntry>), Collection<RunDetails> runs = default(Collection<RunDetails>), Collection<WeekendSchedule> schedule = default(Collection<WeekendSchedule>))
         {
             this.Id = id;
+            // use default value if no "historyRaceId" provided
+            if (historyRaceId == null)
+            {
+                this.HistoryRaceId = -1;
+            }
+            else
+            {
+                this.HistoryRaceId = historyRaceId;
+            }
             this.SeriesId = seriesId;
             this.Name = name;
             this.Promoter = promoter;
@@ -53,6 +66,9 @@ namespace NASCAR.Data.Client.Model
             this.Distance = distance;
             this.Date = date;
             this.Comments = comments;
+            this.TrackName = trackName;
+            this.TrackId = trackId;
+            this.InspectionComplete = inspectionComplete;
             this.Entries = entries;
             this.Runs = runs;
             this.Schedule = schedule;
@@ -64,6 +80,13 @@ namespace NASCAR.Data.Client.Model
         /// <value>The id of the race</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
+
+        /// <summary>
+        /// The race id from the history database
+        /// </summary>
+        /// <value>The race id from the history database</value>
+        [DataMember(Name="history_race_id", EmitDefaultValue=false)]
+        public int? HistoryRaceId { get; set; }
 
         /// <summary>
         /// The series id of the race
@@ -164,6 +187,27 @@ namespace NASCAR.Data.Client.Model
         public string Comments { get; set; }
 
         /// <summary>
+        /// Track Name
+        /// </summary>
+        /// <value>Track Name</value>
+        [DataMember(Name="track_name", EmitDefaultValue=false)]
+        public string TrackName { get; set; }
+
+        /// <summary>
+        /// Track Id
+        /// </summary>
+        /// <value>Track Id</value>
+        [DataMember(Name="track_id", EmitDefaultValue=false)]
+        public int? TrackId { get; set; }
+
+        /// <summary>
+        /// Has inspection been completed
+        /// </summary>
+        /// <value>Has inspection been completed</value>
+        [DataMember(Name="inspection_complete", EmitDefaultValue=false)]
+        public bool? InspectionComplete { get; set; }
+
+        /// <summary>
         /// Race entries
         /// </summary>
         /// <value>Race entries</value>
@@ -193,6 +237,7 @@ namespace NASCAR.Data.Client.Model
             var sb = new StringBuilder();
             sb.Append("class RaceDetails {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  HistoryRaceId: ").Append(HistoryRaceId).Append("\n");
             sb.Append("  SeriesId: ").Append(SeriesId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Promoter: ").Append(Promoter).Append("\n");
@@ -207,6 +252,9 @@ namespace NASCAR.Data.Client.Model
             sb.Append("  Pitstops: ").Append(Pitstops).Append("\n");
             sb.Append("  Date: ").Append(Date).Append("\n");
             sb.Append("  Comments: ").Append(Comments).Append("\n");
+            sb.Append("  TrackName: ").Append(TrackName).Append("\n");
+            sb.Append("  TrackId: ").Append(TrackId).Append("\n");
+            sb.Append("  InspectionComplete: ").Append(InspectionComplete).Append("\n");
             sb.Append("  Entries: ").Append(Entries).Append("\n");
             sb.Append("  Runs: ").Append(Runs).Append("\n");
             sb.Append("  Schedule: ").Append(Schedule).Append("\n");
@@ -248,6 +296,11 @@ namespace NASCAR.Data.Client.Model
                     this.Id == input.Id ||
                     (this.Id != null &&
                     this.Id.Equals(input.Id))
+                ) && 
+                (
+                    this.HistoryRaceId == input.HistoryRaceId ||
+                    (this.HistoryRaceId != null &&
+                    this.HistoryRaceId.Equals(input.HistoryRaceId))
                 ) && 
                 (
                     this.SeriesId == input.SeriesId ||
@@ -320,6 +373,21 @@ namespace NASCAR.Data.Client.Model
                     this.Comments.Equals(input.Comments))
                 ) && 
                 (
+                    this.TrackName == input.TrackName ||
+                    (this.TrackName != null &&
+                    this.TrackName.Equals(input.TrackName))
+                ) && 
+                (
+                    this.TrackId == input.TrackId ||
+                    (this.TrackId != null &&
+                    this.TrackId.Equals(input.TrackId))
+                ) && 
+                (
+                    this.InspectionComplete == input.InspectionComplete ||
+                    (this.InspectionComplete != null &&
+                    this.InspectionComplete.Equals(input.InspectionComplete))
+                ) && 
+                (
                     this.Entries == input.Entries ||
                     this.Entries != null &&
                     input.Entries != null &&
@@ -350,6 +418,8 @@ namespace NASCAR.Data.Client.Model
                 int hashCode = 41;
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.HistoryRaceId != null)
+                    hashCode = hashCode * 59 + this.HistoryRaceId.GetHashCode();
                 if (this.SeriesId != null)
                     hashCode = hashCode * 59 + this.SeriesId.GetHashCode();
                 if (this.Name != null)
@@ -378,6 +448,12 @@ namespace NASCAR.Data.Client.Model
                     hashCode = hashCode * 59 + this.Date.GetHashCode();
                 if (this.Comments != null)
                     hashCode = hashCode * 59 + this.Comments.GetHashCode();
+                if (this.TrackName != null)
+                    hashCode = hashCode * 59 + this.TrackName.GetHashCode();
+                if (this.TrackId != null)
+                    hashCode = hashCode * 59 + this.TrackId.GetHashCode();
+                if (this.InspectionComplete != null)
+                    hashCode = hashCode * 59 + this.InspectionComplete.GetHashCode();
                 if (this.Entries != null)
                     hashCode = hashCode * 59 + this.Entries.GetHashCode();
                 if (this.Runs != null)

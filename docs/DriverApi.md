@@ -1,76 +1,16 @@
 # NASCAR.Data.Client.Api.DriverApi
 
-All URIs are relative to */*
+All URIs are relative to */api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**BySeason**](DriverApi.md#byseason) | **GET** /driver/season | 
-[**Driver**](DriverApi.md#driver) | **GET** /driver | 
-[**DriverSeasonFinishes**](DriverApi.md#driverseasonfinishes) | **GET** /driver/season-finishes | 
+[**DriverGet**](DriverApi.md#driverget) | **GET** /driver | 
+[**DriverSeasonFinishesGet**](DriverApi.md#driverseasonfinishesget) | **GET** /driver/season-finishes | 
+[**DriverSeasonGet**](DriverApi.md#driverseasonget) | **GET** /driver/season | 
 
-<a name="byseason"></a>
-# **BySeason**
-> Collection<Driver> BySeason (int? season = null, int? seriesId = null)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using NASCAR.Data.Client.Api;
-using NASCAR.Data.Client.Client;
-using NASCAR.Data.Client.Model;
-
-namespace Example
-{
-    public class BySeasonExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new DriverApi();
-            var season = 56;  // int? |  (optional) 
-            var seriesId = 56;  // int? |  (optional) 
-
-            try
-            {
-                Collection&lt;Driver&gt; result = apiInstance.BySeason(season, seriesId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling DriverApi.BySeason: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **season** | **int?**|  | [optional] 
- **seriesId** | **int?**|  | [optional] 
-
-### Return type
-
-[**Collection<Driver>**](Driver.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="driver"></a>
-# **Driver**
-> Driver Driver (int? id = null)
+<a name="driverget"></a>
+# **DriverGet**
+> Driver DriverGet (int? id = null)
 
 
 
@@ -84,7 +24,7 @@ using NASCAR.Data.Client.Model;
 
 namespace Example
 {
-    public class DriverExample
+    public class DriverGetExample
     {
         public void main()
         {
@@ -94,12 +34,12 @@ namespace Example
 
             try
             {
-                Driver result = apiInstance.Driver(id);
+                Driver result = apiInstance.DriverGet(id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling DriverApi.Driver: " + e.Message );
+                Debug.Print("Exception when calling DriverApi.DriverGet: " + e.Message );
             }
         }
     }
@@ -126,9 +66,9 @@ Name | Type | Description  | Notes
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="driverseasonfinishes"></a>
-# **DriverSeasonFinishes**
-> Collection<RaceResultSummary> DriverSeasonFinishes (int? id = null, int? season = null, int? seriesId = null)
+<a name="driverseasonfinishesget"></a>
+# **DriverSeasonFinishesGet**
+> Collection<RaceResultSummary> DriverSeasonFinishesGet (int? id = null, int? season = null, int? seriesId = null)
 
 
 
@@ -142,7 +82,7 @@ using NASCAR.Data.Client.Model;
 
 namespace Example
 {
-    public class DriverSeasonFinishesExample
+    public class DriverSeasonFinishesGetExample
     {
         public void main()
         {
@@ -154,12 +94,12 @@ namespace Example
 
             try
             {
-                Collection&lt;RaceResultSummary&gt; result = apiInstance.DriverSeasonFinishes(id, season, seriesId);
+                Collection&lt;RaceResultSummary&gt; result = apiInstance.DriverSeasonFinishesGet(id, season, seriesId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling DriverApi.DriverSeasonFinishes: " + e.Message );
+                Debug.Print("Exception when calling DriverApi.DriverSeasonFinishesGet: " + e.Message );
             }
         }
     }
@@ -177,6 +117,66 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Collection<RaceResultSummary>**](RaceResultSummary.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+<a name="driverseasonget"></a>
+# **DriverSeasonGet**
+> Collection<Driver> DriverSeasonGet (int? season = null, int? seriesId = null)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using NASCAR.Data.Client.Api;
+using NASCAR.Data.Client.Client;
+using NASCAR.Data.Client.Model;
+
+namespace Example
+{
+    public class DriverSeasonGetExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new DriverApi();
+            var season = 56;  // int? |  (optional) 
+            var seriesId = 56;  // int? |  (optional) 
+
+            try
+            {
+                Collection&lt;Driver&gt; result = apiInstance.DriverSeasonGet(season, seriesId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DriverApi.DriverSeasonGet: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **season** | **int?**|  | [optional] 
+ **seriesId** | **int?**|  | [optional] 
+
+### Return type
+
+[**Collection<Driver>**](Driver.md)
 
 ### Authorization
 
