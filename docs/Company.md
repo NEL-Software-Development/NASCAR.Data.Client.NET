@@ -3,12 +3,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int?** |  | [optional] 
-**Name** | **string** |  | [optional] 
-**Abbreviation** | **string** |  | [optional] 
-**Alias** | **string** |  | [optional] 
-**CategoryId** | **int?** |  | [optional] 
-**CategoryName** | **string** |  | [optional] 
+**Id** | **int?** | Company Id | [optional] 
+**Name** | **string** | The name of the company | [optional] 
+**Abbreviation** | **string** | The company&#x27;s abbreviation | [optional] 
+**Alias** | **string** | The company&#x27;s alias | [optional] 
+**CategoryId** | **int?** | Company category Id | [optional] 
+**CategoryName** | **string** | Category name | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
