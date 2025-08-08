@@ -30,6 +30,27 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"> (optional)</param>
+        /// <returns>Collection&lt;Company&gt;</returns>
+        Collection<Company> CompanyGet (int? id = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"> (optional)</param>
+        /// <returns>ApiResponse of Collection&lt;Company&gt;</returns>
+        ApiResponse<Collection<Company>> CompanyGetWithHttpInfo (int? id = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="searchTerm"> (optional)</param>
         /// <returns>Collection&lt;Company&gt;</returns>
         Collection<Company> CompanySearchGet (string searchTerm = null);
@@ -46,6 +67,27 @@ namespace NASCAR.Data.Client.Api
         ApiResponse<Collection<Company>> CompanySearchGetWithHttpInfo (string searchTerm = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"> (optional)</param>
+        /// <returns>Task of Collection&lt;Company&gt;</returns>
+        System.Threading.Tasks.Task<Collection<Company>> CompanyGetAsync (int? id = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"> (optional)</param>
+        /// <returns>Task of ApiResponse (Collection&lt;Company&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Collection<Company>>> CompanyGetAsyncWithHttpInfo (int? id = null);
         /// <summary>
         /// 
         /// </summary>
@@ -176,6 +218,147 @@ namespace NASCAR.Data.Client.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"> (optional)</param>
+        /// <returns>Collection&lt;Company&gt;</returns>
+        public Collection<Company> CompanyGet (int? id = null)
+        {
+             ApiResponse<Collection<Company>> localVarResponse = CompanyGetWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"> (optional)</param>
+        /// <returns>ApiResponse of Collection&lt;Company&gt;</returns>
+        public ApiResponse< Collection<Company> > CompanyGetWithHttpInfo (int? id = null)
+        {
+
+            var localVarPath = "/company";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "id", id)); // query parameter
+            // authentication (Bearer) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CompanyGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Collection<Company>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (Collection<Company>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<Company>)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"> (optional)</param>
+        /// <returns>Task of Collection&lt;Company&gt;</returns>
+        public async System.Threading.Tasks.Task<Collection<Company>> CompanyGetAsync (int? id = null)
+        {
+             ApiResponse<Collection<Company>> localVarResponse = await CompanyGetAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"> (optional)</param>
+        /// <returns>Task of ApiResponse (Collection&lt;Company&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Collection<Company>>> CompanyGetAsyncWithHttpInfo (int? id = null)
+        {
+
+            var localVarPath = "/company";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "id", id)); // query parameter
+            // authentication (Bearer) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CompanyGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Collection<Company>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (Collection<Company>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<Company>)));
         }
 
         /// <summary>

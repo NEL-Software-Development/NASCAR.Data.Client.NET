@@ -35,11 +35,13 @@ namespace NASCAR.Data.Client.Model
         /// <param name="accessToken">accessToken.</param>
         /// <param name="refreshToken">refreshToken.</param>
         /// <param name="tokenType">tokenType.</param>
-        public TokenResponse(string accessToken = default(string), string refreshToken = default(string), string tokenType = default(string))
+        /// <param name="message">message.</param>
+        public TokenResponse(string accessToken = default(string), string refreshToken = default(string), string tokenType = default(string), Status message = default(Status))
         {
             this.AccessToken = accessToken;
             this.RefreshToken = refreshToken;
             this.TokenType = tokenType;
+            this.Message = message;
         }
         
         /// <summary>
@@ -61,6 +63,12 @@ namespace NASCAR.Data.Client.Model
         public string TokenType { get; set; }
 
         /// <summary>
+        /// Gets or Sets Message
+        /// </summary>
+        [DataMember(Name="message", EmitDefaultValue=false)]
+        public Status Message { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -71,6 +79,7 @@ namespace NASCAR.Data.Client.Model
             sb.Append("  AccessToken: ").Append(AccessToken).Append("\n");
             sb.Append("  RefreshToken: ").Append(RefreshToken).Append("\n");
             sb.Append("  TokenType: ").Append(TokenType).Append("\n");
+            sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -119,6 +128,11 @@ namespace NASCAR.Data.Client.Model
                     this.TokenType == input.TokenType ||
                     (this.TokenType != null &&
                     this.TokenType.Equals(input.TokenType))
+                ) && 
+                (
+                    this.Message == input.Message ||
+                    (this.Message != null &&
+                    this.Message.Equals(input.Message))
                 );
         }
 
@@ -137,6 +151,8 @@ namespace NASCAR.Data.Client.Model
                     hashCode = hashCode * 59 + this.RefreshToken.GetHashCode();
                 if (this.TokenType != null)
                     hashCode = hashCode * 59 + this.TokenType.GetHashCode();
+                if (this.Message != null)
+                    hashCode = hashCode * 59 + this.Message.GetHashCode();
                 return hashCode;
             }
         }
