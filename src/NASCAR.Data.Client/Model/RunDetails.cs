@@ -37,14 +37,16 @@ namespace NASCAR.Data.Client.Model
         /// <param name="runState">runState.</param>
         /// <param name="runType">runType.</param>
         /// <param name="duration">The scheduled duration of the run in seconds.</param>
+        /// <param name="timingRunId">timingRunId.</param>
         /// <param name="flags">Flags associated with this run.</param>
-        public RunDetails(string name = default(string), DateTimeOffset? startTime = default(DateTimeOffset?), RunState runState = default(RunState), RunType runType = default(RunType), int? duration = default(int?), Collection<Flag> flags = default(Collection<Flag>))
+        public RunDetails(string name = default(string), DateTimeOffset? startTime = default(DateTimeOffset?), RunState runState = default(RunState), RunType runType = default(RunType), int? duration = default(int?), int? timingRunId = default(int?), Collection<Flag> flags = default(Collection<Flag>))
         {
             this.Name = name;
             this.StartTime = startTime;
             this.RunState = runState;
             this.RunType = runType;
             this.Duration = duration;
+            this.TimingRunId = timingRunId;
             this.Flags = flags;
         }
         
@@ -82,6 +84,12 @@ namespace NASCAR.Data.Client.Model
         public int? Duration { get; set; }
 
         /// <summary>
+        /// Gets or Sets TimingRunId
+        /// </summary>
+        [DataMember(Name="timing_run_id", EmitDefaultValue=false)]
+        public int? TimingRunId { get; set; }
+
+        /// <summary>
         /// Flag state:  (Inactive, Active, Completed)
         /// </summary>
         /// <value>Flag state:  (Inactive, Active, Completed)</value>
@@ -108,6 +116,7 @@ namespace NASCAR.Data.Client.Model
             sb.Append("  RunState: ").Append(RunState).Append("\n");
             sb.Append("  RunType: ").Append(RunType).Append("\n");
             sb.Append("  Duration: ").Append(Duration).Append("\n");
+            sb.Append("  TimingRunId: ").Append(TimingRunId).Append("\n");
             sb.Append("  FlagState: ").Append(FlagState).Append("\n");
             sb.Append("  Flags: ").Append(Flags).Append("\n");
             sb.Append("}\n");
@@ -170,6 +179,11 @@ namespace NASCAR.Data.Client.Model
                     this.Duration.Equals(input.Duration))
                 ) && 
                 (
+                    this.TimingRunId == input.TimingRunId ||
+                    (this.TimingRunId != null &&
+                    this.TimingRunId.Equals(input.TimingRunId))
+                ) && 
+                (
                     this.FlagState == input.FlagState ||
                     (this.FlagState != null &&
                     this.FlagState.Equals(input.FlagState))
@@ -201,6 +215,8 @@ namespace NASCAR.Data.Client.Model
                     hashCode = hashCode * 59 + this.RunType.GetHashCode();
                 if (this.Duration != null)
                     hashCode = hashCode * 59 + this.Duration.GetHashCode();
+                if (this.TimingRunId != null)
+                    hashCode = hashCode * 59 + this.TimingRunId.GetHashCode();
                 if (this.FlagState != null)
                     hashCode = hashCode * 59 + this.FlagState.GetHashCode();
                 if (this.Flags != null)
