@@ -55,6 +55,25 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Collection&lt;LiveDriverPoints&gt;</returns>
+        Collection<LiveDriverPoints> PointsLiveDriverPointsGet ();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Collection&lt;LiveDriverPoints&gt;</returns>
+        ApiResponse<Collection<LiveDriverPoints>> PointsLiveDriverPointsGetWithHttpInfo ();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="season"> (optional)</param>
         /// <param name="seriesId"> (optional)</param>
         /// <param name="raceId"> (optional, default to 0)</param>
@@ -125,6 +144,25 @@ namespace NASCAR.Data.Client.Api
         /// <param name="raceId"> (optional, default to 0)</param>
         /// <returns>Task of ApiResponse (Collection&lt;DriverPoint&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Collection<DriverPoint>>> PointsDriverPointsGetAsyncWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of Collection&lt;LiveDriverPoints&gt;</returns>
+        System.Threading.Tasks.Task<Collection<LiveDriverPoints>> PointsLiveDriverPointsGetAsync ();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (Collection&lt;LiveDriverPoints&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Collection<LiveDriverPoints>>> PointsLiveDriverPointsGetAsyncWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -437,6 +475,141 @@ namespace NASCAR.Data.Client.Api
             return new ApiResponse<Collection<DriverPoint>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (Collection<DriverPoint>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<DriverPoint>)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Collection&lt;LiveDriverPoints&gt;</returns>
+        public Collection<LiveDriverPoints> PointsLiveDriverPointsGet ()
+        {
+             ApiResponse<Collection<LiveDriverPoints>> localVarResponse = PointsLiveDriverPointsGetWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Collection&lt;LiveDriverPoints&gt;</returns>
+        public ApiResponse< Collection<LiveDriverPoints> > PointsLiveDriverPointsGetWithHttpInfo ()
+        {
+
+            var localVarPath = "/points/live-driver-points";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // authentication (Bearer) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PointsLiveDriverPointsGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Collection<LiveDriverPoints>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (Collection<LiveDriverPoints>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<LiveDriverPoints>)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of Collection&lt;LiveDriverPoints&gt;</returns>
+        public async System.Threading.Tasks.Task<Collection<LiveDriverPoints>> PointsLiveDriverPointsGetAsync ()
+        {
+             ApiResponse<Collection<LiveDriverPoints>> localVarResponse = await PointsLiveDriverPointsGetAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (Collection&lt;LiveDriverPoints&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Collection<LiveDriverPoints>>> PointsLiveDriverPointsGetAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/points/live-driver-points";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // authentication (Bearer) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PointsLiveDriverPointsGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Collection<LiveDriverPoints>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (Collection<LiveDriverPoints>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<LiveDriverPoints>)));
         }
 
         /// <summary>
