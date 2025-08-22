@@ -45,7 +45,7 @@ namespace NASCAR.Data.Client.Model
         /// <param name="deltaLeaderTime">Number of milliseconds behind the leader.</param>
         /// <param name="deltaLeaderLaps">Number of laps behind the leader.</param>
         /// <param name="onTrack">Is on track.</param>
-        /// <param name="status">Status.</param>
+        /// <param name="status">Vehicle Status (0&#x3D;None, 1&#x3D;Active, 2&#x3D;DNS, 3&#x3D;DNF, 4&#x3D;DQ, 5&#x3D;Pace Car, 6&#x3D;Garage.</param>
         /// <param name="comment">Comment.</param>
         public RunResult(int? finishPosition = default(int?), string driverName = default(string), string vehicleNumber = default(string), int? laps = default(int?), int? bestTime = default(int?), double? bestSpeed = default(double?), int? bestLap = default(int?), int? lastLapTime = default(int?), int? deltaNextTime = default(int?), int? deltaNextLaps = default(int?), int? deltaLeaderTime = default(int?), int? deltaLeaderLaps = default(int?), bool? onTrack = default(bool?), string status = default(string), string comment = default(string))
         {
@@ -158,9 +158,9 @@ namespace NASCAR.Data.Client.Model
         public bool? OnTrack { get; set; }
 
         /// <summary>
-        /// Status
+        /// Vehicle Status (0&#x3D;None, 1&#x3D;Active, 2&#x3D;DNS, 3&#x3D;DNF, 4&#x3D;DQ, 5&#x3D;Pace Car, 6&#x3D;Garage
         /// </summary>
-        /// <value>Status</value>
+        /// <value>Vehicle Status (0&#x3D;None, 1&#x3D;Active, 2&#x3D;DNS, 3&#x3D;DNF, 4&#x3D;DQ, 5&#x3D;Pace Car, 6&#x3D;Garage</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
 
