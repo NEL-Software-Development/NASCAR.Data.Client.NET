@@ -1,16 +1,18 @@
 # NASCAR.Data.Client.Api.PointsApi
 
-All URIs are relative to */*
+All URIs are relative to */api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DriverPoints**](PointsApi.md#driverpoints) | **GET** /points/driver-points | 
-[**ManufacturerPoints**](PointsApi.md#manufacturerpoints) | **GET** /points/manufacturer-points | 
-[**OwnerPoints**](PointsApi.md#ownerpoints) | **GET** /points/owner-points | 
+[**PointsDriverPointsGet**](PointsApi.md#pointsdriverpointsget) | **GET** /points/driver-points | 
+[**PointsDriverpointsGet**](PointsApi.md#pointsdriverpointsget) | **GET** /points/driverpoints | 
+[**PointsLiveDriverPointsGet**](PointsApi.md#pointslivedriverpointsget) | **GET** /points/live-driver-points | 
+[**PointsManufacturerPointsGet**](PointsApi.md#pointsmanufacturerpointsget) | **GET** /points/manufacturer-points | 
+[**PointsOwnerPointsGet**](PointsApi.md#pointsownerpointsget) | **GET** /points/owner-points | 
 
-<a name="driverpoints"></a>
-# **DriverPoints**
-> Collection<DriverPoint> DriverPoints (int? season = null, int? seriesId = null, int? raceId = null)
+<a name="pointsdriverpointsget"></a>
+# **PointsDriverPointsGet**
+> Collection<DriverPoint> PointsDriverPointsGet (int? season = null, int? seriesId = null, int? raceId = null)
 
 
 
@@ -24,7 +26,7 @@ using NASCAR.Data.Client.Model;
 
 namespace Example
 {
-    public class DriverPointsExample
+    public class PointsDriverPointsGetExample
     {
         public void main()
         {
@@ -36,12 +38,12 @@ namespace Example
 
             try
             {
-                Collection&lt;DriverPoint&gt; result = apiInstance.DriverPoints(season, seriesId, raceId);
+                Collection&lt;DriverPoint&gt; result = apiInstance.PointsDriverPointsGet(season, seriesId, raceId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling PointsApi.DriverPoints: " + e.Message );
+                Debug.Print("Exception when calling PointsApi.PointsDriverPointsGet: " + e.Message );
             }
         }
     }
@@ -70,9 +72,9 @@ Name | Type | Description  | Notes
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="manufacturerpoints"></a>
-# **ManufacturerPoints**
-> Collection<ManufacturerPoint> ManufacturerPoints (int? season = null, int? seriesId = null, int? raceId = null)
+<a name="pointsdriverpointsget"></a>
+# **PointsDriverpointsGet**
+> Collection<DriverPointsView> PointsDriverpointsGet (int? raceId = null)
 
 
 
@@ -86,7 +88,123 @@ using NASCAR.Data.Client.Model;
 
 namespace Example
 {
-    public class ManufacturerPointsExample
+    public class PointsDriverpointsGetExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new PointsApi();
+            var raceId = 56;  // int? |  (optional) 
+
+            try
+            {
+                Collection&lt;DriverPointsView&gt; result = apiInstance.PointsDriverpointsGet(raceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PointsApi.PointsDriverpointsGet: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **raceId** | **int?**|  | [optional] 
+
+### Return type
+
+[**Collection<DriverPointsView>**](DriverPointsView.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+<a name="pointslivedriverpointsget"></a>
+# **PointsLiveDriverPointsGet**
+> Collection<DriverPointsView> PointsLiveDriverPointsGet (int? raceId = null)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using NASCAR.Data.Client.Api;
+using NASCAR.Data.Client.Client;
+using NASCAR.Data.Client.Model;
+
+namespace Example
+{
+    public class PointsLiveDriverPointsGetExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new PointsApi();
+            var raceId = 56;  // int? |  (optional) 
+
+            try
+            {
+                Collection&lt;DriverPointsView&gt; result = apiInstance.PointsLiveDriverPointsGet(raceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PointsApi.PointsLiveDriverPointsGet: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **raceId** | **int?**|  | [optional] 
+
+### Return type
+
+[**Collection<DriverPointsView>**](DriverPointsView.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+<a name="pointsmanufacturerpointsget"></a>
+# **PointsManufacturerPointsGet**
+> Collection<ManufacturerPoint> PointsManufacturerPointsGet (int? season = null, int? seriesId = null, int? raceId = null)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using NASCAR.Data.Client.Api;
+using NASCAR.Data.Client.Client;
+using NASCAR.Data.Client.Model;
+
+namespace Example
+{
+    public class PointsManufacturerPointsGetExample
     {
         public void main()
         {
@@ -98,12 +216,12 @@ namespace Example
 
             try
             {
-                Collection&lt;ManufacturerPoint&gt; result = apiInstance.ManufacturerPoints(season, seriesId, raceId);
+                Collection&lt;ManufacturerPoint&gt; result = apiInstance.PointsManufacturerPointsGet(season, seriesId, raceId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling PointsApi.ManufacturerPoints: " + e.Message );
+                Debug.Print("Exception when calling PointsApi.PointsManufacturerPointsGet: " + e.Message );
             }
         }
     }
@@ -132,9 +250,9 @@ Name | Type | Description  | Notes
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="ownerpoints"></a>
-# **OwnerPoints**
-> Collection<OwnerPoint> OwnerPoints (int? season = null, int? seriesId = null, int? raceId = null)
+<a name="pointsownerpointsget"></a>
+# **PointsOwnerPointsGet**
+> Collection<OwnerPoint> PointsOwnerPointsGet (int? season = null, int? seriesId = null, int? raceId = null)
 
 
 
@@ -148,7 +266,7 @@ using NASCAR.Data.Client.Model;
 
 namespace Example
 {
-    public class OwnerPointsExample
+    public class PointsOwnerPointsGetExample
     {
         public void main()
         {
@@ -160,12 +278,12 @@ namespace Example
 
             try
             {
-                Collection&lt;OwnerPoint&gt; result = apiInstance.OwnerPoints(season, seriesId, raceId);
+                Collection&lt;OwnerPoint&gt; result = apiInstance.PointsOwnerPointsGet(season, seriesId, raceId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling PointsApi.OwnerPoints: " + e.Message );
+                Debug.Print("Exception when calling PointsApi.PointsOwnerPointsGet: " + e.Message );
             }
         }
     }
