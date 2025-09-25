@@ -1,0 +1,10 @@
+# NASCAR.Data.Client.Model.AvailableReport
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Name** | **string** |  | [optional] 
+**Modified** | **DateTimeOffset?** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
