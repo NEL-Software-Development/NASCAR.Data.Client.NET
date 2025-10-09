@@ -3,14 +3,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartLap** | **int?** |  | [optional] 
-**FinishLap** | **int?** |  | [optional] 
-**NumberOfLaps** | **int?** |  | [optional] 
-**ElapsedTime** | **int?** |  | [optional] 
-**Time** | **DateTimeOffset?** |  | [optional] 
-**Duration** | **int?** |  | [optional] 
-**FlagState** | **string** | NONE, WARMUP, GREEN, YELLOW, RED, WHITE, FINISH, EXTRA | [optional] 
-**Comment** | **string** |  | [optional] 
+**StartLap** | **int?** | The flag&#x27;s first lap | [optional] 
+**FinishLap** | **int?** | The flag&#x27;s last lap | [optional] 
+**NumberOfLaps** | **int?** | Total number of laps | [optional] 
+**ElapsedTime** | **int?** | Elapsed race time in milliseconds | [optional] 
+**Time** | **DateTimeOffset?** | Time of flag | [optional] 
+**Duration** | **int?** | Duration in seconds | [optional] 
+**FlagState** | **string** | Flag stage:  (NONE, WARMUP, GREEN, YELLOW, RED, WHITE, FINISH, EXTRA) | [optional] 
+**Comment** | **string** | Comments | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
