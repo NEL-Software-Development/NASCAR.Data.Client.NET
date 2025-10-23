@@ -1,15 +1,15 @@
 # NASCAR.Data.Client.Api.VehicleApi
 
-All URIs are relative to */*
+All URIs are relative to */api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Vehicle**](VehicleApi.md#vehicle) | **GET** /vehicle | 
-[**VehicleSeasonFinishes**](VehicleApi.md#vehicleseasonfinishes) | **GET** /vehicle/season-finishes | 
+[**VehicleGet**](VehicleApi.md#vehicleget) | **GET** /vehicle | 
+[**VehicleSeasonFinishesGet**](VehicleApi.md#vehicleseasonfinishesget) | **GET** /vehicle/season-finishes | 
 
-<a name="vehicle"></a>
-# **Vehicle**
-> VehicleDetails Vehicle (int? id = null)
+<a name="vehicleget"></a>
+# **VehicleGet**
+> VehicleDetails VehicleGet (int? id = null)
 
 
 
@@ -23,7 +23,7 @@ using NASCAR.Data.Client.Model;
 
 namespace Example
 {
-    public class VehicleExample
+    public class VehicleGetExample
     {
         public void main()
         {
@@ -33,12 +33,12 @@ namespace Example
 
             try
             {
-                VehicleDetails result = apiInstance.Vehicle(id);
+                VehicleDetails result = apiInstance.VehicleGet(id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling VehicleApi.Vehicle: " + e.Message );
+                Debug.Print("Exception when calling VehicleApi.VehicleGet: " + e.Message );
             }
         }
     }
@@ -65,9 +65,9 @@ Name | Type | Description  | Notes
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="vehicleseasonfinishes"></a>
-# **VehicleSeasonFinishes**
-> Collection<RaceResultSummary> VehicleSeasonFinishes (int? season = null, int? seriesId = null, string vehicle = null)
+<a name="vehicleseasonfinishesget"></a>
+# **VehicleSeasonFinishesGet**
+> Collection<RaceResultSummary> VehicleSeasonFinishesGet (int? season = null, int? seriesId = null, string vehicle = null)
 
 
 
@@ -81,7 +81,7 @@ using NASCAR.Data.Client.Model;
 
 namespace Example
 {
-    public class VehicleSeasonFinishesExample
+    public class VehicleSeasonFinishesGetExample
     {
         public void main()
         {
@@ -93,12 +93,12 @@ namespace Example
 
             try
             {
-                Collection&lt;RaceResultSummary&gt; result = apiInstance.VehicleSeasonFinishes(season, seriesId, vehicle);
+                Collection&lt;RaceResultSummary&gt; result = apiInstance.VehicleSeasonFinishesGet(season, seriesId, vehicle);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling VehicleApi.VehicleSeasonFinishes: " + e.Message );
+                Debug.Print("Exception when calling VehicleApi.VehicleSeasonFinishesGet: " + e.Message );
             }
         }
     }
