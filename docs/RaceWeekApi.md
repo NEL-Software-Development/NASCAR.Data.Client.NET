@@ -1,16 +1,16 @@
 # NASCAR.Data.Client.Api.RaceWeekApi
 
-All URIs are relative to */*
+All URIs are relative to */api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Details**](RaceWeekApi.md#details) | **GET** /race-week/details | 
-[**Live**](RaceWeekApi.md#live) | **GET** /race-week/live | 
-[**Season**](RaceWeekApi.md#season) | **GET** /race-week/season | 
+[**RaceWeekDetailsGet**](RaceWeekApi.md#raceweekdetailsget) | **GET** /race-week/details | 
+[**RaceWeekLiveGet**](RaceWeekApi.md#raceweekliveget) | **GET** /race-week/live | 
+[**RaceWeekSeasonGet**](RaceWeekApi.md#raceweekseasonget) | **GET** /race-week/season | 
 
-<a name="details"></a>
-# **Details**
-> RaceWeekDetails Details (int? id = null)
+<a name="raceweekdetailsget"></a>
+# **RaceWeekDetailsGet**
+> RaceWeekDetails RaceWeekDetailsGet (int? id = null)
 
 
 
@@ -24,7 +24,7 @@ using NASCAR.Data.Client.Model;
 
 namespace Example
 {
-    public class DetailsExample
+    public class RaceWeekDetailsGetExample
     {
         public void main()
         {
@@ -34,12 +34,12 @@ namespace Example
 
             try
             {
-                RaceWeekDetails result = apiInstance.Details(id);
+                RaceWeekDetails result = apiInstance.RaceWeekDetailsGet(id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RaceWeekApi.Details: " + e.Message );
+                Debug.Print("Exception when calling RaceWeekApi.RaceWeekDetailsGet: " + e.Message );
             }
         }
     }
@@ -66,9 +66,9 @@ Name | Type | Description  | Notes
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="live"></a>
-# **Live**
-> Collection<RaceWeek> Live ()
+<a name="raceweekliveget"></a>
+# **RaceWeekLiveGet**
+> Collection<RaceWeek> RaceWeekLiveGet ()
 
 
 
@@ -82,7 +82,7 @@ using NASCAR.Data.Client.Model;
 
 namespace Example
 {
-    public class LiveExample
+    public class RaceWeekLiveGetExample
     {
         public void main()
         {
@@ -91,12 +91,12 @@ namespace Example
 
             try
             {
-                Collection&lt;RaceWeek&gt; result = apiInstance.Live();
+                Collection&lt;RaceWeek&gt; result = apiInstance.RaceWeekLiveGet();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RaceWeekApi.Live: " + e.Message );
+                Debug.Print("Exception when calling RaceWeekApi.RaceWeekLiveGet: " + e.Message );
             }
         }
     }
@@ -120,9 +120,9 @@ This endpoint does not need any parameter.
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="season"></a>
-# **Season**
-> Collection<RaceWeek> Season (int? season = null)
+<a name="raceweekseasonget"></a>
+# **RaceWeekSeasonGet**
+> Collection<RaceWeek> RaceWeekSeasonGet (int? season = null)
 
 
 
@@ -136,7 +136,7 @@ using NASCAR.Data.Client.Model;
 
 namespace Example
 {
-    public class SeasonExample
+    public class RaceWeekSeasonGetExample
     {
         public void main()
         {
@@ -146,12 +146,12 @@ namespace Example
 
             try
             {
-                Collection&lt;RaceWeek&gt; result = apiInstance.Season(season);
+                Collection&lt;RaceWeek&gt; result = apiInstance.RaceWeekSeasonGet(season);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RaceWeekApi.Season: " + e.Message );
+                Debug.Print("Exception when calling RaceWeekApi.RaceWeekSeasonGet: " + e.Message );
             }
         }
     }
