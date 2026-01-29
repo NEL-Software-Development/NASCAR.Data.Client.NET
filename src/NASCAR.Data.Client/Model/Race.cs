@@ -32,34 +32,52 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Race" /> class.
         /// </summary>
-        /// <param name="id">The id of the race.</param>
+        /// <param name="id">Unique identifier given and used by the NASCAR Data API.</param>
         /// <param name="principalRaceId">The principal race id of the race.</param>
+        /// <param name="historyRaceId">The race id from the history database (default to -1).</param>
         /// <param name="raceweekId">The race.</param>
         /// <param name="seriesId">The series id of the race.</param>
         /// <param name="name">The race name.</param>
         /// <param name="promoter">The promoter of the race.</param>
         /// <param name="laps">Laps.</param>
         /// <param name="distance">Race distance.</param>
+        /// <param name="inspectionComplete">Has inspection been completed.</param>
         /// <param name="date">Race date.</param>
         /// <param name="comments">Race comments.</param>
-        public Race(int? id = default(int?), int? principalRaceId = default(int?), int? raceweekId = default(int?), int? seriesId = default(int?), string name = default(string), string promoter = default(string), int? laps = default(int?), double? distance = default(double?), DateTimeOffset? date = default(DateTimeOffset?), string comments = default(string))
+        /// <param name="historyTrackId">History Track Id.</param>
+        /// <param name="trackId">Track Id.</param>
+        /// <param name="fastestLapAward">fastestLapAward.</param>
+        public Race(int? id = default(int?), int? principalRaceId = default(int?), int? historyRaceId = -1, int? raceweekId = default(int?), int? seriesId = default(int?), string name = default(string), string promoter = default(string), int? laps = default(int?), double? distance = default(double?), bool? inspectionComplete = default(bool?), DateTimeOffset? date = default(DateTimeOffset?), string comments = default(string), int? historyTrackId = default(int?), int? trackId = default(int?), FastestLapAwards fastestLapAward = default(FastestLapAwards))
         {
             this.Id = id;
             this.PrincipalRaceId = principalRaceId;
+            // use default value if no "historyRaceId" provided
+            if (historyRaceId == null)
+            {
+                this.HistoryRaceId = -1;
+            }
+            else
+            {
+                this.HistoryRaceId = historyRaceId;
+            }
             this.RaceweekId = raceweekId;
             this.SeriesId = seriesId;
             this.Name = name;
             this.Promoter = promoter;
             this.Laps = laps;
             this.Distance = distance;
+            this.InspectionComplete = inspectionComplete;
             this.Date = date;
             this.Comments = comments;
+            this.HistoryTrackId = historyTrackId;
+            this.TrackId = trackId;
+            this.FastestLapAward = fastestLapAward;
         }
         
         /// <summary>
-        /// The id of the race
+        /// Unique identifier given and used by the NASCAR Data API
         /// </summary>
-        /// <value>The id of the race</value>
+        /// <value>Unique identifier given and used by the NASCAR Data API</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
@@ -69,6 +87,13 @@ namespace NASCAR.Data.Client.Model
         /// <value>The principal race id of the race</value>
         [DataMember(Name="principal_race_id", EmitDefaultValue=false)]
         public int? PrincipalRaceId { get; set; }
+
+        /// <summary>
+        /// The race id from the history database
+        /// </summary>
+        /// <value>The race id from the history database</value>
+        [DataMember(Name="history_race_id", EmitDefaultValue=false)]
+        public int? HistoryRaceId { get; set; }
 
         /// <summary>
         /// The race
@@ -111,6 +136,13 @@ namespace NASCAR.Data.Client.Model
         /// <value>Race distance</value>
         [DataMember(Name="distance", EmitDefaultValue=false)]
         public double? Distance { get; set; }
+
+        /// <summary>
+        /// Has inspection been completed
+        /// </summary>
+        /// <value>Has inspection been completed</value>
+        [DataMember(Name="inspection_complete", EmitDefaultValue=false)]
+        public bool? InspectionComplete { get; set; }
 
         /// <summary>
         /// URL to practice results
@@ -162,6 +194,13 @@ namespace NASCAR.Data.Client.Model
         public string Pitstops { get; private set; }
 
         /// <summary>
+        /// URL to race stages
+        /// </summary>
+        /// <value>URL to race stages</value>
+        [DataMember(Name="stages", EmitDefaultValue=false)]
+        public string Stages { get; private set; }
+
+        /// <summary>
         /// Race date
         /// </summary>
         /// <value>Race date</value>
@@ -176,6 +215,26 @@ namespace NASCAR.Data.Client.Model
         public string Comments { get; set; }
 
         /// <summary>
+        /// History Track Id
+        /// </summary>
+        /// <value>History Track Id</value>
+        [DataMember(Name="history_track_id", EmitDefaultValue=false)]
+        public int? HistoryTrackId { get; set; }
+
+        /// <summary>
+        /// Track Id
+        /// </summary>
+        /// <value>Track Id</value>
+        [DataMember(Name="track_id", EmitDefaultValue=false)]
+        public int? TrackId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FastestLapAward
+        /// </summary>
+        [DataMember(Name="fastest_lap_award", EmitDefaultValue=false)]
+        public FastestLapAwards FastestLapAward { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -185,12 +244,14 @@ namespace NASCAR.Data.Client.Model
             sb.Append("class Race {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  PrincipalRaceId: ").Append(PrincipalRaceId).Append("\n");
+            sb.Append("  HistoryRaceId: ").Append(HistoryRaceId).Append("\n");
             sb.Append("  RaceweekId: ").Append(RaceweekId).Append("\n");
             sb.Append("  SeriesId: ").Append(SeriesId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Promoter: ").Append(Promoter).Append("\n");
             sb.Append("  Laps: ").Append(Laps).Append("\n");
             sb.Append("  Distance: ").Append(Distance).Append("\n");
+            sb.Append("  InspectionComplete: ").Append(InspectionComplete).Append("\n");
             sb.Append("  PracticeResults: ").Append(PracticeResults).Append("\n");
             sb.Append("  QualifyingResults: ").Append(QualifyingResults).Append("\n");
             sb.Append("  RaceResults: ").Append(RaceResults).Append("\n");
@@ -198,8 +259,12 @@ namespace NASCAR.Data.Client.Model
             sb.Append("  Infractions: ").Append(Infractions).Append("\n");
             sb.Append("  LapLeaders: ").Append(LapLeaders).Append("\n");
             sb.Append("  Pitstops: ").Append(Pitstops).Append("\n");
+            sb.Append("  Stages: ").Append(Stages).Append("\n");
             sb.Append("  Date: ").Append(Date).Append("\n");
             sb.Append("  Comments: ").Append(Comments).Append("\n");
+            sb.Append("  HistoryTrackId: ").Append(HistoryTrackId).Append("\n");
+            sb.Append("  TrackId: ").Append(TrackId).Append("\n");
+            sb.Append("  FastestLapAward: ").Append(FastestLapAward).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -245,6 +310,11 @@ namespace NASCAR.Data.Client.Model
                     this.PrincipalRaceId.Equals(input.PrincipalRaceId))
                 ) && 
                 (
+                    this.HistoryRaceId == input.HistoryRaceId ||
+                    (this.HistoryRaceId != null &&
+                    this.HistoryRaceId.Equals(input.HistoryRaceId))
+                ) && 
+                (
                     this.RaceweekId == input.RaceweekId ||
                     (this.RaceweekId != null &&
                     this.RaceweekId.Equals(input.RaceweekId))
@@ -273,6 +343,11 @@ namespace NASCAR.Data.Client.Model
                     this.Distance == input.Distance ||
                     (this.Distance != null &&
                     this.Distance.Equals(input.Distance))
+                ) && 
+                (
+                    this.InspectionComplete == input.InspectionComplete ||
+                    (this.InspectionComplete != null &&
+                    this.InspectionComplete.Equals(input.InspectionComplete))
                 ) && 
                 (
                     this.PracticeResults == input.PracticeResults ||
@@ -310,6 +385,11 @@ namespace NASCAR.Data.Client.Model
                     this.Pitstops.Equals(input.Pitstops))
                 ) && 
                 (
+                    this.Stages == input.Stages ||
+                    (this.Stages != null &&
+                    this.Stages.Equals(input.Stages))
+                ) && 
+                (
                     this.Date == input.Date ||
                     (this.Date != null &&
                     this.Date.Equals(input.Date))
@@ -318,6 +398,21 @@ namespace NASCAR.Data.Client.Model
                     this.Comments == input.Comments ||
                     (this.Comments != null &&
                     this.Comments.Equals(input.Comments))
+                ) && 
+                (
+                    this.HistoryTrackId == input.HistoryTrackId ||
+                    (this.HistoryTrackId != null &&
+                    this.HistoryTrackId.Equals(input.HistoryTrackId))
+                ) && 
+                (
+                    this.TrackId == input.TrackId ||
+                    (this.TrackId != null &&
+                    this.TrackId.Equals(input.TrackId))
+                ) && 
+                (
+                    this.FastestLapAward == input.FastestLapAward ||
+                    (this.FastestLapAward != null &&
+                    this.FastestLapAward.Equals(input.FastestLapAward))
                 );
         }
 
@@ -334,6 +429,8 @@ namespace NASCAR.Data.Client.Model
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.PrincipalRaceId != null)
                     hashCode = hashCode * 59 + this.PrincipalRaceId.GetHashCode();
+                if (this.HistoryRaceId != null)
+                    hashCode = hashCode * 59 + this.HistoryRaceId.GetHashCode();
                 if (this.RaceweekId != null)
                     hashCode = hashCode * 59 + this.RaceweekId.GetHashCode();
                 if (this.SeriesId != null)
@@ -346,6 +443,8 @@ namespace NASCAR.Data.Client.Model
                     hashCode = hashCode * 59 + this.Laps.GetHashCode();
                 if (this.Distance != null)
                     hashCode = hashCode * 59 + this.Distance.GetHashCode();
+                if (this.InspectionComplete != null)
+                    hashCode = hashCode * 59 + this.InspectionComplete.GetHashCode();
                 if (this.PracticeResults != null)
                     hashCode = hashCode * 59 + this.PracticeResults.GetHashCode();
                 if (this.QualifyingResults != null)
@@ -360,10 +459,18 @@ namespace NASCAR.Data.Client.Model
                     hashCode = hashCode * 59 + this.LapLeaders.GetHashCode();
                 if (this.Pitstops != null)
                     hashCode = hashCode * 59 + this.Pitstops.GetHashCode();
+                if (this.Stages != null)
+                    hashCode = hashCode * 59 + this.Stages.GetHashCode();
                 if (this.Date != null)
                     hashCode = hashCode * 59 + this.Date.GetHashCode();
                 if (this.Comments != null)
                     hashCode = hashCode * 59 + this.Comments.GetHashCode();
+                if (this.HistoryTrackId != null)
+                    hashCode = hashCode * 59 + this.HistoryTrackId.GetHashCode();
+                if (this.TrackId != null)
+                    hashCode = hashCode * 59 + this.TrackId.GetHashCode();
+                if (this.FastestLapAward != null)
+                    hashCode = hashCode * 59 + this.FastestLapAward.GetHashCode();
                 return hashCode;
             }
         }
