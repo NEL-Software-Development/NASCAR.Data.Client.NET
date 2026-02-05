@@ -32,7 +32,7 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Driver" /> class.
         /// </summary>
-        /// <param name="id">Id.</param>
+        /// <param name="id">Unique identifier given and used by the NASCAR Data API.</param>
         /// <param name="name">Name.</param>
         /// <param name="dateOfBirth">Date of birth.</param>
         /// <param name="dateOfDeath">Date of death.</param>
@@ -65,9 +65,9 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Id
+        /// Unique identifier given and used by the NASCAR Data API
         /// </summary>
-        /// <value>Id</value>
+        /// <value>Unique identifier given and used by the NASCAR Data API</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 

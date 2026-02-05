@@ -30,11 +30,9 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
-        /// <param name="raceId"> (optional, default to 0)</param>
-        /// <returns>Collection&lt;DriverPoint&gt;</returns>
-        Collection<DriverPoint> PointsDriverPointsGet (int? season = null, int? seriesId = null, int? raceId = null);
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Collection&lt;DriverPointsView&gt;</returns>
+        Collection<DriverPointsView> PointsDriverPointsGet (int? raceId = null);
 
         /// <summary>
         /// 
@@ -43,11 +41,9 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
-        /// <param name="raceId"> (optional, default to 0)</param>
-        /// <returns>ApiResponse of Collection&lt;DriverPoint&gt;</returns>
-        ApiResponse<Collection<DriverPoint>> PointsDriverPointsGetWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null);
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>ApiResponse of Collection&lt;DriverPointsView&gt;</returns>
+        ApiResponse<Collection<DriverPointsView>> PointsDriverPointsGetWithHttpInfo (int? raceId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -107,11 +103,9 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
-        /// <param name="raceId"> (optional, default to 0)</param>
-        /// <returns>Task of Collection&lt;DriverPoint&gt;</returns>
-        System.Threading.Tasks.Task<Collection<DriverPoint>> PointsDriverPointsGetAsync (int? season = null, int? seriesId = null, int? raceId = null);
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Task of Collection&lt;DriverPointsView&gt;</returns>
+        System.Threading.Tasks.Task<Collection<DriverPointsView>> PointsDriverPointsGetAsync (int? raceId = null);
 
         /// <summary>
         /// 
@@ -120,11 +114,9 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
-        /// <param name="raceId"> (optional, default to 0)</param>
-        /// <returns>Task of ApiResponse (Collection&lt;DriverPoint&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Collection<DriverPoint>>> PointsDriverPointsGetAsyncWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null);
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Task of ApiResponse (Collection&lt;DriverPointsView&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Collection<DriverPointsView>>> PointsDriverPointsGetAsyncWithHttpInfo (int? raceId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -290,13 +282,11 @@ namespace NASCAR.Data.Client.Api
         ///  
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
-        /// <param name="raceId"> (optional, default to 0)</param>
-        /// <returns>Collection&lt;DriverPoint&gt;</returns>
-        public Collection<DriverPoint> PointsDriverPointsGet (int? season = null, int? seriesId = null, int? raceId = null)
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Collection&lt;DriverPointsView&gt;</returns>
+        public Collection<DriverPointsView> PointsDriverPointsGet (int? raceId = null)
         {
-             ApiResponse<Collection<DriverPoint>> localVarResponse = PointsDriverPointsGetWithHttpInfo(season, seriesId, raceId);
+             ApiResponse<Collection<DriverPointsView>> localVarResponse = PointsDriverPointsGetWithHttpInfo(raceId);
              return localVarResponse.Data;
         }
 
@@ -304,11 +294,9 @@ namespace NASCAR.Data.Client.Api
         ///  
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
-        /// <param name="raceId"> (optional, default to 0)</param>
-        /// <returns>ApiResponse of Collection&lt;DriverPoint&gt;</returns>
-        public ApiResponse< Collection<DriverPoint> > PointsDriverPointsGetWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null)
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>ApiResponse of Collection&lt;DriverPointsView&gt;</returns>
+        public ApiResponse< Collection<DriverPointsView> > PointsDriverPointsGetWithHttpInfo (int? raceId = null)
         {
 
             var localVarPath = "/points/driver-points";
@@ -334,8 +322,6 @@ namespace NASCAR.Data.Client.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (season != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "season", season)); // query parameter
-            if (seriesId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "series_id", seriesId)); // query parameter
             if (raceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "race_id", raceId)); // query parameter
             // authentication (Bearer) required
             // bearer required
@@ -357,22 +343,20 @@ namespace NASCAR.Data.Client.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Collection<DriverPoint>>(localVarStatusCode,
+            return new ApiResponse<Collection<DriverPointsView>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (Collection<DriverPoint>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<DriverPoint>)));
+                (Collection<DriverPointsView>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<DriverPointsView>)));
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
-        /// <param name="raceId"> (optional, default to 0)</param>
-        /// <returns>Task of Collection&lt;DriverPoint&gt;</returns>
-        public async System.Threading.Tasks.Task<Collection<DriverPoint>> PointsDriverPointsGetAsync (int? season = null, int? seriesId = null, int? raceId = null)
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Task of Collection&lt;DriverPointsView&gt;</returns>
+        public async System.Threading.Tasks.Task<Collection<DriverPointsView>> PointsDriverPointsGetAsync (int? raceId = null)
         {
-             ApiResponse<Collection<DriverPoint>> localVarResponse = await PointsDriverPointsGetAsyncWithHttpInfo(season, seriesId, raceId);
+             ApiResponse<Collection<DriverPointsView>> localVarResponse = await PointsDriverPointsGetAsyncWithHttpInfo(raceId);
              return localVarResponse.Data;
 
         }
@@ -381,11 +365,9 @@ namespace NASCAR.Data.Client.Api
         ///  
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
-        /// <param name="raceId"> (optional, default to 0)</param>
-        /// <returns>Task of ApiResponse (Collection&lt;DriverPoint&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Collection<DriverPoint>>> PointsDriverPointsGetAsyncWithHttpInfo (int? season = null, int? seriesId = null, int? raceId = null)
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Task of ApiResponse (Collection&lt;DriverPointsView&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Collection<DriverPointsView>>> PointsDriverPointsGetAsyncWithHttpInfo (int? raceId = null)
         {
 
             var localVarPath = "/points/driver-points";
@@ -411,8 +393,6 @@ namespace NASCAR.Data.Client.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (season != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "season", season)); // query parameter
-            if (seriesId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "series_id", seriesId)); // query parameter
             if (raceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "race_id", raceId)); // query parameter
             // authentication (Bearer) required
             // bearer required
@@ -434,9 +414,9 @@ namespace NASCAR.Data.Client.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Collection<DriverPoint>>(localVarStatusCode,
+            return new ApiResponse<Collection<DriverPointsView>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (Collection<DriverPoint>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<DriverPoint>)));
+                (Collection<DriverPointsView>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<DriverPointsView>)));
         }
 
         /// <summary>

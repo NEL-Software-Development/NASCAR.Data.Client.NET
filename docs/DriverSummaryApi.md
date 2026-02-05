@@ -1,14 +1,14 @@
 # NASCAR.Data.Client.Api.DriverSummaryApi
 
-All URIs are relative to */*
+All URIs are relative to */api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DriverSummary**](DriverSummaryApi.md#driversummary) | **GET** /driver-summary | 
+[**DriverSummaryGet**](DriverSummaryApi.md#driversummaryget) | **GET** /driver-summary | 
 
-<a name="driversummary"></a>
-# **DriverSummary**
-> Collection<DriverSummary> DriverSummary (int? seriesId = null, int? season = null, int? driverId = null)
+<a name="driversummaryget"></a>
+# **DriverSummaryGet**
+> Collection<DriverSummary> DriverSummaryGet (int? seriesId = null, int? season = null, int? driverId = null)
 
 
 
@@ -22,7 +22,7 @@ using NASCAR.Data.Client.Model;
 
 namespace Example
 {
-    public class DriverSummaryExample
+    public class DriverSummaryGetExample
     {
         public void main()
         {
@@ -34,12 +34,12 @@ namespace Example
 
             try
             {
-                Collection&lt;DriverSummary&gt; result = apiInstance.DriverSummary(seriesId, season, driverId);
+                Collection&lt;DriverSummary&gt; result = apiInstance.DriverSummaryGet(seriesId, season, driverId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling DriverSummaryApi.DriverSummary: " + e.Message );
+                Debug.Print("Exception when calling DriverSummaryApi.DriverSummaryGet: " + e.Message );
             }
         }
     }
