@@ -5,13 +5,15 @@ using NASCAR.Data.Client.Utility;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace NASCAR.Data.Client.Example
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
+            //Using a token manager
             TokenManager _tokenManager = new TokenManager();
 
             if(_tokenManager.GetAccessToken().IsExpired())
@@ -21,21 +23,33 @@ namespace NASCAR.Data.Client.Example
                 _tokenManager.StoreRefreshToken(tokenResponse);
             }
 
-            Configuration _config = new Configuration()
-            {
-                AccessToken = _tokenManager.GetAccessToken()
-            };
+            var config = Configuration.Default;
 
-            CompanyApi _companies = new CompanyApi(_config);
-            DriverApi _drivers = new DriverApi(_config);
+            config.BasePath = "https://localhost:54561";
+
+            var token = _tokenManager.GetAccessToken();
+            config.AccessToken = token;
+            config.AddApiKey("api_key", token);
+            config.AddApiKeyPrefix("api_key", "Bearer");
+
+
+            //Using Api's
+            CompanyApi _companies = new CompanyApi(config);
+            DriverApi _drivers = new DriverApi(config);
 
             Collection<Company> companyResult = _companies.CompanySearchGet("NASCAR");
-            Collection<Driver> driverResult = _drivers.DriverSeasonGet(season: 2023, seriesId: 1);
-
+            Collection<Driver> driverResult = _drivers.DriverSeasonGet(season: 2025, seriesId: 1);
 
             Console.WriteLine("Found " + companyResult.Count() + " companies.");
             Console.WriteLine("Found " + driverResult.Count() + " drivers.");
+
+            Console.WriteLine("Press ENTER to continue to subscription example.");
             Console.ReadLine();
+
+            //Subscription Example
+            SubscriptionManager.Initialize(config);
+            SubscriptionManager.Add("Drivers");
+            await SubscriptionManager.Start();
         }
     }
 }
