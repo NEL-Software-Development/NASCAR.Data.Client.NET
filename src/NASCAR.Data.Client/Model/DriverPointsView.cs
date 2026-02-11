@@ -35,14 +35,14 @@ namespace NASCAR.Data.Client.Model
         /// <param name="seriesId">seriesId.</param>
         /// <param name="historyRaceId">historyRaceId.</param>
         /// <param name="timingRunId">timingRunId.</param>
-        /// <param name="playoffRoundNumber">playoffRoundNumber.</param>
+        /// <param name="roundNumber">roundNumber.</param>
         /// <param name="driverPoints">driverPoints.</param>
-        public DriverPointsView(int? seriesId = default(int?), int? historyRaceId = default(int?), int? timingRunId = default(int?), int? playoffRoundNumber = default(int?), Collection<LiveDriverPointsSlim> driverPoints = default(Collection<LiveDriverPointsSlim>))
+        public DriverPointsView(int? seriesId = default(int?), int? historyRaceId = default(int?), int? timingRunId = default(int?), int? roundNumber = default(int?), Collection<DriverPointsSlim> driverPoints = default(Collection<DriverPointsSlim>))
         {
             this.SeriesId = seriesId;
             this.HistoryRaceId = historyRaceId;
             this.TimingRunId = timingRunId;
-            this.PlayoffRoundNumber = playoffRoundNumber;
+            this.RoundNumber = roundNumber;
             this.DriverPoints = driverPoints;
         }
         
@@ -65,16 +65,16 @@ namespace NASCAR.Data.Client.Model
         public int? TimingRunId { get; set; }
 
         /// <summary>
-        /// Gets or Sets PlayoffRoundNumber
+        /// Gets or Sets RoundNumber
         /// </summary>
-        [DataMember(Name="playoff_round_number", EmitDefaultValue=false)]
-        public int? PlayoffRoundNumber { get; set; }
+        [DataMember(Name="round_number", EmitDefaultValue=false)]
+        public int? RoundNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets DriverPoints
         /// </summary>
         [DataMember(Name="DriverPoints", EmitDefaultValue=false)]
-        public Collection<LiveDriverPointsSlim> DriverPoints { get; set; }
+        public Collection<DriverPointsSlim> DriverPoints { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -87,7 +87,7 @@ namespace NASCAR.Data.Client.Model
             sb.Append("  SeriesId: ").Append(SeriesId).Append("\n");
             sb.Append("  HistoryRaceId: ").Append(HistoryRaceId).Append("\n");
             sb.Append("  TimingRunId: ").Append(TimingRunId).Append("\n");
-            sb.Append("  PlayoffRoundNumber: ").Append(PlayoffRoundNumber).Append("\n");
+            sb.Append("  RoundNumber: ").Append(RoundNumber).Append("\n");
             sb.Append("  DriverPoints: ").Append(DriverPoints).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -139,9 +139,9 @@ namespace NASCAR.Data.Client.Model
                     this.TimingRunId.Equals(input.TimingRunId))
                 ) && 
                 (
-                    this.PlayoffRoundNumber == input.PlayoffRoundNumber ||
-                    (this.PlayoffRoundNumber != null &&
-                    this.PlayoffRoundNumber.Equals(input.PlayoffRoundNumber))
+                    this.RoundNumber == input.RoundNumber ||
+                    (this.RoundNumber != null &&
+                    this.RoundNumber.Equals(input.RoundNumber))
                 ) && 
                 (
                     this.DriverPoints == input.DriverPoints ||
@@ -166,8 +166,8 @@ namespace NASCAR.Data.Client.Model
                     hashCode = hashCode * 59 + this.HistoryRaceId.GetHashCode();
                 if (this.TimingRunId != null)
                     hashCode = hashCode * 59 + this.TimingRunId.GetHashCode();
-                if (this.PlayoffRoundNumber != null)
-                    hashCode = hashCode * 59 + this.PlayoffRoundNumber.GetHashCode();
+                if (this.RoundNumber != null)
+                    hashCode = hashCode * 59 + this.RoundNumber.GetHashCode();
                 if (this.DriverPoints != null)
                     hashCode = hashCode * 59 + this.DriverPoints.GetHashCode();
                 return hashCode;
