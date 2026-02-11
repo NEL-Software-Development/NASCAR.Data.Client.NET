@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int?** | Gets or sets the unique identifier for the track configuration. | [optional] 
+**Id** | **int?** | Unique identifier given and used by the NASCAR Data API | [optional] 
 **TrackId** | **int?** | Gets or sets the unique identifier for the track. | [optional] 
 **HistoryTrackConfigurationId** | **int?** | Gets or sets the historical identifier for the track configuration. | [optional] 
 **TrackName** | **string** | Gets or sets the name of the track. | [optional] 

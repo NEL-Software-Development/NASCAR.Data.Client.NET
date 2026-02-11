@@ -20,7 +20,7 @@ namespace NASCAR.Data.Client.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-        public interface IVendorApi : IApiAccessor
+        public interface IStatsApi : IApiAccessor
     {
         #region Synchronous Operations
         /// <summary>
@@ -30,9 +30,9 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>ConeCoordinatesListETLSaveResult</returns>
-        ConeCoordinatesListETLSaveResult VendorConeCoordinatesPost (ConeCoordinatesIngest body = null);
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Collection&lt;LoopStat&gt;</returns>
+        Collection<LoopStat> StatsLoopStatsGet (int? raceId = null);
 
         /// <summary>
         /// 
@@ -41,9 +41,9 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of ConeCoordinatesListETLSaveResult</returns>
-        ApiResponse<ConeCoordinatesListETLSaveResult> VendorConeCoordinatesPostWithHttpInfo (ConeCoordinatesIngest body = null);
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>ApiResponse of Collection&lt;LoopStat&gt;</returns>
+        ApiResponse<Collection<LoopStat>> StatsLoopStatsGetWithHttpInfo (int? raceId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -51,9 +51,9 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns></returns>
-        void VendorCrlTestresultPost (CrlFormFoxResult body = null);
+        /// <param name="key"> (optional)</param>
+        /// <returns>byte[]</returns>
+        byte[] StatsReportGet (string key = null);
 
         /// <summary>
         /// 
@@ -62,9 +62,9 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> VendorCrlTestresultPostWithHttpInfo (CrlFormFoxResult body = null);
+        /// <param name="key"> (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> StatsReportGetWithHttpInfo (string key = null);
         /// <summary>
         /// 
         /// </summary>
@@ -72,9 +72,9 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>TireListETLSaveResult</returns>
-        TireListETLSaveResult VendorTiresPost (Collection<Tire> body = null);
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>AvailableReports</returns>
+        AvailableReports StatsReportsGet (int? raceId = null);
 
         /// <summary>
         /// 
@@ -83,9 +83,9 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of TireListETLSaveResult</returns>
-        ApiResponse<TireListETLSaveResult> VendorTiresPostWithHttpInfo (Collection<Tire> body = null);
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>ApiResponse of AvailableReports</returns>
+        ApiResponse<AvailableReports> StatsReportsGetWithHttpInfo (int? raceId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -93,9 +93,10 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>OpticalTrackingUTMOffsetListETLSaveResult</returns>
-        OpticalTrackingUTMOffsetListETLSaveResult VendorUtmOffsetsPost (Collection<OpticalTrackingUTMOffset> body = null);
+        /// <param name="seriesId"> (optional)</param>
+        /// <param name="season"> (optional)</param>
+        /// <returns>Collection&lt;SeasonStat&gt;</returns>
+        Collection<SeasonStat> StatsSeasonGet (int? seriesId = null, int? season = null);
 
         /// <summary>
         /// 
@@ -104,30 +105,10 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of OpticalTrackingUTMOffsetListETLSaveResult</returns>
-        ApiResponse<OpticalTrackingUTMOffsetListETLSaveResult> VendorUtmOffsetsPostWithHttpInfo (Collection<OpticalTrackingUTMOffset> body = null);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>WicketResponse</returns>
-        WicketResponse VendorWicketRequestPost (WicketRequest body = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of WicketResponse</returns>
-        ApiResponse<WicketResponse> VendorWicketRequestPostWithHttpInfo (WicketRequest body = null);
+        /// <param name="seriesId"> (optional)</param>
+        /// <param name="season"> (optional)</param>
+        /// <returns>ApiResponse of Collection&lt;SeasonStat&gt;</returns>
+        ApiResponse<Collection<SeasonStat>> StatsSeasonGetWithHttpInfo (int? seriesId = null, int? season = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -137,9 +118,9 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of ConeCoordinatesListETLSaveResult</returns>
-        System.Threading.Tasks.Task<ConeCoordinatesListETLSaveResult> VendorConeCoordinatesPostAsync (ConeCoordinatesIngest body = null);
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Task of Collection&lt;LoopStat&gt;</returns>
+        System.Threading.Tasks.Task<Collection<LoopStat>> StatsLoopStatsGetAsync (int? raceId = null);
 
         /// <summary>
         /// 
@@ -148,9 +129,9 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse (ConeCoordinatesListETLSaveResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConeCoordinatesListETLSaveResult>> VendorConeCoordinatesPostAsyncWithHttpInfo (ConeCoordinatesIngest body = null);
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Task of ApiResponse (Collection&lt;LoopStat&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Collection<LoopStat>>> StatsLoopStatsGetAsyncWithHttpInfo (int? raceId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -158,9 +139,9 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task VendorCrlTestresultPostAsync (CrlFormFoxResult body = null);
+        /// <param name="key"> (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> StatsReportGetAsync (string key = null);
 
         /// <summary>
         /// 
@@ -169,9 +150,9 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> VendorCrlTestresultPostAsyncWithHttpInfo (CrlFormFoxResult body = null);
+        /// <param name="key"> (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> StatsReportGetAsyncWithHttpInfo (string key = null);
         /// <summary>
         /// 
         /// </summary>
@@ -179,9 +160,9 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of TireListETLSaveResult</returns>
-        System.Threading.Tasks.Task<TireListETLSaveResult> VendorTiresPostAsync (Collection<Tire> body = null);
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Task of AvailableReports</returns>
+        System.Threading.Tasks.Task<AvailableReports> StatsReportsGetAsync (int? raceId = null);
 
         /// <summary>
         /// 
@@ -190,9 +171,9 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse (TireListETLSaveResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TireListETLSaveResult>> VendorTiresPostAsyncWithHttpInfo (Collection<Tire> body = null);
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Task of ApiResponse (AvailableReports)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AvailableReports>> StatsReportsGetAsyncWithHttpInfo (int? raceId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -200,9 +181,10 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of OpticalTrackingUTMOffsetListETLSaveResult</returns>
-        System.Threading.Tasks.Task<OpticalTrackingUTMOffsetListETLSaveResult> VendorUtmOffsetsPostAsync (Collection<OpticalTrackingUTMOffset> body = null);
+        /// <param name="seriesId"> (optional)</param>
+        /// <param name="season"> (optional)</param>
+        /// <returns>Task of Collection&lt;SeasonStat&gt;</returns>
+        System.Threading.Tasks.Task<Collection<SeasonStat>> StatsSeasonGetAsync (int? seriesId = null, int? season = null);
 
         /// <summary>
         /// 
@@ -211,45 +193,25 @@ namespace NASCAR.Data.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse (OpticalTrackingUTMOffsetListETLSaveResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OpticalTrackingUTMOffsetListETLSaveResult>> VendorUtmOffsetsPostAsyncWithHttpInfo (Collection<OpticalTrackingUTMOffset> body = null);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of WicketResponse</returns>
-        System.Threading.Tasks.Task<WicketResponse> VendorWicketRequestPostAsync (WicketRequest body = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse (WicketResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WicketResponse>> VendorWicketRequestPostAsyncWithHttpInfo (WicketRequest body = null);
+        /// <param name="seriesId"> (optional)</param>
+        /// <param name="season"> (optional)</param>
+        /// <returns>Task of ApiResponse (Collection&lt;SeasonStat&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Collection<SeasonStat>>> StatsSeasonGetAsyncWithHttpInfo (int? seriesId = null, int? season = null);
         #endregion Asynchronous Operations
     }
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-        public partial class VendorApi : IVendorApi
+        public partial class StatsApi : IStatsApi
     {
         private NASCAR.Data.Client.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="VendorApi"/> class.
+        /// Initializes a new instance of the <see cref="StatsApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public VendorApi(String basePath)
+        public StatsApi(String basePath)
         {
             this.Configuration = new NASCAR.Data.Client.Client.Configuration { BasePath = basePath };
 
@@ -257,10 +219,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="VendorApi"/> class
+        /// Initializes a new instance of the <see cref="StatsApi"/> class
         /// </summary>
         /// <returns></returns>
-        public VendorApi()
+        public StatsApi()
         {
             this.Configuration = NASCAR.Data.Client.Client.Configuration.Default;
 
@@ -268,12 +230,12 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="VendorApi"/> class
+        /// Initializes a new instance of the <see cref="StatsApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public VendorApi(NASCAR.Data.Client.Client.Configuration configuration = null)
+        public StatsApi(NASCAR.Data.Client.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = NASCAR.Data.Client.Client.Configuration.Default;
@@ -350,11 +312,11 @@ namespace NASCAR.Data.Client.Api
         ///  
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>ConeCoordinatesListETLSaveResult</returns>
-        public ConeCoordinatesListETLSaveResult VendorConeCoordinatesPost (ConeCoordinatesIngest body = null)
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Collection&lt;LoopStat&gt;</returns>
+        public Collection<LoopStat> StatsLoopStatsGet (int? raceId = null)
         {
-             ApiResponse<ConeCoordinatesListETLSaveResult> localVarResponse = VendorConeCoordinatesPostWithHttpInfo(body);
+             ApiResponse<Collection<LoopStat>> localVarResponse = StatsLoopStatsGetWithHttpInfo(raceId);
              return localVarResponse.Data;
         }
 
@@ -362,12 +324,12 @@ namespace NASCAR.Data.Client.Api
         ///  
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of ConeCoordinatesListETLSaveResult</returns>
-        public ApiResponse< ConeCoordinatesListETLSaveResult > VendorConeCoordinatesPostWithHttpInfo (ConeCoordinatesIngest body = null)
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>ApiResponse of Collection&lt;LoopStat&gt;</returns>
+        public ApiResponse< Collection<LoopStat> > StatsLoopStatsGetWithHttpInfo (int? raceId = null)
         {
 
-            var localVarPath = "/vendor/cone-coordinates";
+            var localVarPath = "/stats/loop-stats";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -377,9 +339,6 @@ namespace NASCAR.Data.Client.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -393,14 +352,7 @@ namespace NASCAR.Data.Client.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
+            if (raceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "race_id", raceId)); // query parameter
             // authentication (Bearer) required
             // bearer required
             if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
@@ -410,31 +362,31 @@ namespace NASCAR.Data.Client.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("VendorConeCoordinatesPost", localVarResponse);
+                Exception exception = ExceptionFactory("StatsLoopStatsGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ConeCoordinatesListETLSaveResult>(localVarStatusCode,
+            return new ApiResponse<Collection<LoopStat>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (ConeCoordinatesListETLSaveResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConeCoordinatesListETLSaveResult)));
+                (Collection<LoopStat>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<LoopStat>)));
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of ConeCoordinatesListETLSaveResult</returns>
-        public async System.Threading.Tasks.Task<ConeCoordinatesListETLSaveResult> VendorConeCoordinatesPostAsync (ConeCoordinatesIngest body = null)
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Task of Collection&lt;LoopStat&gt;</returns>
+        public async System.Threading.Tasks.Task<Collection<LoopStat>> StatsLoopStatsGetAsync (int? raceId = null)
         {
-             ApiResponse<ConeCoordinatesListETLSaveResult> localVarResponse = await VendorConeCoordinatesPostAsyncWithHttpInfo(body);
+             ApiResponse<Collection<LoopStat>> localVarResponse = await StatsLoopStatsGetAsyncWithHttpInfo(raceId);
              return localVarResponse.Data;
 
         }
@@ -443,12 +395,12 @@ namespace NASCAR.Data.Client.Api
         ///  
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse (ConeCoordinatesListETLSaveResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConeCoordinatesListETLSaveResult>> VendorConeCoordinatesPostAsyncWithHttpInfo (ConeCoordinatesIngest body = null)
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Task of ApiResponse (Collection&lt;LoopStat&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Collection<LoopStat>>> StatsLoopStatsGetAsyncWithHttpInfo (int? raceId = null)
         {
 
-            var localVarPath = "/vendor/cone-coordinates";
+            var localVarPath = "/stats/loop-stats";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -458,9 +410,6 @@ namespace NASCAR.Data.Client.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -474,14 +423,7 @@ namespace NASCAR.Data.Client.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
+            if (raceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "race_id", raceId)); // query parameter
             // authentication (Bearer) required
             // bearer required
             if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
@@ -491,43 +433,44 @@ namespace NASCAR.Data.Client.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("VendorConeCoordinatesPost", localVarResponse);
+                Exception exception = ExceptionFactory("StatsLoopStatsGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ConeCoordinatesListETLSaveResult>(localVarStatusCode,
+            return new ApiResponse<Collection<LoopStat>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (ConeCoordinatesListETLSaveResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConeCoordinatesListETLSaveResult)));
+                (Collection<LoopStat>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<LoopStat>)));
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns></returns>
-        public void VendorCrlTestresultPost (CrlFormFoxResult body = null)
+        /// <param name="key"> (optional)</param>
+        /// <returns>byte[]</returns>
+        public byte[] StatsReportGet (string key = null)
         {
-             VendorCrlTestresultPostWithHttpInfo(body);
+             ApiResponse<byte[]> localVarResponse = StatsReportGetWithHttpInfo(key);
+             return localVarResponse.Data;
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> VendorCrlTestresultPostWithHttpInfo (CrlFormFoxResult body = null)
+        /// <param name="key"> (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > StatsReportGetWithHttpInfo (string key = null)
         {
 
-            var localVarPath = "/vendor/crl_testresult";
+            var localVarPath = "/stats/report";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -537,27 +480,20 @@ namespace NASCAR.Data.Client.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
+            if (key != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "key", key)); // query parameter
             // authentication (Bearer) required
             // bearer required
             if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
@@ -567,121 +503,45 @@ namespace NASCAR.Data.Client.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("VendorCrlTestresultPost", localVarResponse);
+                Exception exception = ExceptionFactory("StatsReportGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                null);
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task VendorCrlTestresultPostAsync (CrlFormFoxResult body = null)
+        /// <param name="key"> (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> StatsReportGetAsync (string key = null)
         {
-             await VendorCrlTestresultPostAsyncWithHttpInfo(body);
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> VendorCrlTestresultPostAsyncWithHttpInfo (CrlFormFoxResult body = null)
-        {
-
-            var localVarPath = "/vendor/crl_testresult";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-            // authentication (Bearer) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("VendorCrlTestresultPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                null);
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>TireListETLSaveResult</returns>
-        public TireListETLSaveResult VendorTiresPost (Collection<Tire> body = null)
-        {
-             ApiResponse<TireListETLSaveResult> localVarResponse = VendorTiresPostWithHttpInfo(body);
+             ApiResponse<byte[]> localVarResponse = await StatsReportGetAsyncWithHttpInfo(key);
              return localVarResponse.Data;
+
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of TireListETLSaveResult</returns>
-        public ApiResponse< TireListETLSaveResult > VendorTiresPostWithHttpInfo (Collection<Tire> body = null)
+        /// <param name="key"> (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> StatsReportGetAsyncWithHttpInfo (string key = null)
         {
 
-            var localVarPath = "/vendor/tires";
+            var localVarPath = "/stats/report";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -691,9 +551,6 @@ namespace NASCAR.Data.Client.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -707,14 +564,77 @@ namespace NASCAR.Data.Client.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (body != null && body.GetType() != typeof(byte[]))
+            if (key != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "key", key)); // query parameter
+            // authentication (Bearer) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
-            else
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
             {
-                localVarPostBody = body; // byte array
+                Exception exception = ExceptionFactory("StatsReportGet", localVarResponse);
+                if (exception != null) throw exception;
             }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>AvailableReports</returns>
+        public AvailableReports StatsReportsGet (int? raceId = null)
+        {
+             ApiResponse<AvailableReports> localVarResponse = StatsReportsGetWithHttpInfo(raceId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>ApiResponse of AvailableReports</returns>
+        public ApiResponse< AvailableReports > StatsReportsGetWithHttpInfo (int? raceId = null)
+        {
+
+            var localVarPath = "/stats/reports";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (raceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "race_id", raceId)); // query parameter
             // authentication (Bearer) required
             // bearer required
             if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
@@ -724,31 +644,31 @@ namespace NASCAR.Data.Client.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("VendorTiresPost", localVarResponse);
+                Exception exception = ExceptionFactory("StatsReportsGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TireListETLSaveResult>(localVarStatusCode,
+            return new ApiResponse<AvailableReports>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (TireListETLSaveResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TireListETLSaveResult)));
+                (AvailableReports) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AvailableReports)));
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of TireListETLSaveResult</returns>
-        public async System.Threading.Tasks.Task<TireListETLSaveResult> VendorTiresPostAsync (Collection<Tire> body = null)
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Task of AvailableReports</returns>
+        public async System.Threading.Tasks.Task<AvailableReports> StatsReportsGetAsync (int? raceId = null)
         {
-             ApiResponse<TireListETLSaveResult> localVarResponse = await VendorTiresPostAsyncWithHttpInfo(body);
+             ApiResponse<AvailableReports> localVarResponse = await StatsReportsGetAsyncWithHttpInfo(raceId);
              return localVarResponse.Data;
 
         }
@@ -757,12 +677,12 @@ namespace NASCAR.Data.Client.Api
         ///  
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse (TireListETLSaveResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TireListETLSaveResult>> VendorTiresPostAsyncWithHttpInfo (Collection<Tire> body = null)
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Task of ApiResponse (AvailableReports)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AvailableReports>> StatsReportsGetAsyncWithHttpInfo (int? raceId = null)
         {
 
-            var localVarPath = "/vendor/tires";
+            var localVarPath = "/stats/reports";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -772,9 +692,6 @@ namespace NASCAR.Data.Client.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -788,14 +705,7 @@ namespace NASCAR.Data.Client.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
+            if (raceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "race_id", raceId)); // query parameter
             // authentication (Bearer) required
             // bearer required
             if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
@@ -805,31 +715,32 @@ namespace NASCAR.Data.Client.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("VendorTiresPost", localVarResponse);
+                Exception exception = ExceptionFactory("StatsReportsGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TireListETLSaveResult>(localVarStatusCode,
+            return new ApiResponse<AvailableReports>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (TireListETLSaveResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TireListETLSaveResult)));
+                (AvailableReports) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AvailableReports)));
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>OpticalTrackingUTMOffsetListETLSaveResult</returns>
-        public OpticalTrackingUTMOffsetListETLSaveResult VendorUtmOffsetsPost (Collection<OpticalTrackingUTMOffset> body = null)
+        /// <param name="seriesId"> (optional)</param>
+        /// <param name="season"> (optional)</param>
+        /// <returns>Collection&lt;SeasonStat&gt;</returns>
+        public Collection<SeasonStat> StatsSeasonGet (int? seriesId = null, int? season = null)
         {
-             ApiResponse<OpticalTrackingUTMOffsetListETLSaveResult> localVarResponse = VendorUtmOffsetsPostWithHttpInfo(body);
+             ApiResponse<Collection<SeasonStat>> localVarResponse = StatsSeasonGetWithHttpInfo(seriesId, season);
              return localVarResponse.Data;
         }
 
@@ -837,12 +748,13 @@ namespace NASCAR.Data.Client.Api
         ///  
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of OpticalTrackingUTMOffsetListETLSaveResult</returns>
-        public ApiResponse< OpticalTrackingUTMOffsetListETLSaveResult > VendorUtmOffsetsPostWithHttpInfo (Collection<OpticalTrackingUTMOffset> body = null)
+        /// <param name="seriesId"> (optional)</param>
+        /// <param name="season"> (optional)</param>
+        /// <returns>ApiResponse of Collection&lt;SeasonStat&gt;</returns>
+        public ApiResponse< Collection<SeasonStat> > StatsSeasonGetWithHttpInfo (int? seriesId = null, int? season = null)
         {
 
-            var localVarPath = "/vendor/utm_offsets";
+            var localVarPath = "/stats/season";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -852,9 +764,6 @@ namespace NASCAR.Data.Client.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -868,14 +777,8 @@ namespace NASCAR.Data.Client.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
+            if (seriesId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "seriesId", seriesId)); // query parameter
+            if (season != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "season", season)); // query parameter
             // authentication (Bearer) required
             // bearer required
             if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
@@ -885,31 +788,32 @@ namespace NASCAR.Data.Client.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("VendorUtmOffsetsPost", localVarResponse);
+                Exception exception = ExceptionFactory("StatsSeasonGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<OpticalTrackingUTMOffsetListETLSaveResult>(localVarStatusCode,
+            return new ApiResponse<Collection<SeasonStat>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (OpticalTrackingUTMOffsetListETLSaveResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OpticalTrackingUTMOffsetListETLSaveResult)));
+                (Collection<SeasonStat>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<SeasonStat>)));
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of OpticalTrackingUTMOffsetListETLSaveResult</returns>
-        public async System.Threading.Tasks.Task<OpticalTrackingUTMOffsetListETLSaveResult> VendorUtmOffsetsPostAsync (Collection<OpticalTrackingUTMOffset> body = null)
+        /// <param name="seriesId"> (optional)</param>
+        /// <param name="season"> (optional)</param>
+        /// <returns>Task of Collection&lt;SeasonStat&gt;</returns>
+        public async System.Threading.Tasks.Task<Collection<SeasonStat>> StatsSeasonGetAsync (int? seriesId = null, int? season = null)
         {
-             ApiResponse<OpticalTrackingUTMOffsetListETLSaveResult> localVarResponse = await VendorUtmOffsetsPostAsyncWithHttpInfo(body);
+             ApiResponse<Collection<SeasonStat>> localVarResponse = await StatsSeasonGetAsyncWithHttpInfo(seriesId, season);
              return localVarResponse.Data;
 
         }
@@ -918,12 +822,13 @@ namespace NASCAR.Data.Client.Api
         ///  
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse (OpticalTrackingUTMOffsetListETLSaveResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OpticalTrackingUTMOffsetListETLSaveResult>> VendorUtmOffsetsPostAsyncWithHttpInfo (Collection<OpticalTrackingUTMOffset> body = null)
+        /// <param name="seriesId"> (optional)</param>
+        /// <param name="season"> (optional)</param>
+        /// <returns>Task of ApiResponse (Collection&lt;SeasonStat&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Collection<SeasonStat>>> StatsSeasonGetAsyncWithHttpInfo (int? seriesId = null, int? season = null)
         {
 
-            var localVarPath = "/vendor/utm_offsets";
+            var localVarPath = "/stats/season";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -933,9 +838,6 @@ namespace NASCAR.Data.Client.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -949,14 +851,8 @@ namespace NASCAR.Data.Client.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
+            if (seriesId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "seriesId", seriesId)); // query parameter
+            if (season != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "season", season)); // query parameter
             // authentication (Bearer) required
             // bearer required
             if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
@@ -966,181 +862,20 @@ namespace NASCAR.Data.Client.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("VendorUtmOffsetsPost", localVarResponse);
+                Exception exception = ExceptionFactory("StatsSeasonGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<OpticalTrackingUTMOffsetListETLSaveResult>(localVarStatusCode,
+            return new ApiResponse<Collection<SeasonStat>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (OpticalTrackingUTMOffsetListETLSaveResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OpticalTrackingUTMOffsetListETLSaveResult)));
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>WicketResponse</returns>
-        public WicketResponse VendorWicketRequestPost (WicketRequest body = null)
-        {
-             ApiResponse<WicketResponse> localVarResponse = VendorWicketRequestPostWithHttpInfo(body);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of WicketResponse</returns>
-        public ApiResponse< WicketResponse > VendorWicketRequestPostWithHttpInfo (WicketRequest body = null)
-        {
-
-            var localVarPath = "/vendor/wicket_request";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "text/plain",
-                "application/json",
-                "text/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-            // authentication (Bearer) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("VendorWicketRequestPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<WicketResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (WicketResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WicketResponse)));
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of WicketResponse</returns>
-        public async System.Threading.Tasks.Task<WicketResponse> VendorWicketRequestPostAsync (WicketRequest body = null)
-        {
-             ApiResponse<WicketResponse> localVarResponse = await VendorWicketRequestPostAsyncWithHttpInfo(body);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse (WicketResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WicketResponse>> VendorWicketRequestPostAsyncWithHttpInfo (WicketRequest body = null)
-        {
-
-            var localVarPath = "/vendor/wicket_request";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "text/plain",
-                "application/json",
-                "text/json"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (body != null && body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-            // authentication (Bearer) required
-            // bearer required
-            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("VendorWicketRequestPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<WicketResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (WicketResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WicketResponse)));
+                (Collection<SeasonStat>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<SeasonStat>)));
         }
 
     }
