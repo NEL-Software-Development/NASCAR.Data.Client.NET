@@ -35,11 +35,13 @@ namespace NASCAR.Data.Client.Model
         /// <param name="activity">The name of the activity.</param>
         /// <param name="startTime">Scheduled start time.</param>
         /// <param name="endTime">Scheduled end time (if any).</param>
-        public WeekendSchedule(string activity = default(string), DateTimeOffset? startTime = default(DateTimeOffset?), DateTimeOffset? endTime = default(DateTimeOffset?))
+        /// <param name="notes">Additional notes.</param>
+        public WeekendSchedule(string activity = default(string), DateTimeOffset? startTime = default(DateTimeOffset?), DateTimeOffset? endTime = default(DateTimeOffset?), string notes = default(string))
         {
             this.Activity = activity;
             this.StartTime = startTime;
             this.EndTime = endTime;
+            this.Notes = notes;
         }
         
         /// <summary>
@@ -64,6 +66,13 @@ namespace NASCAR.Data.Client.Model
         public DateTimeOffset? EndTime { get; set; }
 
         /// <summary>
+        /// Additional notes
+        /// </summary>
+        /// <value>Additional notes</value>
+        [DataMember(Name="notes", EmitDefaultValue=false)]
+        public string Notes { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -74,6 +83,7 @@ namespace NASCAR.Data.Client.Model
             sb.Append("  Activity: ").Append(Activity).Append("\n");
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
+            sb.Append("  Notes: ").Append(Notes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -122,6 +132,11 @@ namespace NASCAR.Data.Client.Model
                     this.EndTime == input.EndTime ||
                     (this.EndTime != null &&
                     this.EndTime.Equals(input.EndTime))
+                ) && 
+                (
+                    this.Notes == input.Notes ||
+                    (this.Notes != null &&
+                    this.Notes.Equals(input.Notes))
                 );
         }
 
@@ -140,6 +155,8 @@ namespace NASCAR.Data.Client.Model
                     hashCode = hashCode * 59 + this.StartTime.GetHashCode();
                 if (this.EndTime != null)
                     hashCode = hashCode * 59 + this.EndTime.GetHashCode();
+                if (this.Notes != null)
+                    hashCode = hashCode * 59 + this.Notes.GetHashCode();
                 return hashCode;
             }
         }

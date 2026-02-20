@@ -7,9 +7,11 @@ Method | HTTP request | Description
 [**RaceCautionsGet**](RaceApi.md#racecautionsget) | **GET** /race/cautions | 
 [**RaceDisciplineUpdatesGet**](RaceApi.md#racedisciplineupdatesget) | **GET** /race/discipline-updates | 
 [**RaceEntriesGet**](RaceApi.md#raceentriesget) | **GET** /race/entries | 
+[**RaceFastestLapsGet**](RaceApi.md#racefastestlapsget) | **GET** /race/fastest-laps | 
 [**RaceGet**](RaceApi.md#raceget) | **GET** /race | 
 [**RaceInfractionsGet**](RaceApi.md#raceinfractionsget) | **GET** /race/infractions | 
 [**RaceLapLeadersGet**](RaceApi.md#racelapleadersget) | **GET** /race/lap-leaders | 
+[**RaceLapchartGet**](RaceApi.md#racelapchartget) | **GET** /race/lapchart | 
 [**RaceLiveSessionGet**](RaceApi.md#racelivesessionget) | **GET** /race/live-session | 
 [**RaceLookupGet**](RaceApi.md#racelookupget) | **GET** /race/lookup | 
 [**RaceLoopStatsGet**](RaceApi.md#raceloopstatsget) | **GET** /race/loop-stats | 
@@ -201,6 +203,64 @@ Name | Type | Description  | Notes
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+<a name="racefastestlapsget"></a>
+# **RaceFastestLapsGet**
+> FastestLapResult RaceFastestLapsGet (int? raceId = null)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using NASCAR.Data.Client.Api;
+using NASCAR.Data.Client.Client;
+using NASCAR.Data.Client.Model;
+
+namespace Example
+{
+    public class RaceFastestLapsGetExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new RaceApi();
+            var raceId = 56;  // int? |  (optional) 
+
+            try
+            {
+                FastestLapResult result = apiInstance.RaceFastestLapsGet(raceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RaceApi.RaceFastestLapsGet: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **raceId** | **int?**|  | [optional] 
+
+### Return type
+
+[**FastestLapResult**](FastestLapResult.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="raceget"></a>
 # **RaceGet**
 > RaceDetails RaceGet (int? raceId = null)
@@ -364,6 +424,64 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Collection<LapLeader>**](LapLeader.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+<a name="racelapchartget"></a>
+# **RaceLapchartGet**
+> LapChartResult RaceLapchartGet (int? raceId = null)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using NASCAR.Data.Client.Api;
+using NASCAR.Data.Client.Client;
+using NASCAR.Data.Client.Model;
+
+namespace Example
+{
+    public class RaceLapchartGetExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new RaceApi();
+            var raceId = 56;  // int? |  (optional) 
+
+            try
+            {
+                LapChartResult result = apiInstance.RaceLapchartGet(raceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RaceApi.RaceLapchartGet: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **raceId** | **int?**|  | [optional] 
+
+### Return type
+
+[**LapChartResult**](LapChartResult.md)
 
 ### Authorization
 
