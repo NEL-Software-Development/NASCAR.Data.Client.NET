@@ -32,7 +32,7 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TrackConfiguration" /> class.
         /// </summary>
-        /// <param name="id">Gets or sets the unique identifier for the track configuration..</param>
+        /// <param name="id">Unique identifier given and used by the NASCAR Data API.</param>
         /// <param name="trackId">Gets or sets the unique identifier for the track..</param>
         /// <param name="historyTrackConfigurationId">Gets or sets the historical identifier for the track configuration..</param>
         /// <param name="trackName">Gets or sets the name of the track..</param>
@@ -69,9 +69,9 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or sets the unique identifier for the track configuration.
+        /// Unique identifier given and used by the NASCAR Data API
         /// </summary>
-        /// <value>Gets or sets the unique identifier for the track configuration.</value>
+        /// <value>Unique identifier given and used by the NASCAR Data API</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
