@@ -5,14 +5,12 @@ All URIs are relative to */api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**PointsDriverPointsGet**](PointsApi.md#pointsdriverpointsget) | **GET** /points/driver-points | 
-[**PointsDriverpointsGet**](PointsApi.md#pointsdriverpointsget) | **GET** /points/driverpoints | 
-[**PointsLiveDriverPointsGet**](PointsApi.md#pointslivedriverpointsget) | **GET** /points/live-driver-points | 
 [**PointsManufacturerPointsGet**](PointsApi.md#pointsmanufacturerpointsget) | **GET** /points/manufacturer-points | 
 [**PointsOwnerPointsGet**](PointsApi.md#pointsownerpointsget) | **GET** /points/owner-points | 
 
 <a name="pointsdriverpointsget"></a>
 # **PointsDriverPointsGet**
-> Collection<DriverPoint> PointsDriverPointsGet (int? season = null, int? seriesId = null, int? raceId = null)
+> Collection<DriverPointsView> PointsDriverPointsGet (int? raceId = null)
 
 
 
@@ -32,13 +30,11 @@ namespace Example
         {
 
             var apiInstance = new PointsApi();
-            var season = 56;  // int? |  (optional) 
-            var seriesId = 56;  // int? |  (optional) 
-            var raceId = 56;  // int? |  (optional)  (default to 0)
+            var raceId = 56;  // int? |  (optional) 
 
             try
             {
-                Collection&lt;DriverPoint&gt; result = apiInstance.PointsDriverPointsGet(season, seriesId, raceId);
+                Collection&lt;DriverPointsView&gt; result = apiInstance.PointsDriverPointsGet(raceId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -54,129 +50,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **season** | **int?**|  | [optional] 
- **seriesId** | **int?**|  | [optional] 
- **raceId** | **int?**|  | [optional] [default to 0]
-
-### Return type
-
-[**Collection<DriverPoint>**](DriverPoint.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="pointsdriverpointsget"></a>
-# **PointsDriverpointsGet**
-> Collection<DriverPointsView> PointsDriverpointsGet (int? raceId = null)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using NASCAR.Data.Client.Api;
-using NASCAR.Data.Client.Client;
-using NASCAR.Data.Client.Model;
-
-namespace Example
-{
-    public class PointsDriverpointsGetExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new PointsApi();
-            var raceId = 56;  // int? |  (optional) 
-
-            try
-            {
-                Collection&lt;DriverPointsView&gt; result = apiInstance.PointsDriverpointsGet(raceId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PointsApi.PointsDriverpointsGet: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
  **raceId** | **int?**|  | [optional] 
 
 ### Return type
 
 [**Collection<DriverPointsView>**](DriverPointsView.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="pointslivedriverpointsget"></a>
-# **PointsLiveDriverPointsGet**
-> Collection<LiveDriverPoints> PointsLiveDriverPointsGet (int? raceId = null)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using NASCAR.Data.Client.Api;
-using NASCAR.Data.Client.Client;
-using NASCAR.Data.Client.Model;
-
-namespace Example
-{
-    public class PointsLiveDriverPointsGetExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new PointsApi();
-            var raceId = 56;  // int? |  (optional) 
-
-            try
-            {
-                Collection&lt;LiveDriverPoints&gt; result = apiInstance.PointsLiveDriverPointsGet(raceId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PointsApi.PointsLiveDriverPointsGet: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **raceId** | **int?**|  | [optional] 
-
-### Return type
-
-[**Collection<LiveDriverPoints>**](LiveDriverPoints.md)
 
 ### Authorization
 
