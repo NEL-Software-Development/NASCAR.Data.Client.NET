@@ -24,35 +24,33 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// RaceWeekDetails
+    /// ConeCoordinatesIngest
     /// </summary>
     [DataContract]
-        public partial class RaceWeekDetails :  IEquatable<RaceWeekDetails>, IValidatableObject
+        public partial class ConeCoordinatesIngest :  IEquatable<ConeCoordinatesIngest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RaceWeekDetails" /> class.
+        /// Initializes a new instance of the <see cref="ConeCoordinatesIngest" /> class.
         /// </summary>
-        /// <param name="id">Unique identifier given and used by the NASCAR Data API.</param>
-        /// <param name="races">Raceweek race list.</param>
-        public RaceWeekDetails(int? id = default(int?), Collection<RaceDetails> races = default(Collection<RaceDetails>))
+        /// <param name="raceId">raceId.</param>
+        /// <param name="coordinates">coordinates.</param>
+        public ConeCoordinatesIngest(int? raceId = default(int?), Collection<Coordinate> coordinates = default(Collection<Coordinate>))
         {
-            this.Id = id;
-            this.Races = races;
+            this.RaceId = raceId;
+            this.Coordinates = coordinates;
         }
         
         /// <summary>
-        /// Unique identifier given and used by the NASCAR Data API
+        /// Gets or Sets RaceId
         /// </summary>
-        /// <value>Unique identifier given and used by the NASCAR Data API</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public int? Id { get; set; }
+        [DataMember(Name="RaceId", EmitDefaultValue=false)]
+        public int? RaceId { get; set; }
 
         /// <summary>
-        /// Raceweek race list
+        /// Gets or Sets Coordinates
         /// </summary>
-        /// <value>Raceweek race list</value>
-        [DataMember(Name="races", EmitDefaultValue=false)]
-        public Collection<RaceDetails> Races { get; set; }
+        [DataMember(Name="coordinates", EmitDefaultValue=false)]
+        public Collection<Coordinate> Coordinates { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -61,9 +59,9 @@ namespace NASCAR.Data.Client.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class RaceWeekDetails {\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Races: ").Append(Races).Append("\n");
+            sb.Append("class ConeCoordinatesIngest {\n");
+            sb.Append("  RaceId: ").Append(RaceId).Append("\n");
+            sb.Append("  Coordinates: ").Append(Coordinates).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -84,30 +82,30 @@ namespace NASCAR.Data.Client.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as RaceWeekDetails);
+            return this.Equals(input as ConeCoordinatesIngest);
         }
 
         /// <summary>
-        /// Returns true if RaceWeekDetails instances are equal
+        /// Returns true if ConeCoordinatesIngest instances are equal
         /// </summary>
-        /// <param name="input">Instance of RaceWeekDetails to be compared</param>
+        /// <param name="input">Instance of ConeCoordinatesIngest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(RaceWeekDetails input)
+        public bool Equals(ConeCoordinatesIngest input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Id == input.Id ||
-                    (this.Id != null &&
-                    this.Id.Equals(input.Id))
+                    this.RaceId == input.RaceId ||
+                    (this.RaceId != null &&
+                    this.RaceId.Equals(input.RaceId))
                 ) && 
                 (
-                    this.Races == input.Races ||
-                    this.Races != null &&
-                    input.Races != null &&
-                    this.Races.SequenceEqual(input.Races)
+                    this.Coordinates == input.Coordinates ||
+                    this.Coordinates != null &&
+                    input.Coordinates != null &&
+                    this.Coordinates.SequenceEqual(input.Coordinates)
                 );
         }
 
@@ -120,10 +118,10 @@ namespace NASCAR.Data.Client.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Id != null)
-                    hashCode = hashCode * 59 + this.Id.GetHashCode();
-                if (this.Races != null)
-                    hashCode = hashCode * 59 + this.Races.GetHashCode();
+                if (this.RaceId != null)
+                    hashCode = hashCode * 59 + this.RaceId.GetHashCode();
+                if (this.Coordinates != null)
+                    hashCode = hashCode * 59 + this.Coordinates.GetHashCode();
                 return hashCode;
             }
         }

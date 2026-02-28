@@ -32,17 +32,19 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TrackPath" /> class.
         /// </summary>
-        /// <param name="id">Gets or sets the unique identifier for the track path..</param>
+        /// <param name="id">Unique identifier given and used by the NASCAR Data API.</param>
         /// <param name="trackConfigurationId">Gets or sets the identifier of the associated track configuration..</param>
+        /// <param name="historyTrackPathId">The unique identifier for this track path in History..</param>
         /// <param name="trackId">Gets or sets the unique identifier for the track..</param>
         /// <param name="name">Gets or sets the name of the track path..</param>
         /// <param name="ordinalSortOrder">Gets or sets the ordinal sort order of the path..</param>
         /// <param name="pathData">Gets or sets the path data..</param>
         /// <param name="length">Gets or sets the length of the path..</param>
-        public TrackPath(int? id = default(int?), int? trackConfigurationId = default(int?), int? trackId = default(int?), string name = default(string), int? ordinalSortOrder = default(int?), string pathData = default(string), int? length = default(int?))
+        public TrackPath(int? id = default(int?), int? trackConfigurationId = default(int?), int? historyTrackPathId = default(int?), int? trackId = default(int?), string name = default(string), int? ordinalSortOrder = default(int?), string pathData = default(string), int? length = default(int?))
         {
             this.Id = id;
             this.TrackConfigurationId = trackConfigurationId;
+            this.HistoryTrackPathId = historyTrackPathId;
             this.TrackId = trackId;
             this.Name = name;
             this.OrdinalSortOrder = ordinalSortOrder;
@@ -51,9 +53,9 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or sets the unique identifier for the track path.
+        /// Unique identifier given and used by the NASCAR Data API
         /// </summary>
-        /// <value>Gets or sets the unique identifier for the track path.</value>
+        /// <value>Unique identifier given and used by the NASCAR Data API</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
@@ -63,6 +65,13 @@ namespace NASCAR.Data.Client.Model
         /// <value>Gets or sets the identifier of the associated track configuration.</value>
         [DataMember(Name="track_configuration_id", EmitDefaultValue=false)]
         public int? TrackConfigurationId { get; set; }
+
+        /// <summary>
+        /// The unique identifier for this track path in History.
+        /// </summary>
+        /// <value>The unique identifier for this track path in History.</value>
+        [DataMember(Name="history_track_path_id", EmitDefaultValue=false)]
+        public int? HistoryTrackPathId { get; set; }
 
         /// <summary>
         /// Gets or sets the unique identifier for the track.
@@ -109,6 +118,7 @@ namespace NASCAR.Data.Client.Model
             sb.Append("class TrackPath {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  TrackConfigurationId: ").Append(TrackConfigurationId).Append("\n");
+            sb.Append("  HistoryTrackPathId: ").Append(HistoryTrackPathId).Append("\n");
             sb.Append("  TrackId: ").Append(TrackId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  OrdinalSortOrder: ").Append(OrdinalSortOrder).Append("\n");
@@ -159,6 +169,11 @@ namespace NASCAR.Data.Client.Model
                     this.TrackConfigurationId.Equals(input.TrackConfigurationId))
                 ) && 
                 (
+                    this.HistoryTrackPathId == input.HistoryTrackPathId ||
+                    (this.HistoryTrackPathId != null &&
+                    this.HistoryTrackPathId.Equals(input.HistoryTrackPathId))
+                ) && 
+                (
                     this.TrackId == input.TrackId ||
                     (this.TrackId != null &&
                     this.TrackId.Equals(input.TrackId))
@@ -198,6 +213,8 @@ namespace NASCAR.Data.Client.Model
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.TrackConfigurationId != null)
                     hashCode = hashCode * 59 + this.TrackConfigurationId.GetHashCode();
+                if (this.HistoryTrackPathId != null)
+                    hashCode = hashCode * 59 + this.HistoryTrackPathId.GetHashCode();
                 if (this.TrackId != null)
                     hashCode = hashCode * 59 + this.TrackId.GetHashCode();
                 if (this.Name != null)

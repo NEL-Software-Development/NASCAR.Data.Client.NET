@@ -24,35 +24,41 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// RaceWeekDetails
+    /// ConeCoordinatesListETLSaveResult
     /// </summary>
     [DataContract]
-        public partial class RaceWeekDetails :  IEquatable<RaceWeekDetails>, IValidatableObject
+        public partial class ConeCoordinatesListETLSaveResult :  IEquatable<ConeCoordinatesListETLSaveResult>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RaceWeekDetails" /> class.
+        /// Initializes a new instance of the <see cref="ConeCoordinatesListETLSaveResult" /> class.
         /// </summary>
-        /// <param name="id">Unique identifier given and used by the NASCAR Data API.</param>
-        /// <param name="races">Raceweek race list.</param>
-        public RaceWeekDetails(int? id = default(int?), Collection<RaceDetails> races = default(Collection<RaceDetails>))
+        /// <param name="success">success.</param>
+        /// <param name="message">message.</param>
+        /// <param name="data">data.</param>
+        public ConeCoordinatesListETLSaveResult(bool? success = default(bool?), string message = default(string), Collection<ConeCoordinates> data = default(Collection<ConeCoordinates>))
         {
-            this.Id = id;
-            this.Races = races;
+            this.Success = success;
+            this.Message = message;
+            this.Data = data;
         }
         
         /// <summary>
-        /// Unique identifier given and used by the NASCAR Data API
+        /// Gets or Sets Success
         /// </summary>
-        /// <value>Unique identifier given and used by the NASCAR Data API</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public int? Id { get; set; }
+        [DataMember(Name="Success", EmitDefaultValue=false)]
+        public bool? Success { get; set; }
 
         /// <summary>
-        /// Raceweek race list
+        /// Gets or Sets Message
         /// </summary>
-        /// <value>Raceweek race list</value>
-        [DataMember(Name="races", EmitDefaultValue=false)]
-        public Collection<RaceDetails> Races { get; set; }
+        [DataMember(Name="Message", EmitDefaultValue=false)]
+        public string Message { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Data
+        /// </summary>
+        [DataMember(Name="Data", EmitDefaultValue=false)]
+        public Collection<ConeCoordinates> Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -61,9 +67,10 @@ namespace NASCAR.Data.Client.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class RaceWeekDetails {\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Races: ").Append(Races).Append("\n");
+            sb.Append("class ConeCoordinatesListETLSaveResult {\n");
+            sb.Append("  Success: ").Append(Success).Append("\n");
+            sb.Append("  Message: ").Append(Message).Append("\n");
+            sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -84,30 +91,35 @@ namespace NASCAR.Data.Client.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as RaceWeekDetails);
+            return this.Equals(input as ConeCoordinatesListETLSaveResult);
         }
 
         /// <summary>
-        /// Returns true if RaceWeekDetails instances are equal
+        /// Returns true if ConeCoordinatesListETLSaveResult instances are equal
         /// </summary>
-        /// <param name="input">Instance of RaceWeekDetails to be compared</param>
+        /// <param name="input">Instance of ConeCoordinatesListETLSaveResult to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(RaceWeekDetails input)
+        public bool Equals(ConeCoordinatesListETLSaveResult input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Id == input.Id ||
-                    (this.Id != null &&
-                    this.Id.Equals(input.Id))
+                    this.Success == input.Success ||
+                    (this.Success != null &&
+                    this.Success.Equals(input.Success))
                 ) && 
                 (
-                    this.Races == input.Races ||
-                    this.Races != null &&
-                    input.Races != null &&
-                    this.Races.SequenceEqual(input.Races)
+                    this.Message == input.Message ||
+                    (this.Message != null &&
+                    this.Message.Equals(input.Message))
+                ) && 
+                (
+                    this.Data == input.Data ||
+                    this.Data != null &&
+                    input.Data != null &&
+                    this.Data.SequenceEqual(input.Data)
                 );
         }
 
@@ -120,10 +132,12 @@ namespace NASCAR.Data.Client.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Id != null)
-                    hashCode = hashCode * 59 + this.Id.GetHashCode();
-                if (this.Races != null)
-                    hashCode = hashCode * 59 + this.Races.GetHashCode();
+                if (this.Success != null)
+                    hashCode = hashCode * 59 + this.Success.GetHashCode();
+                if (this.Message != null)
+                    hashCode = hashCode * 59 + this.Message.GetHashCode();
+                if (this.Data != null)
+                    hashCode = hashCode * 59 + this.Data.GetHashCode();
                 return hashCode;
             }
         }
