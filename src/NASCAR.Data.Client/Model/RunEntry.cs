@@ -33,6 +33,7 @@ namespace NASCAR.Data.Client.Model
         /// Initializes a new instance of the <see cref="RunEntry" /> class.
         /// </summary>
         /// <param name="driverName">Driver name.</param>
+        /// <param name="driverId">Driver ID.</param>
         /// <param name="driverDetails">URL to driver details.</param>
         /// <param name="sponsor">Sponsor.</param>
         /// <param name="vehicleNumber">Vehicle number.</param>
@@ -41,9 +42,12 @@ namespace NASCAR.Data.Client.Model
         /// <param name="crewChief">Crew chief name.</param>
         /// <param name="modelYear">Vehicle model year.</param>
         /// <param name="model">Vehicle model.</param>
-        public RunEntry(string driverName = default(string), string driverDetails = default(string), string sponsor = default(string), string vehicleNumber = default(string), string vehicleDetails = default(string), string ownerName = default(string), string crewChief = default(string), int? modelYear = default(int?), string model = default(string))
+        /// <param name="teamName">Team name.</param>
+        /// <param name="lastModified">Date and time the entry was last modified.</param>
+        public RunEntry(string driverName = default(string), int? driverId = default(int?), string driverDetails = default(string), string sponsor = default(string), string vehicleNumber = default(string), string vehicleDetails = default(string), string ownerName = default(string), string crewChief = default(string), int? modelYear = default(int?), string model = default(string), string teamName = default(string), DateTimeOffset? lastModified = default(DateTimeOffset?))
         {
             this.DriverName = driverName;
+            this.DriverId = driverId;
             this.DriverDetails = driverDetails;
             this.Sponsor = sponsor;
             this.VehicleNumber = vehicleNumber;
@@ -52,6 +56,8 @@ namespace NASCAR.Data.Client.Model
             this.CrewChief = crewChief;
             this.ModelYear = modelYear;
             this.Model = model;
+            this.TeamName = teamName;
+            this.LastModified = lastModified;
         }
         
         /// <summary>
@@ -60,6 +66,13 @@ namespace NASCAR.Data.Client.Model
         /// <value>Driver name</value>
         [DataMember(Name="driver_name", EmitDefaultValue=false)]
         public string DriverName { get; set; }
+
+        /// <summary>
+        /// Driver ID
+        /// </summary>
+        /// <value>Driver ID</value>
+        [DataMember(Name="driver_id", EmitDefaultValue=false)]
+        public int? DriverId { get; set; }
 
         /// <summary>
         /// URL to driver details
@@ -118,6 +131,20 @@ namespace NASCAR.Data.Client.Model
         public string Model { get; set; }
 
         /// <summary>
+        /// Team name
+        /// </summary>
+        /// <value>Team name</value>
+        [DataMember(Name="team_name", EmitDefaultValue=false)]
+        public string TeamName { get; set; }
+
+        /// <summary>
+        /// Date and time the entry was last modified
+        /// </summary>
+        /// <value>Date and time the entry was last modified</value>
+        [DataMember(Name="last_modified", EmitDefaultValue=false)]
+        public DateTimeOffset? LastModified { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -126,6 +153,7 @@ namespace NASCAR.Data.Client.Model
             var sb = new StringBuilder();
             sb.Append("class RunEntry {\n");
             sb.Append("  DriverName: ").Append(DriverName).Append("\n");
+            sb.Append("  DriverId: ").Append(DriverId).Append("\n");
             sb.Append("  DriverDetails: ").Append(DriverDetails).Append("\n");
             sb.Append("  Sponsor: ").Append(Sponsor).Append("\n");
             sb.Append("  VehicleNumber: ").Append(VehicleNumber).Append("\n");
@@ -134,6 +162,8 @@ namespace NASCAR.Data.Client.Model
             sb.Append("  CrewChief: ").Append(CrewChief).Append("\n");
             sb.Append("  ModelYear: ").Append(ModelYear).Append("\n");
             sb.Append("  Model: ").Append(Model).Append("\n");
+            sb.Append("  TeamName: ").Append(TeamName).Append("\n");
+            sb.Append("  LastModified: ").Append(LastModified).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -174,6 +204,11 @@ namespace NASCAR.Data.Client.Model
                     this.DriverName.Equals(input.DriverName))
                 ) && 
                 (
+                    this.DriverId == input.DriverId ||
+                    (this.DriverId != null &&
+                    this.DriverId.Equals(input.DriverId))
+                ) && 
+                (
                     this.DriverDetails == input.DriverDetails ||
                     (this.DriverDetails != null &&
                     this.DriverDetails.Equals(input.DriverDetails))
@@ -212,6 +247,16 @@ namespace NASCAR.Data.Client.Model
                     this.Model == input.Model ||
                     (this.Model != null &&
                     this.Model.Equals(input.Model))
+                ) && 
+                (
+                    this.TeamName == input.TeamName ||
+                    (this.TeamName != null &&
+                    this.TeamName.Equals(input.TeamName))
+                ) && 
+                (
+                    this.LastModified == input.LastModified ||
+                    (this.LastModified != null &&
+                    this.LastModified.Equals(input.LastModified))
                 );
         }
 
@@ -226,6 +271,8 @@ namespace NASCAR.Data.Client.Model
                 int hashCode = 41;
                 if (this.DriverName != null)
                     hashCode = hashCode * 59 + this.DriverName.GetHashCode();
+                if (this.DriverId != null)
+                    hashCode = hashCode * 59 + this.DriverId.GetHashCode();
                 if (this.DriverDetails != null)
                     hashCode = hashCode * 59 + this.DriverDetails.GetHashCode();
                 if (this.Sponsor != null)
@@ -242,6 +289,10 @@ namespace NASCAR.Data.Client.Model
                     hashCode = hashCode * 59 + this.ModelYear.GetHashCode();
                 if (this.Model != null)
                     hashCode = hashCode * 59 + this.Model.GetHashCode();
+                if (this.TeamName != null)
+                    hashCode = hashCode * 59 + this.TeamName.GetHashCode();
+                if (this.LastModified != null)
+                    hashCode = hashCode * 59 + this.LastModified.GetHashCode();
                 return hashCode;
             }
         }

@@ -32,8 +32,9 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Track" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
+        /// <param name="id">Unique identifier given and used by the NASCAR Data API.</param>
         /// <param name="historyTrackId">History track id.</param>
+        /// <param name="nascaroneTrackId">nascaroneTrackId.</param>
         /// <param name="name">The name of the track.</param>
         /// <param name="owner">The owner of the track.</param>
         /// <param name="sponsorName">The name of the track sponsor.</param>
@@ -49,10 +50,11 @@ namespace NASCAR.Data.Client.Model
         /// <param name="length">The track&#x27;s total length in miles.</param>
         /// <param name="cautionCarSpeed">The track&#x27;s caution speed.</param>
         /// <param name="logo">The URL of the track logo.</param>
-        public Track(int? id = default(int?), int? historyTrackId = default(int?), string name = default(string), string owner = default(string), string sponsorName = default(string), string surface = default(string), string type = default(string), string banking = default(string), string description = default(string), string city = default(string), string state = default(string), int? frontstretchLength = default(int?), int? backstretchLength = default(int?), int? yearBuilt = default(int?), double? length = default(double?), int? cautionCarSpeed = default(int?), string logo = default(string))
+        public Track(int? id = default(int?), int? historyTrackId = default(int?), int? nascaroneTrackId = default(int?), string name = default(string), string owner = default(string), string sponsorName = default(string), string surface = default(string), string type = default(string), string banking = default(string), string description = default(string), string city = default(string), string state = default(string), int? frontstretchLength = default(int?), int? backstretchLength = default(int?), int? yearBuilt = default(int?), double? length = default(double?), int? cautionCarSpeed = default(int?), string logo = default(string))
         {
             this.Id = id;
             this.HistoryTrackId = historyTrackId;
+            this.NascaroneTrackId = nascaroneTrackId;
             this.Name = name;
             this.Owner = owner;
             this.SponsorName = sponsorName;
@@ -71,8 +73,9 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Unique identifier given and used by the NASCAR Data API
         /// </summary>
+        /// <value>Unique identifier given and used by the NASCAR Data API</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
@@ -82,6 +85,12 @@ namespace NASCAR.Data.Client.Model
         /// <value>History track id</value>
         [DataMember(Name="history_track_id", EmitDefaultValue=false)]
         public int? HistoryTrackId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets NascaroneTrackId
+        /// </summary>
+        [DataMember(Name="nascarone_track_id", EmitDefaultValue=false)]
+        public int? NascaroneTrackId { get; set; }
 
         /// <summary>
         /// The name of the track
@@ -198,6 +207,7 @@ namespace NASCAR.Data.Client.Model
             sb.Append("class Track {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  HistoryTrackId: ").Append(HistoryTrackId).Append("\n");
+            sb.Append("  NascaroneTrackId: ").Append(NascaroneTrackId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Owner: ").Append(Owner).Append("\n");
             sb.Append("  SponsorName: ").Append(SponsorName).Append("\n");
@@ -256,6 +266,11 @@ namespace NASCAR.Data.Client.Model
                     this.HistoryTrackId == input.HistoryTrackId ||
                     (this.HistoryTrackId != null &&
                     this.HistoryTrackId.Equals(input.HistoryTrackId))
+                ) && 
+                (
+                    this.NascaroneTrackId == input.NascaroneTrackId ||
+                    (this.NascaroneTrackId != null &&
+                    this.NascaroneTrackId.Equals(input.NascaroneTrackId))
                 ) && 
                 (
                     this.Name == input.Name ||
@@ -347,6 +362,8 @@ namespace NASCAR.Data.Client.Model
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.HistoryTrackId != null)
                     hashCode = hashCode * 59 + this.HistoryTrackId.GetHashCode();
+                if (this.NascaroneTrackId != null)
+                    hashCode = hashCode * 59 + this.NascaroneTrackId.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Owner != null)
