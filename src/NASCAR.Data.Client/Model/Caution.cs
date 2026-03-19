@@ -38,7 +38,8 @@ namespace NASCAR.Data.Client.Model
         /// <param name="comment">Comments about the caution.</param>
         /// <param name="reason">The reason the caution was thrown.</param>
         /// <param name="flagTime">The time the caution was thrown.</param>
-        public Caution(int? lapStart = default(int?), int? lapEnd = default(int?), string beneficiary = default(string), string comment = default(string), string reason = default(string), DateTimeOffset? flagTime = default(DateTimeOffset?))
+        /// <param name="flagState">The flag state at the time of caution (Green, Yellow, Red, Checkered, White, Stop, Unkown, Warm, Invalid).</param>
+        public Caution(int? lapStart = default(int?), int? lapEnd = default(int?), string beneficiary = default(string), string comment = default(string), string reason = default(string), DateTimeOffset? flagTime = default(DateTimeOffset?), string flagState = default(string))
         {
             this.LapStart = lapStart;
             this.LapEnd = lapEnd;
@@ -46,6 +47,7 @@ namespace NASCAR.Data.Client.Model
             this.Comment = comment;
             this.Reason = reason;
             this.FlagTime = flagTime;
+            this.FlagState = flagState;
         }
         
         /// <summary>
@@ -91,6 +93,13 @@ namespace NASCAR.Data.Client.Model
         public DateTimeOffset? FlagTime { get; set; }
 
         /// <summary>
+        /// The flag state at the time of caution (Green, Yellow, Red, Checkered, White, Stop, Unkown, Warm, Invalid)
+        /// </summary>
+        /// <value>The flag state at the time of caution (Green, Yellow, Red, Checkered, White, Stop, Unkown, Warm, Invalid)</value>
+        [DataMember(Name="flag_state", EmitDefaultValue=false)]
+        public string FlagState { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -104,6 +113,7 @@ namespace NASCAR.Data.Client.Model
             sb.Append("  Comment: ").Append(Comment).Append("\n");
             sb.Append("  Reason: ").Append(Reason).Append("\n");
             sb.Append("  FlagTime: ").Append(FlagTime).Append("\n");
+            sb.Append("  FlagState: ").Append(FlagState).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -167,6 +177,11 @@ namespace NASCAR.Data.Client.Model
                     this.FlagTime == input.FlagTime ||
                     (this.FlagTime != null &&
                     this.FlagTime.Equals(input.FlagTime))
+                ) && 
+                (
+                    this.FlagState == input.FlagState ||
+                    (this.FlagState != null &&
+                    this.FlagState.Equals(input.FlagState))
                 );
         }
 
@@ -191,6 +206,8 @@ namespace NASCAR.Data.Client.Model
                     hashCode = hashCode * 59 + this.Reason.GetHashCode();
                 if (this.FlagTime != null)
                     hashCode = hashCode * 59 + this.FlagTime.GetHashCode();
+                if (this.FlagState != null)
+                    hashCode = hashCode * 59 + this.FlagState.GetHashCode();
                 return hashCode;
             }
         }
