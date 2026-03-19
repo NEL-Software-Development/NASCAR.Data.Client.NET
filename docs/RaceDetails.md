@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **Promoter** | **string** | The promoter of the race | [optional] 
 **Laps** | **int?** | Laps | [optional] 
 **Distance** | **double?** | Race distance | [optional] 
+**RaceTypeId** | **int?** | Race Type Identifier (1-Race, 2-Duel, 3-Heat, 4-Exhibition) | [optional] 
+**TotalRaceTime** | **string** | String formatted representation of the total time of race HH:MM:SS | [optional] 
 **PracticeResults** | **string** | URL to Practice results | [optional] 
 **QualifyingResults** | **string** | URL to Qualifying results | [optional] 
 **RaceResults** | **string** | URL to race results | [optional] 

@@ -90,23 +90,21 @@ Class | Method | HTTP request | Description
 *DriverApi* | [**DriverSeasonGet**](docs/DriverApi.md#driverseasonget) | **GET** /driver/season | 
 *DriverSummaryApi* | [**DriverSummaryGet**](docs/DriverSummaryApi.md#driversummaryget) | **GET** /driver-summary | 
 *ERDPApi* | [**ErdpTopicsGet**](docs/ERDPApi.md#erdptopicsget) | **GET** /erdp/topics | Get a users erdp topics.
-*FeedbackApi* | [**FeedbackDevNotesGet**](docs/FeedbackApi.md#feedbackdevnotesget) | **GET** /feedback/dev-notes | 
-*FeedbackApi* | [**FeedbackSubmitFeedbackPost**](docs/FeedbackApi.md#feedbacksubmitfeedbackpost) | **POST** /feedback/submit-feedback | 
 *InspectionsApi* | [**InspectionsOssGet**](docs/InspectionsApi.md#inspectionsossget) | **GET** /inspections/oss | 
 *InspectionsApi* | [**InspectionsVehicleWeightsGet**](docs/InspectionsApi.md#inspectionsvehicleweightsget) | **GET** /inspections/vehicle-weights | 
 *JournalFilesApi* | [**JournalGet**](docs/JournalFilesApi.md#journalget) | **GET** /journal | 
 *OpticalTrackingApi* | [**OpticalTrackingUtmOffsetsGet**](docs/OpticalTrackingApi.md#opticaltrackingutmoffsetsget) | **GET** /optical-tracking/utm-offsets | 
 *PointsApi* | [**PointsDriverPointsGet**](docs/PointsApi.md#pointsdriverpointsget) | **GET** /points/driver-points | 
-*PointsApi* | [**PointsDriverpointsGet**](docs/PointsApi.md#pointsdriverpointsget) | **GET** /points/driverpoints | 
-*PointsApi* | [**PointsLiveDriverPointsGet**](docs/PointsApi.md#pointslivedriverpointsget) | **GET** /points/live-driver-points | 
 *PointsApi* | [**PointsManufacturerPointsGet**](docs/PointsApi.md#pointsmanufacturerpointsget) | **GET** /points/manufacturer-points | 
 *PointsApi* | [**PointsOwnerPointsGet**](docs/PointsApi.md#pointsownerpointsget) | **GET** /points/owner-points | 
 *RaceApi* | [**RaceCautionsGet**](docs/RaceApi.md#racecautionsget) | **GET** /race/cautions | 
 *RaceApi* | [**RaceDisciplineUpdatesGet**](docs/RaceApi.md#racedisciplineupdatesget) | **GET** /race/discipline-updates | 
 *RaceApi* | [**RaceEntriesGet**](docs/RaceApi.md#raceentriesget) | **GET** /race/entries | 
+*RaceApi* | [**RaceFastestLapsGet**](docs/RaceApi.md#racefastestlapsget) | **GET** /race/fastest-laps | 
 *RaceApi* | [**RaceGet**](docs/RaceApi.md#raceget) | **GET** /race | 
 *RaceApi* | [**RaceInfractionsGet**](docs/RaceApi.md#raceinfractionsget) | **GET** /race/infractions | 
 *RaceApi* | [**RaceLapLeadersGet**](docs/RaceApi.md#racelapleadersget) | **GET** /race/lap-leaders | 
+*RaceApi* | [**RaceLapchartGet**](docs/RaceApi.md#racelapchartget) | **GET** /race/lapchart | 
 *RaceApi* | [**RaceLiveSessionGet**](docs/RaceApi.md#racelivesessionget) | **GET** /race/live-session | 
 *RaceApi* | [**RaceLookupGet**](docs/RaceApi.md#racelookupget) | **GET** /race/lookup | 
 *RaceApi* | [**RaceLoopStatsGet**](docs/RaceApi.md#raceloopstatsget) | **GET** /race/loop-stats | 
@@ -127,10 +125,15 @@ Class | Method | HTTP request | Description
 *RaceWeekApi* | [**RaceWeekLiveGet**](docs/RaceWeekApi.md#raceweekliveget) | **GET** /race-week/live | 
 *RaceWeekApi* | [**RaceWeekSeasonGet**](docs/RaceWeekApi.md#raceweekseasonget) | **GET** /race-week/season | 
 *SeriesApi* | [**SeriesGet**](docs/SeriesApi.md#seriesget) | **GET** /series | 
+*StatsApi* | [**StatsLoopStatsGet**](docs/StatsApi.md#statsloopstatsget) | **GET** /stats/loop-stats | 
+*StatsApi* | [**StatsReportGet**](docs/StatsApi.md#statsreportget) | **GET** /stats/report | 
+*StatsApi* | [**StatsReportsGet**](docs/StatsApi.md#statsreportsget) | **GET** /stats/reports | 
+*StatsApi* | [**StatsSeasonGet**](docs/StatsApi.md#statsseasonget) | **GET** /stats/season | 
 *TracksApi* | [**TrackDetailsGet**](docs/TracksApi.md#trackdetailsget) | **GET** /track-details | 
 *TracksApi* | [**TracksGet**](docs/TracksApi.md#tracksget) | **GET** /tracks | 
 *VehicleApi* | [**VehicleGet**](docs/VehicleApi.md#vehicleget) | **GET** /vehicle | 
 *VehicleApi* | [**VehicleSeasonFinishesGet**](docs/VehicleApi.md#vehicleseasonfinishesget) | **GET** /vehicle/season-finishes | 
+*VendorApi* | [**VendorConeCoordinatesPost**](docs/VendorApi.md#vendorconecoordinatespost) | **POST** /vendor/cone-coordinates | 
 *VendorApi* | [**VendorCrlTestresultPost**](docs/VendorApi.md#vendorcrltestresultpost) | **POST** /vendor/crl_testresult | 
 *VendorApi* | [**VendorTiresPost**](docs/VendorApi.md#vendortirespost) | **POST** /vendor/tires | 
 *VendorApi* | [**VendorUtmOffsetsPost**](docs/VendorApi.md#vendorutmoffsetspost) | **POST** /vendor/utm_offsets | 
@@ -147,11 +150,14 @@ Class | Method | HTTP request | Description
  - [Model.ClientERDPSource](docs/ClientERDPSource.md)
  - [Model.ClientERDPTopic](docs/ClientERDPTopic.md)
  - [Model.Company](docs/Company.md)
+ - [Model.ConeCoordinates](docs/ConeCoordinates.md)
+ - [Model.ConeCoordinatesIngest](docs/ConeCoordinatesIngest.md)
+ - [Model.ConeCoordinatesListETLSaveResult](docs/ConeCoordinatesListETLSaveResult.md)
+ - [Model.Coordinate](docs/Coordinate.md)
  - [Model.CrlFormFoxResult](docs/CrlFormFoxResult.md)
- - [Model.DevNote](docs/DevNote.md)
  - [Model.DisciplineUpdate](docs/DisciplineUpdate.md)
  - [Model.Driver](docs/Driver.md)
- - [Model.DriverPoint](docs/DriverPoint.md)
+ - [Model.DriverPointsSlim](docs/DriverPointsSlim.md)
  - [Model.DriverPointsView](docs/DriverPointsView.md)
  - [Model.DriverSummary](docs/DriverSummary.md)
  - [Model.DriverSummaryByPrincipalRaceID](docs/DriverSummaryByPrincipalRaceID.md)
@@ -159,11 +165,11 @@ Class | Method | HTTP request | Description
  - [Model.DriverSummaryByTrack](docs/DriverSummaryByTrack.md)
  - [Model.DriverSummaryByTrackType](docs/DriverSummaryByTrackType.md)
  - [Model.FastestLapAwards](docs/FastestLapAwards.md)
- - [Model.Feedback](docs/Feedback.md)
+ - [Model.FastestLapResult](docs/FastestLapResult.md)
  - [Model.Flag](docs/Flag.md)
+ - [Model.LapChart](docs/LapChart.md)
+ - [Model.LapChartResult](docs/LapChartResult.md)
  - [Model.LapLeader](docs/LapLeader.md)
- - [Model.LiveDriverPoints](docs/LiveDriverPoints.md)
- - [Model.LiveDriverPointsSlim](docs/LiveDriverPointsSlim.md)
  - [Model.LoopStat](docs/LoopStat.md)
  - [Model.ManufacturerPoint](docs/ManufacturerPoint.md)
  - [Model.OSSScan](docs/OSSScan.md)
@@ -191,6 +197,7 @@ Class | Method | HTTP request | Description
  - [Model.RunResults](docs/RunResults.md)
  - [Model.RunState](docs/RunState.md)
  - [Model.RunType](docs/RunType.md)
+ - [Model.SeasonStat](docs/SeasonStat.md)
  - [Model.Series](docs/Series.md)
  - [Model.Stage](docs/Stage.md)
  - [Model.StageResult](docs/StageResult.md)

@@ -24,52 +24,44 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// Stage
+    /// FastestLapResult
     /// </summary>
     [DataContract]
-        public partial class Stage :  IEquatable<Stage>, IValidatableObject
+        public partial class FastestLapResult :  IEquatable<FastestLapResult>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Stage" /> class.
+        /// Initializes a new instance of the <see cref="FastestLapResult" /> class.
         /// </summary>
-        /// <param name="etlStageId">etlStageId.</param>
-        /// <param name="stageNumber">The stage number..</param>
-        /// <param name="laps">The total number of laps in the stage..</param>
-        /// <param name="stageName">The name of the stage (if given)..</param>
-        public Stage(int? etlStageId = default(int?), int? stageNumber = default(int?), int? laps = default(int?), string stageName = default(string))
+        /// <param name="raceId">The race identifier.</param>
+        /// <param name="laps">Total number of laps.</param>
+        /// <param name="items">Array of the best lap chart result by lap_time for each lap.</param>
+        public FastestLapResult(int? raceId = default(int?), int? laps = default(int?), Collection<LapChart> items = default(Collection<LapChart>))
         {
-            this.EtlStageId = etlStageId;
-            this.StageNumber = stageNumber;
+            this.RaceId = raceId;
             this.Laps = laps;
-            this.StageName = stageName;
+            this.Items = items;
         }
         
         /// <summary>
-        /// Gets or Sets EtlStageId
+        /// The race identifier
         /// </summary>
-        [DataMember(Name="etl_stage_id", EmitDefaultValue=false)]
-        public int? EtlStageId { get; set; }
+        /// <value>The race identifier</value>
+        [DataMember(Name="race_id", EmitDefaultValue=false)]
+        public int? RaceId { get; set; }
 
         /// <summary>
-        /// The stage number.
+        /// Total number of laps
         /// </summary>
-        /// <value>The stage number.</value>
-        [DataMember(Name="stage_number", EmitDefaultValue=false)]
-        public int? StageNumber { get; set; }
-
-        /// <summary>
-        /// The total number of laps in the stage.
-        /// </summary>
-        /// <value>The total number of laps in the stage.</value>
+        /// <value>Total number of laps</value>
         [DataMember(Name="laps", EmitDefaultValue=false)]
         public int? Laps { get; set; }
 
         /// <summary>
-        /// The name of the stage (if given).
+        /// Array of the best lap chart result by lap_time for each lap
         /// </summary>
-        /// <value>The name of the stage (if given).</value>
-        [DataMember(Name="stage_name", EmitDefaultValue=false)]
-        public string StageName { get; set; }
+        /// <value>Array of the best lap chart result by lap_time for each lap</value>
+        [DataMember(Name="items", EmitDefaultValue=false)]
+        public Collection<LapChart> Items { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -78,11 +70,10 @@ namespace NASCAR.Data.Client.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Stage {\n");
-            sb.Append("  EtlStageId: ").Append(EtlStageId).Append("\n");
-            sb.Append("  StageNumber: ").Append(StageNumber).Append("\n");
+            sb.Append("class FastestLapResult {\n");
+            sb.Append("  RaceId: ").Append(RaceId).Append("\n");
             sb.Append("  Laps: ").Append(Laps).Append("\n");
-            sb.Append("  StageName: ").Append(StageName).Append("\n");
+            sb.Append("  Items: ").Append(Items).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -103,29 +94,24 @@ namespace NASCAR.Data.Client.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as Stage);
+            return this.Equals(input as FastestLapResult);
         }
 
         /// <summary>
-        /// Returns true if Stage instances are equal
+        /// Returns true if FastestLapResult instances are equal
         /// </summary>
-        /// <param name="input">Instance of Stage to be compared</param>
+        /// <param name="input">Instance of FastestLapResult to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Stage input)
+        public bool Equals(FastestLapResult input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.EtlStageId == input.EtlStageId ||
-                    (this.EtlStageId != null &&
-                    this.EtlStageId.Equals(input.EtlStageId))
-                ) && 
-                (
-                    this.StageNumber == input.StageNumber ||
-                    (this.StageNumber != null &&
-                    this.StageNumber.Equals(input.StageNumber))
+                    this.RaceId == input.RaceId ||
+                    (this.RaceId != null &&
+                    this.RaceId.Equals(input.RaceId))
                 ) && 
                 (
                     this.Laps == input.Laps ||
@@ -133,9 +119,10 @@ namespace NASCAR.Data.Client.Model
                     this.Laps.Equals(input.Laps))
                 ) && 
                 (
-                    this.StageName == input.StageName ||
-                    (this.StageName != null &&
-                    this.StageName.Equals(input.StageName))
+                    this.Items == input.Items ||
+                    this.Items != null &&
+                    input.Items != null &&
+                    this.Items.SequenceEqual(input.Items)
                 );
         }
 
@@ -148,14 +135,12 @@ namespace NASCAR.Data.Client.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.EtlStageId != null)
-                    hashCode = hashCode * 59 + this.EtlStageId.GetHashCode();
-                if (this.StageNumber != null)
-                    hashCode = hashCode * 59 + this.StageNumber.GetHashCode();
+                if (this.RaceId != null)
+                    hashCode = hashCode * 59 + this.RaceId.GetHashCode();
                 if (this.Laps != null)
                     hashCode = hashCode * 59 + this.Laps.GetHashCode();
-                if (this.StageName != null)
-                    hashCode = hashCode * 59 + this.StageName.GetHashCode();
+                if (this.Items != null)
+                    hashCode = hashCode * 59 + this.Items.GetHashCode();
                 return hashCode;
             }
         }
