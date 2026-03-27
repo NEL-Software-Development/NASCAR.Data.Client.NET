@@ -48,7 +48,9 @@ namespace NASCAR.Data.Client.Model
         /// <param name="status">Vehicle Status (0&#x3D;None, 1&#x3D;Active, 2&#x3D;DNS, 3&#x3D;DNF, 4&#x3D;DQ, 5&#x3D;Pace Car, 6&#x3D;Garage.</param>
         /// <param name="comment">Comment.</param>
         /// <param name="startPosition">Start position.</param>
-        public RaceResult(int? finishPosition = default(int?), string driverName = default(string), string vehicleNumber = default(string), int? laps = default(int?), int? bestTime = default(int?), double? bestSpeed = default(double?), int? bestLap = default(int?), int? lastLapTime = default(int?), int? deltaNextTime = default(int?), int? deltaNextLaps = default(int?), int? deltaLeaderTime = default(int?), int? deltaLeaderLaps = default(int?), bool? onTrack = default(bool?), string status = default(string), string comment = default(string), int? startPosition = default(int?))
+        /// <param name="pitBox">Pit box.</param>
+        /// <param name="disqualified">Disqualified.</param>
+        public RaceResult(int? finishPosition = default(int?), string driverName = default(string), string vehicleNumber = default(string), int? laps = default(int?), int? bestTime = default(int?), double? bestSpeed = default(double?), int? bestLap = default(int?), int? lastLapTime = default(int?), int? deltaNextTime = default(int?), int? deltaNextLaps = default(int?), int? deltaLeaderTime = default(int?), int? deltaLeaderLaps = default(int?), bool? onTrack = default(bool?), string status = default(string), string comment = default(string), int? startPosition = default(int?), int? pitBox = default(int?), bool? disqualified = default(bool?))
         {
             this.FinishPosition = finishPosition;
             this.DriverName = driverName;
@@ -66,6 +68,8 @@ namespace NASCAR.Data.Client.Model
             this.Status = status;
             this.Comment = comment;
             this.StartPosition = startPosition;
+            this.PitBox = pitBox;
+            this.Disqualified = disqualified;
         }
         
         /// <summary>
@@ -181,6 +185,20 @@ namespace NASCAR.Data.Client.Model
         public int? StartPosition { get; set; }
 
         /// <summary>
+        /// Pit box
+        /// </summary>
+        /// <value>Pit box</value>
+        [DataMember(Name="pit_box", EmitDefaultValue=false)]
+        public int? PitBox { get; set; }
+
+        /// <summary>
+        /// Disqualified
+        /// </summary>
+        /// <value>Disqualified</value>
+        [DataMember(Name="disqualified", EmitDefaultValue=false)]
+        public bool? Disqualified { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -204,6 +222,8 @@ namespace NASCAR.Data.Client.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Comment: ").Append(Comment).Append("\n");
             sb.Append("  StartPosition: ").Append(StartPosition).Append("\n");
+            sb.Append("  PitBox: ").Append(PitBox).Append("\n");
+            sb.Append("  Disqualified: ").Append(Disqualified).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -317,6 +337,16 @@ namespace NASCAR.Data.Client.Model
                     this.StartPosition == input.StartPosition ||
                     (this.StartPosition != null &&
                     this.StartPosition.Equals(input.StartPosition))
+                ) && 
+                (
+                    this.PitBox == input.PitBox ||
+                    (this.PitBox != null &&
+                    this.PitBox.Equals(input.PitBox))
+                ) && 
+                (
+                    this.Disqualified == input.Disqualified ||
+                    (this.Disqualified != null &&
+                    this.Disqualified.Equals(input.Disqualified))
                 );
         }
 
@@ -361,6 +391,10 @@ namespace NASCAR.Data.Client.Model
                     hashCode = hashCode * 59 + this.Comment.GetHashCode();
                 if (this.StartPosition != null)
                     hashCode = hashCode * 59 + this.StartPosition.GetHashCode();
+                if (this.PitBox != null)
+                    hashCode = hashCode * 59 + this.PitBox.GetHashCode();
+                if (this.Disqualified != null)
+                    hashCode = hashCode * 59 + this.Disqualified.GetHashCode();
                 return hashCode;
             }
         }

@@ -32,6 +32,7 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RunDetails" /> class.
         /// </summary>
+        /// <param name="runId">Unique identifier given and used by the NASCAR Data API.</param>
         /// <param name="name">The name of the run.</param>
         /// <param name="startTime">Scheduled start time.</param>
         /// <param name="runState">runState.</param>
@@ -39,8 +40,9 @@ namespace NASCAR.Data.Client.Model
         /// <param name="duration">The scheduled duration of the run in seconds.</param>
         /// <param name="timingRunId">timingRunId.</param>
         /// <param name="flags">Flags associated with this run.</param>
-        public RunDetails(string name = default(string), DateTimeOffset? startTime = default(DateTimeOffset?), RunState runState = default(RunState), RunType runType = default(RunType), int? duration = default(int?), int? timingRunId = default(int?), Collection<Flag> flags = default(Collection<Flag>))
+        public RunDetails(int? runId = default(int?), string name = default(string), DateTimeOffset? startTime = default(DateTimeOffset?), RunState runState = default(RunState), RunType runType = default(RunType), int? duration = default(int?), int? timingRunId = default(int?), Collection<Flag> flags = default(Collection<Flag>))
         {
+            this.RunId = runId;
             this.Name = name;
             this.StartTime = startTime;
             this.RunState = runState;
@@ -50,6 +52,13 @@ namespace NASCAR.Data.Client.Model
             this.Flags = flags;
         }
         
+        /// <summary>
+        /// Unique identifier given and used by the NASCAR Data API
+        /// </summary>
+        /// <value>Unique identifier given and used by the NASCAR Data API</value>
+        [DataMember(Name="run_id", EmitDefaultValue=false)]
+        public int? RunId { get; set; }
+
         /// <summary>
         /// The name of the run
         /// </summary>
@@ -111,6 +120,7 @@ namespace NASCAR.Data.Client.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RunDetails {\n");
+            sb.Append("  RunId: ").Append(RunId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
             sb.Append("  RunState: ").Append(RunState).Append("\n");
@@ -153,6 +163,11 @@ namespace NASCAR.Data.Client.Model
                 return false;
 
             return 
+                (
+                    this.RunId == input.RunId ||
+                    (this.RunId != null &&
+                    this.RunId.Equals(input.RunId))
+                ) && 
                 (
                     this.Name == input.Name ||
                     (this.Name != null &&
@@ -205,6 +220,8 @@ namespace NASCAR.Data.Client.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.RunId != null)
+                    hashCode = hashCode * 59 + this.RunId.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.StartTime != null)

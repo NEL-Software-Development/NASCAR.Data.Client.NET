@@ -37,14 +37,16 @@ namespace NASCAR.Data.Client.Model
         /// <param name="flagState">Flag state:  (NONE, WARMUP, GREEN, YELLOW, RED, WHITE, FINISH, EXTRA).</param>
         /// <param name="round">Qualifying round: 0-3.</param>
         /// <param name="group">Qualifying group: A, B, (empty).</param>
+        /// <param name="timeLimit">Time limit (in seconds) for the round.</param>
         /// <param name="results">Qualifying results.</param>
-        public QualifyingRunResults(string runName = default(string), string runState = default(string), string flagState = default(string), int? round = default(int?), string group = default(string), Collection<RunResult> results = default(Collection<RunResult>))
+        public QualifyingRunResults(string runName = default(string), string runState = default(string), string flagState = default(string), int? round = default(int?), string group = default(string), int? timeLimit = default(int?), Collection<RunResult> results = default(Collection<RunResult>))
         {
             this.RunName = runName;
             this.RunState = runState;
             this.FlagState = flagState;
             this.Round = round;
             this.Group = group;
+            this.TimeLimit = timeLimit;
             this.Results = results;
         }
         
@@ -84,6 +86,13 @@ namespace NASCAR.Data.Client.Model
         public string Group { get; set; }
 
         /// <summary>
+        /// Time limit (in seconds) for the round
+        /// </summary>
+        /// <value>Time limit (in seconds) for the round</value>
+        [DataMember(Name="time_limit", EmitDefaultValue=false)]
+        public int? TimeLimit { get; set; }
+
+        /// <summary>
         /// Qualifying results
         /// </summary>
         /// <value>Qualifying results</value>
@@ -103,6 +112,7 @@ namespace NASCAR.Data.Client.Model
             sb.Append("  FlagState: ").Append(FlagState).Append("\n");
             sb.Append("  Round: ").Append(Round).Append("\n");
             sb.Append("  Group: ").Append(Group).Append("\n");
+            sb.Append("  TimeLimit: ").Append(TimeLimit).Append("\n");
             sb.Append("  Results: ").Append(Results).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -164,6 +174,11 @@ namespace NASCAR.Data.Client.Model
                     this.Group.Equals(input.Group))
                 ) && 
                 (
+                    this.TimeLimit == input.TimeLimit ||
+                    (this.TimeLimit != null &&
+                    this.TimeLimit.Equals(input.TimeLimit))
+                ) && 
+                (
                     this.Results == input.Results ||
                     this.Results != null &&
                     input.Results != null &&
@@ -190,6 +205,8 @@ namespace NASCAR.Data.Client.Model
                     hashCode = hashCode * 59 + this.Round.GetHashCode();
                 if (this.Group != null)
                     hashCode = hashCode * 59 + this.Group.GetHashCode();
+                if (this.TimeLimit != null)
+                    hashCode = hashCode * 59 + this.TimeLimit.GetHashCode();
                 if (this.Results != null)
                     hashCode = hashCode * 59 + this.Results.GetHashCode();
                 return hashCode;
