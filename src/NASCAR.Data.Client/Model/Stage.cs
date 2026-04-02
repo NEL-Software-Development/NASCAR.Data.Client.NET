@@ -32,16 +32,24 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Stage" /> class.
         /// </summary>
+        /// <param name="etlStageId">etlStageId.</param>
         /// <param name="stageNumber">The stage number..</param>
         /// <param name="laps">The total number of laps in the stage..</param>
         /// <param name="stageName">The name of the stage (if given)..</param>
-        public Stage(int? stageNumber = default(int?), int? laps = default(int?), string stageName = default(string))
+        public Stage(int? etlStageId = default(int?), int? stageNumber = default(int?), int? laps = default(int?), string stageName = default(string))
         {
+            this.EtlStageId = etlStageId;
             this.StageNumber = stageNumber;
             this.Laps = laps;
             this.StageName = stageName;
         }
         
+        /// <summary>
+        /// Gets or Sets EtlStageId
+        /// </summary>
+        [DataMember(Name="etl_stage_id", EmitDefaultValue=false)]
+        public int? EtlStageId { get; set; }
+
         /// <summary>
         /// The stage number.
         /// </summary>
@@ -71,6 +79,7 @@ namespace NASCAR.Data.Client.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Stage {\n");
+            sb.Append("  EtlStageId: ").Append(EtlStageId).Append("\n");
             sb.Append("  StageNumber: ").Append(StageNumber).Append("\n");
             sb.Append("  Laps: ").Append(Laps).Append("\n");
             sb.Append("  StageName: ").Append(StageName).Append("\n");
@@ -109,6 +118,11 @@ namespace NASCAR.Data.Client.Model
 
             return 
                 (
+                    this.EtlStageId == input.EtlStageId ||
+                    (this.EtlStageId != null &&
+                    this.EtlStageId.Equals(input.EtlStageId))
+                ) && 
+                (
                     this.StageNumber == input.StageNumber ||
                     (this.StageNumber != null &&
                     this.StageNumber.Equals(input.StageNumber))
@@ -134,6 +148,8 @@ namespace NASCAR.Data.Client.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.EtlStageId != null)
+                    hashCode = hashCode * 59 + this.EtlStageId.GetHashCode();
                 if (this.StageNumber != null)
                     hashCode = hashCode * 59 + this.StageNumber.GetHashCode();
                 if (this.Laps != null)

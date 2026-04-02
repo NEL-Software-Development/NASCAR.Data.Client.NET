@@ -3,6 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**RunId** | **int?** | Unique identifier given and used by the NASCAR Data API | [optional] 
 **Name** | **string** | The name of the run | [optional] 
 **StartTime** | **DateTimeOffset?** | Scheduled start time | [optional] 
 **RunState** | [**RunState**](RunState.md) |  | [optional] 

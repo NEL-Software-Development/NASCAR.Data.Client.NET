@@ -3,12 +3,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int?** | The id of the race | [optional] 
+**Id** | **int?** | Unique identifier given and used by the NASCAR Data API | [optional] 
 **PrincipalRaceId** | **int?** | The principal race id of the race | [optional] 
 **HistoryRaceId** | **int?** | The race id from the history database | [optional] [default to -1]
 **RaceweekId** | **int?** | The race | [optional] 
 **SeriesId** | **int?** | The series id of the race | [optional] 
 **Name** | **string** | The race name | [optional] 
+**RaceTypeId** | **int?** | Race Type Identifier (1-Race, 2-Duel, 3-Heat, 4-Exhibition) | [optional] 
+**TotalRaceTime** | **string** | String formatted representation of the total time of race HH:MM:SS | [optional] 
 **Promoter** | **string** | The promoter of the race | [optional] 
 **Laps** | **int?** | Laps | [optional] 
 **Distance** | **double?** | Race distance | [optional] 
