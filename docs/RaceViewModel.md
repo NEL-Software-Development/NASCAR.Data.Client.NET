@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **Promoter** | **string** | Race promoter | [optional] 
 **Laps** | **int?** | Laps | [optional] 
 **Distance** | **double?** | Distance | [optional] 
+**RaceTypeId** | **int?** | Race Type Identifier (1-Race, 2-Duel, 3-Heat, 4-Exhibition) | [optional] 
+**TotalRaceTime** | **string** | String formatted representation of the total time of race HH:MM:SS | [optional] 
 **Date** | **DateTimeOffset?** | Race date | [optional] 
 **Comments** | **string** | Comments | [optional] 
 **Cautions** | [**Collection&lt;Caution&gt;**](Caution.md) | Cautions | [optional] 

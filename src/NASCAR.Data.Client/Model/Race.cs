@@ -32,12 +32,14 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Race" /> class.
         /// </summary>
-        /// <param name="id">The id of the race.</param>
+        /// <param name="id">Unique identifier given and used by the NASCAR Data API.</param>
         /// <param name="principalRaceId">The principal race id of the race.</param>
         /// <param name="historyRaceId">The race id from the history database (default to -1).</param>
         /// <param name="raceweekId">The race.</param>
         /// <param name="seriesId">The series id of the race.</param>
         /// <param name="name">The race name.</param>
+        /// <param name="raceTypeId">Race Type Identifier (1-Race, 2-Duel, 3-Heat, 4-Exhibition).</param>
+        /// <param name="totalRaceTime">String formatted representation of the total time of race HH:MM:SS.</param>
         /// <param name="promoter">The promoter of the race.</param>
         /// <param name="laps">Laps.</param>
         /// <param name="distance">Race distance.</param>
@@ -47,7 +49,7 @@ namespace NASCAR.Data.Client.Model
         /// <param name="historyTrackId">History Track Id.</param>
         /// <param name="trackId">Track Id.</param>
         /// <param name="fastestLapAward">fastestLapAward.</param>
-        public Race(int? id = default(int?), int? principalRaceId = default(int?), int? historyRaceId = -1, int? raceweekId = default(int?), int? seriesId = default(int?), string name = default(string), string promoter = default(string), int? laps = default(int?), double? distance = default(double?), bool? inspectionComplete = default(bool?), DateTimeOffset? date = default(DateTimeOffset?), string comments = default(string), int? historyTrackId = default(int?), int? trackId = default(int?), FastestLapAwards fastestLapAward = default(FastestLapAwards))
+        public Race(int? id = default(int?), int? principalRaceId = default(int?), int? historyRaceId = -1, int? raceweekId = default(int?), int? seriesId = default(int?), string name = default(string), int? raceTypeId = default(int?), string totalRaceTime = default(string), string promoter = default(string), int? laps = default(int?), double? distance = default(double?), bool? inspectionComplete = default(bool?), DateTimeOffset? date = default(DateTimeOffset?), string comments = default(string), int? historyTrackId = default(int?), int? trackId = default(int?), FastestLapAwards fastestLapAward = default(FastestLapAwards))
         {
             this.Id = id;
             this.PrincipalRaceId = principalRaceId;
@@ -63,6 +65,8 @@ namespace NASCAR.Data.Client.Model
             this.RaceweekId = raceweekId;
             this.SeriesId = seriesId;
             this.Name = name;
+            this.RaceTypeId = raceTypeId;
+            this.TotalRaceTime = totalRaceTime;
             this.Promoter = promoter;
             this.Laps = laps;
             this.Distance = distance;
@@ -75,9 +79,9 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// The id of the race
+        /// Unique identifier given and used by the NASCAR Data API
         /// </summary>
-        /// <value>The id of the race</value>
+        /// <value>Unique identifier given and used by the NASCAR Data API</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
@@ -115,6 +119,20 @@ namespace NASCAR.Data.Client.Model
         /// <value>The race name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// Race Type Identifier (1-Race, 2-Duel, 3-Heat, 4-Exhibition)
+        /// </summary>
+        /// <value>Race Type Identifier (1-Race, 2-Duel, 3-Heat, 4-Exhibition)</value>
+        [DataMember(Name="race_type_id", EmitDefaultValue=false)]
+        public int? RaceTypeId { get; set; }
+
+        /// <summary>
+        /// String formatted representation of the total time of race HH:MM:SS
+        /// </summary>
+        /// <value>String formatted representation of the total time of race HH:MM:SS</value>
+        [DataMember(Name="total_race_time", EmitDefaultValue=false)]
+        public string TotalRaceTime { get; set; }
 
         /// <summary>
         /// The promoter of the race
@@ -248,6 +266,8 @@ namespace NASCAR.Data.Client.Model
             sb.Append("  RaceweekId: ").Append(RaceweekId).Append("\n");
             sb.Append("  SeriesId: ").Append(SeriesId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  RaceTypeId: ").Append(RaceTypeId).Append("\n");
+            sb.Append("  TotalRaceTime: ").Append(TotalRaceTime).Append("\n");
             sb.Append("  Promoter: ").Append(Promoter).Append("\n");
             sb.Append("  Laps: ").Append(Laps).Append("\n");
             sb.Append("  Distance: ").Append(Distance).Append("\n");
@@ -328,6 +348,16 @@ namespace NASCAR.Data.Client.Model
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
+                ) && 
+                (
+                    this.RaceTypeId == input.RaceTypeId ||
+                    (this.RaceTypeId != null &&
+                    this.RaceTypeId.Equals(input.RaceTypeId))
+                ) && 
+                (
+                    this.TotalRaceTime == input.TotalRaceTime ||
+                    (this.TotalRaceTime != null &&
+                    this.TotalRaceTime.Equals(input.TotalRaceTime))
                 ) && 
                 (
                     this.Promoter == input.Promoter ||
@@ -437,6 +467,10 @@ namespace NASCAR.Data.Client.Model
                     hashCode = hashCode * 59 + this.SeriesId.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.RaceTypeId != null)
+                    hashCode = hashCode * 59 + this.RaceTypeId.GetHashCode();
+                if (this.TotalRaceTime != null)
+                    hashCode = hashCode * 59 + this.TotalRaceTime.GetHashCode();
                 if (this.Promoter != null)
                     hashCode = hashCode * 59 + this.Promoter.GetHashCode();
                 if (this.Laps != null)

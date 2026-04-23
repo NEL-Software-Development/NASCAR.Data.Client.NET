@@ -94,6 +94,27 @@ namespace NASCAR.Data.Client.Api
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="raceId"> (optional)</param>
+        /// <returns>FastestLapResult</returns>
+        FastestLapResult RaceFastestLapsGet (int? raceId = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>ApiResponse of FastestLapResult</returns>
+        ApiResponse<FastestLapResult> RaceFastestLapsGetWithHttpInfo (int? raceId = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId"> (optional)</param>
         /// <returns>RaceDetails</returns>
         RaceDetails RaceGet (int? raceId = null);
 
@@ -128,6 +149,27 @@ namespace NASCAR.Data.Client.Api
         /// <param name="raceId"> (optional)</param>
         /// <returns>ApiResponse of Collection&lt;RaceInfraction&gt;</returns>
         ApiResponse<Collection<RaceInfraction>> RaceInfractionsGetWithHttpInfo (int? raceId = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>LapChartResult</returns>
+        LapChartResult RaceLapChartGet (int? raceId = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>ApiResponse of LapChartResult</returns>
+        ApiResponse<LapChartResult> RaceLapChartGetWithHttpInfo (int? raceId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -564,6 +606,27 @@ namespace NASCAR.Data.Client.Api
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="raceId"> (optional)</param>
+        /// <returns>Task of FastestLapResult</returns>
+        System.Threading.Tasks.Task<FastestLapResult> RaceFastestLapsGetAsync (int? raceId = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Task of ApiResponse (FastestLapResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FastestLapResult>> RaceFastestLapsGetAsyncWithHttpInfo (int? raceId = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId"> (optional)</param>
         /// <returns>Task of RaceDetails</returns>
         System.Threading.Tasks.Task<RaceDetails> RaceGetAsync (int? raceId = null);
 
@@ -598,6 +661,27 @@ namespace NASCAR.Data.Client.Api
         /// <param name="raceId"> (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;RaceInfraction&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Collection<RaceInfraction>>> RaceInfractionsGetAsyncWithHttpInfo (int? raceId = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Task of LapChartResult</returns>
+        System.Threading.Tasks.Task<LapChartResult> RaceLapChartGetAsync (int? raceId = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Task of ApiResponse (LapChartResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LapChartResult>> RaceLapChartGetAsyncWithHttpInfo (int? raceId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1500,6 +1584,147 @@ namespace NASCAR.Data.Client.Api
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="raceId"> (optional)</param>
+        /// <returns>FastestLapResult</returns>
+        public FastestLapResult RaceFastestLapsGet (int? raceId = null)
+        {
+             ApiResponse<FastestLapResult> localVarResponse = RaceFastestLapsGetWithHttpInfo(raceId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>ApiResponse of FastestLapResult</returns>
+        public ApiResponse< FastestLapResult > RaceFastestLapsGetWithHttpInfo (int? raceId = null)
+        {
+
+            var localVarPath = "/race/fastest-laps";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (raceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "race_id", raceId)); // query parameter
+            // authentication (Bearer) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RaceFastestLapsGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FastestLapResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (FastestLapResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FastestLapResult)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Task of FastestLapResult</returns>
+        public async System.Threading.Tasks.Task<FastestLapResult> RaceFastestLapsGetAsync (int? raceId = null)
+        {
+             ApiResponse<FastestLapResult> localVarResponse = await RaceFastestLapsGetAsyncWithHttpInfo(raceId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Task of ApiResponse (FastestLapResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FastestLapResult>> RaceFastestLapsGetAsyncWithHttpInfo (int? raceId = null)
+        {
+
+            var localVarPath = "/race/fastest-laps";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (raceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "race_id", raceId)); // query parameter
+            // authentication (Bearer) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RaceFastestLapsGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FastestLapResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (FastestLapResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FastestLapResult)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId"> (optional)</param>
         /// <returns>RaceDetails</returns>
         public RaceDetails RaceGet (int? raceId = null)
         {
@@ -1775,6 +2000,147 @@ namespace NASCAR.Data.Client.Api
             return new ApiResponse<Collection<RaceInfraction>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (Collection<RaceInfraction>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<RaceInfraction>)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>LapChartResult</returns>
+        public LapChartResult RaceLapChartGet (int? raceId = null)
+        {
+             ApiResponse<LapChartResult> localVarResponse = RaceLapChartGetWithHttpInfo(raceId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>ApiResponse of LapChartResult</returns>
+        public ApiResponse< LapChartResult > RaceLapChartGetWithHttpInfo (int? raceId = null)
+        {
+
+            var localVarPath = "/race/lap-chart";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (raceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "race_id", raceId)); // query parameter
+            // authentication (Bearer) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RaceLapChartGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<LapChartResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (LapChartResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LapChartResult)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Task of LapChartResult</returns>
+        public async System.Threading.Tasks.Task<LapChartResult> RaceLapChartGetAsync (int? raceId = null)
+        {
+             ApiResponse<LapChartResult> localVarResponse = await RaceLapChartGetAsyncWithHttpInfo(raceId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId"> (optional)</param>
+        /// <returns>Task of ApiResponse (LapChartResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LapChartResult>> RaceLapChartGetAsyncWithHttpInfo (int? raceId = null)
+        {
+
+            var localVarPath = "/race/lap-chart";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (raceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "race_id", raceId)); // query parameter
+            // authentication (Bearer) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RaceLapChartGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<LapChartResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (LapChartResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LapChartResult)));
         }
 
         /// <summary>
