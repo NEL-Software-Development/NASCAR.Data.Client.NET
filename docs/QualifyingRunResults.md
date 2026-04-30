@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **FlagState** | **string** | Flag state:  (NONE, WARMUP, GREEN, YELLOW, RED, WHITE, FINISH, EXTRA) | [optional] 
 **Round** | **int?** | Qualifying round: 0-3 | [optional] 
 **Group** | **string** | Qualifying group: A, B, (empty) | [optional] 
+**TimeLimit** | **int?** | Time limit (in seconds) for the round | [optional] 
 **Results** | [**Collection&lt;RunResult&gt;**](RunResult.md) | Qualifying results | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

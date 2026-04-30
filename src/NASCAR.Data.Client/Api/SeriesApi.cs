@@ -42,6 +42,25 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Collection&lt;Series&gt;</returns>
         ApiResponse<Collection<Series>> SeriesGetWithHttpInfo ();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Collection&lt;SeasonSeries&gt;</returns>
+        Collection<SeasonSeries> SeriesSeasonGet ();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Collection&lt;SeasonSeries&gt;</returns>
+        ApiResponse<Collection<SeasonSeries>> SeriesSeasonGetWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -63,6 +82,25 @@ namespace NASCAR.Data.Client.Api
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Collection&lt;Series&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Collection<Series>>> SeriesGetAsyncWithHttpInfo ();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of Collection&lt;SeasonSeries&gt;</returns>
+        System.Threading.Tasks.Task<Collection<SeasonSeries>> SeriesSeasonGetAsync ();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (Collection&lt;SeasonSeries&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Collection<SeasonSeries>>> SeriesSeasonGetAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -307,6 +345,141 @@ namespace NASCAR.Data.Client.Api
             return new ApiResponse<Collection<Series>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (Collection<Series>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<Series>)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Collection&lt;SeasonSeries&gt;</returns>
+        public Collection<SeasonSeries> SeriesSeasonGet ()
+        {
+             ApiResponse<Collection<SeasonSeries>> localVarResponse = SeriesSeasonGetWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Collection&lt;SeasonSeries&gt;</returns>
+        public ApiResponse< Collection<SeasonSeries> > SeriesSeasonGetWithHttpInfo ()
+        {
+
+            var localVarPath = "/series/season";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // authentication (Bearer) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SeriesSeasonGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Collection<SeasonSeries>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (Collection<SeasonSeries>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<SeasonSeries>)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of Collection&lt;SeasonSeries&gt;</returns>
+        public async System.Threading.Tasks.Task<Collection<SeasonSeries>> SeriesSeasonGetAsync ()
+        {
+             ApiResponse<Collection<SeasonSeries>> localVarResponse = await SeriesSeasonGetAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (Collection&lt;SeasonSeries&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Collection<SeasonSeries>>> SeriesSeasonGetAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/series/season";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // authentication (Bearer) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SeriesSeasonGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Collection<SeasonSeries>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (Collection<SeasonSeries>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Collection<SeasonSeries>)));
         }
 
     }
