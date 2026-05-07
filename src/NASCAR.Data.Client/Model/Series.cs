@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// Series
+    /// Represents a NASCAR racing series
     /// </summary>
     [DataContract]
         public partial class Series :  IEquatable<Series>, IValidatableObject
@@ -32,7 +32,7 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Series" /> class.
         /// </summary>
-        /// <param name="id">The series id.</param>
+        /// <param name="id">Unique identifier given and used by the NASCAR Data API.</param>
         /// <param name="shortName">Series short name.</param>
         /// <param name="name">Series full name.</param>
         /// <param name="abbreviation">Series abbreviation.</param>
@@ -47,9 +47,9 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// The series id
+        /// Unique identifier given and used by the NASCAR Data API
         /// </summary>
-        /// <value>The series id</value>
+        /// <value>Unique identifier given and used by the NASCAR Data API</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 

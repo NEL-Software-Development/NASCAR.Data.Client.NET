@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// WicketAccountIds
+    /// Represents the account identifiers used in a Wicket request
     /// </summary>
     [DataContract]
         public partial class WicketAccountIds :  IEquatable<WicketAccountIds>, IValidatableObject
@@ -32,8 +32,8 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WicketAccountIds" /> class.
         /// </summary>
-        /// <param name="gAP">gAP.</param>
-        /// <param name="nDL">nDL.</param>
+        /// <param name="gAP">GAP account identifier.</param>
+        /// <param name="nDL">NDL account identifier.</param>
         public WicketAccountIds(string gAP = default(string), string nDL = default(string))
         {
             this.GAP = gAP;
@@ -41,14 +41,16 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets GAP
+        /// GAP account identifier
         /// </summary>
+        /// <value>GAP account identifier</value>
         [DataMember(Name="GAP", EmitDefaultValue=false)]
         public string GAP { get; set; }
 
         /// <summary>
-        /// Gets or Sets NDL
+        /// NDL account identifier
         /// </summary>
+        /// <value>NDL account identifier</value>
         [DataMember(Name="NDL", EmitDefaultValue=false)]
         public string NDL { get; set; }
 

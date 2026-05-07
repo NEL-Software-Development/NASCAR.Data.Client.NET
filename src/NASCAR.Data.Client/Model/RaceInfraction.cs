@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// RaceInfraction
+    /// Represents a race infraction issued to a vehicle during a race event
     /// </summary>
     [DataContract]
         public partial class RaceInfraction :  IEquatable<RaceInfraction>, IValidatableObject
@@ -35,16 +35,18 @@ namespace NASCAR.Data.Client.Model
         /// <param name="flagState">Flag state at the time of the infraction: (W,G,G/Y,R,Y).</param>
         /// <param name="infraction">Description of the infraction.</param>
         /// <param name="vehicleNumber">Vehicle number.</param>
-        /// <param name="lap">Lap of infraction.</param>
-        /// <param name="lapAssessed">Lap infraction was assessed.</param>
+        /// <param name="driverId">Nascar Data Driver identifier.</param>
+        /// <param name="lap">Lap on which the infraction occurred.</param>
+        /// <param name="lapAssessed">Lap on which the infraction was assessed.</param>
         /// <param name="timeOfRace">Time of race the infraction occurred.</param>
-        /// <param name="penalty">Penalty assessed.</param>
-        /// <param name="notes">Notes.</param>
-        public RaceInfraction(string flagState = default(string), string infraction = default(string), string vehicleNumber = default(string), int? lap = default(int?), int? lapAssessed = default(int?), DateTimeOffset? timeOfRace = default(DateTimeOffset?), string penalty = default(string), string notes = default(string))
+        /// <param name="penalty">Penalty assessed for the infraction.</param>
+        /// <param name="notes">Additional notes for the infraction.</param>
+        public RaceInfraction(string flagState = default(string), string infraction = default(string), string vehicleNumber = default(string), int? driverId = default(int?), int? lap = default(int?), int? lapAssessed = default(int?), DateTimeOffset? timeOfRace = default(DateTimeOffset?), string penalty = default(string), string notes = default(string))
         {
             this.FlagState = flagState;
             this.Infraction = infraction;
             this.VehicleNumber = vehicleNumber;
+            this.DriverId = driverId;
             this.Lap = lap;
             this.LapAssessed = lapAssessed;
             this.TimeOfRace = timeOfRace;
@@ -74,16 +76,30 @@ namespace NASCAR.Data.Client.Model
         public string VehicleNumber { get; set; }
 
         /// <summary>
-        /// Lap of infraction
+        /// Nascar Data Driver identifier
         /// </summary>
-        /// <value>Lap of infraction</value>
+        /// <value>Nascar Data Driver identifier</value>
+        [DataMember(Name="driver_id", EmitDefaultValue=false)]
+        public int? DriverId { get; set; }
+
+        /// <summary>
+        /// URL to driver details
+        /// </summary>
+        /// <value>URL to driver details</value>
+        [DataMember(Name="driver_details", EmitDefaultValue=false)]
+        public string DriverDetails { get; private set; }
+
+        /// <summary>
+        /// Lap on which the infraction occurred
+        /// </summary>
+        /// <value>Lap on which the infraction occurred</value>
         [DataMember(Name="lap", EmitDefaultValue=false)]
         public int? Lap { get; set; }
 
         /// <summary>
-        /// Lap infraction was assessed
+        /// Lap on which the infraction was assessed
         /// </summary>
-        /// <value>Lap infraction was assessed</value>
+        /// <value>Lap on which the infraction was assessed</value>
         [DataMember(Name="lap_assessed", EmitDefaultValue=false)]
         public int? LapAssessed { get; set; }
 
@@ -95,16 +111,16 @@ namespace NASCAR.Data.Client.Model
         public DateTimeOffset? TimeOfRace { get; set; }
 
         /// <summary>
-        /// Penalty assessed
+        /// Penalty assessed for the infraction
         /// </summary>
-        /// <value>Penalty assessed</value>
+        /// <value>Penalty assessed for the infraction</value>
         [DataMember(Name="penalty", EmitDefaultValue=false)]
         public string Penalty { get; set; }
 
         /// <summary>
-        /// Notes
+        /// Additional notes for the infraction
         /// </summary>
-        /// <value>Notes</value>
+        /// <value>Additional notes for the infraction</value>
         [DataMember(Name="notes", EmitDefaultValue=false)]
         public string Notes { get; set; }
 
@@ -119,6 +135,8 @@ namespace NASCAR.Data.Client.Model
             sb.Append("  FlagState: ").Append(FlagState).Append("\n");
             sb.Append("  Infraction: ").Append(Infraction).Append("\n");
             sb.Append("  VehicleNumber: ").Append(VehicleNumber).Append("\n");
+            sb.Append("  DriverId: ").Append(DriverId).Append("\n");
+            sb.Append("  DriverDetails: ").Append(DriverDetails).Append("\n");
             sb.Append("  Lap: ").Append(Lap).Append("\n");
             sb.Append("  LapAssessed: ").Append(LapAssessed).Append("\n");
             sb.Append("  TimeOfRace: ").Append(TimeOfRace).Append("\n");
@@ -174,6 +192,16 @@ namespace NASCAR.Data.Client.Model
                     this.VehicleNumber.Equals(input.VehicleNumber))
                 ) && 
                 (
+                    this.DriverId == input.DriverId ||
+                    (this.DriverId != null &&
+                    this.DriverId.Equals(input.DriverId))
+                ) && 
+                (
+                    this.DriverDetails == input.DriverDetails ||
+                    (this.DriverDetails != null &&
+                    this.DriverDetails.Equals(input.DriverDetails))
+                ) && 
+                (
                     this.Lap == input.Lap ||
                     (this.Lap != null &&
                     this.Lap.Equals(input.Lap))
@@ -215,6 +243,10 @@ namespace NASCAR.Data.Client.Model
                     hashCode = hashCode * 59 + this.Infraction.GetHashCode();
                 if (this.VehicleNumber != null)
                     hashCode = hashCode * 59 + this.VehicleNumber.GetHashCode();
+                if (this.DriverId != null)
+                    hashCode = hashCode * 59 + this.DriverId.GetHashCode();
+                if (this.DriverDetails != null)
+                    hashCode = hashCode * 59 + this.DriverDetails.GetHashCode();
                 if (this.Lap != null)
                     hashCode = hashCode * 59 + this.Lap.GetHashCode();
                 if (this.LapAssessed != null)
