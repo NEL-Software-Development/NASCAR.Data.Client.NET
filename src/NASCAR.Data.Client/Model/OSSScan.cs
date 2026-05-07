@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// OSSScan
+    /// Represents an OSS inspection record for a vehicle at a race event
     /// </summary>
     [DataContract]
         public partial class OSSScan :  IEquatable<OSSScan>, IValidatableObject
@@ -70,11 +70,11 @@ namespace NASCAR.Data.Client.Model
         /// <param name="limitsRhLocationLeftMax">Right hand left maximum.</param>
         /// <param name="passfailsRhLocationLeft">Right hand left pass/fails.</param>
         /// <param name="resultsRhLocationLeft">Right hand left results.</param>
-        /// <param name="limitsRhLocationRightMin">Right hand right min.</param>
-        /// <param name="limitsRhLocationRightMax">Right hand right max.</param>
+        /// <param name="limitsRhLocationRightMin">Right hand right minimum.</param>
+        /// <param name="limitsRhLocationRightMax">Right hand right maximum.</param>
         /// <param name="passfailsRhLocationRight">Right hand right pass/fails.</param>
         /// <param name="resultsRhLocationRight">Right hand right results.</param>
-        /// <param name="limitsRhSkewMin">Right right skew minimum.</param>
+        /// <param name="limitsRhSkewMin">Right hand skew minimum.</param>
         /// <param name="limitsRhSkewMax">Right hand skew maximum.</param>
         /// <param name="passfailsRhSkew">Right hand skew pass/fails.</param>
         /// <param name="resultsRhSkew">Right hand skew results.</param>
@@ -108,7 +108,7 @@ namespace NASCAR.Data.Client.Model
         /// <param name="resultsToeLr">Left rear toe results.</param>
         /// <param name="limitsToeRrMin">Right rear toe minimum.</param>
         /// <param name="limitsToeRrMax">Right rear toe maximum.</param>
-        /// <param name="passfailsToeRr">Right rear pass/fails.</param>
+        /// <param name="passfailsToeRr">Right rear toe pass/fails.</param>
         /// <param name="resultsToeRr">Right rear toe results.</param>
         /// <param name="inspectionDate">Inspection date.</param>
         public OSSScan(string vehicleNumber = default(string), string chassis = default(string), double? limitsBodyoffsetMin = default(double?), double? limitsBodyoffsetMax = default(double?), bool? passfailsBodyoffset = default(bool?), double? resultsBodyoffset = default(double?), double? limitsCamberLfMin = default(double?), double? limitsCamberLfMax = default(double?), bool? passfailsCamberLf = default(bool?), double? resultsCamberLf = default(double?), double? limitsCamberLrMin = default(double?), double? limitsCamberLrMax = default(double?), bool? passfailsCamberLr = default(bool?), double? resultsCamberLr = default(double?), double? limitsCamberRfMin = default(double?), double? limitsCamberRfMax = default(double?), bool? passfailsCamberRf = default(bool?), double? resultsCamberRf = default(double?), double? limitsCamberRrMin = default(double?), double? limitsCamberRrMax = default(double?), bool? passfailsCamberRr = default(bool?), double? resultsCamberRr = default(double?), double? limitsLfFramerailMin = default(double?), double? limitsLfFramerailMax = default(double?), bool? passfailsLfFramerail = default(bool?), double? resultsLfFramerail = default(double?), double? limitsLrFramerailMin = default(double?), double? limitsLrFramerailMax = default(double?), bool? passfailsLrFramerail = default(bool?), double? resultsLrFramerail = default(double?), double? limitsRfFramerailMin = default(double?), double? limitsRfFramerailMax = default(double?), bool? passfailsRfFramerail = default(bool?), double? resultsRfFramerail = default(double?), double? limitsRhLocationLeftMin = default(double?), double? limitsRhLocationLeftMax = default(double?), bool? passfailsRhLocationLeft = default(bool?), double? resultsRhLocationLeft = default(double?), double? limitsRhLocationRightMin = default(double?), double? limitsRhLocationRightMax = default(double?), bool? passfailsRhLocationRight = default(bool?), double? resultsRhLocationRight = default(double?), double? limitsRhSkewMin = default(double?), double? limitsRhSkewMax = default(double?), bool? passfailsRhSkew = default(bool?), double? resultsRhSkew = default(double?), double? limitsRrFramerailMin = default(double?), double? limitsRrFramerailMax = default(double?), bool? passfailsRrFramerail = default(bool?), double? resultsRrFramerail = default(double?), double? limitsRightParallelMin = default(double?), double? limitsRightParallelMax = default(double?), bool? passfailsRightParallel = default(bool?), double? resultsRightParallel = default(double?), double? limitsTreadwidthFrontMin = default(double?), double? limitsTreadwidthFrontMax = default(double?), bool? passfailsTreadwidthFront = default(bool?), double? resultsTreadwidthFront = default(double?), double? limitsTreadwidthRearMin = default(double?), double? limitsTreadwidthRearMax = default(double?), bool? passfailsTreadwidthRear = default(bool?), double? resultsTreadwidthRear = default(double?), double? limitsWheelbaseLeftMin = default(double?), double? limitsWheelbaseLeftMax = default(double?), bool? passfailsWheelbaseLeft = default(bool?), double? resultsWheelbaseLeft = default(double?), double? limitsWheelbaseRightMin = default(double?), double? limitsWheelbaseRightMax = default(double?), bool? passfailsWheelbaseRight = default(bool?), double? resultsWheelbaseRight = default(double?), double? limitsToeLrMin = default(double?), double? limitsToeLrMax = default(double?), bool? passfailsToeLr = default(bool?), double? resultsToeLr = default(double?), double? limitsToeRrMin = default(double?), double? limitsToeRrMax = default(double?), bool? passfailsToeRr = default(bool?), double? resultsToeRr = default(double?), DateTimeOffset? inspectionDate = default(DateTimeOffset?))
@@ -461,16 +461,16 @@ namespace NASCAR.Data.Client.Model
         public double? ResultsRhLocationLeft { get; set; }
 
         /// <summary>
-        /// Right hand right min
+        /// Right hand right minimum
         /// </summary>
-        /// <value>Right hand right min</value>
+        /// <value>Right hand right minimum</value>
         [DataMember(Name="limits_rh_location_right_min", EmitDefaultValue=false)]
         public double? LimitsRhLocationRightMin { get; set; }
 
         /// <summary>
-        /// Right hand right max
+        /// Right hand right maximum
         /// </summary>
-        /// <value>Right hand right max</value>
+        /// <value>Right hand right maximum</value>
         [DataMember(Name="limits_rh_location_right_max", EmitDefaultValue=false)]
         public double? LimitsRhLocationRightMax { get; set; }
 
@@ -489,9 +489,9 @@ namespace NASCAR.Data.Client.Model
         public double? ResultsRhLocationRight { get; set; }
 
         /// <summary>
-        /// Right right skew minimum
+        /// Right hand skew minimum
         /// </summary>
-        /// <value>Right right skew minimum</value>
+        /// <value>Right hand skew minimum</value>
         [DataMember(Name="limits_rh_skew_min", EmitDefaultValue=false)]
         public double? LimitsRhSkewMin { get; set; }
 
@@ -727,9 +727,9 @@ namespace NASCAR.Data.Client.Model
         public double? LimitsToeRrMax { get; set; }
 
         /// <summary>
-        /// Right rear pass/fails
+        /// Right rear toe pass/fails
         /// </summary>
-        /// <value>Right rear pass/fails</value>
+        /// <value>Right rear toe pass/fails</value>
         [DataMember(Name="passfails_toe_rr", EmitDefaultValue=false)]
         public bool? PassfailsToeRr { get; set; }
 

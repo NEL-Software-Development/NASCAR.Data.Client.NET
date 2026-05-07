@@ -4,14 +4,14 @@ All URIs are relative to */api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CompanyGet**](CompanyApi.md#companyget) | **GET** /company | 
-[**CompanySearchGet**](CompanyApi.md#companysearchget) | **GET** /company/search | 
+[**CompanyGet**](CompanyApi.md#companyget) | **GET** /company | Retrieves a single company by ID.
+[**CompanySearchGet**](CompanyApi.md#companysearchget) | **GET** /company/search | Searches for companies by name or keyword.
 
 <a name="companyget"></a>
 # **CompanyGet**
-> Collection<Company> CompanyGet (int? id = null)
+> Company CompanyGet (int? id = null)
 
-
+Retrieves a single company by ID.
 
 ### Example
 ```csharp
@@ -29,11 +29,12 @@ namespace Example
         {
 
             var apiInstance = new CompanyApi();
-            var id = 56;  // int? |  (optional) 
+            var id = 56;  // int? | Unique company identifier. (optional) 
 
             try
             {
-                Collection&lt;Company&gt; result = apiInstance.CompanyGet(id);
+                // Retrieves a single company by ID.
+                Company result = apiInstance.CompanyGet(id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -49,11 +50,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int?**|  | [optional] 
+ **id** | **int?**| Unique company identifier. | [optional] 
 
 ### Return type
 
-[**Collection<Company>**](Company.md)
+[**Company**](Company.md)
 
 ### Authorization
 
@@ -69,7 +70,7 @@ Name | Type | Description  | Notes
 # **CompanySearchGet**
 > Collection<Company> CompanySearchGet (string searchTerm = null)
 
-
+Searches for companies by name or keyword.
 
 ### Example
 ```csharp
@@ -87,10 +88,11 @@ namespace Example
         {
 
             var apiInstance = new CompanyApi();
-            var searchTerm = searchTerm_example;  // string |  (optional) 
+            var searchTerm = searchTerm_example;  // string | Partial or full company name to search for (e.g. \"Daytona\"). (optional) 
 
             try
             {
+                // Searches for companies by name or keyword.
                 Collection&lt;Company&gt; result = apiInstance.CompanySearchGet(searchTerm);
                 Debug.WriteLine(result);
             }
@@ -107,7 +109,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **searchTerm** | **string**|  | [optional] 
+ **searchTerm** | **string**| Partial or full company name to search for (e.g. \&quot;Daytona\&quot;). | [optional] 
 
 ### Return type
 

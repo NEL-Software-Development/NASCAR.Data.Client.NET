@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// WeekendSchedule
+    /// Represents a scheduled activity during a race week event
     /// </summary>
     [DataContract]
         public partial class WeekendSchedule :  IEquatable<WeekendSchedule>, IValidatableObject
@@ -32,20 +32,22 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WeekendSchedule" /> class.
         /// </summary>
-        /// <param name="activity">The name of the activity.</param>
+        /// <param name="activity">Name of the scheduled activity.</param>
         /// <param name="startTime">Scheduled start time.</param>
-        /// <param name="endTime">Scheduled end time (if any).</param>
-        public WeekendSchedule(string activity = default(string), DateTimeOffset? startTime = default(DateTimeOffset?), DateTimeOffset? endTime = default(DateTimeOffset?))
+        /// <param name="endTime">Scheduled end time.</param>
+        /// <param name="notes">Additional notes for the scheduled activity.</param>
+        public WeekendSchedule(string activity = default(string), DateTimeOffset? startTime = default(DateTimeOffset?), DateTimeOffset? endTime = default(DateTimeOffset?), string notes = default(string))
         {
             this.Activity = activity;
             this.StartTime = startTime;
             this.EndTime = endTime;
+            this.Notes = notes;
         }
         
         /// <summary>
-        /// The name of the activity
+        /// Name of the scheduled activity
         /// </summary>
-        /// <value>The name of the activity</value>
+        /// <value>Name of the scheduled activity</value>
         [DataMember(Name="activity", EmitDefaultValue=false)]
         public string Activity { get; set; }
 
@@ -57,11 +59,18 @@ namespace NASCAR.Data.Client.Model
         public DateTimeOffset? StartTime { get; set; }
 
         /// <summary>
-        /// Scheduled end time (if any)
+        /// Scheduled end time
         /// </summary>
-        /// <value>Scheduled end time (if any)</value>
+        /// <value>Scheduled end time</value>
         [DataMember(Name="end_time", EmitDefaultValue=false)]
         public DateTimeOffset? EndTime { get; set; }
+
+        /// <summary>
+        /// Additional notes for the scheduled activity
+        /// </summary>
+        /// <value>Additional notes for the scheduled activity</value>
+        [DataMember(Name="notes", EmitDefaultValue=false)]
+        public string Notes { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -74,6 +83,7 @@ namespace NASCAR.Data.Client.Model
             sb.Append("  Activity: ").Append(Activity).Append("\n");
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
+            sb.Append("  Notes: ").Append(Notes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -122,6 +132,11 @@ namespace NASCAR.Data.Client.Model
                     this.EndTime == input.EndTime ||
                     (this.EndTime != null &&
                     this.EndTime.Equals(input.EndTime))
+                ) && 
+                (
+                    this.Notes == input.Notes ||
+                    (this.Notes != null &&
+                    this.Notes.Equals(input.Notes))
                 );
         }
 
@@ -140,6 +155,8 @@ namespace NASCAR.Data.Client.Model
                     hashCode = hashCode * 59 + this.StartTime.GetHashCode();
                 if (this.EndTime != null)
                     hashCode = hashCode * 59 + this.EndTime.GetHashCode();
+                if (this.Notes != null)
+                    hashCode = hashCode * 59 + this.Notes.GetHashCode();
                 return hashCode;
             }
         }

@@ -3,9 +3,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StageNumber** | **int?** | The stage number. | [optional] 
-**Laps** | **int?** | The total number of laps in the stage. | [optional] 
-**StageName** | **string** | The name of the stage (if given). | [optional] 
+**EtlStageId** | **int?** | ETL stage identifier | [optional] 
+**StageNumber** | **int?** | Stage number | [optional] 
+**Laps** | **int?** | Total number of laps in the stage | [optional] 
+**StageName** | **string** | Name of the stage | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

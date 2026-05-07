@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// OpticalTrackingUTMOffset
+    /// Represents a UTM coordinate offset used for optical tracking at a specific track
     /// </summary>
     [DataContract]
         public partial class OpticalTrackingUTMOffset :  IEquatable<OpticalTrackingUTMOffset>, IValidatableObject
@@ -32,12 +32,12 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OpticalTrackingUTMOffset" /> class.
         /// </summary>
-        /// <param name="trackId">Track Id.</param>
-        /// <param name="trackName">Track Name.</param>
-        /// <param name="zone">Zone.</param>
-        /// <param name="x">X Coordinate.</param>
-        /// <param name="y">Y coordinate.</param>
-        /// <param name="z">Z coordinate.</param>
+        /// <param name="trackId">Track identifier.</param>
+        /// <param name="trackName">Track name.</param>
+        /// <param name="zone">UTM zone designation.</param>
+        /// <param name="x">X coordinate offset.</param>
+        /// <param name="y">Y coordinate offset.</param>
+        /// <param name="z">Z coordinate offset.</param>
         public OpticalTrackingUTMOffset(int? trackId = default(int?), string trackName = default(string), string zone = default(string), double? x = default(double?), double? y = default(double?), double? z = default(double?))
         {
             this.TrackId = trackId;
@@ -49,44 +49,44 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Track Id
+        /// Track identifier
         /// </summary>
-        /// <value>Track Id</value>
+        /// <value>Track identifier</value>
         [DataMember(Name="track_id", EmitDefaultValue=false)]
         public int? TrackId { get; set; }
 
         /// <summary>
-        /// Track Name
+        /// Track name
         /// </summary>
-        /// <value>Track Name</value>
+        /// <value>Track name</value>
         [DataMember(Name="track_name", EmitDefaultValue=false)]
         public string TrackName { get; set; }
 
         /// <summary>
-        /// Zone
+        /// UTM zone designation
         /// </summary>
-        /// <value>Zone</value>
+        /// <value>UTM zone designation</value>
         [DataMember(Name="zone", EmitDefaultValue=false)]
         public string Zone { get; set; }
 
         /// <summary>
-        /// X Coordinate
+        /// X coordinate offset
         /// </summary>
-        /// <value>X Coordinate</value>
+        /// <value>X coordinate offset</value>
         [DataMember(Name="x", EmitDefaultValue=false)]
         public double? X { get; set; }
 
         /// <summary>
-        /// Y coordinate
+        /// Y coordinate offset
         /// </summary>
-        /// <value>Y coordinate</value>
+        /// <value>Y coordinate offset</value>
         [DataMember(Name="y", EmitDefaultValue=false)]
         public double? Y { get; set; }
 
         /// <summary>
-        /// Z coordinate
+        /// Z coordinate offset
         /// </summary>
-        /// <value>Z coordinate</value>
+        /// <value>Z coordinate offset</value>
         [DataMember(Name="z", EmitDefaultValue=false)]
         public double? Z { get; set; }
 

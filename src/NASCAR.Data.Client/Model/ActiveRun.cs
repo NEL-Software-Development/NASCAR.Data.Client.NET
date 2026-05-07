@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// ActiveRun
+    /// Represents the currently active run with its associated flags, entries, and results
     /// </summary>
     [DataContract]
         public partial class ActiveRun :  IEquatable<ActiveRun>, IValidatableObject
@@ -38,8 +38,8 @@ namespace NASCAR.Data.Client.Model
         /// <param name="runType">runType.</param>
         /// <param name="duration">The scheduled duration of the run in seconds.</param>
         /// <param name="flags">Flags associated with this run.</param>
-        /// <param name="entries">entries.</param>
-        /// <param name="results">results.</param>
+        /// <param name="entries">Run entries (vehicles and drivers participating in this run).</param>
+        /// <param name="results">Current results for this run.</param>
         public ActiveRun(string name = default(string), DateTimeOffset? startTime = default(DateTimeOffset?), RunState runState = default(RunState), RunType runType = default(RunType), int? duration = default(int?), Collection<Flag> flags = default(Collection<Flag>), Collection<RunEntry> entries = default(Collection<RunEntry>), Collection<RunResult> results = default(Collection<RunResult>))
         {
             this.Name = name;
@@ -86,8 +86,9 @@ namespace NASCAR.Data.Client.Model
         public int? Duration { get; set; }
 
         /// <summary>
-        /// Gets or Sets FlagState
+        /// Current flag state (NONE, WARMUP, GREEN, YELLOW, RED, WHITE, FINISH, EXTRA)
         /// </summary>
+        /// <value>Current flag state (NONE, WARMUP, GREEN, YELLOW, RED, WHITE, FINISH, EXTRA)</value>
         [DataMember(Name="flag_state", EmitDefaultValue=false)]
         public string FlagState { get; private set; }
 
@@ -99,14 +100,16 @@ namespace NASCAR.Data.Client.Model
         public Collection<Flag> Flags { get; set; }
 
         /// <summary>
-        /// Gets or Sets Entries
+        /// Run entries (vehicles and drivers participating in this run)
         /// </summary>
+        /// <value>Run entries (vehicles and drivers participating in this run)</value>
         [DataMember(Name="entries", EmitDefaultValue=false)]
         public Collection<RunEntry> Entries { get; set; }
 
         /// <summary>
-        /// Gets or Sets Results
+        /// Current results for this run
         /// </summary>
+        /// <value>Current results for this run</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public Collection<RunResult> Results { get; set; }
 
