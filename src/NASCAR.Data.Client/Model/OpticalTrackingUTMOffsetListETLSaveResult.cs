@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// OpticalTrackingUTMOffsetListETLSaveResult
+    /// Represents the result of an ETL save operation with typed data payload
     /// </summary>
     [DataContract]
         public partial class OpticalTrackingUTMOffsetListETLSaveResult :  IEquatable<OpticalTrackingUTMOffsetListETLSaveResult>, IValidatableObject
@@ -32,9 +32,9 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OpticalTrackingUTMOffsetListETLSaveResult" /> class.
         /// </summary>
-        /// <param name="success">success.</param>
-        /// <param name="message">message.</param>
-        /// <param name="data">data.</param>
+        /// <param name="success">Indicates whether the save operation was successful.</param>
+        /// <param name="message">Optional message providing additional information about the save operation result.</param>
+        /// <param name="data">The data payload returned from the save operation.</param>
         public OpticalTrackingUTMOffsetListETLSaveResult(bool? success = default(bool?), string message = default(string), Collection<OpticalTrackingUTMOffset> data = default(Collection<OpticalTrackingUTMOffset>))
         {
             this.Success = success;
@@ -43,20 +43,23 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets Success
+        /// Indicates whether the save operation was successful
         /// </summary>
+        /// <value>Indicates whether the save operation was successful</value>
         [DataMember(Name="Success", EmitDefaultValue=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// Gets or Sets Message
+        /// Optional message providing additional information about the save operation result
         /// </summary>
+        /// <value>Optional message providing additional information about the save operation result</value>
         [DataMember(Name="Message", EmitDefaultValue=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// Gets or Sets Data
+        /// The data payload returned from the save operation
         /// </summary>
+        /// <value>The data payload returned from the save operation</value>
         [DataMember(Name="Data", EmitDefaultValue=false)]
         public Collection<OpticalTrackingUTMOffset> Data { get; set; }
 

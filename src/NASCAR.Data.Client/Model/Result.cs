@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// Result
+    /// Represents a vehicle&#x27;s result for a run
     /// </summary>
     [DataContract]
         public partial class Result :  IEquatable<Result>, IValidatableObject
@@ -32,25 +32,25 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Result" /> class.
         /// </summary>
-        /// <param name="id">Result Id.</param>
-        /// <param name="entryId">Entry Id.</param>
+        /// <param name="id">Unique identifier given and used by the NASCAR Data API.</param>
+        /// <param name="entryId">Associated entry identifier.</param>
         /// <param name="finishPosition">Finish position.</param>
         /// <param name="driverName">Driver name.</param>
         /// <param name="vehicleNumber">Vehicle number.</param>
-        /// <param name="laps">Number of laps.</param>
+        /// <param name="laps">Total number of laps.</param>
         /// <param name="startPosition">Start position.</param>
-        /// <param name="pitBox">Pit box.</param>
+        /// <param name="pitBox">Pit box assigned to the vehicle.</param>
         /// <param name="bestTime">Best lap time in milliseconds.</param>
         /// <param name="bestSpeed">Best speed in MPH.</param>
         /// <param name="bestLap">Best lap number.</param>
-        /// <param name="lastLapTime">Last lap time.</param>
+        /// <param name="lastLapTime">Last lap time in milliseconds.</param>
         /// <param name="deltaNextTime">Number of milliseconds behind the next position.</param>
         /// <param name="deltaNextLaps">Number of laps behind the next position.</param>
         /// <param name="deltaLeaderTime">Number of milliseconds behind the leader.</param>
         /// <param name="deltaLeaderLaps">Number of laps behind the leader.</param>
-        /// <param name="onTrack">Is on track.</param>
+        /// <param name="onTrack">Indicates whether the vehicle is currently on track.</param>
         /// <param name="status">Vehicle Status (0&#x3D;None, 1&#x3D;Active, 2&#x3D;DNS, 3&#x3D;DNF, 4&#x3D;DQ, 5&#x3D;Pace Car, 6&#x3D;Garage.</param>
-        /// <param name="comment">Comment.</param>
+        /// <param name="comment">Comment associated with the result.</param>
         public Result(int? id = default(int?), int? entryId = default(int?), int? finishPosition = default(int?), string driverName = default(string), string vehicleNumber = default(string), int? laps = default(int?), int? startPosition = default(int?), int? pitBox = default(int?), int? bestTime = default(int?), double? bestSpeed = default(double?), int? bestLap = default(int?), int? lastLapTime = default(int?), int? deltaNextTime = default(int?), int? deltaNextLaps = default(int?), int? deltaLeaderTime = default(int?), int? deltaLeaderLaps = default(int?), bool? onTrack = default(bool?), string status = default(string), string comment = default(string))
         {
             this.Id = id;
@@ -75,16 +75,16 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Result Id
+        /// Unique identifier given and used by the NASCAR Data API
         /// </summary>
-        /// <value>Result Id</value>
+        /// <value>Unique identifier given and used by the NASCAR Data API</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Entry Id
+        /// Associated entry identifier
         /// </summary>
-        /// <value>Entry Id</value>
+        /// <value>Associated entry identifier</value>
         [DataMember(Name="entry_id", EmitDefaultValue=false)]
         public int? EntryId { get; set; }
 
@@ -110,9 +110,9 @@ namespace NASCAR.Data.Client.Model
         public string VehicleNumber { get; set; }
 
         /// <summary>
-        /// Number of laps
+        /// Total number of laps
         /// </summary>
-        /// <value>Number of laps</value>
+        /// <value>Total number of laps</value>
         [DataMember(Name="laps", EmitDefaultValue=false)]
         public int? Laps { get; set; }
 
@@ -124,9 +124,9 @@ namespace NASCAR.Data.Client.Model
         public int? StartPosition { get; set; }
 
         /// <summary>
-        /// Pit box
+        /// Pit box assigned to the vehicle
         /// </summary>
-        /// <value>Pit box</value>
+        /// <value>Pit box assigned to the vehicle</value>
         [DataMember(Name="pit_box", EmitDefaultValue=false)]
         public int? PitBox { get; set; }
 
@@ -152,9 +152,9 @@ namespace NASCAR.Data.Client.Model
         public int? BestLap { get; set; }
 
         /// <summary>
-        /// Last lap time
+        /// Last lap time in milliseconds
         /// </summary>
-        /// <value>Last lap time</value>
+        /// <value>Last lap time in milliseconds</value>
         [DataMember(Name="last_lap_time", EmitDefaultValue=false)]
         public int? LastLapTime { get; set; }
 
@@ -187,9 +187,9 @@ namespace NASCAR.Data.Client.Model
         public int? DeltaLeaderLaps { get; set; }
 
         /// <summary>
-        /// Is on track
+        /// Indicates whether the vehicle is currently on track
         /// </summary>
-        /// <value>Is on track</value>
+        /// <value>Indicates whether the vehicle is currently on track</value>
         [DataMember(Name="on_track", EmitDefaultValue=false)]
         public bool? OnTrack { get; set; }
 
@@ -201,9 +201,9 @@ namespace NASCAR.Data.Client.Model
         public string Status { get; set; }
 
         /// <summary>
-        /// Comment
+        /// Comment associated with the result
         /// </summary>
-        /// <value>Comment</value>
+        /// <value>Comment associated with the result</value>
         [DataMember(Name="comment", EmitDefaultValue=false)]
         public string Comment { get; set; }
 
