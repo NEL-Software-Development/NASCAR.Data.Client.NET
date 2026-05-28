@@ -24,89 +24,89 @@ namespace NASCAR.Data.Client.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// Retrieves a list of OSS scans for a specific race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">Unique race identifier. (optional)</param>
         /// <returns>Collection&lt;OSSScan&gt;</returns>
         Collection<OSSScan> InspectionsOssGet (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves a list of OSS scans for a specific race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">Unique race identifier. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;OSSScan&gt;</returns>
         ApiResponse<Collection<OSSScan>> InspectionsOssGetWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves a list of vehicle weights for a specific race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">Unique race identifier. (optional)</param>
         /// <returns>Collection&lt;VehicleWeight&gt;</returns>
         Collection<VehicleWeight> InspectionsVehicleWeightsGet (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves a list of vehicle weights for a specific race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">Unique race identifier. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;VehicleWeight&gt;</returns>
         ApiResponse<Collection<VehicleWeight>> InspectionsVehicleWeightsGetWithHttpInfo (int? raceId = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// Retrieves a list of OSS scans for a specific race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">Unique race identifier. (optional)</param>
         /// <returns>Task of Collection&lt;OSSScan&gt;</returns>
         System.Threading.Tasks.Task<Collection<OSSScan>> InspectionsOssGetAsync (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves a list of OSS scans for a specific race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">Unique race identifier. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;OSSScan&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Collection<OSSScan>>> InspectionsOssGetAsyncWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves a list of vehicle weights for a specific race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">Unique race identifier. (optional)</param>
         /// <returns>Task of Collection&lt;VehicleWeight&gt;</returns>
         System.Threading.Tasks.Task<Collection<VehicleWeight>> InspectionsVehicleWeightsGetAsync (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves a list of vehicle weights for a specific race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">Unique race identifier. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;VehicleWeight&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Collection<VehicleWeight>>> InspectionsVehicleWeightsGetAsyncWithHttpInfo (int? raceId = null);
         #endregion Asynchronous Operations
@@ -221,10 +221,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of OSS scans for a specific race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">Unique race identifier. (optional)</param>
         /// <returns>Collection&lt;OSSScan&gt;</returns>
         public Collection<OSSScan> InspectionsOssGet (int? raceId = null)
         {
@@ -233,10 +233,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of OSS scans for a specific race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">Unique race identifier. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;OSSScan&gt;</returns>
         public ApiResponse< Collection<OSSScan> > InspectionsOssGetWithHttpInfo (int? raceId = null)
         {
@@ -291,10 +291,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of OSS scans for a specific race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">Unique race identifier. (optional)</param>
         /// <returns>Task of Collection&lt;OSSScan&gt;</returns>
         public async System.Threading.Tasks.Task<Collection<OSSScan>> InspectionsOssGetAsync (int? raceId = null)
         {
@@ -304,10 +304,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of OSS scans for a specific race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">Unique race identifier. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;OSSScan&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Collection<OSSScan>>> InspectionsOssGetAsyncWithHttpInfo (int? raceId = null)
         {
@@ -362,10 +362,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of vehicle weights for a specific race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">Unique race identifier. (optional)</param>
         /// <returns>Collection&lt;VehicleWeight&gt;</returns>
         public Collection<VehicleWeight> InspectionsVehicleWeightsGet (int? raceId = null)
         {
@@ -374,10 +374,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of vehicle weights for a specific race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">Unique race identifier. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;VehicleWeight&gt;</returns>
         public ApiResponse< Collection<VehicleWeight> > InspectionsVehicleWeightsGetWithHttpInfo (int? raceId = null)
         {
@@ -432,10 +432,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of vehicle weights for a specific race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">Unique race identifier. (optional)</param>
         /// <returns>Task of Collection&lt;VehicleWeight&gt;</returns>
         public async System.Threading.Tasks.Task<Collection<VehicleWeight>> InspectionsVehicleWeightsGetAsync (int? raceId = null)
         {
@@ -445,10 +445,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of vehicle weights for a specific race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">Unique race identifier. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;VehicleWeight&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Collection<VehicleWeight>>> InspectionsVehicleWeightsGetAsyncWithHttpInfo (int? raceId = null)
         {

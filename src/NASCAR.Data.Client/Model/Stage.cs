@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// Stage
+    /// Represents a stage within a race event
     /// </summary>
     [DataContract]
         public partial class Stage :  IEquatable<Stage>, IValidatableObject
@@ -32,34 +32,43 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Stage" /> class.
         /// </summary>
-        /// <param name="stageNumber">The stage number..</param>
-        /// <param name="laps">The total number of laps in the stage..</param>
-        /// <param name="stageName">The name of the stage (if given)..</param>
-        public Stage(int? stageNumber = default(int?), int? laps = default(int?), string stageName = default(string))
+        /// <param name="etlStageId">ETL stage identifier.</param>
+        /// <param name="stageNumber">Stage number.</param>
+        /// <param name="laps">Total number of laps in the stage.</param>
+        /// <param name="stageName">Name of the stage.</param>
+        public Stage(int? etlStageId = default(int?), int? stageNumber = default(int?), int? laps = default(int?), string stageName = default(string))
         {
+            this.EtlStageId = etlStageId;
             this.StageNumber = stageNumber;
             this.Laps = laps;
             this.StageName = stageName;
         }
         
         /// <summary>
-        /// The stage number.
+        /// ETL stage identifier
         /// </summary>
-        /// <value>The stage number.</value>
+        /// <value>ETL stage identifier</value>
+        [DataMember(Name="etl_stage_id", EmitDefaultValue=false)]
+        public int? EtlStageId { get; set; }
+
+        /// <summary>
+        /// Stage number
+        /// </summary>
+        /// <value>Stage number</value>
         [DataMember(Name="stage_number", EmitDefaultValue=false)]
         public int? StageNumber { get; set; }
 
         /// <summary>
-        /// The total number of laps in the stage.
+        /// Total number of laps in the stage
         /// </summary>
-        /// <value>The total number of laps in the stage.</value>
+        /// <value>Total number of laps in the stage</value>
         [DataMember(Name="laps", EmitDefaultValue=false)]
         public int? Laps { get; set; }
 
         /// <summary>
-        /// The name of the stage (if given).
+        /// Name of the stage
         /// </summary>
-        /// <value>The name of the stage (if given).</value>
+        /// <value>Name of the stage</value>
         [DataMember(Name="stage_name", EmitDefaultValue=false)]
         public string StageName { get; set; }
 
@@ -71,6 +80,7 @@ namespace NASCAR.Data.Client.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Stage {\n");
+            sb.Append("  EtlStageId: ").Append(EtlStageId).Append("\n");
             sb.Append("  StageNumber: ").Append(StageNumber).Append("\n");
             sb.Append("  Laps: ").Append(Laps).Append("\n");
             sb.Append("  StageName: ").Append(StageName).Append("\n");
@@ -109,6 +119,11 @@ namespace NASCAR.Data.Client.Model
 
             return 
                 (
+                    this.EtlStageId == input.EtlStageId ||
+                    (this.EtlStageId != null &&
+                    this.EtlStageId.Equals(input.EtlStageId))
+                ) && 
+                (
                     this.StageNumber == input.StageNumber ||
                     (this.StageNumber != null &&
                     this.StageNumber.Equals(input.StageNumber))
@@ -134,6 +149,8 @@ namespace NASCAR.Data.Client.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.EtlStageId != null)
+                    hashCode = hashCode * 59 + this.EtlStageId.GetHashCode();
                 if (this.StageNumber != null)
                     hashCode = hashCode * 59 + this.StageNumber.GetHashCode();
                 if (this.Laps != null)

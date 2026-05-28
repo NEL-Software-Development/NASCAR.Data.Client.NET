@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// LapLeader
+    /// Represents a lap leader record tracking which vehicle led during a specific range of laps in a run
     /// </summary>
     [DataContract]
         public partial class LapLeader :  IEquatable<LapLeader>, IValidatableObject
@@ -35,12 +35,14 @@ namespace NASCAR.Data.Client.Model
         /// <param name="startLap">Start lap.</param>
         /// <param name="endLap">End lap.</param>
         /// <param name="lapsLed">Total laps led.</param>
+        /// <param name="timesLed">Number of distinct times this vehicle led during this race.</param>
         /// <param name="vehicleNumber">Vehicle number.</param>
-        public LapLeader(int? startLap = default(int?), int? endLap = default(int?), int? lapsLed = default(int?), string vehicleNumber = default(string))
+        public LapLeader(int? startLap = default(int?), int? endLap = default(int?), int? lapsLed = default(int?), int? timesLed = default(int?), string vehicleNumber = default(string))
         {
             this.StartLap = startLap;
             this.EndLap = endLap;
             this.LapsLed = lapsLed;
+            this.TimesLed = timesLed;
             this.VehicleNumber = vehicleNumber;
         }
         
@@ -66,6 +68,13 @@ namespace NASCAR.Data.Client.Model
         public int? LapsLed { get; set; }
 
         /// <summary>
+        /// Number of distinct times this vehicle led during this race
+        /// </summary>
+        /// <value>Number of distinct times this vehicle led during this race</value>
+        [DataMember(Name="times_led", EmitDefaultValue=false)]
+        public int? TimesLed { get; set; }
+
+        /// <summary>
         /// Vehicle number
         /// </summary>
         /// <value>Vehicle number</value>
@@ -83,6 +92,7 @@ namespace NASCAR.Data.Client.Model
             sb.Append("  StartLap: ").Append(StartLap).Append("\n");
             sb.Append("  EndLap: ").Append(EndLap).Append("\n");
             sb.Append("  LapsLed: ").Append(LapsLed).Append("\n");
+            sb.Append("  TimesLed: ").Append(TimesLed).Append("\n");
             sb.Append("  VehicleNumber: ").Append(VehicleNumber).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -134,6 +144,11 @@ namespace NASCAR.Data.Client.Model
                     this.LapsLed.Equals(input.LapsLed))
                 ) && 
                 (
+                    this.TimesLed == input.TimesLed ||
+                    (this.TimesLed != null &&
+                    this.TimesLed.Equals(input.TimesLed))
+                ) && 
+                (
                     this.VehicleNumber == input.VehicleNumber ||
                     (this.VehicleNumber != null &&
                     this.VehicleNumber.Equals(input.VehicleNumber))
@@ -155,6 +170,8 @@ namespace NASCAR.Data.Client.Model
                     hashCode = hashCode * 59 + this.EndLap.GetHashCode();
                 if (this.LapsLed != null)
                     hashCode = hashCode * 59 + this.LapsLed.GetHashCode();
+                if (this.TimesLed != null)
+                    hashCode = hashCode * 59 + this.TimesLed.GetHashCode();
                 if (this.VehicleNumber != null)
                     hashCode = hashCode * 59 + this.VehicleNumber.GetHashCode();
                 return hashCode;

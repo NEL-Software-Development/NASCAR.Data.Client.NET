@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// RunResults
+    /// Represents the results of a run including run state, flag state, and qualifying information
     /// </summary>
     [DataContract]
         public partial class RunResults :  IEquatable<RunResults>, IValidatableObject
@@ -32,12 +32,12 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RunResults" /> class.
         /// </summary>
-        /// <param name="runName">runName.</param>
+        /// <param name="runName">Run name.</param>
         /// <param name="runState">Run state:  (Inactive, Active, Completed).</param>
         /// <param name="flagState">Flag state:  (NONE, WARMUP, GREEN, YELLOW, RED, WHITE, FINISH, EXTRA).</param>
         /// <param name="round">Qualifying round: 0-3.</param>
         /// <param name="group">Qualifying group: A, B, (empty).</param>
-        /// <param name="results">results.</param>
+        /// <param name="results">Run results.</param>
         public RunResults(string runName = default(string), string runState = default(string), string flagState = default(string), int? round = default(int?), string group = default(string), Collection<Result> results = default(Collection<Result>))
         {
             this.RunName = runName;
@@ -49,8 +49,9 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets RunName
+        /// Run name
         /// </summary>
+        /// <value>Run name</value>
         [DataMember(Name="run_name", EmitDefaultValue=false)]
         public string RunName { get; set; }
 
@@ -83,9 +84,9 @@ namespace NASCAR.Data.Client.Model
         public string Group { get; set; }
 
         /// <summary>
-        /// results
+        /// Run results
         /// </summary>
-        /// <value>results</value>
+        /// <value>Run results</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public Collection<Result> Results { get; set; }
 

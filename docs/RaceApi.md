@@ -4,34 +4,36 @@ All URIs are relative to */api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**RaceCautionsGet**](RaceApi.md#racecautionsget) | **GET** /race/cautions | 
-[**RaceDisciplineUpdatesGet**](RaceApi.md#racedisciplineupdatesget) | **GET** /race/discipline-updates | 
-[**RaceEntriesGet**](RaceApi.md#raceentriesget) | **GET** /race/entries | 
-[**RaceGet**](RaceApi.md#raceget) | **GET** /race | 
-[**RaceInfractionsGet**](RaceApi.md#raceinfractionsget) | **GET** /race/infractions | 
-[**RaceLapLeadersGet**](RaceApi.md#racelapleadersget) | **GET** /race/lap-leaders | 
-[**RaceLiveSessionGet**](RaceApi.md#racelivesessionget) | **GET** /race/live-session | 
-[**RaceLookupGet**](RaceApi.md#racelookupget) | **GET** /race/lookup | 
+[**RaceCautionsGet**](RaceApi.md#racecautionsget) | **GET** /race/cautions | Retrieves a list of cautions for a given race.
+[**RaceDisciplineUpdatesGet**](RaceApi.md#racedisciplineupdatesget) | **GET** /race/discipline-updates | Retrieves a list of discipline updates for a given race.
+[**RaceEntriesGet**](RaceApi.md#raceentriesget) | **GET** /race/entries | Retrieves a list of entries for a given race.
+[**RaceFastestLapsGet**](RaceApi.md#racefastestlapsget) | **GET** /race/fastest-laps | Retrieves the fastest lap information for a specified race.
+[**RaceGet**](RaceApi.md#raceget) | **GET** /race | Retrieves detailed information for a given race.
+[**RaceInfractionsGet**](RaceApi.md#raceinfractionsget) | **GET** /race/infractions | Retrieves a list of infractions for a given race.
+[**RaceLapChartGet**](RaceApi.md#racelapchartget) | **GET** /race/lap-chart | Retrieves lap by lap driver information for a specified race.
+[**RaceLapLeadersGet**](RaceApi.md#racelapleadersget) | **GET** /race/lap-leaders | Retrieves a list of lap leaders for a given race.
+[**RaceLiveSessionGet**](RaceApi.md#racelivesessionget) | **GET** /race/live-session | Retrieves the active run session information.
+[**RaceLookupGet**](RaceApi.md#racelookupget) | **GET** /race/lookup | Retrieves a list of race details based on historic race ID or a date range.
 [**RaceLoopStatsGet**](RaceApi.md#raceloopstatsget) | **GET** /race/loop-stats | 
-[**RacePitstopsGet**](RaceApi.md#racepitstopsget) | **GET** /race/pitstops | 
-[**RacePracticeResultsGet**](RaceApi.md#racepracticeresultsget) | **GET** /race/practice-results | 
-[**RaceQualifyingResultsGet**](RaceApi.md#racequalifyingresultsget) | **GET** /race/qualifying-results | 
-[**RaceRaceResultsGet**](RaceApi.md#raceraceresultsget) | **GET** /race/race-results | 
+[**RacePitstopsGet**](RaceApi.md#racepitstopsget) | **GET** /race/pitstops | Retrieves a list of pit stops for a given race.
+[**RacePracticeResultsGet**](RaceApi.md#racepracticeresultsget) | **GET** /race/practice-results | Retrieves practice run results for a given race.
+[**RaceQualifyingResultsGet**](RaceApi.md#racequalifyingresultsget) | **GET** /race/qualifying-results | Retrieves qualifying run results for a given race.
+[**RaceRaceResultsGet**](RaceApi.md#raceraceresultsget) | **GET** /race/race-results | Retrieves the race results for a specified race
 [**RaceReportGet**](RaceApi.md#racereportget) | **GET** /race/report | 
-[**RaceResultsGet**](RaceApi.md#raceresultsget) | **GET** /race/results | 
-[**RaceRostersGet**](RaceApi.md#racerostersget) | **GET** /race/rosters | 
-[**RaceSeasonGet**](RaceApi.md#raceseasonget) | **GET** /race/season | 
-[**RaceStageResultsGet**](RaceApi.md#racestageresultsget) | **GET** /race/stage-results | 
-[**RaceStagesGet**](RaceApi.md#racestagesget) | **GET** /race/stages | 
+[**RaceResultsGet**](RaceApi.md#raceresultsget) | **GET** /race/results | Retrieves the run results for a specified race and timing run ID. Timing run ID corresponds to the different  timing runs within a race.
+[**RaceRostersGet**](RaceApi.md#racerostersget) | **GET** /race/rosters | Retrieves the team rosters for a specified race.
+[**RaceSeasonGet**](RaceApi.md#raceseasonget) | **GET** /race/season | Retrieves races for a specified season and series.
+[**RaceStageResultsGet**](RaceApi.md#racestageresultsget) | **GET** /race/stage-results | Retrieves a list of stage results for a specified race.
+[**RaceStagesGet**](RaceApi.md#racestagesget) | **GET** /race/stages | Retrieves the stage information for a specified race.
 [**RaceStatReportsGet**](RaceApi.md#racestatreportsget) | **GET** /race/stat-reports | 
-[**RaceViewmodelGet**](RaceApi.md#raceviewmodelget) | **GET** /race/viewmodel | 
-[**RaceWeekendScheduleGet**](RaceApi.md#raceweekendscheduleget) | **GET** /race/weekend-schedule | 
+[**RaceViewmodelGet**](RaceApi.md#raceviewmodelget) | **GET** /race/viewmodel | Retrieves a comprehensive view model for a specified race.
+[**RaceWeekendScheduleGet**](RaceApi.md#raceweekendscheduleget) | **GET** /race/weekend-schedule | Retrieves the weekend schedule for a specified race.
 
 <a name="racecautionsget"></a>
 # **RaceCautionsGet**
 > Collection<Caution> RaceCautionsGet (int? raceId = null)
 
-
+Retrieves a list of cautions for a given race.
 
 ### Example
 ```csharp
@@ -49,10 +51,11 @@ namespace Example
         {
 
             var apiInstance = new RaceApi();
-            var raceId = 56;  // int? |  (optional) 
+            var raceId = 56;  // int? | The unique identifier of the race. (optional) 
 
             try
             {
+                // Retrieves a list of cautions for a given race.
                 Collection&lt;Caution&gt; result = apiInstance.RaceCautionsGet(raceId);
                 Debug.WriteLine(result);
             }
@@ -69,7 +72,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **raceId** | **int?**|  | [optional] 
+ **raceId** | **int?**| The unique identifier of the race. | [optional] 
 
 ### Return type
 
@@ -89,7 +92,7 @@ Name | Type | Description  | Notes
 # **RaceDisciplineUpdatesGet**
 > Collection<DisciplineUpdate> RaceDisciplineUpdatesGet (int? raceId = null)
 
-
+Retrieves a list of discipline updates for a given race.
 
 ### Example
 ```csharp
@@ -107,10 +110,11 @@ namespace Example
         {
 
             var apiInstance = new RaceApi();
-            var raceId = 56;  // int? |  (optional) 
+            var raceId = 56;  // int? | The unique identifier of the race. (optional) 
 
             try
             {
+                // Retrieves a list of discipline updates for a given race.
                 Collection&lt;DisciplineUpdate&gt; result = apiInstance.RaceDisciplineUpdatesGet(raceId);
                 Debug.WriteLine(result);
             }
@@ -127,7 +131,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **raceId** | **int?**|  | [optional] 
+ **raceId** | **int?**| The unique identifier of the race. | [optional] 
 
 ### Return type
 
@@ -147,7 +151,7 @@ Name | Type | Description  | Notes
 # **RaceEntriesGet**
 > Collection<RunEntry> RaceEntriesGet (int? raceId = null)
 
-
+Retrieves a list of entries for a given race.
 
 ### Example
 ```csharp
@@ -165,10 +169,11 @@ namespace Example
         {
 
             var apiInstance = new RaceApi();
-            var raceId = 56;  // int? |  (optional) 
+            var raceId = 56;  // int? | The unique identifier of the race. (optional) 
 
             try
             {
+                // Retrieves a list of entries for a given race.
                 Collection&lt;RunEntry&gt; result = apiInstance.RaceEntriesGet(raceId);
                 Debug.WriteLine(result);
             }
@@ -185,7 +190,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **raceId** | **int?**|  | [optional] 
+ **raceId** | **int?**| The unique identifier of the race. | [optional] 
 
 ### Return type
 
@@ -201,11 +206,70 @@ Name | Type | Description  | Notes
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+<a name="racefastestlapsget"></a>
+# **RaceFastestLapsGet**
+> FastestLapResult RaceFastestLapsGet (int? raceId = null)
+
+Retrieves the fastest lap information for a specified race.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using NASCAR.Data.Client.Api;
+using NASCAR.Data.Client.Client;
+using NASCAR.Data.Client.Model;
+
+namespace Example
+{
+    public class RaceFastestLapsGetExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new RaceApi();
+            var raceId = 56;  // int? | The unique identifier of the race. (optional) 
+
+            try
+            {
+                // Retrieves the fastest lap information for a specified race.
+                FastestLapResult result = apiInstance.RaceFastestLapsGet(raceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RaceApi.RaceFastestLapsGet: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **raceId** | **int?**| The unique identifier of the race. | [optional] 
+
+### Return type
+
+[**FastestLapResult**](FastestLapResult.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="raceget"></a>
 # **RaceGet**
 > RaceDetails RaceGet (int? raceId = null)
 
-
+Retrieves detailed information for a given race.
 
 ### Example
 ```csharp
@@ -223,10 +287,11 @@ namespace Example
         {
 
             var apiInstance = new RaceApi();
-            var raceId = 56;  // int? |  (optional) 
+            var raceId = 56;  // int? | The unique identifier of the race. (optional) 
 
             try
             {
+                // Retrieves detailed information for a given race.
                 RaceDetails result = apiInstance.RaceGet(raceId);
                 Debug.WriteLine(result);
             }
@@ -243,7 +308,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **raceId** | **int?**|  | [optional] 
+ **raceId** | **int?**| The unique identifier of the race. | [optional] 
 
 ### Return type
 
@@ -263,7 +328,7 @@ Name | Type | Description  | Notes
 # **RaceInfractionsGet**
 > Collection<RaceInfraction> RaceInfractionsGet (int? raceId = null)
 
-
+Retrieves a list of infractions for a given race.
 
 ### Example
 ```csharp
@@ -281,10 +346,11 @@ namespace Example
         {
 
             var apiInstance = new RaceApi();
-            var raceId = 56;  // int? |  (optional) 
+            var raceId = 56;  // int? | The unique identifier of the race. (optional) 
 
             try
             {
+                // Retrieves a list of infractions for a given race.
                 Collection&lt;RaceInfraction&gt; result = apiInstance.RaceInfractionsGet(raceId);
                 Debug.WriteLine(result);
             }
@@ -301,7 +367,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **raceId** | **int?**|  | [optional] 
+ **raceId** | **int?**| The unique identifier of the race. | [optional] 
 
 ### Return type
 
@@ -317,11 +383,70 @@ Name | Type | Description  | Notes
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+<a name="racelapchartget"></a>
+# **RaceLapChartGet**
+> LapChartResult RaceLapChartGet (int? raceId = null)
+
+Retrieves lap by lap driver information for a specified race.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using NASCAR.Data.Client.Api;
+using NASCAR.Data.Client.Client;
+using NASCAR.Data.Client.Model;
+
+namespace Example
+{
+    public class RaceLapChartGetExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new RaceApi();
+            var raceId = 56;  // int? | The unique identifier of the race. (optional) 
+
+            try
+            {
+                // Retrieves lap by lap driver information for a specified race.
+                LapChartResult result = apiInstance.RaceLapChartGet(raceId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RaceApi.RaceLapChartGet: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **raceId** | **int?**| The unique identifier of the race. | [optional] 
+
+### Return type
+
+[**LapChartResult**](LapChartResult.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="racelapleadersget"></a>
 # **RaceLapLeadersGet**
 > Collection<LapLeader> RaceLapLeadersGet (int? raceId = null)
 
-
+Retrieves a list of lap leaders for a given race.
 
 ### Example
 ```csharp
@@ -339,10 +464,11 @@ namespace Example
         {
 
             var apiInstance = new RaceApi();
-            var raceId = 56;  // int? |  (optional) 
+            var raceId = 56;  // int? | The unique identifier of the race. (optional) 
 
             try
             {
+                // Retrieves a list of lap leaders for a given race.
                 Collection&lt;LapLeader&gt; result = apiInstance.RaceLapLeadersGet(raceId);
                 Debug.WriteLine(result);
             }
@@ -359,7 +485,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **raceId** | **int?**|  | [optional] 
+ **raceId** | **int?**| The unique identifier of the race. | [optional] 
 
 ### Return type
 
@@ -379,7 +505,7 @@ Name | Type | Description  | Notes
 # **RaceLiveSessionGet**
 > ActiveRun RaceLiveSessionGet ()
 
-
+Retrieves the active run session information.
 
 ### Example
 ```csharp
@@ -400,6 +526,7 @@ namespace Example
 
             try
             {
+                // Retrieves the active run session information.
                 ActiveRun result = apiInstance.RaceLiveSessionGet();
                 Debug.WriteLine(result);
             }
@@ -433,7 +560,7 @@ This endpoint does not need any parameter.
 # **RaceLookupGet**
 > Collection<RaceDetails> RaceLookupGet (int? historyRaceId = null, DateTime? dateStart = null, DateTime? dateEnd = null)
 
-
+Retrieves a list of race details based on historic race ID or a date range.
 
 ### Example
 ```csharp
@@ -451,12 +578,13 @@ namespace Example
         {
 
             var apiInstance = new RaceApi();
-            var historyRaceId = 56;  // int? |  (optional) 
-            var dateStart = 2013-10-20;  // DateTime? | enter date_start in yyyy-mm-dd format (optional) 
-            var dateEnd = 2013-10-20;  // DateTime? | enter date_end in yyyy-mm-dd format (optional) 
+            var historyRaceId = 56;  // int? | The unique identifier of the historic race. (e.g. 5596) (optional) 
+            var dateStart = 2013-10-20;  // DateTime? | The start date of the date range in yyyy-mm-dd format. (optional) 
+            var dateEnd = 2013-10-20;  // DateTime? | The end date of the date range in yyyy-mm-dd format. (optional) 
 
             try
             {
+                // Retrieves a list of race details based on historic race ID or a date range.
                 Collection&lt;RaceDetails&gt; result = apiInstance.RaceLookupGet(historyRaceId, dateStart, dateEnd);
                 Debug.WriteLine(result);
             }
@@ -473,9 +601,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **historyRaceId** | **int?**|  | [optional] 
- **dateStart** | **DateTime?**| enter date_start in yyyy-mm-dd format | [optional] 
- **dateEnd** | **DateTime?**| enter date_end in yyyy-mm-dd format | [optional] 
+ **historyRaceId** | **int?**| The unique identifier of the historic race. (e.g. 5596) | [optional] 
+ **dateStart** | **DateTime?**| The start date of the date range in yyyy-mm-dd format. | [optional] 
+ **dateEnd** | **DateTime?**| The end date of the date range in yyyy-mm-dd format. | [optional] 
 
 ### Return type
 
@@ -553,7 +681,7 @@ Name | Type | Description  | Notes
 # **RacePitstopsGet**
 > Collection<Pitstop> RacePitstopsGet (int? raceId = null)
 
-
+Retrieves a list of pit stops for a given race.
 
 ### Example
 ```csharp
@@ -571,10 +699,11 @@ namespace Example
         {
 
             var apiInstance = new RaceApi();
-            var raceId = 56;  // int? |  (optional) 
+            var raceId = 56;  // int? | The unique identifier of the race. (optional) 
 
             try
             {
+                // Retrieves a list of pit stops for a given race.
                 Collection&lt;Pitstop&gt; result = apiInstance.RacePitstopsGet(raceId);
                 Debug.WriteLine(result);
             }
@@ -591,7 +720,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **raceId** | **int?**|  | [optional] 
+ **raceId** | **int?**| The unique identifier of the race. | [optional] 
 
 ### Return type
 
@@ -611,7 +740,7 @@ Name | Type | Description  | Notes
 # **RacePracticeResultsGet**
 > Collection<PracticeRunResults> RacePracticeResultsGet (int? raceId = null)
 
-
+Retrieves practice run results for a given race.
 
 ### Example
 ```csharp
@@ -629,10 +758,11 @@ namespace Example
         {
 
             var apiInstance = new RaceApi();
-            var raceId = 56;  // int? |  (optional) 
+            var raceId = 56;  // int? | The unique identifier of the race. (optional) 
 
             try
             {
+                // Retrieves practice run results for a given race.
                 Collection&lt;PracticeRunResults&gt; result = apiInstance.RacePracticeResultsGet(raceId);
                 Debug.WriteLine(result);
             }
@@ -649,7 +779,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **raceId** | **int?**|  | [optional] 
+ **raceId** | **int?**| The unique identifier of the race. | [optional] 
 
 ### Return type
 
@@ -669,7 +799,7 @@ Name | Type | Description  | Notes
 # **RaceQualifyingResultsGet**
 > Collection<QualifyingRunResults> RaceQualifyingResultsGet (int? raceId = null)
 
-
+Retrieves qualifying run results for a given race.
 
 ### Example
 ```csharp
@@ -687,10 +817,11 @@ namespace Example
         {
 
             var apiInstance = new RaceApi();
-            var raceId = 56;  // int? |  (optional) 
+            var raceId = 56;  // int? | The unique identifier of the race. (optional) 
 
             try
             {
+                // Retrieves qualifying run results for a given race.
                 Collection&lt;QualifyingRunResults&gt; result = apiInstance.RaceQualifyingResultsGet(raceId);
                 Debug.WriteLine(result);
             }
@@ -707,7 +838,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **raceId** | **int?**|  | [optional] 
+ **raceId** | **int?**| The unique identifier of the race. | [optional] 
 
 ### Return type
 
@@ -727,7 +858,7 @@ Name | Type | Description  | Notes
 # **RaceRaceResultsGet**
 > Collection<RaceRunResults> RaceRaceResultsGet (int? raceId = null)
 
-
+Retrieves the race results for a specified race
 
 ### Example
 ```csharp
@@ -749,6 +880,7 @@ namespace Example
 
             try
             {
+                // Retrieves the race results for a specified race
                 Collection&lt;RaceRunResults&gt; result = apiInstance.RaceRaceResultsGet(raceId);
                 Debug.WriteLine(result);
             }
@@ -843,7 +975,7 @@ Name | Type | Description  | Notes
 # **RaceResultsGet**
 > RunResults RaceResultsGet (int? raceId = null, int? timingRunId = null)
 
-
+Retrieves the run results for a specified race and timing run ID. Timing run ID corresponds to the different  timing runs within a race.
 
 ### Example
 ```csharp
@@ -861,11 +993,12 @@ namespace Example
         {
 
             var apiInstance = new RaceApi();
-            var raceId = 56;  // int? |  (optional) 
-            var timingRunId = 56;  // int? |  (optional) 
+            var raceId = 56;  // int? | The unique identifier of the race. (optional) 
+            var timingRunId = 56;  // int? | The unique identifier of the timing run within the race. (optional) 
 
             try
             {
+                // Retrieves the run results for a specified race and timing run ID. Timing run ID corresponds to the different  timing runs within a race.
                 RunResults result = apiInstance.RaceResultsGet(raceId, timingRunId);
                 Debug.WriteLine(result);
             }
@@ -882,8 +1015,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **raceId** | **int?**|  | [optional] 
- **timingRunId** | **int?**|  | [optional] 
+ **raceId** | **int?**| The unique identifier of the race. | [optional] 
+ **timingRunId** | **int?**| The unique identifier of the timing run within the race. | [optional] 
 
 ### Return type
 
@@ -903,7 +1036,7 @@ Name | Type | Description  | Notes
 # **RaceRostersGet**
 > Collection<TeamRoster> RaceRostersGet (int? raceId = null)
 
-
+Retrieves the team rosters for a specified race.
 
 ### Example
 ```csharp
@@ -921,10 +1054,11 @@ namespace Example
         {
 
             var apiInstance = new RaceApi();
-            var raceId = 56;  // int? |  (optional) 
+            var raceId = 56;  // int? | The unique identifier of the race. (optional) 
 
             try
             {
+                // Retrieves the team rosters for a specified race.
                 Collection&lt;TeamRoster&gt; result = apiInstance.RaceRostersGet(raceId);
                 Debug.WriteLine(result);
             }
@@ -941,7 +1075,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **raceId** | **int?**|  | [optional] 
+ **raceId** | **int?**| The unique identifier of the race. | [optional] 
 
 ### Return type
 
@@ -961,7 +1095,7 @@ Name | Type | Description  | Notes
 # **RaceSeasonGet**
 > Collection<Collection<Race>> RaceSeasonGet (int? season = null, int? seriesId = null)
 
-
+Retrieves races for a specified season and series.
 
 ### Example
 ```csharp
@@ -979,11 +1113,12 @@ namespace Example
         {
 
             var apiInstance = new RaceApi();
-            var season = 56;  // int? |  (optional) 
-            var seriesId = 56;  // int? |  (optional) 
+            var season = 56;  // int? | The season for which to retrieve races. (optional) 
+            var seriesId = 56;  // int? | Series identifier. Common values are 1 for Cup, 2 for O'Reilly, and 3 for Truck. (optional) 
 
             try
             {
+                // Retrieves races for a specified season and series.
                 Collection&lt;Collection&lt;Race&gt;&gt; result = apiInstance.RaceSeasonGet(season, seriesId);
                 Debug.WriteLine(result);
             }
@@ -1000,8 +1135,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **season** | **int?**|  | [optional] 
- **seriesId** | **int?**|  | [optional] 
+ **season** | **int?**| The season for which to retrieve races. | [optional] 
+ **seriesId** | **int?**| Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. | [optional] 
 
 ### Return type
 
@@ -1021,7 +1156,7 @@ Name | Type | Description  | Notes
 # **RaceStageResultsGet**
 > Collection<StageRunResults> RaceStageResultsGet (int? raceId = null)
 
-
+Retrieves a list of stage results for a specified race.
 
 ### Example
 ```csharp
@@ -1039,10 +1174,11 @@ namespace Example
         {
 
             var apiInstance = new RaceApi();
-            var raceId = 56;  // int? |  (optional) 
+            var raceId = 56;  // int? | The unique identifier of the race. (optional) 
 
             try
             {
+                // Retrieves a list of stage results for a specified race.
                 Collection&lt;StageRunResults&gt; result = apiInstance.RaceStageResultsGet(raceId);
                 Debug.WriteLine(result);
             }
@@ -1059,7 +1195,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **raceId** | **int?**|  | [optional] 
+ **raceId** | **int?**| The unique identifier of the race. | [optional] 
 
 ### Return type
 
@@ -1079,7 +1215,7 @@ Name | Type | Description  | Notes
 # **RaceStagesGet**
 > Collection<Stage> RaceStagesGet (int? raceId = null)
 
-
+Retrieves the stage information for a specified race.
 
 ### Example
 ```csharp
@@ -1097,10 +1233,11 @@ namespace Example
         {
 
             var apiInstance = new RaceApi();
-            var raceId = 56;  // int? |  (optional) 
+            var raceId = 56;  // int? | The unique identifier of the race. (optional) 
 
             try
             {
+                // Retrieves the stage information for a specified race.
                 Collection&lt;Stage&gt; result = apiInstance.RaceStagesGet(raceId);
                 Debug.WriteLine(result);
             }
@@ -1117,7 +1254,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **raceId** | **int?**|  | [optional] 
+ **raceId** | **int?**| The unique identifier of the race. | [optional] 
 
 ### Return type
 
@@ -1195,7 +1332,7 @@ Name | Type | Description  | Notes
 # **RaceViewmodelGet**
 > RaceViewModel RaceViewmodelGet (int? raceId = null)
 
-
+Retrieves a comprehensive view model for a specified race.
 
 ### Example
 ```csharp
@@ -1213,10 +1350,11 @@ namespace Example
         {
 
             var apiInstance = new RaceApi();
-            var raceId = 56;  // int? |  (optional) 
+            var raceId = 56;  // int? | The unique identifier of the race. (optional) 
 
             try
             {
+                // Retrieves a comprehensive view model for a specified race.
                 RaceViewModel result = apiInstance.RaceViewmodelGet(raceId);
                 Debug.WriteLine(result);
             }
@@ -1233,7 +1371,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **raceId** | **int?**|  | [optional] 
+ **raceId** | **int?**| The unique identifier of the race. | [optional] 
 
 ### Return type
 
@@ -1253,7 +1391,7 @@ Name | Type | Description  | Notes
 # **RaceWeekendScheduleGet**
 > Collection<WeekendSchedule> RaceWeekendScheduleGet (int? raceId = null)
 
-
+Retrieves the weekend schedule for a specified race.
 
 ### Example
 ```csharp
@@ -1271,10 +1409,11 @@ namespace Example
         {
 
             var apiInstance = new RaceApi();
-            var raceId = 56;  // int? |  (optional) 
+            var raceId = 56;  // int? | The unique identifier of the race. (optional) 
 
             try
             {
+                // Retrieves the weekend schedule for a specified race.
                 Collection&lt;WeekendSchedule&gt; result = apiInstance.RaceWeekendScheduleGet(raceId);
                 Debug.WriteLine(result);
             }
@@ -1291,7 +1430,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **raceId** | **int?**|  | [optional] 
+ **raceId** | **int?**| The unique identifier of the race. | [optional] 
 
 ### Return type
 

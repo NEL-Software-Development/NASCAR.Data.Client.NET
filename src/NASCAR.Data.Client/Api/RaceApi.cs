@@ -24,133 +24,175 @@ namespace NASCAR.Data.Client.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// Retrieves a list of cautions for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Collection&lt;Caution&gt;</returns>
         Collection<Caution> RaceCautionsGet (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves a list of cautions for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;Caution&gt;</returns>
         ApiResponse<Collection<Caution>> RaceCautionsGetWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves a list of discipline updates for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Collection&lt;DisciplineUpdate&gt;</returns>
         Collection<DisciplineUpdate> RaceDisciplineUpdatesGet (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves a list of discipline updates for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;DisciplineUpdate&gt;</returns>
         ApiResponse<Collection<DisciplineUpdate>> RaceDisciplineUpdatesGetWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves a list of entries for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Collection&lt;RunEntry&gt;</returns>
         Collection<RunEntry> RaceEntriesGet (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves a list of entries for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;RunEntry&gt;</returns>
         ApiResponse<Collection<RunEntry>> RaceEntriesGetWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves the fastest lap information for a specified race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
+        /// <returns>FastestLapResult</returns>
+        FastestLapResult RaceFastestLapsGet (int? raceId = null);
+
+        /// <summary>
+        /// Retrieves the fastest lap information for a specified race.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
+        /// <returns>ApiResponse of FastestLapResult</returns>
+        ApiResponse<FastestLapResult> RaceFastestLapsGetWithHttpInfo (int? raceId = null);
+        /// <summary>
+        /// Retrieves detailed information for a given race.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>RaceDetails</returns>
         RaceDetails RaceGet (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves detailed information for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of RaceDetails</returns>
         ApiResponse<RaceDetails> RaceGetWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves a list of infractions for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Collection&lt;RaceInfraction&gt;</returns>
         Collection<RaceInfraction> RaceInfractionsGet (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves a list of infractions for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;RaceInfraction&gt;</returns>
         ApiResponse<Collection<RaceInfraction>> RaceInfractionsGetWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves lap by lap driver information for a specified race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
+        /// <returns>LapChartResult</returns>
+        LapChartResult RaceLapChartGet (int? raceId = null);
+
+        /// <summary>
+        /// Retrieves lap by lap driver information for a specified race.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
+        /// <returns>ApiResponse of LapChartResult</returns>
+        ApiResponse<LapChartResult> RaceLapChartGetWithHttpInfo (int? raceId = null);
+        /// <summary>
+        /// Retrieves a list of lap leaders for a given race.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Collection&lt;LapLeader&gt;</returns>
         Collection<LapLeader> RaceLapLeadersGet (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves a list of lap leaders for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;LapLeader&gt;</returns>
         ApiResponse<Collection<LapLeader>> RaceLapLeadersGetWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves the active run session information.
         /// </summary>
         /// <remarks>
         /// 
@@ -160,7 +202,7 @@ namespace NASCAR.Data.Client.Api
         ActiveRun RaceLiveSessionGet ();
 
         /// <summary>
-        /// 
+        /// Retrieves the active run session information.
         /// </summary>
         /// <remarks>
         /// 
@@ -169,28 +211,28 @@ namespace NASCAR.Data.Client.Api
         /// <returns>ApiResponse of ActiveRun</returns>
         ApiResponse<ActiveRun> RaceLiveSessionGetWithHttpInfo ();
         /// <summary>
-        /// 
+        /// Retrieves a list of race details based on historic race ID or a date range.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="historyRaceId"> (optional)</param>
-        /// <param name="dateStart">enter date_start in yyyy-mm-dd format (optional)</param>
-        /// <param name="dateEnd">enter date_end in yyyy-mm-dd format (optional)</param>
+        /// <param name="historyRaceId">The unique identifier of the historic race. (e.g. 5596) (optional)</param>
+        /// <param name="dateStart">The start date of the date range in yyyy-mm-dd format. (optional)</param>
+        /// <param name="dateEnd">The end date of the date range in yyyy-mm-dd format. (optional)</param>
         /// <returns>Collection&lt;RaceDetails&gt;</returns>
         Collection<RaceDetails> RaceLookupGet (int? historyRaceId = null, DateTime? dateStart = null, DateTime? dateEnd = null);
 
         /// <summary>
-        /// 
+        /// Retrieves a list of race details based on historic race ID or a date range.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="historyRaceId"> (optional)</param>
-        /// <param name="dateStart">enter date_start in yyyy-mm-dd format (optional)</param>
-        /// <param name="dateEnd">enter date_end in yyyy-mm-dd format (optional)</param>
+        /// <param name="historyRaceId">The unique identifier of the historic race. (e.g. 5596) (optional)</param>
+        /// <param name="dateStart">The start date of the date range in yyyy-mm-dd format. (optional)</param>
+        /// <param name="dateEnd">The end date of the date range in yyyy-mm-dd format. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;RaceDetails&gt;</returns>
         ApiResponse<Collection<RaceDetails>> RaceLookupGetWithHttpInfo (int? historyRaceId = null, DateTime? dateStart = null, DateTime? dateEnd = null);
         /// <summary>
@@ -215,70 +257,70 @@ namespace NASCAR.Data.Client.Api
         /// <returns>ApiResponse of Collection&lt;LoopStat&gt;</returns>
         ApiResponse<Collection<LoopStat>> RaceLoopStatsGetWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves a list of pit stops for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Collection&lt;Pitstop&gt;</returns>
         Collection<Pitstop> RacePitstopsGet (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves a list of pit stops for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;Pitstop&gt;</returns>
         ApiResponse<Collection<Pitstop>> RacePitstopsGetWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves practice run results for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Collection&lt;PracticeRunResults&gt;</returns>
         Collection<PracticeRunResults> RacePracticeResultsGet (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves practice run results for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;PracticeRunResults&gt;</returns>
         ApiResponse<Collection<PracticeRunResults>> RacePracticeResultsGetWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves qualifying run results for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Collection&lt;QualifyingRunResults&gt;</returns>
         Collection<QualifyingRunResults> RaceQualifyingResultsGet (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves qualifying run results for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;QualifyingRunResults&gt;</returns>
         ApiResponse<Collection<QualifyingRunResults>> RaceQualifyingResultsGetWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves the race results for a specified race
         /// </summary>
         /// <remarks>
         /// 
@@ -289,7 +331,7 @@ namespace NASCAR.Data.Client.Api
         Collection<RaceRunResults> RaceRaceResultsGet (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves the race results for a specified race
         /// </summary>
         /// <remarks>
         /// 
@@ -320,112 +362,112 @@ namespace NASCAR.Data.Client.Api
         /// <returns>ApiResponse of AvailableReports</returns>
         ApiResponse<AvailableReports> RaceReportGetWithHttpInfo (string key = null);
         /// <summary>
-        /// 
+        /// Retrieves the run results for a specified race and timing run ID. Timing run ID corresponds to the different  timing runs within a race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
-        /// <param name="timingRunId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
+        /// <param name="timingRunId">The unique identifier of the timing run within the race. (optional)</param>
         /// <returns>RunResults</returns>
         RunResults RaceResultsGet (int? raceId = null, int? timingRunId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves the run results for a specified race and timing run ID. Timing run ID corresponds to the different  timing runs within a race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
-        /// <param name="timingRunId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
+        /// <param name="timingRunId">The unique identifier of the timing run within the race. (optional)</param>
         /// <returns>ApiResponse of RunResults</returns>
         ApiResponse<RunResults> RaceResultsGetWithHttpInfo (int? raceId = null, int? timingRunId = null);
         /// <summary>
-        /// 
+        /// Retrieves the team rosters for a specified race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Collection&lt;TeamRoster&gt;</returns>
         Collection<TeamRoster> RaceRostersGet (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves the team rosters for a specified race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;TeamRoster&gt;</returns>
         ApiResponse<Collection<TeamRoster>> RaceRostersGetWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves races for a specified season and series.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
+        /// <param name="season">The season for which to retrieve races. (optional)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
         /// <returns>Collection&lt;Collection&lt;Race&gt;&gt;</returns>
         Collection<Collection<Race>> RaceSeasonGet (int? season = null, int? seriesId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves races for a specified season and series.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
+        /// <param name="season">The season for which to retrieve races. (optional)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;Collection&lt;Race&gt;&gt;</returns>
         ApiResponse<Collection<Collection<Race>>> RaceSeasonGetWithHttpInfo (int? season = null, int? seriesId = null);
         /// <summary>
-        /// 
+        /// Retrieves a list of stage results for a specified race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Collection&lt;StageRunResults&gt;</returns>
         Collection<StageRunResults> RaceStageResultsGet (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves a list of stage results for a specified race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;StageRunResults&gt;</returns>
         ApiResponse<Collection<StageRunResults>> RaceStageResultsGetWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves the stage information for a specified race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Collection&lt;Stage&gt;</returns>
         Collection<Stage> RaceStagesGet (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves the stage information for a specified race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;Stage&gt;</returns>
         ApiResponse<Collection<Stage>> RaceStagesGetWithHttpInfo (int? raceId = null);
         /// <summary>
@@ -450,177 +492,219 @@ namespace NASCAR.Data.Client.Api
         /// <returns>ApiResponse of AvailableReports</returns>
         ApiResponse<AvailableReports> RaceStatReportsGetWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves a comprehensive view model for a specified race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>RaceViewModel</returns>
         RaceViewModel RaceViewmodelGet (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves a comprehensive view model for a specified race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of RaceViewModel</returns>
         ApiResponse<RaceViewModel> RaceViewmodelGetWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves the weekend schedule for a specified race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Collection&lt;WeekendSchedule&gt;</returns>
         Collection<WeekendSchedule> RaceWeekendScheduleGet (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves the weekend schedule for a specified race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;WeekendSchedule&gt;</returns>
         ApiResponse<Collection<WeekendSchedule>> RaceWeekendScheduleGetWithHttpInfo (int? raceId = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// Retrieves a list of cautions for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of Collection&lt;Caution&gt;</returns>
         System.Threading.Tasks.Task<Collection<Caution>> RaceCautionsGetAsync (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves a list of cautions for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;Caution&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Collection<Caution>>> RaceCautionsGetAsyncWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves a list of discipline updates for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of Collection&lt;DisciplineUpdate&gt;</returns>
         System.Threading.Tasks.Task<Collection<DisciplineUpdate>> RaceDisciplineUpdatesGetAsync (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves a list of discipline updates for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;DisciplineUpdate&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Collection<DisciplineUpdate>>> RaceDisciplineUpdatesGetAsyncWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves a list of entries for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of Collection&lt;RunEntry&gt;</returns>
         System.Threading.Tasks.Task<Collection<RunEntry>> RaceEntriesGetAsync (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves a list of entries for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;RunEntry&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Collection<RunEntry>>> RaceEntriesGetAsyncWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves the fastest lap information for a specified race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
+        /// <returns>Task of FastestLapResult</returns>
+        System.Threading.Tasks.Task<FastestLapResult> RaceFastestLapsGetAsync (int? raceId = null);
+
+        /// <summary>
+        /// Retrieves the fastest lap information for a specified race.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
+        /// <returns>Task of ApiResponse (FastestLapResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FastestLapResult>> RaceFastestLapsGetAsyncWithHttpInfo (int? raceId = null);
+        /// <summary>
+        /// Retrieves detailed information for a given race.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of RaceDetails</returns>
         System.Threading.Tasks.Task<RaceDetails> RaceGetAsync (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves detailed information for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (RaceDetails)</returns>
         System.Threading.Tasks.Task<ApiResponse<RaceDetails>> RaceGetAsyncWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves a list of infractions for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of Collection&lt;RaceInfraction&gt;</returns>
         System.Threading.Tasks.Task<Collection<RaceInfraction>> RaceInfractionsGetAsync (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves a list of infractions for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;RaceInfraction&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Collection<RaceInfraction>>> RaceInfractionsGetAsyncWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves lap by lap driver information for a specified race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
+        /// <returns>Task of LapChartResult</returns>
+        System.Threading.Tasks.Task<LapChartResult> RaceLapChartGetAsync (int? raceId = null);
+
+        /// <summary>
+        /// Retrieves lap by lap driver information for a specified race.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
+        /// <returns>Task of ApiResponse (LapChartResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LapChartResult>> RaceLapChartGetAsyncWithHttpInfo (int? raceId = null);
+        /// <summary>
+        /// Retrieves a list of lap leaders for a given race.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of Collection&lt;LapLeader&gt;</returns>
         System.Threading.Tasks.Task<Collection<LapLeader>> RaceLapLeadersGetAsync (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves a list of lap leaders for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;LapLeader&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Collection<LapLeader>>> RaceLapLeadersGetAsyncWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves the active run session information.
         /// </summary>
         /// <remarks>
         /// 
@@ -630,7 +714,7 @@ namespace NASCAR.Data.Client.Api
         System.Threading.Tasks.Task<ActiveRun> RaceLiveSessionGetAsync ();
 
         /// <summary>
-        /// 
+        /// Retrieves the active run session information.
         /// </summary>
         /// <remarks>
         /// 
@@ -639,28 +723,28 @@ namespace NASCAR.Data.Client.Api
         /// <returns>Task of ApiResponse (ActiveRun)</returns>
         System.Threading.Tasks.Task<ApiResponse<ActiveRun>> RaceLiveSessionGetAsyncWithHttpInfo ();
         /// <summary>
-        /// 
+        /// Retrieves a list of race details based on historic race ID or a date range.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="historyRaceId"> (optional)</param>
-        /// <param name="dateStart">enter date_start in yyyy-mm-dd format (optional)</param>
-        /// <param name="dateEnd">enter date_end in yyyy-mm-dd format (optional)</param>
+        /// <param name="historyRaceId">The unique identifier of the historic race. (e.g. 5596) (optional)</param>
+        /// <param name="dateStart">The start date of the date range in yyyy-mm-dd format. (optional)</param>
+        /// <param name="dateEnd">The end date of the date range in yyyy-mm-dd format. (optional)</param>
         /// <returns>Task of Collection&lt;RaceDetails&gt;</returns>
         System.Threading.Tasks.Task<Collection<RaceDetails>> RaceLookupGetAsync (int? historyRaceId = null, DateTime? dateStart = null, DateTime? dateEnd = null);
 
         /// <summary>
-        /// 
+        /// Retrieves a list of race details based on historic race ID or a date range.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="historyRaceId"> (optional)</param>
-        /// <param name="dateStart">enter date_start in yyyy-mm-dd format (optional)</param>
-        /// <param name="dateEnd">enter date_end in yyyy-mm-dd format (optional)</param>
+        /// <param name="historyRaceId">The unique identifier of the historic race. (e.g. 5596) (optional)</param>
+        /// <param name="dateStart">The start date of the date range in yyyy-mm-dd format. (optional)</param>
+        /// <param name="dateEnd">The end date of the date range in yyyy-mm-dd format. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;RaceDetails&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Collection<RaceDetails>>> RaceLookupGetAsyncWithHttpInfo (int? historyRaceId = null, DateTime? dateStart = null, DateTime? dateEnd = null);
         /// <summary>
@@ -685,70 +769,70 @@ namespace NASCAR.Data.Client.Api
         /// <returns>Task of ApiResponse (Collection&lt;LoopStat&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Collection<LoopStat>>> RaceLoopStatsGetAsyncWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves a list of pit stops for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of Collection&lt;Pitstop&gt;</returns>
         System.Threading.Tasks.Task<Collection<Pitstop>> RacePitstopsGetAsync (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves a list of pit stops for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;Pitstop&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Collection<Pitstop>>> RacePitstopsGetAsyncWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves practice run results for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of Collection&lt;PracticeRunResults&gt;</returns>
         System.Threading.Tasks.Task<Collection<PracticeRunResults>> RacePracticeResultsGetAsync (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves practice run results for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;PracticeRunResults&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Collection<PracticeRunResults>>> RacePracticeResultsGetAsyncWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves qualifying run results for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of Collection&lt;QualifyingRunResults&gt;</returns>
         System.Threading.Tasks.Task<Collection<QualifyingRunResults>> RaceQualifyingResultsGetAsync (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves qualifying run results for a given race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;QualifyingRunResults&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Collection<QualifyingRunResults>>> RaceQualifyingResultsGetAsyncWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves the race results for a specified race
         /// </summary>
         /// <remarks>
         /// 
@@ -759,7 +843,7 @@ namespace NASCAR.Data.Client.Api
         System.Threading.Tasks.Task<Collection<RaceRunResults>> RaceRaceResultsGetAsync (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves the race results for a specified race
         /// </summary>
         /// <remarks>
         /// 
@@ -790,112 +874,112 @@ namespace NASCAR.Data.Client.Api
         /// <returns>Task of ApiResponse (AvailableReports)</returns>
         System.Threading.Tasks.Task<ApiResponse<AvailableReports>> RaceReportGetAsyncWithHttpInfo (string key = null);
         /// <summary>
-        /// 
+        /// Retrieves the run results for a specified race and timing run ID. Timing run ID corresponds to the different  timing runs within a race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
-        /// <param name="timingRunId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
+        /// <param name="timingRunId">The unique identifier of the timing run within the race. (optional)</param>
         /// <returns>Task of RunResults</returns>
         System.Threading.Tasks.Task<RunResults> RaceResultsGetAsync (int? raceId = null, int? timingRunId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves the run results for a specified race and timing run ID. Timing run ID corresponds to the different  timing runs within a race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
-        /// <param name="timingRunId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
+        /// <param name="timingRunId">The unique identifier of the timing run within the race. (optional)</param>
         /// <returns>Task of ApiResponse (RunResults)</returns>
         System.Threading.Tasks.Task<ApiResponse<RunResults>> RaceResultsGetAsyncWithHttpInfo (int? raceId = null, int? timingRunId = null);
         /// <summary>
-        /// 
+        /// Retrieves the team rosters for a specified race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of Collection&lt;TeamRoster&gt;</returns>
         System.Threading.Tasks.Task<Collection<TeamRoster>> RaceRostersGetAsync (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves the team rosters for a specified race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;TeamRoster&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Collection<TeamRoster>>> RaceRostersGetAsyncWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves races for a specified season and series.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
+        /// <param name="season">The season for which to retrieve races. (optional)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
         /// <returns>Task of Collection&lt;Collection&lt;Race&gt;&gt;</returns>
         System.Threading.Tasks.Task<Collection<Collection<Race>>> RaceSeasonGetAsync (int? season = null, int? seriesId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves races for a specified season and series.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
+        /// <param name="season">The season for which to retrieve races. (optional)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;Collection&lt;Race&gt;&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Collection<Collection<Race>>>> RaceSeasonGetAsyncWithHttpInfo (int? season = null, int? seriesId = null);
         /// <summary>
-        /// 
+        /// Retrieves a list of stage results for a specified race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of Collection&lt;StageRunResults&gt;</returns>
         System.Threading.Tasks.Task<Collection<StageRunResults>> RaceStageResultsGetAsync (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves a list of stage results for a specified race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;StageRunResults&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Collection<StageRunResults>>> RaceStageResultsGetAsyncWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves the stage information for a specified race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of Collection&lt;Stage&gt;</returns>
         System.Threading.Tasks.Task<Collection<Stage>> RaceStagesGetAsync (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves the stage information for a specified race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;Stage&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Collection<Stage>>> RaceStagesGetAsyncWithHttpInfo (int? raceId = null);
         /// <summary>
@@ -920,45 +1004,45 @@ namespace NASCAR.Data.Client.Api
         /// <returns>Task of ApiResponse (AvailableReports)</returns>
         System.Threading.Tasks.Task<ApiResponse<AvailableReports>> RaceStatReportsGetAsyncWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves a comprehensive view model for a specified race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of RaceViewModel</returns>
         System.Threading.Tasks.Task<RaceViewModel> RaceViewmodelGetAsync (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves a comprehensive view model for a specified race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (RaceViewModel)</returns>
         System.Threading.Tasks.Task<ApiResponse<RaceViewModel>> RaceViewmodelGetAsyncWithHttpInfo (int? raceId = null);
         /// <summary>
-        /// 
+        /// Retrieves the weekend schedule for a specified race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of Collection&lt;WeekendSchedule&gt;</returns>
         System.Threading.Tasks.Task<Collection<WeekendSchedule>> RaceWeekendScheduleGetAsync (int? raceId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves the weekend schedule for a specified race.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;WeekendSchedule&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Collection<WeekendSchedule>>> RaceWeekendScheduleGetAsyncWithHttpInfo (int? raceId = null);
         #endregion Asynchronous Operations
@@ -1073,10 +1157,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of cautions for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Collection&lt;Caution&gt;</returns>
         public Collection<Caution> RaceCautionsGet (int? raceId = null)
         {
@@ -1085,10 +1169,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of cautions for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;Caution&gt;</returns>
         public ApiResponse< Collection<Caution> > RaceCautionsGetWithHttpInfo (int? raceId = null)
         {
@@ -1143,10 +1227,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of cautions for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of Collection&lt;Caution&gt;</returns>
         public async System.Threading.Tasks.Task<Collection<Caution>> RaceCautionsGetAsync (int? raceId = null)
         {
@@ -1156,10 +1240,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of cautions for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;Caution&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Collection<Caution>>> RaceCautionsGetAsyncWithHttpInfo (int? raceId = null)
         {
@@ -1214,10 +1298,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of discipline updates for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Collection&lt;DisciplineUpdate&gt;</returns>
         public Collection<DisciplineUpdate> RaceDisciplineUpdatesGet (int? raceId = null)
         {
@@ -1226,10 +1310,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of discipline updates for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;DisciplineUpdate&gt;</returns>
         public ApiResponse< Collection<DisciplineUpdate> > RaceDisciplineUpdatesGetWithHttpInfo (int? raceId = null)
         {
@@ -1284,10 +1368,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of discipline updates for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of Collection&lt;DisciplineUpdate&gt;</returns>
         public async System.Threading.Tasks.Task<Collection<DisciplineUpdate>> RaceDisciplineUpdatesGetAsync (int? raceId = null)
         {
@@ -1297,10 +1381,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of discipline updates for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;DisciplineUpdate&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Collection<DisciplineUpdate>>> RaceDisciplineUpdatesGetAsyncWithHttpInfo (int? raceId = null)
         {
@@ -1355,10 +1439,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of entries for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Collection&lt;RunEntry&gt;</returns>
         public Collection<RunEntry> RaceEntriesGet (int? raceId = null)
         {
@@ -1367,10 +1451,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of entries for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;RunEntry&gt;</returns>
         public ApiResponse< Collection<RunEntry> > RaceEntriesGetWithHttpInfo (int? raceId = null)
         {
@@ -1425,10 +1509,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of entries for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of Collection&lt;RunEntry&gt;</returns>
         public async System.Threading.Tasks.Task<Collection<RunEntry>> RaceEntriesGetAsync (int? raceId = null)
         {
@@ -1438,10 +1522,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of entries for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;RunEntry&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Collection<RunEntry>>> RaceEntriesGetAsyncWithHttpInfo (int? raceId = null)
         {
@@ -1496,10 +1580,151 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves the fastest lap information for a specified race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
+        /// <returns>FastestLapResult</returns>
+        public FastestLapResult RaceFastestLapsGet (int? raceId = null)
+        {
+             ApiResponse<FastestLapResult> localVarResponse = RaceFastestLapsGetWithHttpInfo(raceId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieves the fastest lap information for a specified race. 
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
+        /// <returns>ApiResponse of FastestLapResult</returns>
+        public ApiResponse< FastestLapResult > RaceFastestLapsGetWithHttpInfo (int? raceId = null)
+        {
+
+            var localVarPath = "/race/fastest-laps";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (raceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "race_id", raceId)); // query parameter
+            // authentication (Bearer) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RaceFastestLapsGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FastestLapResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (FastestLapResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FastestLapResult)));
+        }
+
+        /// <summary>
+        /// Retrieves the fastest lap information for a specified race. 
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
+        /// <returns>Task of FastestLapResult</returns>
+        public async System.Threading.Tasks.Task<FastestLapResult> RaceFastestLapsGetAsync (int? raceId = null)
+        {
+             ApiResponse<FastestLapResult> localVarResponse = await RaceFastestLapsGetAsyncWithHttpInfo(raceId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieves the fastest lap information for a specified race. 
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
+        /// <returns>Task of ApiResponse (FastestLapResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FastestLapResult>> RaceFastestLapsGetAsyncWithHttpInfo (int? raceId = null)
+        {
+
+            var localVarPath = "/race/fastest-laps";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (raceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "race_id", raceId)); // query parameter
+            // authentication (Bearer) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RaceFastestLapsGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FastestLapResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (FastestLapResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FastestLapResult)));
+        }
+
+        /// <summary>
+        /// Retrieves detailed information for a given race. 
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>RaceDetails</returns>
         public RaceDetails RaceGet (int? raceId = null)
         {
@@ -1508,10 +1733,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves detailed information for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of RaceDetails</returns>
         public ApiResponse< RaceDetails > RaceGetWithHttpInfo (int? raceId = null)
         {
@@ -1566,10 +1791,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves detailed information for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of RaceDetails</returns>
         public async System.Threading.Tasks.Task<RaceDetails> RaceGetAsync (int? raceId = null)
         {
@@ -1579,10 +1804,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves detailed information for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (RaceDetails)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RaceDetails>> RaceGetAsyncWithHttpInfo (int? raceId = null)
         {
@@ -1637,10 +1862,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of infractions for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Collection&lt;RaceInfraction&gt;</returns>
         public Collection<RaceInfraction> RaceInfractionsGet (int? raceId = null)
         {
@@ -1649,10 +1874,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of infractions for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;RaceInfraction&gt;</returns>
         public ApiResponse< Collection<RaceInfraction> > RaceInfractionsGetWithHttpInfo (int? raceId = null)
         {
@@ -1707,10 +1932,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of infractions for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of Collection&lt;RaceInfraction&gt;</returns>
         public async System.Threading.Tasks.Task<Collection<RaceInfraction>> RaceInfractionsGetAsync (int? raceId = null)
         {
@@ -1720,10 +1945,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of infractions for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;RaceInfraction&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Collection<RaceInfraction>>> RaceInfractionsGetAsyncWithHttpInfo (int? raceId = null)
         {
@@ -1778,10 +2003,151 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves lap by lap driver information for a specified race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
+        /// <returns>LapChartResult</returns>
+        public LapChartResult RaceLapChartGet (int? raceId = null)
+        {
+             ApiResponse<LapChartResult> localVarResponse = RaceLapChartGetWithHttpInfo(raceId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieves lap by lap driver information for a specified race. 
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
+        /// <returns>ApiResponse of LapChartResult</returns>
+        public ApiResponse< LapChartResult > RaceLapChartGetWithHttpInfo (int? raceId = null)
+        {
+
+            var localVarPath = "/race/lap-chart";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (raceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "race_id", raceId)); // query parameter
+            // authentication (Bearer) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RaceLapChartGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<LapChartResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (LapChartResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LapChartResult)));
+        }
+
+        /// <summary>
+        /// Retrieves lap by lap driver information for a specified race. 
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
+        /// <returns>Task of LapChartResult</returns>
+        public async System.Threading.Tasks.Task<LapChartResult> RaceLapChartGetAsync (int? raceId = null)
+        {
+             ApiResponse<LapChartResult> localVarResponse = await RaceLapChartGetAsyncWithHttpInfo(raceId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieves lap by lap driver information for a specified race. 
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
+        /// <returns>Task of ApiResponse (LapChartResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LapChartResult>> RaceLapChartGetAsyncWithHttpInfo (int? raceId = null)
+        {
+
+            var localVarPath = "/race/lap-chart";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (raceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "race_id", raceId)); // query parameter
+            // authentication (Bearer) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RaceLapChartGet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<LapChartResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (LapChartResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LapChartResult)));
+        }
+
+        /// <summary>
+        /// Retrieves a list of lap leaders for a given race. 
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Collection&lt;LapLeader&gt;</returns>
         public Collection<LapLeader> RaceLapLeadersGet (int? raceId = null)
         {
@@ -1790,10 +2156,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of lap leaders for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;LapLeader&gt;</returns>
         public ApiResponse< Collection<LapLeader> > RaceLapLeadersGetWithHttpInfo (int? raceId = null)
         {
@@ -1848,10 +2214,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of lap leaders for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of Collection&lt;LapLeader&gt;</returns>
         public async System.Threading.Tasks.Task<Collection<LapLeader>> RaceLapLeadersGetAsync (int? raceId = null)
         {
@@ -1861,10 +2227,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of lap leaders for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;LapLeader&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Collection<LapLeader>>> RaceLapLeadersGetAsyncWithHttpInfo (int? raceId = null)
         {
@@ -1919,7 +2285,7 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves the active run session information. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ActiveRun</returns>
@@ -1930,7 +2296,7 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves the active run session information. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ActiveRun</returns>
@@ -1986,7 +2352,7 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves the active run session information. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ActiveRun</returns>
@@ -1998,7 +2364,7 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves the active run session information. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ActiveRun)</returns>
@@ -2054,12 +2420,12 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of race details based on historic race ID or a date range. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="historyRaceId"> (optional)</param>
-        /// <param name="dateStart">enter date_start in yyyy-mm-dd format (optional)</param>
-        /// <param name="dateEnd">enter date_end in yyyy-mm-dd format (optional)</param>
+        /// <param name="historyRaceId">The unique identifier of the historic race. (e.g. 5596) (optional)</param>
+        /// <param name="dateStart">The start date of the date range in yyyy-mm-dd format. (optional)</param>
+        /// <param name="dateEnd">The end date of the date range in yyyy-mm-dd format. (optional)</param>
         /// <returns>Collection&lt;RaceDetails&gt;</returns>
         public Collection<RaceDetails> RaceLookupGet (int? historyRaceId = null, DateTime? dateStart = null, DateTime? dateEnd = null)
         {
@@ -2068,12 +2434,12 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of race details based on historic race ID or a date range. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="historyRaceId"> (optional)</param>
-        /// <param name="dateStart">enter date_start in yyyy-mm-dd format (optional)</param>
-        /// <param name="dateEnd">enter date_end in yyyy-mm-dd format (optional)</param>
+        /// <param name="historyRaceId">The unique identifier of the historic race. (e.g. 5596) (optional)</param>
+        /// <param name="dateStart">The start date of the date range in yyyy-mm-dd format. (optional)</param>
+        /// <param name="dateEnd">The end date of the date range in yyyy-mm-dd format. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;RaceDetails&gt;</returns>
         public ApiResponse< Collection<RaceDetails> > RaceLookupGetWithHttpInfo (int? historyRaceId = null, DateTime? dateStart = null, DateTime? dateEnd = null)
         {
@@ -2130,12 +2496,12 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of race details based on historic race ID or a date range. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="historyRaceId"> (optional)</param>
-        /// <param name="dateStart">enter date_start in yyyy-mm-dd format (optional)</param>
-        /// <param name="dateEnd">enter date_end in yyyy-mm-dd format (optional)</param>
+        /// <param name="historyRaceId">The unique identifier of the historic race. (e.g. 5596) (optional)</param>
+        /// <param name="dateStart">The start date of the date range in yyyy-mm-dd format. (optional)</param>
+        /// <param name="dateEnd">The end date of the date range in yyyy-mm-dd format. (optional)</param>
         /// <returns>Task of Collection&lt;RaceDetails&gt;</returns>
         public async System.Threading.Tasks.Task<Collection<RaceDetails>> RaceLookupGetAsync (int? historyRaceId = null, DateTime? dateStart = null, DateTime? dateEnd = null)
         {
@@ -2145,12 +2511,12 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of race details based on historic race ID or a date range. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="historyRaceId"> (optional)</param>
-        /// <param name="dateStart">enter date_start in yyyy-mm-dd format (optional)</param>
-        /// <param name="dateEnd">enter date_end in yyyy-mm-dd format (optional)</param>
+        /// <param name="historyRaceId">The unique identifier of the historic race. (e.g. 5596) (optional)</param>
+        /// <param name="dateStart">The start date of the date range in yyyy-mm-dd format. (optional)</param>
+        /// <param name="dateEnd">The end date of the date range in yyyy-mm-dd format. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;RaceDetails&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Collection<RaceDetails>>> RaceLookupGetAsyncWithHttpInfo (int? historyRaceId = null, DateTime? dateStart = null, DateTime? dateEnd = null)
         {
@@ -2348,10 +2714,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of pit stops for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Collection&lt;Pitstop&gt;</returns>
         public Collection<Pitstop> RacePitstopsGet (int? raceId = null)
         {
@@ -2360,10 +2726,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of pit stops for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;Pitstop&gt;</returns>
         public ApiResponse< Collection<Pitstop> > RacePitstopsGetWithHttpInfo (int? raceId = null)
         {
@@ -2418,10 +2784,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of pit stops for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of Collection&lt;Pitstop&gt;</returns>
         public async System.Threading.Tasks.Task<Collection<Pitstop>> RacePitstopsGetAsync (int? raceId = null)
         {
@@ -2431,10 +2797,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of pit stops for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;Pitstop&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Collection<Pitstop>>> RacePitstopsGetAsyncWithHttpInfo (int? raceId = null)
         {
@@ -2489,10 +2855,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves practice run results for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Collection&lt;PracticeRunResults&gt;</returns>
         public Collection<PracticeRunResults> RacePracticeResultsGet (int? raceId = null)
         {
@@ -2501,10 +2867,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves practice run results for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;PracticeRunResults&gt;</returns>
         public ApiResponse< Collection<PracticeRunResults> > RacePracticeResultsGetWithHttpInfo (int? raceId = null)
         {
@@ -2559,10 +2925,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves practice run results for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of Collection&lt;PracticeRunResults&gt;</returns>
         public async System.Threading.Tasks.Task<Collection<PracticeRunResults>> RacePracticeResultsGetAsync (int? raceId = null)
         {
@@ -2572,10 +2938,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves practice run results for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;PracticeRunResults&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Collection<PracticeRunResults>>> RacePracticeResultsGetAsyncWithHttpInfo (int? raceId = null)
         {
@@ -2630,10 +2996,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves qualifying run results for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Collection&lt;QualifyingRunResults&gt;</returns>
         public Collection<QualifyingRunResults> RaceQualifyingResultsGet (int? raceId = null)
         {
@@ -2642,10 +3008,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves qualifying run results for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;QualifyingRunResults&gt;</returns>
         public ApiResponse< Collection<QualifyingRunResults> > RaceQualifyingResultsGetWithHttpInfo (int? raceId = null)
         {
@@ -2700,10 +3066,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves qualifying run results for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of Collection&lt;QualifyingRunResults&gt;</returns>
         public async System.Threading.Tasks.Task<Collection<QualifyingRunResults>> RaceQualifyingResultsGetAsync (int? raceId = null)
         {
@@ -2713,10 +3079,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves qualifying run results for a given race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;QualifyingRunResults&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Collection<QualifyingRunResults>>> RaceQualifyingResultsGetAsyncWithHttpInfo (int? raceId = null)
         {
@@ -2771,7 +3137,7 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves the race results for a specified race 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="raceId"> (optional)</param>
@@ -2783,7 +3149,7 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves the race results for a specified race 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="raceId"> (optional)</param>
@@ -2841,7 +3207,7 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves the race results for a specified race 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="raceId"> (optional)</param>
@@ -2854,7 +3220,7 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves the race results for a specified race 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="raceId"> (optional)</param>
@@ -3053,11 +3419,11 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves the run results for a specified race and timing run ID. Timing run ID corresponds to the different  timing runs within a race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
-        /// <param name="timingRunId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
+        /// <param name="timingRunId">The unique identifier of the timing run within the race. (optional)</param>
         /// <returns>RunResults</returns>
         public RunResults RaceResultsGet (int? raceId = null, int? timingRunId = null)
         {
@@ -3066,11 +3432,11 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves the run results for a specified race and timing run ID. Timing run ID corresponds to the different  timing runs within a race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
-        /// <param name="timingRunId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
+        /// <param name="timingRunId">The unique identifier of the timing run within the race. (optional)</param>
         /// <returns>ApiResponse of RunResults</returns>
         public ApiResponse< RunResults > RaceResultsGetWithHttpInfo (int? raceId = null, int? timingRunId = null)
         {
@@ -3126,11 +3492,11 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves the run results for a specified race and timing run ID. Timing run ID corresponds to the different  timing runs within a race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
-        /// <param name="timingRunId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
+        /// <param name="timingRunId">The unique identifier of the timing run within the race. (optional)</param>
         /// <returns>Task of RunResults</returns>
         public async System.Threading.Tasks.Task<RunResults> RaceResultsGetAsync (int? raceId = null, int? timingRunId = null)
         {
@@ -3140,11 +3506,11 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves the run results for a specified race and timing run ID. Timing run ID corresponds to the different  timing runs within a race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
-        /// <param name="timingRunId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
+        /// <param name="timingRunId">The unique identifier of the timing run within the race. (optional)</param>
         /// <returns>Task of ApiResponse (RunResults)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RunResults>> RaceResultsGetAsyncWithHttpInfo (int? raceId = null, int? timingRunId = null)
         {
@@ -3200,10 +3566,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves the team rosters for a specified race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Collection&lt;TeamRoster&gt;</returns>
         public Collection<TeamRoster> RaceRostersGet (int? raceId = null)
         {
@@ -3212,10 +3578,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves the team rosters for a specified race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;TeamRoster&gt;</returns>
         public ApiResponse< Collection<TeamRoster> > RaceRostersGetWithHttpInfo (int? raceId = null)
         {
@@ -3270,10 +3636,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves the team rosters for a specified race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of Collection&lt;TeamRoster&gt;</returns>
         public async System.Threading.Tasks.Task<Collection<TeamRoster>> RaceRostersGetAsync (int? raceId = null)
         {
@@ -3283,10 +3649,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves the team rosters for a specified race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;TeamRoster&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Collection<TeamRoster>>> RaceRostersGetAsyncWithHttpInfo (int? raceId = null)
         {
@@ -3341,11 +3707,11 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves races for a specified season and series. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
+        /// <param name="season">The season for which to retrieve races. (optional)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
         /// <returns>Collection&lt;Collection&lt;Race&gt;&gt;</returns>
         public Collection<Collection<Race>> RaceSeasonGet (int? season = null, int? seriesId = null)
         {
@@ -3354,11 +3720,11 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves races for a specified season and series. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
+        /// <param name="season">The season for which to retrieve races. (optional)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;Collection&lt;Race&gt;&gt;</returns>
         public ApiResponse< Collection<Collection<Race>> > RaceSeasonGetWithHttpInfo (int? season = null, int? seriesId = null)
         {
@@ -3414,11 +3780,11 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves races for a specified season and series. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
+        /// <param name="season">The season for which to retrieve races. (optional)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
         /// <returns>Task of Collection&lt;Collection&lt;Race&gt;&gt;</returns>
         public async System.Threading.Tasks.Task<Collection<Collection<Race>>> RaceSeasonGetAsync (int? season = null, int? seriesId = null)
         {
@@ -3428,11 +3794,11 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves races for a specified season and series. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
+        /// <param name="season">The season for which to retrieve races. (optional)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;Collection&lt;Race&gt;&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Collection<Collection<Race>>>> RaceSeasonGetAsyncWithHttpInfo (int? season = null, int? seriesId = null)
         {
@@ -3488,10 +3854,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of stage results for a specified race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Collection&lt;StageRunResults&gt;</returns>
         public Collection<StageRunResults> RaceStageResultsGet (int? raceId = null)
         {
@@ -3500,10 +3866,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of stage results for a specified race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;StageRunResults&gt;</returns>
         public ApiResponse< Collection<StageRunResults> > RaceStageResultsGetWithHttpInfo (int? raceId = null)
         {
@@ -3558,10 +3924,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of stage results for a specified race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of Collection&lt;StageRunResults&gt;</returns>
         public async System.Threading.Tasks.Task<Collection<StageRunResults>> RaceStageResultsGetAsync (int? raceId = null)
         {
@@ -3571,10 +3937,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of stage results for a specified race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;StageRunResults&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Collection<StageRunResults>>> RaceStageResultsGetAsyncWithHttpInfo (int? raceId = null)
         {
@@ -3629,10 +3995,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves the stage information for a specified race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Collection&lt;Stage&gt;</returns>
         public Collection<Stage> RaceStagesGet (int? raceId = null)
         {
@@ -3641,10 +4007,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves the stage information for a specified race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;Stage&gt;</returns>
         public ApiResponse< Collection<Stage> > RaceStagesGetWithHttpInfo (int? raceId = null)
         {
@@ -3699,10 +4065,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves the stage information for a specified race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of Collection&lt;Stage&gt;</returns>
         public async System.Threading.Tasks.Task<Collection<Stage>> RaceStagesGetAsync (int? raceId = null)
         {
@@ -3712,10 +4078,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves the stage information for a specified race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;Stage&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Collection<Stage>>> RaceStagesGetAsyncWithHttpInfo (int? raceId = null)
         {
@@ -3911,10 +4277,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a comprehensive view model for a specified race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>RaceViewModel</returns>
         public RaceViewModel RaceViewmodelGet (int? raceId = null)
         {
@@ -3923,10 +4289,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a comprehensive view model for a specified race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of RaceViewModel</returns>
         public ApiResponse< RaceViewModel > RaceViewmodelGetWithHttpInfo (int? raceId = null)
         {
@@ -3981,10 +4347,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a comprehensive view model for a specified race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of RaceViewModel</returns>
         public async System.Threading.Tasks.Task<RaceViewModel> RaceViewmodelGetAsync (int? raceId = null)
         {
@@ -3994,10 +4360,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a comprehensive view model for a specified race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (RaceViewModel)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RaceViewModel>> RaceViewmodelGetAsyncWithHttpInfo (int? raceId = null)
         {
@@ -4052,10 +4418,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves the weekend schedule for a specified race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Collection&lt;WeekendSchedule&gt;</returns>
         public Collection<WeekendSchedule> RaceWeekendScheduleGet (int? raceId = null)
         {
@@ -4064,10 +4430,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves the weekend schedule for a specified race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;WeekendSchedule&gt;</returns>
         public ApiResponse< Collection<WeekendSchedule> > RaceWeekendScheduleGetWithHttpInfo (int? raceId = null)
         {
@@ -4122,10 +4488,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves the weekend schedule for a specified race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of Collection&lt;WeekendSchedule&gt;</returns>
         public async System.Threading.Tasks.Task<Collection<WeekendSchedule>> RaceWeekendScheduleGetAsync (int? raceId = null)
         {
@@ -4135,10 +4501,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves the weekend schedule for a specified race. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="raceId"> (optional)</param>
+        /// <param name="raceId">The unique identifier of the race. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;WeekendSchedule&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Collection<WeekendSchedule>>> RaceWeekendScheduleGetAsyncWithHttpInfo (int? raceId = null)
         {

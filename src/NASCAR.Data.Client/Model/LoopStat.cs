@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// LoopStat
+    /// Represents loop stat data for a vehicle in a race, including positional, speed, and passing metrics
     /// </summary>
     [DataContract]
         public partial class LoopStat :  IEquatable<LoopStat>, IValidatableObject
