@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// RaceRunResults
+    /// Represents the results of a race run including current run state and flag state
     /// </summary>
     [DataContract]
         public partial class RaceRunResults :  IEquatable<RaceRunResults>, IValidatableObject

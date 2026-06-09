@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// StageResult
+    /// Represents a vehicle&#x27;s finish result for a stage within a race
     /// </summary>
     [DataContract]
         public partial class StageResult :  IEquatable<StageResult>, IValidatableObject
@@ -32,7 +32,7 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StageResult" /> class.
         /// </summary>
-        /// <param name="finishPosition">Finish position in stage.</param>
+        /// <param name="finishPosition">Finish position in the stage.</param>
         /// <param name="driverName">Driver name.</param>
         /// <param name="vehicleNumber">Vehicle number.</param>
         public StageResult(int? finishPosition = default(int?), string driverName = default(string), string vehicleNumber = default(string))
@@ -43,9 +43,9 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Finish position in stage
+        /// Finish position in the stage
         /// </summary>
-        /// <value>Finish position in stage</value>
+        /// <value>Finish position in the stage</value>
         [DataMember(Name="finish_position", EmitDefaultValue=false)]
         public int? FinishPosition { get; set; }
 

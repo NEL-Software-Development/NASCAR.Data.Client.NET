@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// DriverSummaryByTrack
+    /// Represents a driver&#x27;s career summary statistics at a specific track
     /// </summary>
     [DataContract]
         public partial class DriverSummaryByTrack :  IEquatable<DriverSummaryByTrack>, IValidatableObject
@@ -35,20 +35,20 @@ namespace NASCAR.Data.Client.Model
         /// <param name="averageStart">Average start position.</param>
         /// <param name="averageFinish">Average finish position.</param>
         /// <param name="dnf">The number of races where the driver did not finish.</param>
-        /// <param name="driverId">Driver Id.</param>
+        /// <param name="driverId">Driver identifier.</param>
         /// <param name="lapsCompleted">The number of laps completed.</param>
         /// <param name="lapsLed">The number of laps led.</param>
         /// <param name="leadLapFinish">The number of finishes where the driver was on the lead lap.</param>
         /// <param name="milesCompleted">Total miles completed.</param>
         /// <param name="poles">The number of times the driver earned the pole position.</param>
         /// <param name="runningAtFinish">Running at finish.</param>
-        /// <param name="seriesId">Series ID.</param>
+        /// <param name="seriesId">Series identifier.</param>
         /// <param name="top5">The number of top 5 finishes.</param>
         /// <param name="top10">The number of top 10 finishes.</param>
         /// <param name="totalRaces">The total number of races.</param>
         /// <param name="wins">Race wins.</param>
         /// <param name="season">Race season.</param>
-        /// <param name="trackId">Track Id.</param>
+        /// <param name="trackId">Track identifier.</param>
         /// <param name="trackName">Track name.</param>
         public DriverSummaryByTrack(double? averageStart = default(double?), double? averageFinish = default(double?), int? dnf = default(int?), int? driverId = default(int?), int? lapsCompleted = default(int?), int? lapsLed = default(int?), int? leadLapFinish = default(int?), double? milesCompleted = default(double?), int? poles = default(int?), int? runningAtFinish = default(int?), int? seriesId = default(int?), int? top5 = default(int?), int? top10 = default(int?), int? totalRaces = default(int?), int? wins = default(int?), int? season = default(int?), int? trackId = default(int?), string trackName = default(string))
         {
@@ -94,9 +94,9 @@ namespace NASCAR.Data.Client.Model
         public int? Dnf { get; set; }
 
         /// <summary>
-        /// Driver Id
+        /// Driver identifier
         /// </summary>
-        /// <value>Driver Id</value>
+        /// <value>Driver identifier</value>
         [DataMember(Name="driver_id", EmitDefaultValue=false)]
         public int? DriverId { get; set; }
 
@@ -143,9 +143,9 @@ namespace NASCAR.Data.Client.Model
         public int? RunningAtFinish { get; set; }
 
         /// <summary>
-        /// Series ID
+        /// Series identifier
         /// </summary>
-        /// <value>Series ID</value>
+        /// <value>Series identifier</value>
         [DataMember(Name="series_id", EmitDefaultValue=false)]
         public int? SeriesId { get; set; }
 
@@ -185,9 +185,9 @@ namespace NASCAR.Data.Client.Model
         public int? Season { get; set; }
 
         /// <summary>
-        /// Track Id
+        /// Track identifier
         /// </summary>
-        /// <value>Track Id</value>
+        /// <value>Track identifier</value>
         [DataMember(Name="track_id", EmitDefaultValue=false)]
         public int? TrackId { get; set; }
 
