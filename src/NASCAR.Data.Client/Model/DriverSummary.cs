@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// DriverSummary
+    /// Represents a complete summary of a driver&#x27;s career statistics across races, seasons, tracks, and track types
     /// </summary>
     [DataContract]
         public partial class DriverSummary :  IEquatable<DriverSummary>, IValidatableObject

@@ -3,11 +3,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int?** | Id | [optional] 
+**Id** | **int?** | Unique identifier given and used by the NASCAR Data API | [optional] 
 **Name** | **string** | Name | [optional] 
 **DateOfBirth** | **DateTimeOffset?** | Date of birth | [optional] 
 **DateOfDeath** | **DateTimeOffset?** | Date of death | [optional] 
-**HometownCity** | **string** | The driver&#x27;s hometown | [optional] 
+**HistoryDriverId** | **int?** | Historical identifier for the driver | [optional] 
+**HometownCity** | **string** | The driver&#x27;s hometown city | [optional] 
 **HometownState** | **string** | The driver&#x27;s home state | [optional] 
 **HometownCountry** | **string** | The driver&#x27;s home country | [optional] 
 **ResidesCity** | **string** | The city where the driver resides | [optional] 

@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// ManufacturerPoint
+    /// Represents a manufacturer&#x27;s points standing for a specific race
     /// </summary>
     [DataContract]
         public partial class ManufacturerPoint :  IEquatable<ManufacturerPoint>, IValidatableObject

@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **VehicleNumber** | **string** | Vehicle number | [optional] 
-**Members** | [**Collection&lt;RosterMember&gt;**](RosterMember.md) | Team members | [optional] 
+**Members** | [**Collection&lt;RosterMember&gt;**](RosterMember.md) | Team members associated with the vehicle | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

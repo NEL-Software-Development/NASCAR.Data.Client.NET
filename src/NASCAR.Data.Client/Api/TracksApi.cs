@@ -24,28 +24,28 @@ namespace NASCAR.Data.Client.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// Retrieves detailed information about a specific track, including its history, notable events, and other relevant data, given the track&#x27;s unique identifier from /tracks.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="trackId"> (optional)</param>
+        /// <param name="trackId">The unique identifier of the track. (optional)</param>
         /// <returns>TrackDetails</returns>
         TrackDetails TrackDetailsGet (int? trackId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves detailed information about a specific track, including its history, notable events, and other relevant data, given the track&#x27;s unique identifier from /tracks.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="trackId"> (optional)</param>
+        /// <param name="trackId">The unique identifier of the track. (optional)</param>
         /// <returns>ApiResponse of TrackDetails</returns>
         ApiResponse<TrackDetails> TrackDetailsGetWithHttpInfo (int? trackId = null);
         /// <summary>
-        /// 
+        /// Retrieves a list of all tracks in the NASCAR database, including basic information such as track name, location, and type.
         /// </summary>
         /// <remarks>
         /// 
@@ -55,7 +55,7 @@ namespace NASCAR.Data.Client.Api
         Track TracksGet ();
 
         /// <summary>
-        /// 
+        /// Retrieves a list of all tracks in the NASCAR database, including basic information such as track name, location, and type.
         /// </summary>
         /// <remarks>
         /// 
@@ -66,28 +66,28 @@ namespace NASCAR.Data.Client.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// Retrieves detailed information about a specific track, including its history, notable events, and other relevant data, given the track&#x27;s unique identifier from /tracks.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="trackId"> (optional)</param>
+        /// <param name="trackId">The unique identifier of the track. (optional)</param>
         /// <returns>Task of TrackDetails</returns>
         System.Threading.Tasks.Task<TrackDetails> TrackDetailsGetAsync (int? trackId = null);
 
         /// <summary>
-        /// 
+        /// Retrieves detailed information about a specific track, including its history, notable events, and other relevant data, given the track&#x27;s unique identifier from /tracks.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="trackId"> (optional)</param>
+        /// <param name="trackId">The unique identifier of the track. (optional)</param>
         /// <returns>Task of ApiResponse (TrackDetails)</returns>
         System.Threading.Tasks.Task<ApiResponse<TrackDetails>> TrackDetailsGetAsyncWithHttpInfo (int? trackId = null);
         /// <summary>
-        /// 
+        /// Retrieves a list of all tracks in the NASCAR database, including basic information such as track name, location, and type.
         /// </summary>
         /// <remarks>
         /// 
@@ -97,7 +97,7 @@ namespace NASCAR.Data.Client.Api
         System.Threading.Tasks.Task<Track> TracksGetAsync ();
 
         /// <summary>
-        /// 
+        /// Retrieves a list of all tracks in the NASCAR database, including basic information such as track name, location, and type.
         /// </summary>
         /// <remarks>
         /// 
@@ -217,10 +217,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves detailed information about a specific track, including its history, notable events, and other relevant data, given the track&#x27;s unique identifier from /tracks. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="trackId"> (optional)</param>
+        /// <param name="trackId">The unique identifier of the track. (optional)</param>
         /// <returns>TrackDetails</returns>
         public TrackDetails TrackDetailsGet (int? trackId = null)
         {
@@ -229,10 +229,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves detailed information about a specific track, including its history, notable events, and other relevant data, given the track&#x27;s unique identifier from /tracks. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="trackId"> (optional)</param>
+        /// <param name="trackId">The unique identifier of the track. (optional)</param>
         /// <returns>ApiResponse of TrackDetails</returns>
         public ApiResponse< TrackDetails > TrackDetailsGetWithHttpInfo (int? trackId = null)
         {
@@ -287,10 +287,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves detailed information about a specific track, including its history, notable events, and other relevant data, given the track&#x27;s unique identifier from /tracks. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="trackId"> (optional)</param>
+        /// <param name="trackId">The unique identifier of the track. (optional)</param>
         /// <returns>Task of TrackDetails</returns>
         public async System.Threading.Tasks.Task<TrackDetails> TrackDetailsGetAsync (int? trackId = null)
         {
@@ -300,10 +300,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves detailed information about a specific track, including its history, notable events, and other relevant data, given the track&#x27;s unique identifier from /tracks. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="trackId"> (optional)</param>
+        /// <param name="trackId">The unique identifier of the track. (optional)</param>
         /// <returns>Task of ApiResponse (TrackDetails)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TrackDetails>> TrackDetailsGetAsyncWithHttpInfo (int? trackId = null)
         {
@@ -358,7 +358,7 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of all tracks in the NASCAR database, including basic information such as track name, location, and type. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Track</returns>
@@ -369,7 +369,7 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of all tracks in the NASCAR database, including basic information such as track name, location, and type. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Track</returns>
@@ -425,7 +425,7 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of all tracks in the NASCAR database, including basic information such as track name, location, and type. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Track</returns>
@@ -437,7 +437,7 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a list of all tracks in the NASCAR database, including basic information such as track name, location, and type. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Track)</returns>

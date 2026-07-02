@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// Tire
+    /// Represents a vendor tire assigned to a vehicle for a race event
     /// </summary>
     [DataContract]
         public partial class Tire :  IEquatable<Tire>, IValidatableObject
@@ -32,12 +32,12 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Tire" /> class.
         /// </summary>
-        /// <param name="epc">epc.</param>
-        /// <param name="dNumber">dNumber.</param>
-        /// <param name="sequence">sequence.</param>
-        /// <param name="tireType">tireType.</param>
-        /// <param name="sideCode">sideCode.</param>
-        /// <param name="carNumber">carNumber.</param>
+        /// <param name="epc">Electronic Product Code for the tire.</param>
+        /// <param name="dNumber">D-number identifier for the tire.</param>
+        /// <param name="sequence">Sequence identifier for the tire.</param>
+        /// <param name="tireType">Type of tire.</param>
+        /// <param name="sideCode">Side code indicating tire placement (R&#x3D;Right, L&#x3D;Left, E&#x3D;Either).</param>
+        /// <param name="carNumber">Car number the tire is assigned to.</param>
         public Tire(string epc = default(string), string dNumber = default(string), string sequence = default(string), string tireType = default(string), string sideCode = default(string), string carNumber = default(string))
         {
             this.Epc = epc;
@@ -49,38 +49,44 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets Epc
+        /// Electronic Product Code for the tire
         /// </summary>
+        /// <value>Electronic Product Code for the tire</value>
         [DataMember(Name="epc", EmitDefaultValue=false)]
         public string Epc { get; set; }
 
         /// <summary>
-        /// Gets or Sets DNumber
+        /// D-number identifier for the tire
         /// </summary>
+        /// <value>D-number identifier for the tire</value>
         [DataMember(Name="d_number", EmitDefaultValue=false)]
         public string DNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets Sequence
+        /// Sequence identifier for the tire
         /// </summary>
+        /// <value>Sequence identifier for the tire</value>
         [DataMember(Name="sequence", EmitDefaultValue=false)]
         public string Sequence { get; set; }
 
         /// <summary>
-        /// Gets or Sets TireType
+        /// Type of tire
         /// </summary>
+        /// <value>Type of tire</value>
         [DataMember(Name="tire_type", EmitDefaultValue=false)]
         public string TireType { get; set; }
 
         /// <summary>
-        /// Gets or Sets SideCode
+        /// Side code indicating tire placement (R&#x3D;Right, L&#x3D;Left, E&#x3D;Either)
         /// </summary>
+        /// <value>Side code indicating tire placement (R&#x3D;Right, L&#x3D;Left, E&#x3D;Either)</value>
         [DataMember(Name="side_code", EmitDefaultValue=false)]
         public string SideCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets CarNumber
+        /// Car number the tire is assigned to
         /// </summary>
+        /// <value>Car number the tire is assigned to</value>
         [DataMember(Name="car_number", EmitDefaultValue=false)]
         public string CarNumber { get; set; }
 

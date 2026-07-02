@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// RaceWeek
+    /// Represents a race week event and its associated schedule and series information
     /// </summary>
     [DataContract]
         public partial class RaceWeek :  IEquatable<RaceWeek>, IValidatableObject
@@ -32,13 +32,13 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RaceWeek" /> class.
         /// </summary>
-        /// <param name="id">Id.</param>
+        /// <param name="id">Unique identifier given and used by the NASCAR Data API.</param>
         /// <param name="season">Race season (required) (default to 0).</param>
-        /// <param name="venue">Venue (required) (default to &quot;&quot;).</param>
+        /// <param name="venue">Venue name for the race week event (required) (default to &quot;&quot;).</param>
         /// <param name="runningSeries">List of series running at this event (required) (default to &quot;&quot;).</param>
-        /// <param name="startDate">Start of raceweek.</param>
-        /// <param name="endDate">End of raceweek.</param>
-        /// <param name="isLive">Is this raceweek currently in progress.</param>
+        /// <param name="startDate">Start date of the race week.</param>
+        /// <param name="endDate">End date of the race week.</param>
+        /// <param name="isLive">Indicates whether this race week is currently in progress.</param>
         public RaceWeek(int? id = default(int?), int? season = 0, string venue = "", string runningSeries = "", DateTimeOffset? startDate = default(DateTimeOffset?), DateTimeOffset? endDate = default(DateTimeOffset?), bool? isLive = default(bool?))
         {
             // to ensure "season" is required (not null)
@@ -75,9 +75,9 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Id
+        /// Unique identifier given and used by the NASCAR Data API
         /// </summary>
-        /// <value>Id</value>
+        /// <value>Unique identifier given and used by the NASCAR Data API</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
@@ -89,9 +89,9 @@ namespace NASCAR.Data.Client.Model
         public int? Season { get; set; }
 
         /// <summary>
-        /// Venue
+        /// Venue name for the race week event
         /// </summary>
-        /// <value>Venue</value>
+        /// <value>Venue name for the race week event</value>
         [DataMember(Name="venue", EmitDefaultValue=false)]
         public string Venue { get; set; }
 
@@ -103,30 +103,30 @@ namespace NASCAR.Data.Client.Model
         public string RunningSeries { get; set; }
 
         /// <summary>
-        /// Start of raceweek
+        /// Start date of the race week
         /// </summary>
-        /// <value>Start of raceweek</value>
+        /// <value>Start date of the race week</value>
         [DataMember(Name="start_date", EmitDefaultValue=false)]
         public DateTimeOffset? StartDate { get; set; }
 
         /// <summary>
-        /// End of raceweek
+        /// End date of the race week
         /// </summary>
-        /// <value>End of raceweek</value>
+        /// <value>End date of the race week</value>
         [DataMember(Name="end_date", EmitDefaultValue=false)]
         public DateTimeOffset? EndDate { get; set; }
 
         /// <summary>
-        /// Is this raceweek currently in progress
+        /// Indicates whether this race week is currently in progress
         /// </summary>
-        /// <value>Is this raceweek currently in progress</value>
+        /// <value>Indicates whether this race week is currently in progress</value>
         [DataMember(Name="is_live", EmitDefaultValue=false)]
         public bool? IsLive { get; set; }
 
         /// <summary>
-        /// URL to raceweek details
+        /// URL to race week details
         /// </summary>
-        /// <value>URL to raceweek details</value>
+        /// <value>URL to race week details</value>
         [DataMember(Name="details", EmitDefaultValue=false)]
         public string Details { get; private set; }
 
