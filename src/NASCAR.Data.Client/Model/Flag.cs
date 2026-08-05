@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// Flag
+    /// Represents a flag event during a race run
     /// </summary>
     [DataContract]
         public partial class Flag :  IEquatable<Flag>, IValidatableObject
@@ -38,7 +38,7 @@ namespace NASCAR.Data.Client.Model
         /// <param name="elapsedTime">Elapsed race time in milliseconds.</param>
         /// <param name="time">Time of flag.</param>
         /// <param name="duration">Duration in seconds.</param>
-        /// <param name="flagState">Flag stage:  (NONE, WARMUP, GREEN, YELLOW, RED, WHITE, FINISH, EXTRA).</param>
+        /// <param name="flagState">Flag state:  (Green, Yellow, Red, Checkered, White, Stop, NoActiveFlag, Warm, Invalid).</param>
         /// <param name="comment">Comments.</param>
         public Flag(int? startLap = default(int?), int? finishLap = default(int?), int? numberOfLaps = default(int?), int? elapsedTime = default(int?), DateTimeOffset? time = default(DateTimeOffset?), int? duration = default(int?), string flagState = default(string), string comment = default(string))
         {
@@ -95,9 +95,9 @@ namespace NASCAR.Data.Client.Model
         public int? Duration { get; set; }
 
         /// <summary>
-        /// Flag stage:  (NONE, WARMUP, GREEN, YELLOW, RED, WHITE, FINISH, EXTRA)
+        /// Flag state:  (Green, Yellow, Red, Checkered, White, Stop, NoActiveFlag, Warm, Invalid)
         /// </summary>
-        /// <value>Flag stage:  (NONE, WARMUP, GREEN, YELLOW, RED, WHITE, FINISH, EXTRA)</value>
+        /// <value>Flag state:  (Green, Yellow, Red, Checkered, White, Stop, NoActiveFlag, Warm, Invalid)</value>
         [DataMember(Name="flag_state", EmitDefaultValue=false)]
         public string FlagState { get; set; }
 

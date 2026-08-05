@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// WicketResponse
+    /// Represents the response from the Wicket service after processing a request
     /// </summary>
     [DataContract]
         public partial class WicketResponse :  IEquatable<WicketResponse>, IValidatableObject
@@ -32,8 +32,8 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WicketResponse" /> class.
         /// </summary>
-        /// <param name="success">success.</param>
-        /// <param name="message">message.</param>
+        /// <param name="success">Indicates whether the Wicket request was successful.</param>
+        /// <param name="message">Message providing additional information about the response.</param>
         public WicketResponse(bool? success = default(bool?), string message = default(string))
         {
             this.Success = success;
@@ -41,14 +41,16 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Gets or Sets Success
+        /// Indicates whether the Wicket request was successful
         /// </summary>
+        /// <value>Indicates whether the Wicket request was successful</value>
         [DataMember(Name="success", EmitDefaultValue=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// Gets or Sets Message
+        /// Message providing additional information about the response
         /// </summary>
+        /// <value>Message providing additional information about the response</value>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; set; }
 

@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// AvailableReports
+    /// Container for a collection of available reports
     /// </summary>
     [DataContract]
         public partial class AvailableReports :  IEquatable<AvailableReports>, IValidatableObject
@@ -32,15 +32,16 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AvailableReports" /> class.
         /// </summary>
-        /// <param name="reports">reports.</param>
+        /// <param name="reports">Collection of available reports.</param>
         public AvailableReports(Collection<AvailableReport> reports = default(Collection<AvailableReport>))
         {
             this.Reports = reports;
         }
         
         /// <summary>
-        /// Gets or Sets Reports
+        /// Collection of available reports
         /// </summary>
+        /// <value>Collection of available reports</value>
         [DataMember(Name="reports", EmitDefaultValue=false)]
         public Collection<AvailableReport> Reports { get; set; }
 

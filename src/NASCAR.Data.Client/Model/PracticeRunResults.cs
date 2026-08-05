@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// PracticeRunResults
+    /// Represents the results of a practice run including current run and flag state
     /// </summary>
     [DataContract]
         public partial class PracticeRunResults :  IEquatable<PracticeRunResults>, IValidatableObject
@@ -34,7 +34,7 @@ namespace NASCAR.Data.Client.Model
         /// </summary>
         /// <param name="runName">Run name.</param>
         /// <param name="runState">Run state:  (Inactive, Active, Completed).</param>
-        /// <param name="flagState">Flag state:  (NONE, WARMUP, GREEN, YELLOW, RED, WHITE, FINISH, EXTRA).</param>
+        /// <param name="flagState">Flag state:  (Green, Yellow, Red, Checkered, White, Stop, NoActiveFlag, Warm, Invalid).</param>
         /// <param name="results">Practice results.</param>
         public PracticeRunResults(string runName = default(string), string runState = default(string), string flagState = default(string), Collection<RunResult> results = default(Collection<RunResult>))
         {
@@ -59,9 +59,9 @@ namespace NASCAR.Data.Client.Model
         public string RunState { get; set; }
 
         /// <summary>
-        /// Flag state:  (NONE, WARMUP, GREEN, YELLOW, RED, WHITE, FINISH, EXTRA)
+        /// Flag state:  (Green, Yellow, Red, Checkered, White, Stop, NoActiveFlag, Warm, Invalid)
         /// </summary>
-        /// <value>Flag state:  (NONE, WARMUP, GREEN, YELLOW, RED, WHITE, FINISH, EXTRA)</value>
+        /// <value>Flag state:  (Green, Yellow, Red, Checkered, White, Stop, NoActiveFlag, Warm, Invalid)</value>
         [DataMember(Name="flag_state", EmitDefaultValue=false)]
         public string FlagState { get; set; }
 

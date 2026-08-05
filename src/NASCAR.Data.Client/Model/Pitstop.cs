@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// Pitstop
+    /// Represents a pit stop event for a vehicle during a race run
     /// </summary>
     [DataContract]
         public partial class Pitstop :  IEquatable<Pitstop>, IValidatableObject
@@ -32,28 +32,28 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Pitstop" /> class.
         /// </summary>
-        /// <param name="lap">Lap.</param>
-        /// <param name="leaderLap">Leader lap.</param>
+        /// <param name="lap">Lap on which the pit stop occurred.</param>
+        /// <param name="leaderLap">Lap of the leader when the pit stop occurred.</param>
         /// <param name="vehicleNumber">Vehicle number.</param>
-        /// <param name="enterFlagstate">Enter flag state.</param>
-        /// <param name="enterRacetime">Exit flag state.</param>
-        /// <param name="enterTravelduration">Enter travel duration.</param>
-        /// <param name="adjustmentLeft">Adjustment left.</param>
-        /// <param name="adjustmentRight">Adjustment right.</param>
-        /// <param name="bodyRepairs">Body repairs.</param>
-        /// <param name="fuelCans">Number of fuel cans.</param>
-        /// <param name="leftfrontTirechanged">Left front tire changed.</param>
-        /// <param name="leftrearTirechanged">Left rear tire changed.</param>
-        /// <param name="rightfrontTirechanged">Right front tire changed.</param>
-        /// <param name="rightrearTirechanged">Right rear tire changed.</param>
-        /// <param name="infraction">Infraction.</param>
-        /// <param name="video">Video.</param>
-        /// <param name="pitboxEnter">Pit box enter.</param>
-        /// <param name="pitboxExit">Pit box exit.</param>
-        /// <param name="exitFlagstate">Exit flag state.</param>
-        /// <param name="exitRacetime">Exit race time.</param>
-        /// <param name="exitTravelduration">Exit travel duration.</param>
-        /// <param name="totalDuration">Total duration.</param>
+        /// <param name="enterFlagstate">Flag state on pit entry.</param>
+        /// <param name="enterRacetime">Race time on pit entry.</param>
+        /// <param name="enterTravelduration">Travel duration on pit entry.</param>
+        /// <param name="adjustmentLeft">Left side adjustment made during pit stop.</param>
+        /// <param name="adjustmentRight">Right side adjustment made during pit stop.</param>
+        /// <param name="bodyRepairs">Body repairs performed during pit stop.</param>
+        /// <param name="fuelCans">Number of fuel cans used during pit stop.</param>
+        /// <param name="leftfrontTirechanged">Left front tire changed during pit stop.</param>
+        /// <param name="leftrearTirechanged">Left rear tire changed during pit stop.</param>
+        /// <param name="rightfrontTirechanged">Right front tire changed during pit stop.</param>
+        /// <param name="rightrearTirechanged">Right rear tire changed during pit stop.</param>
+        /// <param name="infraction">Infraction issued during pit stop.</param>
+        /// <param name="video">Video path associated with the pit stop.</param>
+        /// <param name="pitboxEnter">Race time on pit box entry.</param>
+        /// <param name="pitboxExit">Race time on pit box exit.</param>
+        /// <param name="exitFlagstate">Flag state on pit exit.</param>
+        /// <param name="exitRacetime">Race time on pit exit.</param>
+        /// <param name="exitTravelduration">Travel duration on pit exit.</param>
+        /// <param name="totalDuration">Total duration of the pit stop.</param>
         public Pitstop(int? lap = default(int?), int? leaderLap = default(int?), string vehicleNumber = default(string), int? enterFlagstate = default(int?), double? enterRacetime = default(double?), double? enterTravelduration = default(double?), bool? adjustmentLeft = default(bool?), bool? adjustmentRight = default(bool?), bool? bodyRepairs = default(bool?), int? fuelCans = default(int?), bool? leftfrontTirechanged = default(bool?), bool? leftrearTirechanged = default(bool?), bool? rightfrontTirechanged = default(bool?), bool? rightrearTirechanged = default(bool?), string infraction = default(string), string video = default(string), double? pitboxEnter = default(double?), double? pitboxExit = default(double?), int? exitFlagstate = default(int?), double? exitRacetime = default(double?), double? exitTravelduration = default(double?), double? totalDuration = default(double?))
         {
             this.Lap = lap;
@@ -81,16 +81,16 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Lap
+        /// Lap on which the pit stop occurred
         /// </summary>
-        /// <value>Lap</value>
+        /// <value>Lap on which the pit stop occurred</value>
         [DataMember(Name="lap", EmitDefaultValue=false)]
         public int? Lap { get; set; }
 
         /// <summary>
-        /// Leader lap
+        /// Lap of the leader when the pit stop occurred
         /// </summary>
-        /// <value>Leader lap</value>
+        /// <value>Lap of the leader when the pit stop occurred</value>
         [DataMember(Name="leader_lap", EmitDefaultValue=false)]
         public int? LeaderLap { get; set; }
 
@@ -102,135 +102,135 @@ namespace NASCAR.Data.Client.Model
         public string VehicleNumber { get; set; }
 
         /// <summary>
-        /// Enter flag state
+        /// Flag state on pit entry
         /// </summary>
-        /// <value>Enter flag state</value>
+        /// <value>Flag state on pit entry</value>
         [DataMember(Name="enter_flagstate", EmitDefaultValue=false)]
         public int? EnterFlagstate { get; set; }
 
         /// <summary>
-        /// Exit flag state
+        /// Race time on pit entry
         /// </summary>
-        /// <value>Exit flag state</value>
+        /// <value>Race time on pit entry</value>
         [DataMember(Name="enter_racetime", EmitDefaultValue=false)]
         public double? EnterRacetime { get; set; }
 
         /// <summary>
-        /// Enter travel duration
+        /// Travel duration on pit entry
         /// </summary>
-        /// <value>Enter travel duration</value>
+        /// <value>Travel duration on pit entry</value>
         [DataMember(Name="enter_travelduration", EmitDefaultValue=false)]
         public double? EnterTravelduration { get; set; }
 
         /// <summary>
-        /// Adjustment left
+        /// Left side adjustment made during pit stop
         /// </summary>
-        /// <value>Adjustment left</value>
+        /// <value>Left side adjustment made during pit stop</value>
         [DataMember(Name="adjustment_left", EmitDefaultValue=false)]
         public bool? AdjustmentLeft { get; set; }
 
         /// <summary>
-        /// Adjustment right
+        /// Right side adjustment made during pit stop
         /// </summary>
-        /// <value>Adjustment right</value>
+        /// <value>Right side adjustment made during pit stop</value>
         [DataMember(Name="adjustment_right", EmitDefaultValue=false)]
         public bool? AdjustmentRight { get; set; }
 
         /// <summary>
-        /// Body repairs
+        /// Body repairs performed during pit stop
         /// </summary>
-        /// <value>Body repairs</value>
+        /// <value>Body repairs performed during pit stop</value>
         [DataMember(Name="body_repairs", EmitDefaultValue=false)]
         public bool? BodyRepairs { get; set; }
 
         /// <summary>
-        /// Number of fuel cans
+        /// Number of fuel cans used during pit stop
         /// </summary>
-        /// <value>Number of fuel cans</value>
+        /// <value>Number of fuel cans used during pit stop</value>
         [DataMember(Name="fuel_cans", EmitDefaultValue=false)]
         public int? FuelCans { get; set; }
 
         /// <summary>
-        /// Left front tire changed
+        /// Left front tire changed during pit stop
         /// </summary>
-        /// <value>Left front tire changed</value>
+        /// <value>Left front tire changed during pit stop</value>
         [DataMember(Name="leftfront_tirechanged", EmitDefaultValue=false)]
         public bool? LeftfrontTirechanged { get; set; }
 
         /// <summary>
-        /// Left rear tire changed
+        /// Left rear tire changed during pit stop
         /// </summary>
-        /// <value>Left rear tire changed</value>
+        /// <value>Left rear tire changed during pit stop</value>
         [DataMember(Name="Leftrear_tirechanged", EmitDefaultValue=false)]
         public bool? LeftrearTirechanged { get; set; }
 
         /// <summary>
-        /// Right front tire changed
+        /// Right front tire changed during pit stop
         /// </summary>
-        /// <value>Right front tire changed</value>
+        /// <value>Right front tire changed during pit stop</value>
         [DataMember(Name="rightfront_tirechanged", EmitDefaultValue=false)]
         public bool? RightfrontTirechanged { get; set; }
 
         /// <summary>
-        /// Right rear tire changed
+        /// Right rear tire changed during pit stop
         /// </summary>
-        /// <value>Right rear tire changed</value>
+        /// <value>Right rear tire changed during pit stop</value>
         [DataMember(Name="rightrear_tirechanged", EmitDefaultValue=false)]
         public bool? RightrearTirechanged { get; set; }
 
         /// <summary>
-        /// Infraction
+        /// Infraction issued during pit stop
         /// </summary>
-        /// <value>Infraction</value>
+        /// <value>Infraction issued during pit stop</value>
         [DataMember(Name="infraction", EmitDefaultValue=false)]
         public string Infraction { get; set; }
 
         /// <summary>
-        /// Video
+        /// Video path associated with the pit stop
         /// </summary>
-        /// <value>Video</value>
+        /// <value>Video path associated with the pit stop</value>
         [DataMember(Name="video", EmitDefaultValue=false)]
         public string Video { get; set; }
 
         /// <summary>
-        /// Pit box enter
+        /// Race time on pit box entry
         /// </summary>
-        /// <value>Pit box enter</value>
+        /// <value>Race time on pit box entry</value>
         [DataMember(Name="pitbox_enter", EmitDefaultValue=false)]
         public double? PitboxEnter { get; set; }
 
         /// <summary>
-        /// Pit box exit
+        /// Race time on pit box exit
         /// </summary>
-        /// <value>Pit box exit</value>
+        /// <value>Race time on pit box exit</value>
         [DataMember(Name="pitbox_exit", EmitDefaultValue=false)]
         public double? PitboxExit { get; set; }
 
         /// <summary>
-        /// Exit flag state
+        /// Flag state on pit exit
         /// </summary>
-        /// <value>Exit flag state</value>
+        /// <value>Flag state on pit exit</value>
         [DataMember(Name="exit_flagstate", EmitDefaultValue=false)]
         public int? ExitFlagstate { get; set; }
 
         /// <summary>
-        /// Exit race time
+        /// Race time on pit exit
         /// </summary>
-        /// <value>Exit race time</value>
+        /// <value>Race time on pit exit</value>
         [DataMember(Name="exit_racetime", EmitDefaultValue=false)]
         public double? ExitRacetime { get; set; }
 
         /// <summary>
-        /// Exit travel duration
+        /// Travel duration on pit exit
         /// </summary>
-        /// <value>Exit travel duration</value>
+        /// <value>Travel duration on pit exit</value>
         [DataMember(Name="exit_travelduration", EmitDefaultValue=false)]
         public double? ExitTravelduration { get; set; }
 
         /// <summary>
-        /// Total duration
+        /// Total duration of the pit stop
         /// </summary>
-        /// <value>Total duration</value>
+        /// <value>Total duration of the pit stop</value>
         [DataMember(Name="total_duration", EmitDefaultValue=false)]
         public double? TotalDuration { get; set; }
 

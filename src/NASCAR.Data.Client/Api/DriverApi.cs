@@ -24,143 +24,143 @@ namespace NASCAR.Data.Client.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// Retrieves a single driver by driver ID.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"> (optional)</param>
+        /// <param name="id">Unique driver identifier. (optional)</param>
         /// <returns>Driver</returns>
         Driver DriverGet (int? id = null);
 
         /// <summary>
-        /// 
+        /// Retrieves a single driver by driver ID.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"> (optional)</param>
+        /// <param name="id">Unique driver identifier. (optional)</param>
         /// <returns>ApiResponse of Driver</returns>
         ApiResponse<Driver> DriverGetWithHttpInfo (int? id = null);
         /// <summary>
-        /// 
+        /// Lists season finish results for a specific driver within a series and season.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"> (optional)</param>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
+        /// <param name="id">Unique driver identifier. (optional)</param>
+        /// <param name="season">Four-digit season year to query. (optional)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
         /// <returns>Collection&lt;RaceResultSummary&gt;</returns>
         Collection<RaceResultSummary> DriverSeasonFinishesGet (int? id = null, int? season = null, int? seriesId = null);
 
         /// <summary>
-        /// 
+        /// Lists season finish results for a specific driver within a series and season.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"> (optional)</param>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
+        /// <param name="id">Unique driver identifier. (optional)</param>
+        /// <param name="season">Four-digit season year to query. (optional)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;RaceResultSummary&gt;</returns>
         ApiResponse<Collection<RaceResultSummary>> DriverSeasonFinishesGetWithHttpInfo (int? id = null, int? season = null, int? seriesId = null);
         /// <summary>
-        /// 
+        /// Lists all drivers for a given series and race season.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
+        /// <param name="season">Four-digit season year to query. (optional)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
         /// <returns>Collection&lt;Driver&gt;</returns>
         Collection<Driver> DriverSeasonGet (int? season = null, int? seriesId = null);
 
         /// <summary>
-        /// 
+        /// Lists all drivers for a given series and race season.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
+        /// <param name="season">Four-digit season year to query. (optional)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;Driver&gt;</returns>
         ApiResponse<Collection<Driver>> DriverSeasonGetWithHttpInfo (int? season = null, int? seriesId = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// Retrieves a single driver by driver ID.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"> (optional)</param>
+        /// <param name="id">Unique driver identifier. (optional)</param>
         /// <returns>Task of Driver</returns>
         System.Threading.Tasks.Task<Driver> DriverGetAsync (int? id = null);
 
         /// <summary>
-        /// 
+        /// Retrieves a single driver by driver ID.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"> (optional)</param>
+        /// <param name="id">Unique driver identifier. (optional)</param>
         /// <returns>Task of ApiResponse (Driver)</returns>
         System.Threading.Tasks.Task<ApiResponse<Driver>> DriverGetAsyncWithHttpInfo (int? id = null);
         /// <summary>
-        /// 
+        /// Lists season finish results for a specific driver within a series and season.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"> (optional)</param>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
+        /// <param name="id">Unique driver identifier. (optional)</param>
+        /// <param name="season">Four-digit season year to query. (optional)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
         /// <returns>Task of Collection&lt;RaceResultSummary&gt;</returns>
         System.Threading.Tasks.Task<Collection<RaceResultSummary>> DriverSeasonFinishesGetAsync (int? id = null, int? season = null, int? seriesId = null);
 
         /// <summary>
-        /// 
+        /// Lists season finish results for a specific driver within a series and season.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"> (optional)</param>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
+        /// <param name="id">Unique driver identifier. (optional)</param>
+        /// <param name="season">Four-digit season year to query. (optional)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;RaceResultSummary&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Collection<RaceResultSummary>>> DriverSeasonFinishesGetAsyncWithHttpInfo (int? id = null, int? season = null, int? seriesId = null);
         /// <summary>
-        /// 
+        /// Lists all drivers for a given series and race season.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
+        /// <param name="season">Four-digit season year to query. (optional)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
         /// <returns>Task of Collection&lt;Driver&gt;</returns>
         System.Threading.Tasks.Task<Collection<Driver>> DriverSeasonGetAsync (int? season = null, int? seriesId = null);
 
         /// <summary>
-        /// 
+        /// Lists all drivers for a given series and race season.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
+        /// <param name="season">Four-digit season year to query. (optional)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;Driver&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Collection<Driver>>> DriverSeasonGetAsyncWithHttpInfo (int? season = null, int? seriesId = null);
         #endregion Asynchronous Operations
@@ -275,10 +275,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a single driver by driver ID. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"> (optional)</param>
+        /// <param name="id">Unique driver identifier. (optional)</param>
         /// <returns>Driver</returns>
         public Driver DriverGet (int? id = null)
         {
@@ -287,10 +287,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a single driver by driver ID. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"> (optional)</param>
+        /// <param name="id">Unique driver identifier. (optional)</param>
         /// <returns>ApiResponse of Driver</returns>
         public ApiResponse< Driver > DriverGetWithHttpInfo (int? id = null)
         {
@@ -345,10 +345,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a single driver by driver ID. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"> (optional)</param>
+        /// <param name="id">Unique driver identifier. (optional)</param>
         /// <returns>Task of Driver</returns>
         public async System.Threading.Tasks.Task<Driver> DriverGetAsync (int? id = null)
         {
@@ -358,10 +358,10 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Retrieves a single driver by driver ID. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"> (optional)</param>
+        /// <param name="id">Unique driver identifier. (optional)</param>
         /// <returns>Task of ApiResponse (Driver)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Driver>> DriverGetAsyncWithHttpInfo (int? id = null)
         {
@@ -416,12 +416,12 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Lists season finish results for a specific driver within a series and season. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"> (optional)</param>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
+        /// <param name="id">Unique driver identifier. (optional)</param>
+        /// <param name="season">Four-digit season year to query. (optional)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
         /// <returns>Collection&lt;RaceResultSummary&gt;</returns>
         public Collection<RaceResultSummary> DriverSeasonFinishesGet (int? id = null, int? season = null, int? seriesId = null)
         {
@@ -430,12 +430,12 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Lists season finish results for a specific driver within a series and season. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"> (optional)</param>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
+        /// <param name="id">Unique driver identifier. (optional)</param>
+        /// <param name="season">Four-digit season year to query. (optional)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;RaceResultSummary&gt;</returns>
         public ApiResponse< Collection<RaceResultSummary> > DriverSeasonFinishesGetWithHttpInfo (int? id = null, int? season = null, int? seriesId = null)
         {
@@ -492,12 +492,12 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Lists season finish results for a specific driver within a series and season. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"> (optional)</param>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
+        /// <param name="id">Unique driver identifier. (optional)</param>
+        /// <param name="season">Four-digit season year to query. (optional)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
         /// <returns>Task of Collection&lt;RaceResultSummary&gt;</returns>
         public async System.Threading.Tasks.Task<Collection<RaceResultSummary>> DriverSeasonFinishesGetAsync (int? id = null, int? season = null, int? seriesId = null)
         {
@@ -507,12 +507,12 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Lists season finish results for a specific driver within a series and season. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id"> (optional)</param>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
+        /// <param name="id">Unique driver identifier. (optional)</param>
+        /// <param name="season">Four-digit season year to query. (optional)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;RaceResultSummary&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Collection<RaceResultSummary>>> DriverSeasonFinishesGetAsyncWithHttpInfo (int? id = null, int? season = null, int? seriesId = null)
         {
@@ -569,11 +569,11 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Lists all drivers for a given series and race season. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
+        /// <param name="season">Four-digit season year to query. (optional)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
         /// <returns>Collection&lt;Driver&gt;</returns>
         public Collection<Driver> DriverSeasonGet (int? season = null, int? seriesId = null)
         {
@@ -582,11 +582,11 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Lists all drivers for a given series and race season. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
+        /// <param name="season">Four-digit season year to query. (optional)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
         /// <returns>ApiResponse of Collection&lt;Driver&gt;</returns>
         public ApiResponse< Collection<Driver> > DriverSeasonGetWithHttpInfo (int? season = null, int? seriesId = null)
         {
@@ -642,11 +642,11 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Lists all drivers for a given series and race season. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
+        /// <param name="season">Four-digit season year to query. (optional)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
         /// <returns>Task of Collection&lt;Driver&gt;</returns>
         public async System.Threading.Tasks.Task<Collection<Driver>> DriverSeasonGetAsync (int? season = null, int? seriesId = null)
         {
@@ -656,11 +656,11 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Lists all drivers for a given series and race season. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="season"> (optional)</param>
-        /// <param name="seriesId"> (optional)</param>
+        /// <param name="season">Four-digit season year to query. (optional)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
         /// <returns>Task of ApiResponse (Collection&lt;Driver&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Collection<Driver>>> DriverSeasonGetAsyncWithHttpInfo (int? season = null, int? seriesId = null)
         {

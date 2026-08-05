@@ -4,15 +4,15 @@ All URIs are relative to */api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DriverGet**](DriverApi.md#driverget) | **GET** /driver | 
-[**DriverSeasonFinishesGet**](DriverApi.md#driverseasonfinishesget) | **GET** /driver/season-finishes | 
-[**DriverSeasonGet**](DriverApi.md#driverseasonget) | **GET** /driver/season | 
+[**DriverGet**](DriverApi.md#driverget) | **GET** /driver | Retrieves a single driver by driver ID.
+[**DriverSeasonFinishesGet**](DriverApi.md#driverseasonfinishesget) | **GET** /driver/season-finishes | Lists season finish results for a specific driver within a series and season.
+[**DriverSeasonGet**](DriverApi.md#driverseasonget) | **GET** /driver/season | Lists all drivers for a given series and race season.
 
 <a name="driverget"></a>
 # **DriverGet**
 > Driver DriverGet (int? id = null)
 
-
+Retrieves a single driver by driver ID.
 
 ### Example
 ```csharp
@@ -30,10 +30,11 @@ namespace Example
         {
 
             var apiInstance = new DriverApi();
-            var id = 56;  // int? |  (optional) 
+            var id = 56;  // int? | Unique driver identifier. (optional) 
 
             try
             {
+                // Retrieves a single driver by driver ID.
                 Driver result = apiInstance.DriverGet(id);
                 Debug.WriteLine(result);
             }
@@ -50,7 +51,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int?**|  | [optional] 
+ **id** | **int?**| Unique driver identifier. | [optional] 
 
 ### Return type
 
@@ -70,7 +71,7 @@ Name | Type | Description  | Notes
 # **DriverSeasonFinishesGet**
 > Collection<RaceResultSummary> DriverSeasonFinishesGet (int? id = null, int? season = null, int? seriesId = null)
 
-
+Lists season finish results for a specific driver within a series and season.
 
 ### Example
 ```csharp
@@ -88,12 +89,13 @@ namespace Example
         {
 
             var apiInstance = new DriverApi();
-            var id = 56;  // int? |  (optional) 
-            var season = 56;  // int? |  (optional) 
-            var seriesId = 56;  // int? |  (optional) 
+            var id = 56;  // int? | Unique driver identifier. (optional) 
+            var season = 56;  // int? | Four-digit season year to query. (optional) 
+            var seriesId = 56;  // int? | Series identifier. Common values are 1 for Cup, 2 for O'Reilly, and 3 for Truck. (optional) 
 
             try
             {
+                // Lists season finish results for a specific driver within a series and season.
                 Collection&lt;RaceResultSummary&gt; result = apiInstance.DriverSeasonFinishesGet(id, season, seriesId);
                 Debug.WriteLine(result);
             }
@@ -110,9 +112,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int?**|  | [optional] 
- **season** | **int?**|  | [optional] 
- **seriesId** | **int?**|  | [optional] 
+ **id** | **int?**| Unique driver identifier. | [optional] 
+ **season** | **int?**| Four-digit season year to query. | [optional] 
+ **seriesId** | **int?**| Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. | [optional] 
 
 ### Return type
 
@@ -132,7 +134,7 @@ Name | Type | Description  | Notes
 # **DriverSeasonGet**
 > Collection<Driver> DriverSeasonGet (int? season = null, int? seriesId = null)
 
-
+Lists all drivers for a given series and race season.
 
 ### Example
 ```csharp
@@ -150,11 +152,12 @@ namespace Example
         {
 
             var apiInstance = new DriverApi();
-            var season = 56;  // int? |  (optional) 
-            var seriesId = 56;  // int? |  (optional) 
+            var season = 56;  // int? | Four-digit season year to query. (optional) 
+            var seriesId = 56;  // int? | Series identifier. Common values are 1 for Cup, 2 for O'Reilly, and 3 for Truck. (optional) 
 
             try
             {
+                // Lists all drivers for a given series and race season.
                 Collection&lt;Driver&gt; result = apiInstance.DriverSeasonGet(season, seriesId);
                 Debug.WriteLine(result);
             }
@@ -171,8 +174,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **season** | **int?**|  | [optional] 
- **seriesId** | **int?**|  | [optional] 
+ **season** | **int?**| Four-digit season year to query. | [optional] 
+ **seriesId** | **int?**| Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. | [optional] 
 
 ### Return type
 
