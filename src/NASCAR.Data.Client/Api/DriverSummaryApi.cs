@@ -24,55 +24,55 @@ namespace NASCAR.Data.Client.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// Returns a summary of a driver&#x27;s performance for a given series and season, including statistics such as wins, top 5s, top 10s, poles, and more.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="seriesId"> (optional)</param>
-        /// <param name="season"> (optional)</param>
-        /// <param name="driverId"> (optional, default to 0)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
+        /// <param name="season">Four-digit season year to query. (optional)</param>
+        /// <param name="driverId">Unique driver identifier. If specified, the summary will be limited to the given driver. If not provided or set to 0, summaries for all drivers in the specified series and season will be returned. (optional, default to 0)</param>
         /// <returns>Collection&lt;DriverSummary&gt;</returns>
         Collection<DriverSummary> DriverSummaryGet (int? seriesId = null, int? season = null, int? driverId = null);
 
         /// <summary>
-        /// 
+        /// Returns a summary of a driver&#x27;s performance for a given series and season, including statistics such as wins, top 5s, top 10s, poles, and more.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="seriesId"> (optional)</param>
-        /// <param name="season"> (optional)</param>
-        /// <param name="driverId"> (optional, default to 0)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
+        /// <param name="season">Four-digit season year to query. (optional)</param>
+        /// <param name="driverId">Unique driver identifier. If specified, the summary will be limited to the given driver. If not provided or set to 0, summaries for all drivers in the specified series and season will be returned. (optional, default to 0)</param>
         /// <returns>ApiResponse of Collection&lt;DriverSummary&gt;</returns>
         ApiResponse<Collection<DriverSummary>> DriverSummaryGetWithHttpInfo (int? seriesId = null, int? season = null, int? driverId = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// Returns a summary of a driver&#x27;s performance for a given series and season, including statistics such as wins, top 5s, top 10s, poles, and more.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="seriesId"> (optional)</param>
-        /// <param name="season"> (optional)</param>
-        /// <param name="driverId"> (optional, default to 0)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
+        /// <param name="season">Four-digit season year to query. (optional)</param>
+        /// <param name="driverId">Unique driver identifier. If specified, the summary will be limited to the given driver. If not provided or set to 0, summaries for all drivers in the specified series and season will be returned. (optional, default to 0)</param>
         /// <returns>Task of Collection&lt;DriverSummary&gt;</returns>
         System.Threading.Tasks.Task<Collection<DriverSummary>> DriverSummaryGetAsync (int? seriesId = null, int? season = null, int? driverId = null);
 
         /// <summary>
-        /// 
+        /// Returns a summary of a driver&#x27;s performance for a given series and season, including statistics such as wins, top 5s, top 10s, poles, and more.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="seriesId"> (optional)</param>
-        /// <param name="season"> (optional)</param>
-        /// <param name="driverId"> (optional, default to 0)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
+        /// <param name="season">Four-digit season year to query. (optional)</param>
+        /// <param name="driverId">Unique driver identifier. If specified, the summary will be limited to the given driver. If not provided or set to 0, summaries for all drivers in the specified series and season will be returned. (optional, default to 0)</param>
         /// <returns>Task of ApiResponse (Collection&lt;DriverSummary&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Collection<DriverSummary>>> DriverSummaryGetAsyncWithHttpInfo (int? seriesId = null, int? season = null, int? driverId = null);
         #endregion Asynchronous Operations
@@ -187,12 +187,12 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Returns a summary of a driver&#x27;s performance for a given series and season, including statistics such as wins, top 5s, top 10s, poles, and more. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="seriesId"> (optional)</param>
-        /// <param name="season"> (optional)</param>
-        /// <param name="driverId"> (optional, default to 0)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
+        /// <param name="season">Four-digit season year to query. (optional)</param>
+        /// <param name="driverId">Unique driver identifier. If specified, the summary will be limited to the given driver. If not provided or set to 0, summaries for all drivers in the specified series and season will be returned. (optional, default to 0)</param>
         /// <returns>Collection&lt;DriverSummary&gt;</returns>
         public Collection<DriverSummary> DriverSummaryGet (int? seriesId = null, int? season = null, int? driverId = null)
         {
@@ -201,12 +201,12 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Returns a summary of a driver&#x27;s performance for a given series and season, including statistics such as wins, top 5s, top 10s, poles, and more. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="seriesId"> (optional)</param>
-        /// <param name="season"> (optional)</param>
-        /// <param name="driverId"> (optional, default to 0)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
+        /// <param name="season">Four-digit season year to query. (optional)</param>
+        /// <param name="driverId">Unique driver identifier. If specified, the summary will be limited to the given driver. If not provided or set to 0, summaries for all drivers in the specified series and season will be returned. (optional, default to 0)</param>
         /// <returns>ApiResponse of Collection&lt;DriverSummary&gt;</returns>
         public ApiResponse< Collection<DriverSummary> > DriverSummaryGetWithHttpInfo (int? seriesId = null, int? season = null, int? driverId = null)
         {
@@ -263,12 +263,12 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Returns a summary of a driver&#x27;s performance for a given series and season, including statistics such as wins, top 5s, top 10s, poles, and more. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="seriesId"> (optional)</param>
-        /// <param name="season"> (optional)</param>
-        /// <param name="driverId"> (optional, default to 0)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
+        /// <param name="season">Four-digit season year to query. (optional)</param>
+        /// <param name="driverId">Unique driver identifier. If specified, the summary will be limited to the given driver. If not provided or set to 0, summaries for all drivers in the specified series and season will be returned. (optional, default to 0)</param>
         /// <returns>Task of Collection&lt;DriverSummary&gt;</returns>
         public async System.Threading.Tasks.Task<Collection<DriverSummary>> DriverSummaryGetAsync (int? seriesId = null, int? season = null, int? driverId = null)
         {
@@ -278,12 +278,12 @@ namespace NASCAR.Data.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// Returns a summary of a driver&#x27;s performance for a given series and season, including statistics such as wins, top 5s, top 10s, poles, and more. 
         /// </summary>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="seriesId"> (optional)</param>
-        /// <param name="season"> (optional)</param>
-        /// <param name="driverId"> (optional, default to 0)</param>
+        /// <param name="seriesId">Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. (optional)</param>
+        /// <param name="season">Four-digit season year to query. (optional)</param>
+        /// <param name="driverId">Unique driver identifier. If specified, the summary will be limited to the given driver. If not provided or set to 0, summaries for all drivers in the specified series and season will be returned. (optional, default to 0)</param>
         /// <returns>Task of ApiResponse (Collection&lt;DriverSummary&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Collection<DriverSummary>>> DriverSummaryGetAsyncWithHttpInfo (int? seriesId = null, int? season = null, int? driverId = null)
         {

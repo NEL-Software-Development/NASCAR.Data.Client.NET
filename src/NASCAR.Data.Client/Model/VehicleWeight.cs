@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// VehicleWeight
+    /// Represents a vehicle weight inspection record for a race event
     /// </summary>
     [DataContract]
         public partial class VehicleWeight :  IEquatable<VehicleWeight>, IValidatableObject
@@ -32,20 +32,20 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VehicleWeight" /> class.
         /// </summary>
-        /// <param name="inspectionType">The type of inspection.</param>
-        /// <param name="vehicleNumber">The vehicle number inspected.</param>
-        /// <param name="adjustment">The weight adjustment.</param>
-        /// <param name="crossWeight">The cross weight of the vehicle.</param>
-        /// <param name="leftFront">The left front weight of the vehicle.</param>
-        /// <param name="leftRear">The left rear weight of the vehicle.</param>
-        /// <param name="leftSide">The weight of the left side of the vehicle.</param>
-        /// <param name="nose">The nose weight of the vehicle.</param>
-        /// <param name="rear">The rear weight of the vehicle.</param>
-        /// <param name="rightFront">The right front weight of the vehicle.</param>
-        /// <param name="rightRear">The right rear weight of the vehicle.</param>
-        /// <param name="rightSide">The weight of the right side of the vehicle.</param>
-        /// <param name="totalWeight">The total weight of the vehicle.</param>
-        /// <param name="passed">Whether or not is passed.</param>
+        /// <param name="inspectionType">Type of inspection.</param>
+        /// <param name="vehicleNumber">Vehicle number inspected.</param>
+        /// <param name="adjustment">Weight adjustment applied to the vehicle.</param>
+        /// <param name="crossWeight">Cross weight of the vehicle.</param>
+        /// <param name="leftFront">Left front weight of the vehicle.</param>
+        /// <param name="leftRear">Left rear weight of the vehicle.</param>
+        /// <param name="leftSide">Left side weight of the vehicle.</param>
+        /// <param name="nose">Nose weight of the vehicle.</param>
+        /// <param name="rear">Rear weight of the vehicle.</param>
+        /// <param name="rightFront">Right front weight of the vehicle.</param>
+        /// <param name="rightRear">Right rear weight of the vehicle.</param>
+        /// <param name="rightSide">Right side weight of the vehicle.</param>
+        /// <param name="totalWeight">Total weight of the vehicle.</param>
+        /// <param name="passed">Indicates whether the vehicle passed the weight inspection.</param>
         public VehicleWeight(string inspectionType = default(string), string vehicleNumber = default(string), int? adjustment = default(int?), int? crossWeight = default(int?), int? leftFront = default(int?), int? leftRear = default(int?), int? leftSide = default(int?), int? nose = default(int?), int? rear = default(int?), int? rightFront = default(int?), int? rightRear = default(int?), int? rightSide = default(int?), int? totalWeight = default(int?), bool? passed = default(bool?))
         {
             this.InspectionType = inspectionType;
@@ -65,100 +65,100 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// The type of inspection
+        /// Type of inspection
         /// </summary>
-        /// <value>The type of inspection</value>
+        /// <value>Type of inspection</value>
         [DataMember(Name="inspection_type", EmitDefaultValue=false)]
         public string InspectionType { get; set; }
 
         /// <summary>
-        /// The vehicle number inspected
+        /// Vehicle number inspected
         /// </summary>
-        /// <value>The vehicle number inspected</value>
+        /// <value>Vehicle number inspected</value>
         [DataMember(Name="vehicle_number", EmitDefaultValue=false)]
         public string VehicleNumber { get; set; }
 
         /// <summary>
-        /// The weight adjustment
+        /// Weight adjustment applied to the vehicle
         /// </summary>
-        /// <value>The weight adjustment</value>
+        /// <value>Weight adjustment applied to the vehicle</value>
         [DataMember(Name="adjustment", EmitDefaultValue=false)]
         public int? Adjustment { get; set; }
 
         /// <summary>
-        /// The cross weight of the vehicle
+        /// Cross weight of the vehicle
         /// </summary>
-        /// <value>The cross weight of the vehicle</value>
+        /// <value>Cross weight of the vehicle</value>
         [DataMember(Name="cross_weight", EmitDefaultValue=false)]
         public int? CrossWeight { get; set; }
 
         /// <summary>
-        /// The left front weight of the vehicle
+        /// Left front weight of the vehicle
         /// </summary>
-        /// <value>The left front weight of the vehicle</value>
+        /// <value>Left front weight of the vehicle</value>
         [DataMember(Name="left_front", EmitDefaultValue=false)]
         public int? LeftFront { get; set; }
 
         /// <summary>
-        /// The left rear weight of the vehicle
+        /// Left rear weight of the vehicle
         /// </summary>
-        /// <value>The left rear weight of the vehicle</value>
+        /// <value>Left rear weight of the vehicle</value>
         [DataMember(Name="left_rear", EmitDefaultValue=false)]
         public int? LeftRear { get; set; }
 
         /// <summary>
-        /// The weight of the left side of the vehicle
+        /// Left side weight of the vehicle
         /// </summary>
-        /// <value>The weight of the left side of the vehicle</value>
+        /// <value>Left side weight of the vehicle</value>
         [DataMember(Name="left_side", EmitDefaultValue=false)]
         public int? LeftSide { get; set; }
 
         /// <summary>
-        /// The nose weight of the vehicle
+        /// Nose weight of the vehicle
         /// </summary>
-        /// <value>The nose weight of the vehicle</value>
+        /// <value>Nose weight of the vehicle</value>
         [DataMember(Name="nose", EmitDefaultValue=false)]
         public int? Nose { get; set; }
 
         /// <summary>
-        /// The rear weight of the vehicle
+        /// Rear weight of the vehicle
         /// </summary>
-        /// <value>The rear weight of the vehicle</value>
+        /// <value>Rear weight of the vehicle</value>
         [DataMember(Name="rear", EmitDefaultValue=false)]
         public int? Rear { get; set; }
 
         /// <summary>
-        /// The right front weight of the vehicle
+        /// Right front weight of the vehicle
         /// </summary>
-        /// <value>The right front weight of the vehicle</value>
+        /// <value>Right front weight of the vehicle</value>
         [DataMember(Name="right_front", EmitDefaultValue=false)]
         public int? RightFront { get; set; }
 
         /// <summary>
-        /// The right rear weight of the vehicle
+        /// Right rear weight of the vehicle
         /// </summary>
-        /// <value>The right rear weight of the vehicle</value>
+        /// <value>Right rear weight of the vehicle</value>
         [DataMember(Name="right_rear", EmitDefaultValue=false)]
         public int? RightRear { get; set; }
 
         /// <summary>
-        /// The weight of the right side of the vehicle
+        /// Right side weight of the vehicle
         /// </summary>
-        /// <value>The weight of the right side of the vehicle</value>
+        /// <value>Right side weight of the vehicle</value>
         [DataMember(Name="right_side", EmitDefaultValue=false)]
         public int? RightSide { get; set; }
 
         /// <summary>
-        /// The total weight of the vehicle
+        /// Total weight of the vehicle
         /// </summary>
-        /// <value>The total weight of the vehicle</value>
+        /// <value>Total weight of the vehicle</value>
         [DataMember(Name="total_weight", EmitDefaultValue=false)]
         public int? TotalWeight { get; set; }
 
         /// <summary>
-        /// Whether or not is passed
+        /// Indicates whether the vehicle passed the weight inspection
         /// </summary>
-        /// <value>Whether or not is passed</value>
+        /// <value>Indicates whether the vehicle passed the weight inspection</value>
         [DataMember(Name="passed", EmitDefaultValue=false)]
         public bool? Passed { get; set; }
 

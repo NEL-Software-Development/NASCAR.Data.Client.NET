@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// RosterMember
+    /// Represents a single team member and their role
     /// </summary>
     [DataContract]
         public partial class RosterMember :  IEquatable<RosterMember>, IValidatableObject
@@ -33,7 +33,7 @@ namespace NASCAR.Data.Client.Model
         /// Initializes a new instance of the <see cref="RosterMember" /> class.
         /// </summary>
         /// <param name="name">Team member name.</param>
-        /// <param name="position">Position.</param>
+        /// <param name="position">Team member position or role.</param>
         public RosterMember(string name = default(string), string position = default(string))
         {
             this.Name = name;
@@ -48,9 +48,9 @@ namespace NASCAR.Data.Client.Model
         public string Name { get; set; }
 
         /// <summary>
-        /// Position
+        /// Team member position or role
         /// </summary>
-        /// <value>Position</value>
+        /// <value>Team member position or role</value>
         [DataMember(Name="position", EmitDefaultValue=false)]
         public string Position { get; set; }
 
