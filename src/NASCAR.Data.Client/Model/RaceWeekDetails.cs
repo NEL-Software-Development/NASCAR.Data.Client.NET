@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// RaceWeekDetails
+    /// Represents the details of a race week including all associated races
     /// </summary>
     [DataContract]
         public partial class RaceWeekDetails :  IEquatable<RaceWeekDetails>, IValidatableObject
@@ -32,8 +32,8 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RaceWeekDetails" /> class.
         /// </summary>
-        /// <param name="id">Raceweek Id.</param>
-        /// <param name="races">Raceweek race list.</param>
+        /// <param name="id">Unique identifier given and used by the NASCAR Data API.</param>
+        /// <param name="races">Collection of race details associated with the race week.</param>
         public RaceWeekDetails(int? id = default(int?), Collection<RaceDetails> races = default(Collection<RaceDetails>))
         {
             this.Id = id;
@@ -41,16 +41,16 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Raceweek Id
+        /// Unique identifier given and used by the NASCAR Data API
         /// </summary>
-        /// <value>Raceweek Id</value>
+        /// <value>Unique identifier given and used by the NASCAR Data API</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Raceweek race list
+        /// Collection of race details associated with the race week
         /// </summary>
-        /// <value>Raceweek race list</value>
+        /// <value>Collection of race details associated with the race week</value>
         [DataMember(Name="races", EmitDefaultValue=false)]
         public Collection<RaceDetails> Races { get; set; }
 

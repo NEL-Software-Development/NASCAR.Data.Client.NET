@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// RaceViewModel
+    /// Represents a complete view model for a race event including results, entries, runs, and related data
     /// </summary>
     [DataContract]
         public partial class RaceViewModel :  IEquatable<RaceViewModel>, IValidatableObject
@@ -32,32 +32,36 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RaceViewModel" /> class.
         /// </summary>
-        /// <param name="seriesId">Series Id.</param>
+        /// <param name="seriesId">Series identifier.</param>
         /// <param name="name">Race name.</param>
-        /// <param name="promoter">Race promoter.</param>
-        /// <param name="laps">Laps.</param>
-        /// <param name="distance">Distance.</param>
+        /// <param name="promoter">Promoter of the race.</param>
+        /// <param name="laps">Total number of laps.</param>
+        /// <param name="distance">Race distance.</param>
+        /// <param name="raceTypeId">Race Type Identifier (1-Race, 2-Duel, 3-Heat, 4-Exhibition).</param>
+        /// <param name="totalRaceTime">Total race time formatted as HH:MM:SS.</param>
         /// <param name="date">Race date.</param>
-        /// <param name="comments">Comments.</param>
-        /// <param name="cautions">Cautions.</param>
+        /// <param name="comments">Race comments.</param>
+        /// <param name="cautions">Cautions during the race.</param>
         /// <param name="entries">Race entries.</param>
         /// <param name="infractions">Race infractions.</param>
         /// <param name="lapLeaders">Lap leaders.</param>
-        /// <param name="loopStats">Loop stats.</param>
-        /// <param name="pitstops">Pitstops.</param>
+        /// <param name="loopStats">Loop stats for the race.</param>
+        /// <param name="pitstops">Pit stops during the race.</param>
         /// <param name="practiceResults">Practice results.</param>
         /// <param name="qualifyingResults">Qualifying results.</param>
         /// <param name="raceResults">Race results.</param>
-        /// <param name="runs">Runs.</param>
+        /// <param name="runs">Runs associated with the race.</param>
         /// <param name="stageResults">Stage results.</param>
-        /// <param name="schedule">Weekend schedule.</param>
-        public RaceViewModel(int? seriesId = default(int?), string name = default(string), string promoter = default(string), int? laps = default(int?), double? distance = default(double?), DateTimeOffset? date = default(DateTimeOffset?), string comments = default(string), Collection<Caution> cautions = default(Collection<Caution>), Collection<RunEntry> entries = default(Collection<RunEntry>), Collection<RaceInfraction> infractions = default(Collection<RaceInfraction>), Collection<LapLeader> lapLeaders = default(Collection<LapLeader>), Collection<LoopStat> loopStats = default(Collection<LoopStat>), Collection<Pitstop> pitstops = default(Collection<Pitstop>), Collection<PracticeRunResults> practiceResults = default(Collection<PracticeRunResults>), Collection<QualifyingRunResults> qualifyingResults = default(Collection<QualifyingRunResults>), Collection<RaceRunResults> raceResults = default(Collection<RaceRunResults>), Collection<RunDetails> runs = default(Collection<RunDetails>), Collection<StageRunResults> stageResults = default(Collection<StageRunResults>), Collection<WeekendSchedule> schedule = default(Collection<WeekendSchedule>))
+        /// <param name="schedule">Weekend schedule entries for the race.</param>
+        public RaceViewModel(int? seriesId = default(int?), string name = default(string), string promoter = default(string), int? laps = default(int?), double? distance = default(double?), int? raceTypeId = default(int?), string totalRaceTime = default(string), DateTimeOffset? date = default(DateTimeOffset?), string comments = default(string), Collection<Caution> cautions = default(Collection<Caution>), Collection<RunEntry> entries = default(Collection<RunEntry>), Collection<RaceInfraction> infractions = default(Collection<RaceInfraction>), Collection<LapLeader> lapLeaders = default(Collection<LapLeader>), Collection<LoopStat> loopStats = default(Collection<LoopStat>), Collection<Pitstop> pitstops = default(Collection<Pitstop>), Collection<PracticeRunResults> practiceResults = default(Collection<PracticeRunResults>), Collection<QualifyingRunResults> qualifyingResults = default(Collection<QualifyingRunResults>), Collection<RaceRunResults> raceResults = default(Collection<RaceRunResults>), Collection<RunDetails> runs = default(Collection<RunDetails>), Collection<StageRunResults> stageResults = default(Collection<StageRunResults>), Collection<WeekendSchedule> schedule = default(Collection<WeekendSchedule>))
         {
             this.SeriesId = seriesId;
             this.Name = name;
             this.Promoter = promoter;
             this.Laps = laps;
             this.Distance = distance;
+            this.RaceTypeId = raceTypeId;
+            this.TotalRaceTime = totalRaceTime;
             this.Date = date;
             this.Comments = comments;
             this.Cautions = cautions;
@@ -75,9 +79,9 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// Series Id
+        /// Series identifier
         /// </summary>
-        /// <value>Series Id</value>
+        /// <value>Series identifier</value>
         [DataMember(Name="series_id", EmitDefaultValue=false)]
         public int? SeriesId { get; set; }
 
@@ -89,25 +93,39 @@ namespace NASCAR.Data.Client.Model
         public string Name { get; set; }
 
         /// <summary>
-        /// Race promoter
+        /// Promoter of the race
         /// </summary>
-        /// <value>Race promoter</value>
+        /// <value>Promoter of the race</value>
         [DataMember(Name="promoter", EmitDefaultValue=false)]
         public string Promoter { get; set; }
 
         /// <summary>
-        /// Laps
+        /// Total number of laps
         /// </summary>
-        /// <value>Laps</value>
+        /// <value>Total number of laps</value>
         [DataMember(Name="laps", EmitDefaultValue=false)]
         public int? Laps { get; set; }
 
         /// <summary>
-        /// Distance
+        /// Race distance
         /// </summary>
-        /// <value>Distance</value>
+        /// <value>Race distance</value>
         [DataMember(Name="distance", EmitDefaultValue=false)]
         public double? Distance { get; set; }
+
+        /// <summary>
+        /// Race Type Identifier (1-Race, 2-Duel, 3-Heat, 4-Exhibition)
+        /// </summary>
+        /// <value>Race Type Identifier (1-Race, 2-Duel, 3-Heat, 4-Exhibition)</value>
+        [DataMember(Name="race_type_id", EmitDefaultValue=false)]
+        public int? RaceTypeId { get; set; }
+
+        /// <summary>
+        /// Total race time formatted as HH:MM:SS
+        /// </summary>
+        /// <value>Total race time formatted as HH:MM:SS</value>
+        [DataMember(Name="total_race_time", EmitDefaultValue=false)]
+        public string TotalRaceTime { get; set; }
 
         /// <summary>
         /// Race date
@@ -117,16 +135,16 @@ namespace NASCAR.Data.Client.Model
         public DateTimeOffset? Date { get; set; }
 
         /// <summary>
-        /// Comments
+        /// Race comments
         /// </summary>
-        /// <value>Comments</value>
+        /// <value>Race comments</value>
         [DataMember(Name="comments", EmitDefaultValue=false)]
         public string Comments { get; set; }
 
         /// <summary>
-        /// Cautions
+        /// Cautions during the race
         /// </summary>
-        /// <value>Cautions</value>
+        /// <value>Cautions during the race</value>
         [DataMember(Name="cautions", EmitDefaultValue=false)]
         public Collection<Caution> Cautions { get; set; }
 
@@ -152,16 +170,16 @@ namespace NASCAR.Data.Client.Model
         public Collection<LapLeader> LapLeaders { get; set; }
 
         /// <summary>
-        /// Loop stats
+        /// Loop stats for the race
         /// </summary>
-        /// <value>Loop stats</value>
+        /// <value>Loop stats for the race</value>
         [DataMember(Name="loop_Stats", EmitDefaultValue=false)]
         public Collection<LoopStat> LoopStats { get; set; }
 
         /// <summary>
-        /// Pitstops
+        /// Pit stops during the race
         /// </summary>
-        /// <value>Pitstops</value>
+        /// <value>Pit stops during the race</value>
         [DataMember(Name="pitstops", EmitDefaultValue=false)]
         public Collection<Pitstop> Pitstops { get; set; }
 
@@ -187,9 +205,9 @@ namespace NASCAR.Data.Client.Model
         public Collection<RaceRunResults> RaceResults { get; set; }
 
         /// <summary>
-        /// Runs
+        /// Runs associated with the race
         /// </summary>
-        /// <value>Runs</value>
+        /// <value>Runs associated with the race</value>
         [DataMember(Name="runs", EmitDefaultValue=false)]
         public Collection<RunDetails> Runs { get; set; }
 
@@ -201,9 +219,9 @@ namespace NASCAR.Data.Client.Model
         public Collection<StageRunResults> StageResults { get; set; }
 
         /// <summary>
-        /// Weekend schedule
+        /// Weekend schedule entries for the race
         /// </summary>
-        /// <value>Weekend schedule</value>
+        /// <value>Weekend schedule entries for the race</value>
         [DataMember(Name="schedule", EmitDefaultValue=false)]
         public Collection<WeekendSchedule> Schedule { get; set; }
 
@@ -220,6 +238,8 @@ namespace NASCAR.Data.Client.Model
             sb.Append("  Promoter: ").Append(Promoter).Append("\n");
             sb.Append("  Laps: ").Append(Laps).Append("\n");
             sb.Append("  Distance: ").Append(Distance).Append("\n");
+            sb.Append("  RaceTypeId: ").Append(RaceTypeId).Append("\n");
+            sb.Append("  TotalRaceTime: ").Append(TotalRaceTime).Append("\n");
             sb.Append("  Date: ").Append(Date).Append("\n");
             sb.Append("  Comments: ").Append(Comments).Append("\n");
             sb.Append("  Cautions: ").Append(Cautions).Append("\n");
@@ -292,6 +312,16 @@ namespace NASCAR.Data.Client.Model
                     this.Distance == input.Distance ||
                     (this.Distance != null &&
                     this.Distance.Equals(input.Distance))
+                ) && 
+                (
+                    this.RaceTypeId == input.RaceTypeId ||
+                    (this.RaceTypeId != null &&
+                    this.RaceTypeId.Equals(input.RaceTypeId))
+                ) && 
+                (
+                    this.TotalRaceTime == input.TotalRaceTime ||
+                    (this.TotalRaceTime != null &&
+                    this.TotalRaceTime.Equals(input.TotalRaceTime))
                 ) && 
                 (
                     this.Date == input.Date ||
@@ -396,6 +426,10 @@ namespace NASCAR.Data.Client.Model
                     hashCode = hashCode * 59 + this.Laps.GetHashCode();
                 if (this.Distance != null)
                     hashCode = hashCode * 59 + this.Distance.GetHashCode();
+                if (this.RaceTypeId != null)
+                    hashCode = hashCode * 59 + this.RaceTypeId.GetHashCode();
+                if (this.TotalRaceTime != null)
+                    hashCode = hashCode * 59 + this.TotalRaceTime.GetHashCode();
                 if (this.Date != null)
                     hashCode = hashCode * 59 + this.Date.GetHashCode();
                 if (this.Comments != null)

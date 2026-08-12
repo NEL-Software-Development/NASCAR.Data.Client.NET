@@ -31,6 +31,27 @@ namespace NASCAR.Data.Client.Api
         /// </remarks>
         /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
+        /// <returns>ConeCoordinatesListETLSaveResult</returns>
+        ConeCoordinatesListETLSaveResult VendorConeCoordinatesPost (ConeCoordinatesIngest body = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of ConeCoordinatesListETLSaveResult</returns>
+        ApiResponse<ConeCoordinatesListETLSaveResult> VendorConeCoordinatesPostWithHttpInfo (ConeCoordinatesIngest body = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
         /// <returns></returns>
         void VendorCrlTestresultPost (CrlFormFoxResult body = null);
 
@@ -109,6 +130,27 @@ namespace NASCAR.Data.Client.Api
         ApiResponse<WicketResponse> VendorWicketRequestPostWithHttpInfo (WicketRequest body = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ConeCoordinatesListETLSaveResult</returns>
+        System.Threading.Tasks.Task<ConeCoordinatesListETLSaveResult> VendorConeCoordinatesPostAsync (ConeCoordinatesIngest body = null);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (ConeCoordinatesListETLSaveResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConeCoordinatesListETLSaveResult>> VendorConeCoordinatesPostAsyncWithHttpInfo (ConeCoordinatesIngest body = null);
         /// <summary>
         /// 
         /// </summary>
@@ -302,6 +344,167 @@ namespace NASCAR.Data.Client.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ConeCoordinatesListETLSaveResult</returns>
+        public ConeCoordinatesListETLSaveResult VendorConeCoordinatesPost (ConeCoordinatesIngest body = null)
+        {
+             ApiResponse<ConeCoordinatesListETLSaveResult> localVarResponse = VendorConeCoordinatesPostWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of ConeCoordinatesListETLSaveResult</returns>
+        public ApiResponse< ConeCoordinatesListETLSaveResult > VendorConeCoordinatesPostWithHttpInfo (ConeCoordinatesIngest body = null)
+        {
+
+            var localVarPath = "/vendor/cone-coordinates";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/_*+json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (Bearer) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("VendorConeCoordinatesPost", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ConeCoordinatesListETLSaveResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (ConeCoordinatesListETLSaveResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConeCoordinatesListETLSaveResult)));
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ConeCoordinatesListETLSaveResult</returns>
+        public async System.Threading.Tasks.Task<ConeCoordinatesListETLSaveResult> VendorConeCoordinatesPostAsync (ConeCoordinatesIngest body = null)
+        {
+             ApiResponse<ConeCoordinatesListETLSaveResult> localVarResponse = await VendorConeCoordinatesPostAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="NASCAR.Data.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (ConeCoordinatesListETLSaveResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConeCoordinatesListETLSaveResult>> VendorConeCoordinatesPostAsyncWithHttpInfo (ConeCoordinatesIngest body = null)
+        {
+
+            var localVarPath = "/vendor/cone-coordinates";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/_*+json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "text/plain",
+                "application/json",
+                "text/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+            // authentication (Bearer) required
+            // bearer required
+            if (!String.IsNullOrEmpty(this.Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("VendorConeCoordinatesPost", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ConeCoordinatesListETLSaveResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (ConeCoordinatesListETLSaveResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConeCoordinatesListETLSaveResult)));
         }
 
         /// <summary>
