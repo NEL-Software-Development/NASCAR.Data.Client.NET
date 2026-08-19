@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// Stage
+    /// Represents a stage within a race event
     /// </summary>
     [DataContract]
         public partial class Stage :  IEquatable<Stage>, IValidatableObject
@@ -32,9 +32,9 @@ namespace NASCAR.Data.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Stage" /> class.
         /// </summary>
-        /// <param name="stageNumber">The stage number..</param>
-        /// <param name="laps">The total number of laps in the stage..</param>
-        /// <param name="stageName">The name of the stage (if given)..</param>
+        /// <param name="stageNumber">Stage number.</param>
+        /// <param name="laps">Total number of laps in the stage.</param>
+        /// <param name="stageName">Name of the stage.</param>
         public Stage(int? stageNumber = default(int?), int? laps = default(int?), string stageName = default(string))
         {
             this.StageNumber = stageNumber;
@@ -43,23 +43,23 @@ namespace NASCAR.Data.Client.Model
         }
         
         /// <summary>
-        /// The stage number.
+        /// Stage number
         /// </summary>
-        /// <value>The stage number.</value>
+        /// <value>Stage number</value>
         [DataMember(Name="stage_number", EmitDefaultValue=false)]
         public int? StageNumber { get; set; }
 
         /// <summary>
-        /// The total number of laps in the stage.
+        /// Total number of laps in the stage
         /// </summary>
-        /// <value>The total number of laps in the stage.</value>
+        /// <value>Total number of laps in the stage</value>
         [DataMember(Name="laps", EmitDefaultValue=false)]
         public int? Laps { get; set; }
 
         /// <summary>
-        /// The name of the stage (if given).
+        /// Name of the stage
         /// </summary>
-        /// <value>The name of the stage (if given).</value>
+        /// <value>Name of the stage</value>
         [DataMember(Name="stage_name", EmitDefaultValue=false)]
         public string StageName { get; set; }
 

@@ -24,7 +24,7 @@ using SwaggerDateConverter = NASCAR.Data.Client.Client.SwaggerDateConverter;
 namespace NASCAR.Data.Client.Model
 {
     /// <summary>
-    /// DisciplineUpdate
+    /// Represents a disciplinary action or inspection update for a vehicle during a race event
     /// </summary>
     [DataContract]
         public partial class DisciplineUpdate :  IEquatable<DisciplineUpdate>, IValidatableObject
