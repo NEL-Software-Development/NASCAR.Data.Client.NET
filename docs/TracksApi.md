@@ -4,14 +4,14 @@ All URIs are relative to */api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**TrackDetailsGet**](TracksApi.md#trackdetailsget) | **GET** /track-details | 
-[**TracksGet**](TracksApi.md#tracksget) | **GET** /tracks | 
+[**TrackDetailsGet**](TracksApi.md#trackdetailsget) | **GET** /track-details | Retrieves detailed information about a specific track, including its history, notable events, and other relevant data, given the track&#x27;s unique identifier from /tracks.
+[**TracksGet**](TracksApi.md#tracksget) | **GET** /tracks | Retrieves a list of all tracks in the NASCAR database, including basic information such as track name, location, and type.
 
 <a name="trackdetailsget"></a>
 # **TrackDetailsGet**
 > TrackDetails TrackDetailsGet (int? trackId = null)
 
-
+Retrieves detailed information about a specific track, including its history, notable events, and other relevant data, given the track's unique identifier from /tracks.
 
 ### Example
 ```csharp
@@ -29,10 +29,11 @@ namespace Example
         {
 
             var apiInstance = new TracksApi();
-            var trackId = 56;  // int? |  (optional) 
+            var trackId = 56;  // int? | The unique identifier of the track. (optional) 
 
             try
             {
+                // Retrieves detailed information about a specific track, including its history, notable events, and other relevant data, given the track's unique identifier from /tracks.
                 TrackDetails result = apiInstance.TrackDetailsGet(trackId);
                 Debug.WriteLine(result);
             }
@@ -49,7 +50,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **trackId** | **int?**|  | [optional] 
+ **trackId** | **int?**| The unique identifier of the track. | [optional] 
 
 ### Return type
 
@@ -69,7 +70,7 @@ Name | Type | Description  | Notes
 # **TracksGet**
 > Track TracksGet ()
 
-
+Retrieves a list of all tracks in the NASCAR database, including basic information such as track name, location, and type.
 
 ### Example
 ```csharp
@@ -90,6 +91,7 @@ namespace Example
 
             try
             {
+                // Retrieves a list of all tracks in the NASCAR database, including basic information such as track name, location, and type.
                 Track result = apiInstance.TracksGet();
                 Debug.WriteLine(result);
             }
