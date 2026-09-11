@@ -4,13 +4,13 @@ All URIs are relative to */api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AccountRefreshTokenGet**](AccountApi.md#accountrefreshtokenget) | **GET** /account/refresh-token | 
+[**AccountRefreshTokenGet**](AccountApi.md#accountrefreshtokenget) | **GET** /account/refresh-token | Refreshes an expired authentication token using a refresh token.
 
 <a name="accountrefreshtokenget"></a>
 # **AccountRefreshTokenGet**
 > TokenResponse AccountRefreshTokenGet (string refreshToken = null)
 
-
+Refreshes an expired authentication token using a refresh token.
 
 ### Example
 ```csharp
@@ -28,10 +28,11 @@ namespace Example
         {
 
             var apiInstance = new AccountApi();
-            var refreshToken = refreshToken_example;  // string |  (optional) 
+            var refreshToken = refreshToken_example;  // string | The refresh token obtained from a previous authentication.  Used to obtain a new access token without requiring user credentials. (optional) 
 
             try
             {
+                // Refreshes an expired authentication token using a refresh token.
                 TokenResponse result = apiInstance.AccountRefreshTokenGet(refreshToken);
                 Debug.WriteLine(result);
             }
@@ -48,7 +49,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **refreshToken** | **string**|  | [optional] 
+ **refreshToken** | **string**| The refresh token obtained from a previous authentication.  Used to obtain a new access token without requiring user credentials. | [optional] 
 
 ### Return type
 
