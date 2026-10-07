@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**FinishPosition** | **int?** | Finish position in stage | [optional] 
+**FinishPosition** | **int?** | Finish position in the stage | [optional] 
 **DriverName** | **string** | Driver name | [optional] 
 **VehicleNumber** | **string** | Vehicle number | [optional] 
 

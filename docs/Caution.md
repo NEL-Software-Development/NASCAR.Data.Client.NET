@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **Comment** | **string** | Comments about the caution | [optional] 
 **Reason** | **string** | The reason the caution was thrown | [optional] 
 **FlagTime** | **DateTimeOffset?** | The time the caution was thrown | [optional] 
+**FlagState** | **string** | The flag state at the time of caution (Green, Yellow, Red, Checkered, White, Stop, NoActiveFlag, Warm, Invalid) | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
