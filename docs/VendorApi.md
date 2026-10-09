@@ -4,11 +4,70 @@ All URIs are relative to */api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**VendorConeCoordinatesPost**](VendorApi.md#vendorconecoordinatespost) | **POST** /vendor/cone-coordinates | 
 [**VendorCrlTestresultPost**](VendorApi.md#vendorcrltestresultpost) | **POST** /vendor/crl_testresult | 
 [**VendorTiresPost**](VendorApi.md#vendortirespost) | **POST** /vendor/tires | 
 [**VendorUtmOffsetsPost**](VendorApi.md#vendorutmoffsetspost) | **POST** /vendor/utm_offsets | 
 [**VendorWicketRequestPost**](VendorApi.md#vendorwicketrequestpost) | **POST** /vendor/wicket_request | 
 
+<a name="vendorconecoordinatespost"></a>
+# **VendorConeCoordinatesPost**
+> ConeCoordinatesListETLSaveResult VendorConeCoordinatesPost (ConeCoordinatesIngest body = null)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using NASCAR.Data.Client.Api;
+using NASCAR.Data.Client.Client;
+using NASCAR.Data.Client.Model;
+
+namespace Example
+{
+    public class VendorConeCoordinatesPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new VendorApi();
+            var body = new ConeCoordinatesIngest(); // ConeCoordinatesIngest |  (optional) 
+
+            try
+            {
+                ConeCoordinatesListETLSaveResult result = apiInstance.VendorConeCoordinatesPost(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling VendorApi.VendorConeCoordinatesPost: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**ConeCoordinatesIngest**](ConeCoordinatesIngest.md)|  | [optional] 
+
+### Return type
+
+[**ConeCoordinatesListETLSaveResult**](ConeCoordinatesListETLSaveResult.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/_*+json
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 <a name="vendorcrltestresultpost"></a>
 # **VendorCrlTestresultPost**
 > void VendorCrlTestresultPost (CrlFormFoxResult body = null)

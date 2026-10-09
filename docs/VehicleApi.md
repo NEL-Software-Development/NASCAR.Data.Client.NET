@@ -4,14 +4,14 @@ All URIs are relative to */api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**VehicleGet**](VehicleApi.md#vehicleget) | **GET** /vehicle | 
-[**VehicleSeasonFinishesGet**](VehicleApi.md#vehicleseasonfinishesget) | **GET** /vehicle/season-finishes | 
+[**VehicleGet**](VehicleApi.md#vehicleget) | **GET** /vehicle | Retrieves detailed information about a specific vehicle, including its finishes, given the vehicle&#x27;s unique identifier.
+[**VehicleSeasonFinishesGet**](VehicleApi.md#vehicleseasonfinishesget) | **GET** /vehicle/season-finishes | Retrieves a list of all finishes for a specific vehicle across an entire season, given the season, series, and vehicle number.
 
 <a name="vehicleget"></a>
 # **VehicleGet**
 > VehicleDetails VehicleGet (int? id = null)
 
-
+Retrieves detailed information about a specific vehicle, including its finishes, given the vehicle's unique identifier.
 
 ### Example
 ```csharp
@@ -29,10 +29,11 @@ namespace Example
         {
 
             var apiInstance = new VehicleApi();
-            var id = 56;  // int? |  (optional) 
+            var id = 56;  // int? | The unique identifier of the vehicle. (optional) 
 
             try
             {
+                // Retrieves detailed information about a specific vehicle, including its finishes, given the vehicle's unique identifier.
                 VehicleDetails result = apiInstance.VehicleGet(id);
                 Debug.WriteLine(result);
             }
@@ -49,7 +50,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int?**|  | [optional] 
+ **id** | **int?**| The unique identifier of the vehicle. | [optional] 
 
 ### Return type
 
@@ -69,7 +70,7 @@ Name | Type | Description  | Notes
 # **VehicleSeasonFinishesGet**
 > Collection<RaceResultSummary> VehicleSeasonFinishesGet (int? season = null, int? seriesId = null, string vehicle = null)
 
-
+Retrieves a list of all finishes for a specific vehicle across an entire season, given the season, series, and vehicle number.
 
 ### Example
 ```csharp
@@ -87,12 +88,13 @@ namespace Example
         {
 
             var apiInstance = new VehicleApi();
-            var season = 56;  // int? |  (optional) 
-            var seriesId = 56;  // int? |  (optional) 
-            var vehicle = vehicle_example;  // string |  (optional) 
+            var season = 56;  // int? | Four-digit season year to query (optional) 
+            var seriesId = 56;  // int? | Series identifier. Common values are 1 for Cup, 2 for O'Reilly, and 3 for Truck. (optional) 
+            var vehicle = vehicle_example;  // string | Vehicle number to query (optional) 
 
             try
             {
+                // Retrieves a list of all finishes for a specific vehicle across an entire season, given the season, series, and vehicle number.
                 Collection&lt;RaceResultSummary&gt; result = apiInstance.VehicleSeasonFinishesGet(season, seriesId, vehicle);
                 Debug.WriteLine(result);
             }
@@ -109,9 +111,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **season** | **int?**|  | [optional] 
- **seriesId** | **int?**|  | [optional] 
- **vehicle** | **string**|  | [optional] 
+ **season** | **int?**| Four-digit season year to query | [optional] 
+ **seriesId** | **int?**| Series identifier. Common values are 1 for Cup, 2 for O&#x27;Reilly, and 3 for Truck. | [optional] 
+ **vehicle** | **string**| Vehicle number to query | [optional] 
 
 ### Return type
 

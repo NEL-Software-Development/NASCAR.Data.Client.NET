@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **ElapsedTime** | **int?** | Elapsed race time in milliseconds | [optional] 
 **Time** | **DateTimeOffset?** | Time of flag | [optional] 
 **Duration** | **int?** | Duration in seconds | [optional] 
-**FlagState** | **string** | Flag stage:  (NONE, WARMUP, GREEN, YELLOW, RED, WHITE, FINISH, EXTRA) | [optional] 
+**FlagState** | **string** | Flag state:  (Green, Yellow, Red, Checkered, White, Stop, NoActiveFlag, Warm, Invalid) | [optional] 
 **Comment** | **string** | Comments | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
