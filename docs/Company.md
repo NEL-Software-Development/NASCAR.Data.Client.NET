@@ -3,7 +3,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int?** | Company Id | [optional] 
 **Name** | **string** | The name of the company | [optional] 
 **Abbreviation** | **string** | The company&#x27;s abbreviation | [optional] 
 **Alias** | **string** | The company&#x27;s alias | [optional] 

@@ -1,0 +1,45 @@
+# NASCAR.Data.Client.Model.RaceStat
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**RaceId** | **int?** | NASCAR One/API race identifier, not the History race identifier. | [optional] 
+**HistoryRaceId** | **int?** |  | [optional] 
+**SeriesId** | **int?** |  | [optional] 
+**Season** | **int?** |  | [optional] 
+**HistoryDriverId** | **int?** |  | [optional] 
+**TrackId** | **int?** | NASCAR One/API track identifier. | [optional] 
+**DriverId** | **int?** | API driver identifier; null when no API driver mapping exists. | [optional] 
+**RaceName** | **string** |  | [optional] 
+**FirstName** | **string** |  | [optional] 
+**Nickname** | **string** |  | [optional] 
+**LastName** | **string** |  | [optional] 
+**Suffix** | **string** |  | [optional] 
+**Track** | **string** |  | [optional] 
+**VehicleNumber** | **string** | Vehicle number as text, preserving leading zeroes. | [optional] 
+**ScheduledDate** | **DateTimeOffset?** | Source local clock time; no UTC offset is supplied by the source. | [optional] 
+**ActualDate** | **DateTimeOffset?** | Source local clock time; no UTC offset is supplied by the source. | [optional] 
+**TrackLength** | **double?** |  | [optional] 
+**ScheduledLaps** | **int?** |  | [optional] 
+**ActualLaps** | **int?** |  | [optional] 
+**StartingPosition** | **int?** |  | [optional] 
+**MidRacePosition** | **int?** |  | [optional] 
+**FinishingPosition** | **int?** |  | [optional] 
+**ClosingLapsPosition** | **int?** |  | [optional] 
+**ClosingLapsDiff** | **int?** |  | [optional] 
+**BestPosition** | **int?** |  | [optional] 
+**WorstPosition** | **int?** |  | [optional] 
+**GreenFlagPasses** | **int?** |  | [optional] 
+**PassingDifferential** | **int?** |  | [optional] 
+**GreenFlagTimesPassed** | **int?** |  | [optional] 
+**QualityPasses** | **int?** |  | [optional] 
+**FastestLaps** | **int?** |  | [optional] 
+**LapsInTop15** | **int?** |  | [optional] 
+**LapsLed** | **int?** |  | [optional] 
+**LapsCompleted** | **int?** |  | [optional] 
+**AverageRunningPosition** | **double?** |  | [optional] 
+**DriverRating** | **double?** |  | [optional] 
+**LastUpdate** | **DateTimeOffset?** | Time this record was last refreshed in the warehouse. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

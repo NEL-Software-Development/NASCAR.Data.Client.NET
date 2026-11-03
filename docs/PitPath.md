@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **int?** | Gets or sets the unique identifier for the pit path. | [optional] 
+**HistoryPitPathId** | **int?** |  | [optional] 
 **TrackConfigurationId** | **int?** | Gets or sets the identifier of the associated track configuration. | [optional] 
 **TrackId** | **int?** | Gets or sets the unique identifier for the track. | [optional] 
 **Name** | **string** | Gets or sets the name of the pit path. | [optional] 

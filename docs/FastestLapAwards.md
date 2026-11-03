@@ -3,9 +3,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LapTime** | **int?** |  | [optional] 
-**CarNumber** | **string** |  | [optional] 
-**Lap** | **int?** |  | [optional] 
+**LapTime** | **int?** | The fastest lap time recorded | [optional] 
+**CarNumber** | **string** | The car number that recorded the fastest lap | [optional] 
+**Lap** | **int?** | The lap number on which the fastest time was recorded | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

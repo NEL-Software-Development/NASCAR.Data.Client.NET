@@ -3,13 +3,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**RunId** | **int?** | Unique identifier given and used by the NASCAR Data API | [optional] 
 **Name** | **string** | The name of the run | [optional] 
 **StartTime** | **DateTimeOffset?** | Scheduled start time | [optional] 
 **RunState** | [**RunState**](RunState.md) |  | [optional] 
 **RunType** | [**RunType**](RunType.md) |  | [optional] 
 **Duration** | **int?** | The scheduled duration of the run in seconds | [optional] 
-**TimingRunId** | **int?** |  | [optional] 
-**FlagState** | **string** | Flag state:  (Inactive, Active, Completed) | [optional] 
+**TimingRunId** | **int?** | Timing system run identifier | [optional] 
+**FlagState** | **string** | Current flag state derived from the last flag in the run:  (NONE, WARMUP, GREEN, YELLOW, RED, WHITE, FINISH, EXTRA) | [optional] 
 **Flags** | [**Collection&lt;Flag&gt;**](Flag.md) | Flags associated with this run | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

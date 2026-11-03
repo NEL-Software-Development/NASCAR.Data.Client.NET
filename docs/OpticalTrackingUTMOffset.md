@@ -3,12 +3,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TrackId** | **int?** | Track Id | [optional] 
-**TrackName** | **string** | Track Name | [optional] 
-**Zone** | **string** | Zone | [optional] 
-**X** | **double?** | X Coordinate | [optional] 
-**Y** | **double?** | Y coordinate | [optional] 
-**Z** | **double?** | Z coordinate | [optional] 
+**TrackId** | **int?** | Track identifier | [optional] 
+**TrackName** | **string** | Track name | [optional] 
+**Zone** | **string** | UTM zone designation | [optional] 
+**X** | **double?** | X coordinate offset | [optional] 
+**Y** | **double?** | Y coordinate offset | [optional] 
+**Z** | **double?** | Z coordinate offset | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

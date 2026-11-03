@@ -4,15 +4,15 @@ All URIs are relative to */api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**RaceWeekDetailsGet**](RaceWeekApi.md#raceweekdetailsget) | **GET** /race-week/details | 
-[**RaceWeekLiveGet**](RaceWeekApi.md#raceweekliveget) | **GET** /race-week/live | 
-[**RaceWeekSeasonGet**](RaceWeekApi.md#raceweekseasonget) | **GET** /race-week/season | 
+[**RaceWeekDetailsGet**](RaceWeekApi.md#raceweekdetailsget) | **GET** /race-week/details | Retrieves details for a specific race week event given its unique identifier.
+[**RaceWeekLiveGet**](RaceWeekApi.md#raceweekliveget) | **GET** /race-week/live | Retrieves a list of live race events
+[**RaceWeekSeasonGet**](RaceWeekApi.md#raceweekseasonget) | **GET** /race-week/season | Retrieves all race week events for a given season, ordered by start date. This includes both past and upcoming events within the specified season.
 
 <a name="raceweekdetailsget"></a>
 # **RaceWeekDetailsGet**
 > RaceWeekDetails RaceWeekDetailsGet (int? id = null)
 
-
+Retrieves details for a specific race week event given its unique identifier.
 
 ### Example
 ```csharp
@@ -34,6 +34,7 @@ namespace Example
 
             try
             {
+                // Retrieves details for a specific race week event given its unique identifier.
                 RaceWeekDetails result = apiInstance.RaceWeekDetailsGet(id);
                 Debug.WriteLine(result);
             }
@@ -70,7 +71,7 @@ Name | Type | Description  | Notes
 # **RaceWeekLiveGet**
 > Collection<RaceWeek> RaceWeekLiveGet ()
 
-
+Retrieves a list of live race events
 
 ### Example
 ```csharp
@@ -91,6 +92,7 @@ namespace Example
 
             try
             {
+                // Retrieves a list of live race events
                 Collection&lt;RaceWeek&gt; result = apiInstance.RaceWeekLiveGet();
                 Debug.WriteLine(result);
             }
@@ -124,7 +126,7 @@ This endpoint does not need any parameter.
 # **RaceWeekSeasonGet**
 > Collection<RaceWeek> RaceWeekSeasonGet (int? season = null)
 
-
+Retrieves all race week events for a given season, ordered by start date. This includes both past and upcoming events within the specified season.
 
 ### Example
 ```csharp
@@ -142,10 +144,11 @@ namespace Example
         {
 
             var apiInstance = new RaceWeekApi();
-            var season = 56;  // int? |  (optional) 
+            var season = 56;  // int? | The season for which to retrieve race week events. (optional) 
 
             try
             {
+                // Retrieves all race week events for a given season, ordered by start date. This includes both past and upcoming events within the specified season.
                 Collection&lt;RaceWeek&gt; result = apiInstance.RaceWeekSeasonGet(season);
                 Debug.WriteLine(result);
             }
@@ -162,7 +165,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **season** | **int?**|  | [optional] 
+ **season** | **int?**| The season for which to retrieve race week events. | [optional] 
 
 ### Return type
 
